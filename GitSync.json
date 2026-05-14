@@ -1,7 +1,10 @@
 {
     "system_version": "6.1.6.170",
     "readme_addons": {
-        "Integration": {},
+        "Integration": {
+            "MitreAttck": "ReadmeAddon",
+            "CrowdStrikeFalcon": "ReadmeAddon"
+        },
         "Mappings": {},
         "Visual Family": {},
         "Playbook": {},
