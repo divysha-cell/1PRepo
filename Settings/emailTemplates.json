@@ -1,0 +1,20 @@
+[
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/2",
+        "templateType": "Template",
+        "author": "28ff3096-2a98-4634-bc6c-bb0b19eacc62",
+        "id": 2,
+        "content": "13",
+        "displayName": "new",
+        "environments": "[\"Default Environment\",\"Env1\"]"
+    },
+    {
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/1",
+        "templateType": "Template",
+        "author": "28ff3096-2a98-4634-bc6c-bb0b19eacc62",
+        "id": 1,
+        "content": "vghjkkmnbvbnm",
+        "displayName": "temp",
+        "environments": "[\"Default Environment\"]"
+    }
+]
