@@ -4,15 +4,15 @@
 Expands on the MicrosoftGraphSecurity integration by providing additional alerting functionality for SOC, along with entity enrichment and remediation actions.
 Additional documentation: https://github.com/snags141/SiemplifyIntegration_MicrosoftGraphSecurityTools
 
-Python Version - V3_11
+Python Version - 3
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.|False|Password||
-|Client ID|Client ID from Azure|True|String||
-|Secret ID|Secret ID from Azure|False|Password||
-|Tenant ID|Tenant ID from Azure here|True|String||
-|Certificate Path|If authentication based on certificates is  used instead of client secret, specify path to the certificate on Siemplify server|False|String||
+|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.||Password|*****|
+|Client ID|Client ID from Azure|True|String|clientIdhere|
+|Secret ID|Secret ID from Azure||Password|*****|
+|Tenant ID|Tenant ID from Azure here|True|String|tenantidhere|
+|Certificate Path|If authentication based on certificates is  used instead of client secret, specify path to the certificate on Siemplify server||String|None|
 
 
 #### Dependencies
@@ -39,8 +39,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Create Insight|Create an insight for each email checked with MFA stats.|False|None||
-|User Email|Users email address to search for (userPrincipalName). Valid target entities (emails) will also be checked.|True|None||
+|Create Insight|Create an insight for each email checked with MFA stats.||Boolean|false|
+|User Email|Users email address to search for (userPrincipalName). Valid target entities (emails) will also be checked.|True|String|user@email.com|
+
+
+
+##### JSON Results
+```json
+[{"id": "75as5323-a3b6-1234-f86b-30dc4bfb56e1", "userPrincipalName": "john.smith@email.com", "userDisplayName": "John Smith", "isRegistered": "True", "isEnabled": "False", "isCapable": "False", "isMfaRegistered": "True", "authMethods": ["mobilePhone", "appNotification", "appCode"]}, {"id": "d14f12cc-f123-1234-f3c3-a574926bad3c", "userPrincipalName": "Jack.Smith@email.com", "userDisplayName": "Jack Smith", "isRegistered": "True", "isEnabled": "False", "isCapable": "False", "isMfaRegistered": "True", "authMethods": ["mobilePhone", "appNotification", "appCode"]}]
+```
 
 
 
@@ -52,7 +59,14 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User ID|User ID/userPrincipalName (email)|True|None||
+|User ID|User ID/userPrincipalName (email)|True|String|john.smith@mail.com|
+
+
+
+##### JSON Results
+```json
+[{"id": "BQCBAcc7hg4=", "displayName": "IBM XForce", "sequence": 1, "isEnabled": "True", "hasError": "False", "isReadOnly": "False", "conditions": {"fromAddresses": [{"emailAddress": {"name": "no-reply@xforce.ibmcloud.com", "address": "no-reply@xforce.ibmcloud.com"}}]}, "actions": {"moveToFolder": "YXNmYWRmd2RzZmZzZmRzYWRmYXNkZmFzZGZhc2RmYXNmYXNmYWZhZ2hmZ2hydGJmZ3ZiZGZzdmZkYWRzZmE=", "stopProcessingRules": "True"}}, {"id": "CQAccc7hg8=", "displayName": "Siemplify", "sequence": 2, "isEnabled": "True", "hasError": "False", "isReadOnly": "False", "conditions": {"fromAddresses": [{"emailAddress": {"name": "user@siemplify.co", "address": "user@siemplify.co"}}]}, "actions": {"moveToFolder": "YXNkZiBhc2RmIGFzZGZhZGZhZGZhc2YgZGFzZnNmIGFoZGZnYXNkIGZnYXNmZGdhZ2RmaHNnZmhhIHNkZ2ZhaHMgZ2ZhaGZnc2YgZ2FzamhkZ2YgYWpzZ2QgZmhnYXNzaGRmZ2E=", "stopProcessingRules": "True"}}]
+```
 
 
 
@@ -64,8 +78,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User ID|Either email (userPrincipalName) or ID|True|None||
-|Message ID|ID of message to retrieve attachment list from|False|None||
+|User ID|Either email (userPrincipalName) or ID|True|String|john.smith@mail.com|
+|Message ID|ID of message to retrieve attachment list from||String|None|
+
+
+
+##### JSON Results
+```json
+[{"@odata.type": "#microsoft.graph.fileAttachment", "@odata.mediaContentType": "image/png", "id": "AAMkADY4OWJiOTY5LWZiODItNDNjMy05MjA4LTA2ZTNiMzNkZTg1NQBGAAAAAADi_cDVGMwvSY14bTcuE30PBwBq0FWx2eMAQJKh8wSyz13FAAAAAAEMAABq0FWx2eMAQJKh8wSyz13FAAHfMNGJAAABEgAQAE7nqquOvxZAnwi-XELc2aw=", "lastModifiedDateTime": "2020-11-04T13:57:31Z", "name": "banner.png", "contentType": "image/png", "size": 14061, "isInline": "False", "contentId": "206BF41F95785446BD7BC1721276F923@ausprd01.prod.outlook.com", "contentLocation": "None", "contentBytes": "verylongb64string=="}]
+```
 
 
 
@@ -76,9 +97,16 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Query Parameters|Should begin with '$' - See MS Graph docs for query-parameters. EG: $filter=subject eq 'test'|False|None||
-|Select Filter|CSV list of fields to return, eg: sender,subject|False|None||
-|User ID|User ID/userPrincipalName (email)|True|None||
+|Query Parameters|Should begin with '$' - See MS Graph docs for query-parameters. EG: $filter=subject eq 'test'||String|None|
+|Select Filter|CSV list of fields to return, eg: sender,subject||String|None|
+|User ID|User ID/userPrincipalName (email)|True|String|john.smith@mail.com|
+
+
+
+##### JSON Results
+```json
+[{"@odata.etag": "W/\"CQAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAwR4Hg\"", "id": "AAMkAGUAAAwTW09AAA=", "subject": "You have late tasks!", "sender": {"emailAddress": {"name": "Microsoft Planner", "address": "noreply@Planner.Office365.com"}}}, {"@odata.etag": "W/\"CQAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAq4D1e\"", "id": "AAMkAGUAAAq5QKlAAA=", "subject": "You have late tasks!", "sender": {"emailAddress": {"name": "Microsoft Planner", "address": "noreply@Planner.Office365.com"}}}, {"@odata.etag": "W/\"CQAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAq4D0v\"", "id": "AAMkAGUAAAq5QKkAAA=", "subject": "Your Azure AD Identity Protection Weekly Digest", "sender": {"emailAddress": {"name": "Microsoft Azure", "address": "azure-noreply@microsoft.com"}}}, {"@odata.etag": "W/\"CQAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAq4DsN\"", "id": "AAMkAGUAAAq5QKjAAA=", "subject": "Use attached file", "sender": {"emailAddress": {"name": "Megan Bowen", "address": "MeganB@contoso.OnMicrosoft.com"}}}, {"@odata.etag": "W/\"CQAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAq4Dq9\"", "id": "AAMkAGUAAAq5QKiAAA=", "subject": "Original invitation", "sender": {"emailAddress": {"name": "Megan Bowen", "address": "MeganB@contoso.OnMicrosoft.com"}}}, {"@odata.etag": "W/\"CQAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAq4Dq1\"", "id": "AAMkAGUAAAq5QKhAAA=", "subject": "Koala image", "sender": {"emailAddress": {"name": "Megan Bowen", "address": "MeganB@contoso.OnMicrosoft.com"}}}, {"@odata.etag": "W/\"CQAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAq4Dqp\"", "id": "AAMkAGUAAAq5QKgAAA=", "subject": "Sales invoice template", "sender": {"emailAddress": {"name": "Megan Bowen", "address": "MeganB@contoso.OnMicrosoft.com"}}}, {"@odata.type": "#microsoft.graph.eventMessage", "@odata.etag": "W/\"DAAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAq4Dft\"", "id": "AAMkAGUAAAq5UMVAAA=", "subject": "Accepted: Review strategy for Q3", "sender": {"emailAddress": {"name": "Adele Vance", "address": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=A17A02BCF30C4937A87B14273385667C-ADELEV"}}}, {"@odata.type": "#microsoft.graph.eventMessage", "@odata.etag": "W/\"DAAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAq4DfF\"", "id": "AAMkAGUAAAq5UMUAAA=", "subject": "Accepted: Review strategy for Q3", "sender": {"emailAddress": {"name": "Adele Vance", "address": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=A17A02BCF30C4937A87B14273385667C-ADELEV"}}}, {"@odata.type": "#microsoft.graph.eventMessage", "@odata.etag": "W/\"CwAAABYAAADHcgC8Hl9tRZ/hc1wEUs1TAAAq4Dfa\"", "id": "AAMkAGUAAAq5T8tAAA=", "subject": "Review strategy for Q3", "sender": {"emailAddress": {"name": "Megan Bowen", "address": "MeganB@contoso.OnMicrosoft.com"}}}]
+```
 
 
 
@@ -89,9 +117,16 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User ID|User ID/userPrincipalName (email)|True|None||
-|Message ID|ID of the message|True|None||
-|Attachment ID|ID of the attachment to delete.|True|None||
+|User ID|User ID/userPrincipalName (email)|True|String|john.smith@mail.com|
+|Message ID|ID of the message|True|String|someb64=|
+|Attachment ID|ID of the attachment to delete.|True|String|someb64=|
+
+
+
+##### JSON Results
+```json
+{"status_code": "204", "result": "success", "output_message": "Deletion request completed successfully"}
+```
 
 
 
@@ -103,8 +138,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User ID|User ID/userPrincipalName (email)|True|None||
-|Message ID|ID of the message to retrieve|True|None||
+|User ID|User ID/userPrincipalName (email)|True|String|john.smith@email.com|
+|Message ID|ID of the message to retrieve|True|String|AAMkADhMGAAA=|
+
+
+
+##### JSON Results
+```json
+{"@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('7f180cbb-a5ae-457c-b7e8-6f5b42ba33e7')/messages/$entity", "@odata.etag": "W/\"CQAAABYAAAC4ofQHEIqCSbQPot83AFcbAAAnjjuZ\"", "id": "AAMkADhMGAAA=", "createdDateTime": "2018-09-09T03:15:05Z", "lastModifiedDateTime": "2018-09-09T03:15:08Z", "changeKey": "CQAAABYAAAC4ofQHEIqCSbQPot83AFcbAAAnjjuZ", "categories": [], "receivedDateTime": "2018-09-09T03:15:08Z", "sentDateTime": "2018-09-09T03:15:06Z", "hasAttachments": false, "internetMessageId": "<MWHPR6E1BE060@MWHPR1120.namprd22.prod.outlook.com>", "subject": "9/9/2018: concert", "bodyPreview": "The group represents Nevada.", "importance": "normal", "parentFolderId": "AAMkADcbAAAAAAEJAAA=", "conversationId": "AAQkADOUpag6yWs=", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": true, "isDraft": false, "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADMGAAA%3D&exvsurl=1&viewmodel=ReadMessageItem", "inferenceClassification": "focused", "body": {"contentType": "html", "content": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta content=\"text/html; charset=us-ascii\">\r\n</head>\r\n<body>\r\nThe group represents Nevada.\r\n</body>\r\n</html>\r\n"}, "sender": {"emailAddress": {"name": "Adele Vance", "address": "adelev@contoso.OnMicrosoft.com"}}, "from": {"emailAddress": {"name": "Adele Vance", "address": "adelev@contoso.OnMicrosoft.com"}}, "toRecipients": [{"emailAddress": {"name": "Alex Wilber", "address": "AlexW@contoso.OnMicrosoft.com"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "flag": {"flagStatus": "notFlagged"}}
+```
 
 
 
@@ -115,8 +157,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Message ID|ID of the message to delete|True|None||
-|User ID|User ID/userPrincipalName (email) of the user who's mailbox you want to delete a message from. Supports a CSV input to delete from several mailboxes|True|None||
+|Message ID|ID of the message to delete|True|String|someb64=|
+|User ID|User ID/userPrincipalName (email) of the user who's mailbox you want to delete a message from. Supports a CSV input to delete from several mailboxes|True|String|john.smith@mail.com|
+
+
+
+##### JSON Results
+```json
+{"status_code": "204", "result": "success", "output_message": "Deletion request completed successfully"}
+```
 
 
 
@@ -138,14 +187,17 @@ Alert on negative changes to user MFA registration. Use the allowlist to prevent
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Tenant ID|Tenant ID from Azure|True|None|x|
-|Self Service Reset Alert|Create alert when a user has the ability to self-service reset their password/MFA.|False|None|false|
-|Secret ID|Secret ID from Azure|True|None|x|
-|MFA Registration Alert|Create alert when a user is not registered for MFA. Recommended.|False|None|true|
-|Exclude Guests|Exclude guests/external users from alerts (emails containing #EXT#)|False|None|false|
-|Client ID|Client ID from Azure|True|None|x|
-|Certificate Path|If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server|False|None|None|
-|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.|False|None||
+|Tenant ID|Tenant ID from Azure|True|String|x|
+|Self Service Reset Alert|Create alert when a user has the ability to self-service reset their password/MFA.||Boolean|false|
+|Secret ID|Secret ID from Azure|True|Password|*****|
+|PythonProcessTimeout|The timeout limit (in seconds) for the python process running current script|True|String|60|
+|MFA Registration Alert|Create alert when a user is not registered for MFA. Recommended.||Boolean|true|
+|Exclude Guests|Exclude guests/external users from alerts (emails containing #EXT#)||Boolean|false|
+|EventClassId|The field name used to determine the event name (sub-type)|True|String|MFA Alert|
+|DeviceProductField|The field name used to determine the device product|True|String|Microsoft 365|
+|Client ID|Client ID from Azure|True|String|x|
+|Certificate Path|If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server||String|None|
+|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.||Password|*****|
 
 
 #### MS SecureScore Alert
@@ -153,13 +205,16 @@ Allows for easy monitoring of Secure Score. Set a threshold and you will be aler
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Threshold|Specify the Secure Score threshold. If your Secure Score drops below this threshold, an alert will be raised.|False|None|0|
-|Tenant ID|Tenant ID  from Azure|True|None|x|
-|Secret ID|Secret ID from Azure|True|None|x|
-|Default Priority|Set the default priority (-1 to 100). Informative = -1, Low = 40, Medium = 60, High = 80, Critical = 100|True|None|60|
-|Client ID|Client ID from Azure|True|None|x|
-|Certificate Path|If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server|False|None|None|
-|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.|False|None||
+|Threshold|Specify the Secure Score threshold. If your Secure Score drops below this threshold, an alert will be raised.||Integer|0|
+|Tenant ID|Tenant ID  from Azure|True|String|x|
+|Secret ID|Secret ID from Azure|True|Password|*****|
+|PythonProcessTimeout|The timeout limit (in seconds) for the python process running current script|True|String|60|
+|EventClassId|The field name used to determine the event name (sub-type)|True|String|SecureScore|
+|DeviceProductField|The field name used to determine the device product|True|String|Microsoft 365|
+|Default Priority|Set the default priority (-1 to 100). Informative = -1, Low = 40, Medium = 60, High = 80, Critical = 100|True|Integer|60|
+|Client ID|Client ID from Azure|True|String|x|
+|Certificate Path|If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server||String|None|
+|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.||Password|*****|
 
 
 

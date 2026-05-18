@@ -3,14 +3,14 @@
 
 This integration connects the Group-IB Digital Risk Protection portal to Google SecOps SOAR. It imports DRP violation events into SecOps as structured cases, surfaces URLs as actionable entities, and enables analysts to approve or reject violations directly from SecOps playbooks — without leaving the SOAR platform. In case of any queries, please reach out to integration@group-ib.com.
 
-Python Version - V3_11
+Python Version - 3
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Verify SSL|Verify the server's SSL certificate.|False|Boolean||
-|API URL||True|String||
-|API login||False|Email||
-|API key||False|Password||
+|Verify SSL|Verify the server's SSL certificate.||Boolean|true|
+|API URL||True|String|https://drp.group-ib.com/client_api|
+|API login|||Email|None|
+|API key|||Password|*****|
 
 
 #### Dependencies
@@ -83,15 +83,15 @@ Timeout - 600 Seconds
 
 |Name|IsMandatory|Type|DefaultValue|
 |----|-----------|----|------------|
-|Case Type|True|None|Violations|
-|Max Cases To Process|True|None|2000|
-|Lookback Days|True|None|1|
-|Dry Run|False|None|true|
-|Close Root Cause|True|None|Duplicate|
-|Close Reason|True|None|Maintenance|
-|Merge Mode|True|None|close|
-|Carry Over To Primary|False|None|false|
-|Chronicle Instance Path|False|None||
+|Case Type|True|String|Violations|
+|Max Cases To Process|True|Integer|2000|
+|Lookback Days|True|Integer|1|
+|Dry Run||Boolean|true|
+|Close Root Cause|True|String|Duplicate|
+|Close Reason|True|String|Maintenance|
+|Merge Mode|True|String|close|
+|Carry Over To Primary||Boolean|false|
+|Chronicle Instance Path||String||
 
 
 
@@ -101,18 +101,21 @@ DRP Violations Connector
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|API login| your DRP email  |True|None|example@email.me|
-|API key|your DRP API token |True|None|123321|
-|API URL|DRP URL|True|None|https://drp.group-ib.com/client_api/|
-|Verify SSL|Verify the server's SSL certificate.|False|None|true|
-| Case name  |Violation URL |True|None|Violation URL |
-|Case severity|Severity|True|None|Medium|
-|Case type  |Type|True|None|Violations|
-|Start date |leave blank (defaults to 1 day back) |False|None||
-|Brand IDs|Filtering by company brands|False|None||
-|Approve States|1 - Not required; 2 - Rejected; 3 - Under review; 4 - approved|False|None||
-|Subtypes|1 - counterfeit; 2 - piracy; 3 - partner_policy_compliance; 4 - trademark; 5 - malware; 6 - phishing; 7 - fraud; 8 - no_violation|False|None||
-|Section|1 - Web; 2 - Mobile apps; 3 - Marketplace; 4 - Social networks; 5 - Advertising; 6 - Instant messengers|False|None||
+|API login| your DRP email  |True|Email|example@email.me|
+|API key|your DRP API token |True|Password|*****|
+|API URL|DRP URL|True|String|https://drp.group-ib.com/client_api/|
+|Verify SSL|Verify the server's SSL certificate.||Boolean|true|
+| Case name  |Violation URL |True|String|Violation URL |
+|Case severity|Severity|True|String|Medium|
+|Case type  |Type|True|String|Violations|
+|Start date |leave blank (defaults to 1 day back) ||String||
+|Brand IDs|Filtering by company brands||String||
+|Approve States|1 - Not required; 2 - Rejected; 3 - Under review; 4 - approved||String||
+|Subtypes|1 - counterfeit; 2 - piracy; 3 - partner_policy_compliance; 4 - trademark; 5 - malware; 6 - phishing; 7 - fraud; 8 - no_violation||String||
+|Section|1 - Web; 2 - Mobile apps; 3 - Marketplace; 4 - Social networks; 5 - Advertising; 6 - Instant messengers||String||
+|DeviceProductField||True|String|title|
+|EventClassId||True|String|id|
+|PythonProcessTimeout||True|String|600|
 
 
 #### DRP Violations Review Connector
@@ -120,14 +123,17 @@ DRP Violations Review Connector
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|API login|DRP username|True|None|your@email.com |
-|API key|your API token |True|None|764|
-|API URL|DRP URL|True|None|https://drp.group-ib.com/client_api/|
-|Verify SSL|Verify the server's SSL certificate.|False|None|true|
-|Case name |Name|True|None|Violation URL - review required |
-|Case type|type|True|None|Violations Under Review|
-|Case severity |Severity|True|None|Medium|
-|Start date |leave blank - auto takes -1 day|False|None||
+|API login|DRP username|True|Email|your@email.com |
+|API key|your API token |True|Password|*****|
+|API URL|DRP URL|True|String|https://drp.group-ib.com/client_api/|
+|Verify SSL|Verify the server's SSL certificate.||Boolean|true|
+|Case name |Name|True|String|Violation URL - review required |
+|Case type|type|True|String|Violations Under Review|
+|Case severity |Severity|True|String|Medium|
+|Start date |leave blank - auto takes -1 day||String||
+|DeviceProductField||True|String|title|
+|EventClassId||True|String|id|
+|PythonProcessTimeout||True|String|30|
 
 
 #### DRP Typosquatting Connector
@@ -135,14 +141,17 @@ DRP Typosquatting Connector
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|API login| Email used for DRP portal login |True|None|your@email.com   |
-|API key|API token from DRP profile   |True|None|789987|
-|API URL|DRP URL|True|None|https://drp.group-ib.com/client_api/|
-|Verify SSL|Verify the server's SSL certificate.|False|None|true|
-|Case name|Default — label shown on cases  |True|None|Typosquatting Domain |
-|Case type|type|True|None|Typosquatting    |
-|Case severity|Options: Informative / Low / Medium / High / Critical |True|None|Medium|
-|Start date|Blank = start from 1 day ago. Set YYYY-MM-DD only for a historical backfill |False|None||
+|API login| Email used for DRP portal login |True|Email|your@email.com   |
+|API key|API token from DRP profile   |True|Password|*****|
+|API URL|DRP URL|True|String|https://drp.group-ib.com/client_api/|
+|Verify SSL|Verify the server's SSL certificate.||Boolean|true|
+|Case name|Default — label shown on cases  |True|String|Typosquatting Domain |
+|Case type|type|True|String|Typosquatting    |
+|Case severity|Options: Informative / Low / Medium / High / Critical |True|String|Medium|
+|Start date|Blank = start from 1 day ago. Set YYYY-MM-DD only for a historical backfill ||String||
+|DeviceProductField||True|String|title|
+|EventClassId||True|String|id|
+|PythonProcessTimeout||True|String|30|
 
 
 

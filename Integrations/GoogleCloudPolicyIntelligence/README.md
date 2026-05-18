@@ -3,17 +3,17 @@
 
 Google Cloud Policy Intelligence is a service that helps you understand and manage your Google Cloud IAM policies. Policy Intelligence provides a comprehensive view of your policies, including their configuration, relationships, and usage. This information can be used to improve your security posture, optimize your costs, and make better decisions about your cloud resources.
 
-Python Version - V3_11
+Python Version - 3
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|API Root|API root of the Google Cloud Policy Intelligence instance.|True|String||
-|Project ID|ID of the project that should be used in Google Cloud Policy Intelligence integration.|False|String||
-|User Service Account|Service account of the Google Cloud Policy Intelligence instance. A full content of the service account JSON file should be provided.|False|Password||
-|Quota Project ID|ID of your Google Cloud project for Google Cloud API usage and billing. If no value is provided, the project ID defined in your Google Cloud service account is used. For this parameter to work, make sure to grant the "Service Usage Consumer" IAM role to your Google Cloud service account.|False|String||
-|Workload Identity Email|A Service Account Client Email to replace the usage of "User's Service Account", which will be used for Impersonation. Note that the SOAR Service Account must be granted the "Service Account Token Creator" IAM role on the User Service Account.|False|String||
-|Location ID|ID of the location that should be used in Google Cloud Policy Intelligence integration. Defaults to ‘global’.|False|String||
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the Google Cloud Policy Intelligence server is valid.|False|Boolean||
+|API Root|API root of the Google Cloud Policy Intelligence instance.|True|String|https://policyanalyzer.googleapis.com|
+|Project ID|ID of the project that should be used in Google Cloud Policy Intelligence integration.||String||
+|User's Service Account|Service account of the Google Cloud Policy Intelligence instance. A full content of the service account JSON file should be provided.||Password|*****|
+|Quota Project ID|ID of your Google Cloud project for Google Cloud API usage and billing. If no value is provided, the project ID defined in your Google Cloud service account is used. For this parameter to work, make sure to grant the "Service Usage Consumer" IAM role to your Google Cloud service account.||String||
+|Workload Identity Email|A Service Account Client Email to replace the usage of "User's Service Account", which will be used for Impersonation. Note that the SOAR Service Account must be granted the "Service Account Token Creator" IAM role on the User Service Account.||String||
+|Location ID|ID of the location that should be used in Google Cloud Policy Intelligence integration. Defaults to ‘global’.||String|global|
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the Google Cloud Policy Intelligence server is valid.||Boolean|true|
 
 
 #### Dependencies
@@ -62,9 +62,16 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Project ID|Specify the name of the project, where you want to search service account activities. If nothing is provided, the project will be extracted from integration configuration.|False|None||
-|Service Account Resource Name|Specify a comma-separated list of service accounts for which you want to fetch activity.|True|None||
-|Max Activities To Return|Specify how many activities to return. Maximum: 1000.|True|None||
+|Project ID|Specify the name of the project, where you want to search service account activities. If nothing is provided, the project will be extracted from integration configuration.||String||
+|Service Account Resource Name|Specify a comma-separated list of service accounts for which you want to fetch activity.|True|String||
+|Max Activities To Return|Specify how many activities to return. Maximum: 1000.|True|String|50|
+
+
+
+##### JSON Results
+```json
+[{"Entity": "//iam.googleapis.com/projects/chronicle-demo-env/serviceAccounts/cdir-scc-service-account@chronicle-demo-env.iam.gserviceaccount.com", "EntityResult": [{"fullResourceName": "//iam.googleapis.com/projects/chronicle-demo-env/serviceAccounts/cdir-scc-service-account@chronicle-demo-env.iam.gserviceaccount.com", "activityType": "serviceAccountLastAuthentication", "observationPeriod": {"startTime": "2023-05-23T07:00:00Z", "endTime": "2023-08-20T07:00:00Z"}, "activity": {"lastAuthenticatedTime": "2023-08-20T07:00:00Z", "serviceAccount": {"serviceAccountId": "100969641053678159314", "projectNumber": "105111850896", "fullResourceName": "//iam.googleapis.com/projects/chronicle-demo-env/serviceAccounts/cdir-scc-service-account@chronicle-demo-env.iam.gserviceaccount.com"}}}]}]
+```
 
 
 

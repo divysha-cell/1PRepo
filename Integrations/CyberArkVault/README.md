@@ -1,18 +1,20 @@
+<p align="center"><img src="./Resources/CyberArkVault.svg" 
+     alt="CyberArkVault" width="200"/></p>
 
 # CyberArkVault
 
 Secure, Rotate and Control Access to Privileged Account Credentials
 
-Python Version - V3_11
+Python Version - 3
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Api Root|None|True|String||
-|Password Vault Api Root|None|True|String||
+|Api Root|None|True|String|https://{Base URL}:{Port}|
+|Password Vault Api Root|None|True|String|https://{Base URL}:{Port}|
 |Username|None|True|String||
-|Password|None|True|Password||
+|Password|None|True|Password|*****|
 |Application ID|None|True|String||
-|Use SSL|None|False|Boolean||
+|Use SSL|None||Boolean||
 
 
 
@@ -24,7 +26,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Group Name|Full group name as exist in the CyberArkVault|True|None||
+|Group Name|Full group name as exist in the CyberArkVault|True|String|None|
 
 
 
@@ -35,7 +37,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User Name|Full user name as exist in the CyberArkVault|True|None||
+|User Name|Full user name as exist in the CyberArkVault|True|String|None|
 
 
 
@@ -52,7 +54,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User Name|Full user name as exist in the CyberArkVault|True|None||
+|User Name|Full user name as exist in the CyberArkVault|True|String|None|
 
 
 
@@ -63,7 +65,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User Name|Full user name as exist in the CyberArkVault|True|None||
+|User Name|Full user name as exist in the CyberArkVault|True|String|None|
 
 
 

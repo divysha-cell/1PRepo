@@ -3,21 +3,21 @@
 
 Microsoft 365 and Office 365 deliver the power of cloud productivity to businesses of all sizes, helping save time, money, and free up valued resources. The Microsoft 365 and Office 365 plans combine the familiar Microsoft Office desktop suite with cloud-based versions of Microsoft's next-generation communications and collaboration services (including Office for the web, Microsoft Exchange Online, Microsoft Teams, and Microsoft SharePoint Online) to help users be productive from virtually anywhere through the Internet. This integration uses Microsoft Graph Mail API to communicate with Microsoft 365 and Office 365 services.
 
-Python Version - V3_11
+Python Version - 3
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Azure AD Endpoint|The Microsoft Entra endpoint to connect to.|True|String||
-|Microsoft Graph Endpoint|The Microsoft Graph endpoint to connect to.|True|String||
+|Azure AD Endpoint|The Microsoft Entra endpoint to connect to.|True|String|https://login.microsoftonline.com|
+|Microsoft Graph Endpoint|The Microsoft Graph endpoint to connect to.|True|String|https://graph.microsoft.com|
 |Client ID|The client (application) ID of the Microsoft Entra application to use in the integration.|True|String||
-|Secret ID|The client secret value of the Microsoft Entra app to use in the integration.|True|Password||
+|Secret ID|The client secret value of the Microsoft Entra app to use in the integration.|True|Password|*****|
 |Tenant|The Microsoft Entra ID (tenant ID) value.|True|String||
 |Default Mailbox|The default mailbox to use in the integration.|True|String||
-|Mail field source|If enabled, user's mailbox address will be fetched from the 'mail' attribute of user's details. Otherwise, user's mailbox address will be fetched from the 'userPrincipalName' field.|False|Boolean||
-|Base64 Encoded Private Key|Specify a base64 encoded private key that will be used to decrypt the email.|False|Password||
-|Base64 Encoded Certificate|Specify a base64 encoded certificate that will be used to decrypt the email.|False|Password||
-|Base64 Encoded CA certificate|Specify a base64 encoded trusted CA certificate for signature verification.|False|Password||
-|Verify SSL|If selected, the integration verifies that the SSL certificate for the connection to the Microsoft Graph server is valid.|False|Boolean||
+|Mail field source|If enabled, user's mailbox address will be fetched from the 'mail' attribute of user's details. Otherwise, user's mailbox address will be fetched from the 'userPrincipalName' field.||Boolean|false|
+|Base64 Encoded Private Key|Specify a base64 encoded private key that will be used to decrypt the email.||Password|*****|
+|Base64 Encoded Certificate|Specify a base64 encoded certificate that will be used to decrypt the email.||Password|*****|
+|Base64 Encoded CA certificate|Specify a base64 encoded trusted CA certificate for signature verification.||Password|*****|
+|Verify SSL|If selected, the integration verifies that the SSL certificate for the connection to the Microsoft Graph server is valid.||Boolean|true|
 
 
 #### Dependencies
@@ -93,16 +93,23 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Send From|Specify the optional email address from which if permissions allow, email should be sent. By default, the email will be sent from the default mailbox specified in the integration configuration.|True|None||
-|Mail ID|Specify the mail ids or internetMessageIds of the message that you want to forward.|True|None||
-|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|False|None||
-|Subject|Specify the mail subject part.|True|None||
-|Send to|Specify the arbitrary comma separated list of email addresses for the email recipients. For example: user1@company.co, user2@company.co|True|None||
-|CC|Specify the arbitrary comma separated list of email addresses to be put in the CC field of email. Format is the same as for the 'Send to' field.|False|None||
-|BCC|Arbitrary comma separated list of email addresses to be put in the BCC field of email. Format is the same as for the 'Send to' field.|False|None||
-|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.|False|None||
-|Mail Content|Specify the email body part.|True|None||
-|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|None||
+|Send From|Specify the optional email address from which if permissions allow, email should be sent. By default, the email will be sent from the default mailbox specified in the integration configuration.|True|String||
+|Mail ID|Specify the mail ids or internetMessageIds of the message that you want to forward.|True|String||
+|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder||String||
+|Subject|Specify the mail subject part.|True|String||
+|Send to|Specify the arbitrary comma separated list of email addresses for the email recipients. For example: user1@company.co, user2@company.co|True|String||
+|CC|Specify the arbitrary comma separated list of email addresses to be put in the CC field of email. Format is the same as for the 'Send to' field.||String||
+|BCC|Arbitrary comma separated list of email addresses to be put in the BCC field of email. Format is the same as for the 'Send to' field.||String||
+|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.||String||
+|Mail Content|Specify the email body part.|True|String||
+|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|List|None|
+
+
+
+##### JSON Results
+```json
+{"id": "xxxxx", "createdDateTime": "2024-02-02T09:49:53Z", "lastModifiedDateTime": "2024-02-02T09:51:19Z", "changeKey": "ieiohjdskj", "categories": [], "receivedDateTime": "2024-02-02T09:49:54Z", "sentDateTime": "2024-02-02T09:49:54Z", "hasAttachments": true, "internetMessageId": "<xyz>", "subject": "xxxx", "bodyPreview": "Mail Action body", "importance": "normal", "parentFolderId": "ddd==", "conversationId": "dagazz=", "conversationIndex": "daf+UJo/clVcxTQ==", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": true, "isDraft": false, "webLink": "https://www.example.com/about", "inferenceClassification": "focused", "body": {"contentType": "text", "content": "Send Mail Action body"}, "sender": {"emailAddress": {"name": "wdzd", "address": "sample@s.com"}}, "from": {"emailAddress": {"name": "safd", "address": "xxx"}}, "toRecipients": [{"emailAddress": {"name": "xx", "address": "aef"}}], "ccRecipients": [{"emailAddress": {"name": "as", "address": "kdaw"}}], "bccRecipients": [{"emailAddress": {"name": "xxsf", "address": "wf"}}], "replyTo": [], "uniqueBody": {"contentType": "html", "content": "Mail Action body"}, "flag": {"flagStatus": "notFlagged"}}
+```
 
 
 
@@ -113,16 +120,23 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Send From|Optional email address to send an email from (if permissions allow it). By default, the email is sent from the default mailbox specified in the integration configuration.|True|None||
-|Subject|Email subject.|True|None||
-|Send to|Arbitrary comma-separated list of email addresses for the email recipients, for example, user1@company.co, user2@company.co.|True|None||
-|CC|Arbitrary comma-separated list of email addresses to use in the CC email field. Use the same format as for the "Send to" field.|False|None||
-|BCC|Arbitrary comma-separated list of email addresses to use in the BCC email field. Use the same format for the "Send to" field.|False|None||
-|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.|False|None||
-|Email HTML Template|The question you would like to ask, or describe the decision you would like the recipient to be able to respond to|True|None||
-|Structure of voting options|Structure of the vote to send to the recipients.|True|None||
-|Reply-To Recipients|Comma-separated list of recipients used in the Reply-To header. Note: The Reply-To header is added to force email replies to specific email addresses instead of the email sender address stated in the From field.|False|None||
-|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|None||
+|Send From|Optional email address to send an email from (if permissions allow it). By default, the email is sent from the default mailbox specified in the integration configuration.|True|String||
+|Subject|Email subject.|True|String||
+|Send to|Arbitrary comma-separated list of email addresses for the email recipients, for example, user1@company.co, user2@company.co.|True|String||
+|CC|Arbitrary comma-separated list of email addresses to use in the CC email field. Use the same format as for the "Send to" field.||String||
+|BCC|Arbitrary comma-separated list of email addresses to use in the BCC email field. Use the same format for the "Send to" field.||String||
+|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.||String||
+|Email HTML Template|The question you would like to ask, or describe the decision you would like the recipient to be able to respond to|True|Email Content|Email HTML Template|
+|Structure of voting options|Structure of the vote to send to the recipients.|True|List|Yes/No|
+|Reply-To Recipients|Comma-separated list of recipients used in the Reply-To header. Note: The Reply-To header is added to force email replies to specific email addresses instead of the email sender address stated in the From field.||String||
+|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|List|None|
+
+
+
+##### JSON Results
+```json
+{"createdDateTime": "2024-01-30T16:50:27Z", "lastModifiedDateTime": "2024-01-30T16:50:27Z", "changeKey": "xxxxx", "categories": [], "receivedDateTime": "2024-01-30T16:50:27Z", "sentDateTime": "2024-01-30T16:50:27Z", "hasAttachments": false, "internetMessageId": "<abcd.prod.com>", "subject": "Testing", "bodyPreview": "bbcbcb", "importance": "normal", "parentFolderId": "xxxxxxx", "conversationId": "xxxxx", "conversationIndex": "xxxxxx", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": true, "isDraft": false, "webLink": "https://www.example.com/about", "inferenceClassification": "focused", "body": {"contentType": "html", "content": "hdhdhd"}, "sender": {"emailAddress": {"name": "sdjsdjs", "address": "abcd@example.com"}}, "from": {"emailAddress": {"name": "jdsjdjs", "address": "abcd@gm.com"}}, "toRecipients": [{"emailAddress": {"name": "abc@example.com", "address": "abc@example.com"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "uniqueBody": {"contentType": "html", "content": "ssfsf"}, "flag": {"flagStatus": "notFlagged"}, "id": "xxxxx"}
+```
 
 
 
@@ -133,16 +147,30 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Search In Mailbox|By default, the action attempts to search for an email in the default mailbox specified in the integration configuration. If permissions allow, the action can execute search in other mailboxes. This parameter accepts multiple values as a comma-separated string.|True|None||
-|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|False|None||
-|Mail IDs|Specify the mail ids or internetMessageIds to search for. This parameter accepts multiple values as a comma-separated string.|True|None||
-|Regex Map JSON|JSON definition containing regular expressions to apply to the attached email file and produce additional key values in the action JSON result. Example of the JSON definition is as follows: {ips: \b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\b}|False|None||
+|Search In Mailbox|By default, the action attempts to search for an email in the default mailbox specified in the integration configuration. If permissions allow, the action can execute search in other mailboxes. This parameter accepts multiple values as a comma-separated string.|True|String||
+|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder||String||
+|Mail IDs|Specify the mail ids or internetMessageIds to search for. This parameter accepts multiple values as a comma-separated string.|True|String||
+|Regex Map JSON|JSON definition containing regular expressions to apply to the attached email file and produce additional key values in the action JSON result. Example of the JSON definition is as follows: {ips: \b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\b}||String|{}|
+
+
+
+##### JSON Results
+```json
+[{"type":"EML","subject":"examplesubject","from":"example@mail.com","to":"example1@mail.com,example2@mail.com","date":"Thu,4Jul202412:11:29+0530","text":"Someexampleintext","html":"<p>Someexampleinhtml</p>","regex":{},"regex_from_text_part":{},"id":"abcd","name":"abc.eml"},{"type":"MSG","subject":"examplesubject","from":"example@mail.com","to":"example1@mail.com,example2@mail.com","date":"Thu,4Jul202412:11:29+0530","text":"Someexampleintext","html":"<p>Someexampleinhtml</p>","regex":{},"regex_from_text_part":{},"id":"abcd","name":"abc.msg"},{"type":"ICS","subject":"examplesubject","from":"example@mail.com","to":"example1@mail.com,example2@mail.com","date":"Thu,4Jul202412:11:29+0530","text":"Someexampleintext","html":"<p>Someexampleinhtml</p>","regex":{},"regex_from_text_part":{},"id":"abcd","name":"abc.ics"}]
+```
 
 
 
 #### Get Mailbox Account Out Of Facility Settings
 Get the mailbox account out of facility (OOF) settings for the provided Google SecOps User entity. Note: This action uses the beta version of Microsoft Graph APIs.
 Timeout - 600 Seconds
+
+
+
+##### JSON Results
+```json
+[{"Entity": "jame.bond@ex.com", "EntityResult": {"@odata.context": "https://abc.com", "id": "abcb", "availability": "Offline", "activity": "Offline", "statusMessage": null, "outOfOfficeSettings": {"message": null, "isOutOfOffice": false}}}, {"Entity": "exchang@ex.com", "EntityResult": {"@odata.context": "https://abc.com", "id": "djds", "availability": "Offline", "activity": "Offline", "statusMessage": null, "outOfOfficeSettings": {"message": null, "isOutOfOffice": false}}}]
+```
 
 
 
@@ -153,9 +181,16 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Search In Mailbox|A mailbox to search for an email in. By default, the action  attempts to search for the email in the default mailbox that you specified in the integration configuration. With correct permissions, the action can execute a search in other mailboxes. Parameter accepts multiple values as a comma separated string. |True|None||
-|Folder Name|A mailbox folder to search in.|True|None||
-|Mail IDs|Specify the mail ids or internetMessageIds to mark as not junk. Parameter accepts multiple values as a comma separated string.|True|None||
+|Search In Mailbox|A mailbox to search for an email in. By default, the action  attempts to search for the email in the default mailbox that you specified in the integration configuration. With correct permissions, the action can execute a search in other mailboxes. Parameter accepts multiple values as a comma separated string. |True|String||
+|Folder Name|A mailbox folder to search in.|True|String||
+|Mail IDs|Specify the mail ids or internetMessageIds to mark as not junk. Parameter accepts multiple values as a comma separated string.|True|String||
+
+
+
+##### JSON Results
+```json
+
+```
 
 
 
@@ -172,17 +207,24 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Move In Mailbox|By default, move operation will be executed in the default mailbox specified in the integration configuration. If permissions allow, action can search in other mailboxes as well. If permissions allow, action can search in other mailboxes as well. Parameter accepts multiple values as a comma separated string.|True|None||
-|Source Folder Name|Specify the source folder name to move mail from. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|None||
-|Destination Folder Name|Specify the destination folder name to move mail to. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|None||
-|Mail IDs|Specify the mail ids or internetMessageIds to search for. Parameter accepts multiple values as a comma separated string. If mail id or internet message id is provided, it takes priority for the search, subject and sender filters are ignored.|False|None||
-|Subject Filter|Specify the subject of the email to search for. Filter works with "contains" logic.|False|None||
-|Sender Filter|Specify the sender of the email to search for. Filter works with "equals" logic.|False|None||
-|Time Frame (minutes)|Specify time frame in minutes to search emails for.|False|None||
-|Only Unread|If enabled, action searches only for the unread emails.|False|None||
-|How many mailboxes to process in a single batch|Specify how many mailboxes action should process in a single batch (single connection to O365). If nothing is provided, default value of 25 will be used.|False|None||
-|Limit the Amount of Information Returned in the JSON Result|If enabled, the amount of information returned by the action will be limited only to the key email fields.|False|None||
-|Disable the Action JSON Result|If enabled, action will not return JSON result.|False|None||
+|Move In Mailbox|By default, move operation will be executed in the default mailbox specified in the integration configuration. If permissions allow, action can search in other mailboxes as well. If permissions allow, action can search in other mailboxes as well. Parameter accepts multiple values as a comma separated string.|True|String|Default Mailbox|
+|Source Folder Name|Specify the source folder name to move mail from. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|String|None|
+|Destination Folder Name|Specify the destination folder name to move mail to. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|String|None|
+|Mail IDs|Specify the mail ids or internetMessageIds to search for. Parameter accepts multiple values as a comma separated string. If mail id or internet message id is provided, it takes priority for the search, subject and sender filters are ignored.||String|None|
+|Subject Filter|Specify the subject of the email to search for. Filter works with "contains" logic.||String|None|
+|Sender Filter|Specify the sender of the email to search for. Filter works with "equals" logic.||String|None|
+|Time Frame (minutes)|Specify time frame in minutes to search emails for.||String|None|
+|Only Unread|If enabled, action searches only for the unread emails.||Boolean|None|
+|How many mailboxes to process in a single batch|Specify how many mailboxes action should process in a single batch (single connection to O365). If nothing is provided, default value of 25 will be used.||String||
+|Limit the Amount of Information Returned in the JSON Result|If enabled, the amount of information returned by the action will be limited only to the key email fields.||Boolean|false|
+|Disable the Action JSON Result|If enabled, action will not return JSON result.||Boolean|false|
+
+
+
+##### JSON Results
+```json
+[{"Mailbox": "example@mail.com", "Emails": [{"id": "xxxxx", "createdDateTime": "2024-02-05T10:03:14Z", "lastModifiedDateTime": "2024-02-05T16:30:11Z", "changeKey": "cxsdjjh", "categories": [], "receivedDateTime": "2024-02-05T10:03:15Z", "sentDateTime": "2024-02-05T10:03:12Z", "hasAttachments": true, "internetMessageId": "sdfhsjdfhjsdjfd", "subject": "Forwarding for the last time with attachment", "bodyPreview": "this is the mail content for testingxyzrxyzn________________________________xyzrxyznFrom: xyzxyzrxyznSent: Monday, February 5, 2024 7:48:16 AMxyzrxyznTo: example.com <example.com>xyzrxyznSubject: subjectxyzrxyznxyzrxyznmail", "importance": "normal", "parentFolderId": "id", "conversationId": "id", "conversationIndex": "hjaoihfehf", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": true, "isDraft": false, "webLink": "https://www.example.com/about", "inferenceClassification": "focused", "body": {"contentType": "html", "content": "xyz"}, "sender": {"emailAddress": {"name": "xyz", "address": "example@mail.com"}}, "from": {"emailAddress": {"name": "xyz", "address": "example@mail.com"}}, "toRecipients": [{"emailAddress": {"name": "xyz", "address": "example@mail.com"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "flag": {"flagStatus": "notFlagged"}}]}]
+```
 
 
 
@@ -193,16 +235,23 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Search In Mailbox|By default, the action  attempts to search for an email in the default mailbox specified in the integration configuration. If permissions allow, the action can execute search in other mailboxes. This parameter accepts multiple values as a comma-separated string.|True|None||
-|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|False|None||
-|Download Destination|Destination to save the downloaded attachments to. By default, the action attempts to save the attachment to the Google Cloud storage bucket. Saving an attachment to the local file system is a fallback option.|True|None||
-|Download Path|Path to download attachments to. When saving attachments to the Google Cloud bucket or a local file system, the action expects download path to be specified in the unix-like format, for example, “/tmp/test”.|True|None||
-|Mail IDs|Specify the mail ids or internetMessageIds to search for. Parameter accepts multiple values as a comma separated string. If mail id or internet message id is provided, it takes priority for the search, subject and sender filters are ignored.|False|None||
-|Subject Filter|Specify the subject of the email to search for. Filter works with "contains" logic.|False|None||
-|Sender Filter|Specify the sender of the email to search for. Filter works with "equals" logic.|False|None||
-|Download Attachments from EML|If checked, the action downloads attachments from attached EML files.|False|None||
-|Download Attachments to unique path?|If checked, the action downloads attachments to the unique path under the path value provided in the “Download Path” parameter to avoid overwiting of previously downloaded attachments.|False|None||
-|How many mailboxes to process in a single batch|Number of  mailboxes to process in a single batch (single connection to O365). If no value is provided, the default value of 25 mailboxes is used.|False|None||
+|Search In Mailbox|By default, the action  attempts to search for an email in the default mailbox specified in the integration configuration. If permissions allow, the action can execute search in other mailboxes. This parameter accepts multiple values as a comma-separated string.|True|String|Default Mailbox|
+|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder||String|None|
+|Download Destination|Destination to save the downloaded attachments to. By default, the action attempts to save the attachment to the Google Cloud storage bucket. Saving an attachment to the local file system is a fallback option.|True|List|None|
+|Download Path|Path to download attachments to. When saving attachments to the Google Cloud bucket or a local file system, the action expects download path to be specified in the unix-like format, for example, “/tmp/test”.|True|String|None|
+|Mail IDs|Specify the mail ids or internetMessageIds to search for. Parameter accepts multiple values as a comma separated string. If mail id or internet message id is provided, it takes priority for the search, subject and sender filters are ignored.||String|None|
+|Subject Filter|Specify the subject of the email to search for. Filter works with "contains" logic.||String|None|
+|Sender Filter|Specify the sender of the email to search for. Filter works with "equals" logic.||String|None|
+|Download Attachments from EML|If checked, the action downloads attachments from attached EML files.||Boolean|None|
+|Download Attachments to unique path?|If checked, the action downloads attachments to the unique path under the path value provided in the “Download Path” parameter to avoid overwiting of previously downloaded attachments.||Boolean|None|
+|How many mailboxes to process in a single batch|Number of  mailboxes to process in a single batch (single connection to O365). If no value is provided, the default value of 25 mailboxes is used.||String|None|
+
+
+
+##### JSON Results
+```json
+[{"attachment_name":"name1.png","downloaded_path":"file_path/name1.png"},{"attachment_name":"name2.png","downloaded_path":"file_path/name2.png"}]
+```
 
 
 
@@ -213,16 +262,23 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|CC|Specify the arbitrary comma separated list of email addresses to be put in the CC field of email. Format is the same as for the "Send to" field.|False|None||
-|Send From|Specify the optional email address from which if permissions allow, email should be sent. By default, the email will be sent from the default mailbox specified in the integration configuration.|True|None||
-|Subject|Specify the mail subject part.|True|None||
-|Send to|Specify the arbitrary comma separated list of email addresses for the email recipients. For example: user1@company.co, user2@company.co|True|None||
-|BCC|Arbitrary comma separated list of email addresses to be put in the BCC field of email. Format is the same as for the "Send to" field.|False|None||
-|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.|False|None||
-|Mail Content Type|Specify the type of email content: either plain text or html.|False|None||
-|Mail Content|Specify the email body part.|True|None||
-|Reply-To Recipients|Specify a comma-separated list of recipients that will be used in the "Reply-To" header. Note: The Reply-To header is added when the originator of the message wants any replies to the message to go to that particular email address rather than the one in the "From:" address.|False|None||
-|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|None||
+|CC|Specify the arbitrary comma separated list of email addresses to be put in the CC field of email. Format is the same as for the "Send to" field.||String||
+|Send From|Specify the optional email address from which if permissions allow, email should be sent. By default, the email will be sent from the default mailbox specified in the integration configuration.|True|String||
+|Subject|Specify the mail subject part.|True|String||
+|Send to|Specify the arbitrary comma separated list of email addresses for the email recipients. For example: user1@company.co, user2@company.co|True|String||
+|BCC|Arbitrary comma separated list of email addresses to be put in the BCC field of email. Format is the same as for the "Send to" field.||String||
+|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.||String||
+|Mail Content Type|Specify the type of email content: either plain text or html.||List|Text|
+|Mail Content|Specify the email body part.|True|String||
+|Reply-To Recipients|Specify a comma-separated list of recipients that will be used in the "Reply-To" header. Note: The Reply-To header is added when the originator of the message wants any replies to the message to go to that particular email address rather than the one in the "From:" address.||String||
+|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|List|None|
+
+
+
+##### JSON Results
+```json
+{"createdDateTime": "2024-01-30T16:50:27Z", "lastModifiedDateTime": "2024-01-30T16:50:27Z", "changeKey": "cxsdjjh", "categories": [], "receivedDateTime": "2024-01-30T16:50:27Z", "sentDateTime": "2024-01-30T16:50:27Z", "hasAttachments": false, "internetMessageId": "sdfhsjdfhjsdjfd", "subject": "Testing", "bodyPreview": "bbcbcb", "importance": "normal", "parentFolderId": "id", "conversationId": "id", "conversationIndex": "sfsdfds", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": true, "isDraft": false, "webLink": "https://www.example.com/about", "inferenceClassification": "focused", "body": {"contentType": "html", "content": "hdhdhd"}, "sender": {"emailAddress": {"name": "sdjsdjs", "address": "example@mail.com"}}, "from": {"emailAddress": {"name": "jdsjdjs", "address": "example@mail.com"}}, "toRecipients": [{"emailAddress": {"name": "example@mail.com", "address": "example@mail.com"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "uniqueBody": {"contentType": "html", "content": "ssfsf"}, "flag": {"flagStatus": "notFlagged"}, "id": "xxxxx"}
+```
 
 
 
@@ -233,15 +289,22 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Send From|Optional email address to send an email from (if permissions allow it). By default, the email is sent from the default mailbox specified in the integration configuration.|True|None||
-|Subject|Email subject.|True|None||
-|Send to|Specify the arbitrary comma-separated list of email addresses for the email recipients,for example, user1@company.co, user2@company.co.|True|None||
-|CC|Arbitrary comma-separated list of email addresses to use in the CC email field. Use the same format as for the "Send to" field.|False|None||
-|BCC|Arbitrary comma-separated list of email addresses to use in the BCC email field. Use the same format for the "Send to" field.|False|None||
-|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.|False|None||
-|Email HTML Template|The question you would like to ask, or describe the decision you would like the recipient to be able to respond to|True|None||
-|Reply-To Recipients|Comma-separated list of recipients used in the Reply-To header. Note: The Reply-To header is added to force email replies to specific email addresses instead of the email sender address stated in the From field.|False|None||
-|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|None||
+|Send From|Optional email address to send an email from (if permissions allow it). By default, the email is sent from the default mailbox specified in the integration configuration.|True|String||
+|Subject|Email subject.|True|String||
+|Send to|Specify the arbitrary comma-separated list of email addresses for the email recipients,for example, user1@company.co, user2@company.co.|True|String||
+|CC|Arbitrary comma-separated list of email addresses to use in the CC email field. Use the same format as for the "Send to" field.||String||
+|BCC|Arbitrary comma-separated list of email addresses to use in the BCC email field. Use the same format for the "Send to" field.||String||
+|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.||String||
+|Email HTML Template|The question you would like to ask, or describe the decision you would like the recipient to be able to respond to|True|Email Content|Email HTML Template|
+|Reply-To Recipients|Comma-separated list of recipients used in the Reply-To header. Note: The Reply-To header is added to force email replies to specific email addresses instead of the email sender address stated in the From field.||String||
+|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|List|None|
+
+
+
+##### JSON Results
+```json
+{"createdDateTime": "2024-01-30T16:50:27Z", "lastModifiedDateTime": "2024-01-30T16:50:27Z", "changeKey": "xxxxx", "categories": [], "receivedDateTime": "2024-01-30T16:50:27Z", "sentDateTime": "2024-01-30T16:50:27Z", "hasAttachments": false, "internetMessageId": "<outlook.com>", "subject": "Testing", "bodyPreview": "bbcbcb", "importance": "normal", "parentFolderId": "xxxxx", "conversationId": "xxxxx", "conversationIndex": "xxxxxxx", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": true, "isDraft": false, "webLink": "https://example.com", "inferenceClassification": "focused", "body": {"contentType": "html", "content": "hdhdhd"}, "sender": {"emailAddress": {"name": "sdjsdjs", "address": "xxxxx"}}, "from": {"emailAddress": {"name": "jdsjdjs", "address": "xxxxxx"}}, "toRecipients": [{"emailAddress": {"name": "example@mail.com", "address": "xxxxxxx"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "uniqueBody": {"contentType": "html", "content": "ssfsf"}, "flag": {"flagStatus": "notFlagged"}, "id": "xxxxxxx"}
+```
 
 
 
@@ -252,17 +315,24 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Search in Mailbox|By default, the search will be executed in the default mailbox specified in the integration configuration. If permissions allow, action can search in other mailboxes as well. Parameter accepts multiple values as a comma separated string. Note that it’s not recommended to perform a search against a big number of mailboxes with this action, for complex searches it is recommended to use Exchange Extension Pack.|True|None||
-|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|None||
-|Subject Filter|Specify the subject of the email to search for. Filter works with “contains” logic.|False|None||
-|Sender Filter|Specify the sender of the email to search for. Filter works with “equals” logic.|False|None||
-|Time Frame (minutes)|Specify time frame in minutes to search emails for.|False|None||
-|Max Emails To Return|Specify how many emails action should return. If value is not provided, API default is used.|False|None||
-|Only Unread|If enabled, action will search only for unread emails.|False|None||
-|Select All Fields For Return|If enabled, action will return all available fields for the found email.|False|None||
-|How many mailboxes to process in a single batch|Specify how many mailboxes action should process in a single batch (single connection to O365). If nothing is provided, default value of 25 will be used.|False|None||
-|Limit the Amount of Information Returned in the JSON Result|If enabled, the amount of information returned by the action will be limited only to the key email fields.|False|None||
-|Disable the Action JSON Result|If enabled, action will not return JSON result.|False|None||
+|Search in Mailbox|By default, the search will be executed in the default mailbox specified in the integration configuration. If permissions allow, action can search in other mailboxes as well. Parameter accepts multiple values as a comma separated string. Note that it’s not recommended to perform a search against a big number of mailboxes with this action, for complex searches it is recommended to use Exchange Extension Pack.|True|String|Default Mailbox|
+|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|String|Inbox|
+|Subject Filter|Specify the subject of the email to search for. Filter works with “contains” logic.||String||
+|Sender Filter|Specify the sender of the email to search for. Filter works with “equals” logic.||String||
+|Time Frame (minutes)|Specify time frame in minutes to search emails for.||String||
+|Max Emails To Return|Specify how many emails action should return. If value is not provided, API default is used.||String||
+|Only Unread|If enabled, action will search only for unread emails.||Boolean|false|
+|Select All Fields For Return|If enabled, action will return all available fields for the found email.||Boolean|false|
+|How many mailboxes to process in a single batch|Specify how many mailboxes action should process in a single batch (single connection to O365). If nothing is provided, default value of 25 will be used.||String||
+|Limit the Amount of Information Returned in the JSON Result|If enabled, the amount of information returned by the action will be limited only to the key email fields.||Boolean|false|
+|Disable the Action JSON Result|If enabled, action will not return JSON result.||Boolean|false|
+
+
+
+##### JSON Results
+```json
+[{"Mailbox": "abcd@g.com", "Emails": [{"id": "xxxx", "createdDateTime": "2024-01-12T07:48:13Z", "lastModifiedDateTime": "2024-01-12T08:25:54Z", "changeKey": "xxxx", "categories": [], "receivedDateTime": "2024-01-12T07:48:14Z", "sentDateTime": "2024-01-12T07:48:10Z", "hasAttachments": false, "internetMessageId": "xxxx", "subject": "xxxx", "bodyPreview": "xxxx", "importance": "normal", "parentFolderId": "xxxx", "conversationId": "xxxx", "conversationIndex": "xxxx", "isDeliveryReceiptRequested": null, "isReadReceiptRequested": false, "isRead": true, "isDraft": false, "webLink": "dddm", "inferenceClassification": "focused", "body": {"contentType": "text", "content": "xxxx"}, "sender": {"emailAddress": {"name": "xxxx", "address": "xxxx"}}, "from": {"emailAddress": {"name": "xxxx", "address": "xxxx"}}, "toRecipients": [{"emailAddress": {"name": "xxxx", "address": "xxxx"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "flag": {"flagStatus": "notFlagged"}}]}]
+```
 
 
 
@@ -273,13 +343,20 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Mail ID|Specify the id or internetMessageId of the email, which current action would be waiting for. If the message has been sent using Send Email action, please select SendEmail.JSONResult|id or Send Email.JsonResult|internetMessageId field as a placeholder. Search Emails action also can return ids for emails.|True|None||
-|Wait for All Recipients to Reply?|If enabled,  the action will wait for responses from all of the recipients until timeout, and not finish upon getting the first response.|False|None||
-|Wait Stage Exclude pattern|Specify the regular expression to exclude specific replies from the wait stage. Works with subject and body parts of the email. Example is, to exclude automatic Out-Of-Office emails to be considered as recipient reply, and instead wait for actual user reply.|False|None||
-|Folder to Check for Reply|Specify the mailbox email folder (mailbox that was used to send the email with question) to search for the user reply in this folder. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|False|None||
-|Fetch Response Attachments|If enabled, if recipient replies with attachment - fetch recipient response and add it as attachment for the action result.|False|None||
-|Limit the Amount of Information Returned in the JSON Result|If enabled, the amount of information returned by the action will be limited only to the key email fields.|False|None||
-|Disable the Action JSON Result|If enabled, action will not return JSON result.|False|None||
+|Mail ID|Specify the id or internetMessageId of the email, which current action would be waiting for. If the message has been sent using Send Email action, please select SendEmail.JSONResult|id or Send Email.JsonResult|internetMessageId field as a placeholder. Search Emails action also can return ids for emails.|True|String|None|
+|Wait for All Recipients to Reply?|If enabled,  the action will wait for responses from all of the recipients until timeout, and not finish upon getting the first response.||Boolean|None|
+|Wait Stage Exclude pattern|Specify the regular expression to exclude specific replies from the wait stage. Works with subject and body parts of the email. Example is, to exclude automatic Out-Of-Office emails to be considered as recipient reply, and instead wait for actual user reply.||String|None|
+|Folder to Check for Reply|Specify the mailbox email folder (mailbox that was used to send the email with question) to search for the user reply in this folder. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder||String|None|
+|Fetch Response Attachments|If enabled, if recipient replies with attachment - fetch recipient response and add it as attachment for the action result.||Boolean|None|
+|Limit the Amount of Information Returned in the JSON Result|If enabled, the amount of information returned by the action will be limited only to the key email fields.||Boolean|true|
+|Disable the Action JSON Result|If enabled, action will not return JSON result.||Boolean|false|
+
+
+
+##### JSON Results
+```json
+{"Responses": [{"recipient": "recipient@example.com", "content": {"@odata.etag": "W/\"dummy_etag\"", "id": "dummy_id", "createdDateTime": "2024-01-01T12:00:00Z", "lastModifiedDateTime": "2024-01-01T12:00:01Z", "changeKey": "dummy_change_key", "categories": [], "receivedDateTime": "2024-01-01T12:00:00Z", "sentDateTime": "2024-01-01T12:00:00Z", "hasAttachments": false, "internetMessageId": "<dummy_message_id@example.com>", "subject": "Dummy Subject", "bodyPreview": "Dummy Body Preview", "importance": "normal", "parentFolderId": "dummy_folder_id", "conversationId": "dummy_conversation_id", "conversationIndex": "dummy_conversation_index", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": false, "isDraft": false, "webLink": "https://outlook.office365.com/owa/?ItemID=dummy_item_id&exvsurl=1&viewmodel=ReadMessageItem", "inferenceClassification": "focused", "internetMessageHeaders": [{"name": "Received", "value": "from dummy_server by dummy_server"}, {"name": "Authentication-Results", "value": "dummy_authentication_results"},  {"name": "From", "value": "\"Dummy Sender\" <dummy_sender@example.com>"}, {"name": "To", "value": "\"Dummy Recipient\" <dummy_recipient@example.com>"}, {"name": "Subject", "value": "Dummy Subject"}, {"name": "Thread-Topic", "value": "Dummy Thread Topic"}, {"name": "Thread-Index", "value": "dummy_thread_index"}, {"name": "Date", "value": "Mon, 01 Jan 2024 12:00:00 +0000"}, {"name": "Message-ID", "value": "<dummy_message_id@example.com>"}, {"name": "References", "value": "<dummy_reference_id@example.com>"}, {"name": "In-Reply-To", "value": "<dummy_in_reply_to_id@example.com>"}, {"name": "X-MS-Exchange-Organization-SCL", "value": "0"}, {"name": "X-MS-TNEF-Correlator", "value": "dummy_correlator"}, {"name": "MIME-Version", "value": "1.0"}], "body": {"contentType": "html", "content": "<html><body>Dummy Body</body></html>"}, "sender": {"emailAddress": {"name": "Dummy Sender", "address": "dummy_sender@example.com"}}, "from": {"emailAddress": {"name": "Dummy Sender", "address": "dummy_sender@example.com"}}, "toRecipients": [{"emailAddress": {"name": "Dummy Recipient", "address": "dummy_recipient@example.com"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "uniqueBody": {"contentType": "html", "content": "<html><body>Dummy Unique Body</body></html>"}, "flag": {"flagStatus": "notFlagged"}, "singleValueExtendedProperties": [{"id": "String 0x7d", "value": "Dummy Extended Property"}]}}]}
+```
 
 
 
@@ -290,14 +367,21 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Send From|Specify the optional email address from which if permissions allow, email should be sent. By default, the email will be sent from the default mailbox specified in the integration configuration.|True|None||
-|Mail ID|Specify the ID or internetMessageId of the message to which you want to send a reply.|True|None||
-|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|None||
-|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.|False|None||
-|Mail Content|Specify the email body part.|True|None||
-|Reply All|If enabled, action will send a reply to all recipients related to the original email. Note: this parameter has priority over “Reply To“ parameter.|False|None||
-|Reply To|Specify a comma-separated list of emails to which you want to send this reply. If nothing is provided and “Reply All“ is disabled, action will only send a reply to the sender of the email. If “Reply All“ is enabled, action will ignore this parameter.|False|None||
-|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|None||
+|Send From|Specify the optional email address from which if permissions allow, email should be sent. By default, the email will be sent from the default mailbox specified in the integration configuration.|True|String||
+|Mail ID|Specify the ID or internetMessageId of the message to which you want to send a reply.|True|String||
+|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|String||
+|Attachments Paths|Specify the attachments to be added, parameter expects full paths to be provided, for example: /<work directory>/file1.pdf. Parameter accepts multiple values as a comma separated string.||String||
+|Mail Content|Specify the email body part.|True|String||
+|Reply All|If enabled, action will send a reply to all recipients related to the original email. Note: this parameter has priority over “Reply To“ parameter.||Boolean||
+|Reply To|Specify a comma-separated list of emails to which you want to send this reply. If nothing is provided and “Reply All“ is disabled, action will only send a reply to the sender of the email. If “Reply All“ is enabled, action will ignore this parameter.||String||
+|Attachment Location|Location where the attachments to be added are stored. By default, the action attempts to get the attachment from the Google Cloud storage bucket, another option is to fetch it from the local file system.|True|List|None|
+
+
+
+##### JSON Results
+```json
+{"id": "xxxx", "createdDateTime": "2024-02-02T10:57:18Z", "lastModifiedDateTime": "2024-02-02T10:57:23Z", "changeKey": "dsf+oAAQLaPjk", "categories": [], "receivedDateTime": "2024-02-02T10:57:20Z", "sentDateTime": "2024-02-02T10:57:19Z", "hasAttachments": true, "internetMessageId": "sdfhsjdfhjsdjfd", "subject": "RE: reply checking", "bodyPreview": "Reply check kr", "importance": "normal", "parentFolderId": "id", "conversationId": "id", "conversationIndex": "sdghfjfke", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": true, "isDraft": false, "webLink": "https://www.example.com/about", "inferenceClassification": "focused", "body": {"contentType": "text", "content": "Reply check kr"}, "sender": {"emailAddress": {"name": "aff", "address": "ddxsm@a.com"}}, "from": {"emailAddress": {"name": "fasf", "address": "ddxsm@a.com"}}, "toRecipients": [{"emailAddress": {"name": "wf", "address": "ddxsm@a.com"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "uniqueBody": {"contentType": "html", "content": "Reply check"}, "flag": {"flagStatus": "notFlagged"}}
+```
 
 
 
@@ -308,9 +392,16 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Search In Mailbox|A mailbox to search for an email in. By default, the action  attempts to search for the email in the default mailbox that you specified in the integration configuration. With correct permissions, the action can execute a search in other mailboxes. Parameter accepts multiple values as a comma separated string.|True|None||
-|Folder Name|A mailbox folder to search in.|True|None||
-|Mail IDs|Specify the mail ids or internetMessageIds to mark as junk. Parameter accepts multiple values as a comma separated string.|True|None||
+|Search In Mailbox|A mailbox to search for an email in. By default, the action  attempts to search for the email in the default mailbox that you specified in the integration configuration. With correct permissions, the action can execute a search in other mailboxes. Parameter accepts multiple values as a comma separated string.|True|String||
+|Folder Name|A mailbox folder to search in.|True|String||
+|Mail IDs|Specify the mail ids or internetMessageIds to mark as junk. Parameter accepts multiple values as a comma separated string.|True|String||
+
+
+
+##### JSON Results
+```json
+
+```
 
 
 
@@ -321,16 +412,23 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Delete In Mailbox|By default, delete operation will be executed in the default mailbox specified in the integration configuration. If permissions allow, action can search in other mailboxes as well. Parameter accepts multiple values as a comma separated string.|True|None||
-|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|None||
-|Mail IDs|Specify the mail ids or internetMessageIds to search for. Parameter accepts multiple values as a comma separated string. If mail id or internet message id is provided, it takes priority for the search, subject and sender filters are ignored.|False|None||
-|Subject Filter|Specify the subject of the email to search for. Filter works with “contains” logic.|False|None||
-|Sender Filter|Specify the sender of the email to search for. Filter works with “equals” logic.|False|None||
-|Time Frame (minutes)|Specify time frame in minutes to search emails for.|False|None||
-|Only Unread|If enabled, action searches only for the unread emails.|False|None||
-|How many mailboxes to process in a single batch|Specify how many mailboxes action should process in a single batch (single connection to O365). If nothing is provided, default value of 25 will be used.|False|None||
-|Limit the Amount of Information Returned in the JSON Result|If enabled, the amount of information returned by the action will be limited only to the key email fields.|False|None||
-|Disable the Action JSON Result|If enabled, action will not return JSON result.|False|None||
+|Delete In Mailbox|By default, delete operation will be executed in the default mailbox specified in the integration configuration. If permissions allow, action can search in other mailboxes as well. Parameter accepts multiple values as a comma separated string.|True|String||
+|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|String||
+|Mail IDs|Specify the mail ids or internetMessageIds to search for. Parameter accepts multiple values as a comma separated string. If mail id or internet message id is provided, it takes priority for the search, subject and sender filters are ignored.||String||
+|Subject Filter|Specify the subject of the email to search for. Filter works with “contains” logic.||String||
+|Sender Filter|Specify the sender of the email to search for. Filter works with “equals” logic.||String||
+|Time Frame (minutes)|Specify time frame in minutes to search emails for.||String||
+|Only Unread|If enabled, action searches only for the unread emails.||Boolean||
+|How many mailboxes to process in a single batch|Specify how many mailboxes action should process in a single batch (single connection to O365). If nothing is provided, default value of 25 will be used.||String||
+|Limit the Amount of Information Returned in the JSON Result|If enabled, the amount of information returned by the action will be limited only to the key email fields.||Boolean|false|
+|Disable the Action JSON Result|If enabled, action will not return JSON result.||Boolean|true|
+
+
+
+##### JSON Results
+```json
+[{"@odata.context": "xx", "@odata.etag": "xxxx", "id": "xxxx", "createdDateTime": "2025-02-12T15:18:43Z", "lastModifiedDateTime": "2025-02-12T15:18:49Z", "changeKey": "xx+xx", "categories": [], "receivedDateTime": "2025-02-12T15:18:44Z", "sentDateTime": "2025-02-12T15:18:41Z", "hasAttachments": false, "internetMessageId": "xxx", "subject": "Re: Testing", "bodyPreview": "xxxx", "importance": "normal", "parentFolderId": "xxx", "conversationId": "xxx", "conversationIndex": "xxx", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": false, "isDraft": false, "webLink": "xxx", "inferenceClassification": "focused", "body": {"contentType": "html", "content": "xxxx"}, "sender": {"emailAddress": {"name": "Idris Elba", "address": "xxxx"}}, "from": {"emailAddress": {"name": "Idris Elba", "address": "xxx"}}, "toRecipients": [{"emailAddress": {"name": "xxxx", "address": "xxxx"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "flag": {"flagStatus": "notFlagged"}}]
+```
 
 
 
@@ -341,13 +439,20 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Search In Mailbox|By default, action will try to search for email in the default mailbox specified in the integration configuration. If permissions allow, action can search in other mailboxes as well.|True|None||
-|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|False|None||
-|Mail ID|Specify the mail id or internetMessageId to save email and attachments to the case. If the message has been sent using Send Email action, please select SendEmail.JSONResult|id or Send Email.JsonResult|internetMessageId field as a placeholder. Search Emails action also can return ids for emails.|True|None||
-|Save Only Email Attachments|If enabled, action will save only attachments of the specified email.|False|None||
-|Attachment To Save|If "Save Only Email Attachments" checkbox is enabled, action can save only specific attachments that are specified in this parameter. Parameter accepts multiple values as a comma-separated string.|False|None||
-|Base64 Encode|If enabled, encode the email file to base64 encoding.|False|None||
-|Save Email to the Case Wall|If enabled, save the Email directly to the SecOps Case Wall.|False|None||
+|Search In Mailbox|By default, action will try to search for email in the default mailbox specified in the integration configuration. If permissions allow, action can search in other mailboxes as well.|True|String|Default Mailbox|
+|Folder Name|Specify the mailbox folder to search in. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder||String|Inbox|
+|Mail ID|Specify the mail id or internetMessageId to save email and attachments to the case. If the message has been sent using Send Email action, please select SendEmail.JSONResult|id or Send Email.JsonResult|internetMessageId field as a placeholder. Search Emails action also can return ids for emails.|True|String|None|
+|Save Only Email Attachments|If enabled, action will save only attachments of the specified email.||Boolean|None|
+|Attachment To Save|If "Save Only Email Attachments" checkbox is enabled, action can save only specific attachments that are specified in this parameter. Parameter accepts multiple values as a comma-separated string.||String|None|
+|Base64 Encode|If enabled, encode the email file to base64 encoding.||Boolean|false|
+|Save Email to the Case Wall|If enabled, save the Email directly to the SecOps Case Wall.||Boolean|false|
+
+
+
+##### JSON Results
+```json
+{"id": "xxxx-=", "createdDateTime": "2024-02-16T14:10:34Z", "eml_info":"xyzhd", "lastModifiedDateTime": "2024-02-16T14:10:41Z", "changeKey": "cxsdjjh", "categories": [], "receivedDateTime": "2024-02-16T14:10:35Z", "sentDateTime": "2024-02-16T14:09:36Z", "hasAttachments": true, "internetMessageId": "sdfhsjdfhjsdjfd", "subject": "all attachments", "bodyPreview": "all the attachments", "importance": "normal", "parentFolderId": "id", "conversationId": "id", "conversationIndex": "sfsdfds", "isDeliveryReceiptRequested": false, "isReadReceiptRequested": false, "isRead": true, "isDraft": false, "webLink": "https://outlook.office365.com/hgh", "inferenceClassification": "focused", "body": {"contentType": "html", "content": "<html><head>somehtml</head></html>"}, "sender": {"emailAddress": {"name": "yyyyy", "address": "yyyyy"}}, "from": {"emailAddress": {"name": "yyyyy", "address": "yyyyy"}}, "toRecipients": [{"emailAddress": {"name": "xxxx", "address": "xxxx"}}], "ccRecipients": [], "bccRecipients": [], "replyTo": [], "flag": {"flagStatus": "notFlagged"}}
+```
 
 
 
@@ -358,13 +463,20 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Vote Mail Sent From|By default, the email is sent from the default mailbox specified in the integration configuration. In this parameter optionally a different value can be specified, if the vote mail was sent from a different mailbox.|True|None||
-|Mail ID|ID or internetMessageId of the vote email that the action waits for. If the message was sent using Send Vote Email action, select SendVoteEmail.JSONResult|id or Send Email.JsonResult|internetMessageId field as a placeholder. The Search Emails action also can return email IDs.|True|None||
-|Wait for All Recipients to Reply?|If selected, the action waits for responses from all recipients until timeout and doesn't complete execution receiving the first response.|False|None||
-|Wait Stage Exclude pattern|Regular expression to exclude specific replies from the wait stage. The regular expression works with the email subject and body. For example, you can use this parameter to exclude  automatic Out of Office emails wait for an actual user reply.|False|None||
-|Folder to Check for Reply|Email folder in the mailbox that was used to send the email with question to search for the user reply in. Parameter also accepts a comma separated list of folders to check the user response in multiple folders. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|False|None||
-|Folder to check for Sent Mail|Parameter can be used to specify mailbox email folder (mailbox that was used to send the email with question) to search for the sent mail in this folder. Parameter also accepts a comma separated list of folders to check the user response in multiple folders. Parameter is case sensitive. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|False|None||
-|Fetch Response Attachments|If selected and the recipient replies with an attachment, the action fetches the recipient response and adds it as an attachment for the action result.|False|None||
+|Vote Mail Sent From|By default, the email is sent from the default mailbox specified in the integration configuration. In this parameter optionally a different value can be specified, if the vote mail was sent from a different mailbox.|True|String|None|
+|Mail ID|ID or internetMessageId of the vote email that the action waits for. If the message was sent using Send Vote Email action, select SendVoteEmail.JSONResult|id or Send Email.JsonResult|internetMessageId field as a placeholder. The Search Emails action also can return email IDs.|True|String|None|
+|Wait for All Recipients to Reply?|If selected, the action waits for responses from all recipients until timeout and doesn't complete execution receiving the first response.||Boolean|None|
+|Wait Stage Exclude pattern|Regular expression to exclude specific replies from the wait stage. The regular expression works with the email subject and body. For example, you can use this parameter to exclude  automatic Out of Office emails wait for an actual user reply.||String|None|
+|Folder to Check for Reply|Email folder in the mailbox that was used to send the email with question to search for the user reply in. Parameter also accepts a comma separated list of folders to check the user response in multiple folders. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder||String|None|
+|Folder to check for Sent Mail|Parameter can be used to specify mailbox email folder (mailbox that was used to send the email with question) to search for the sent mail in this folder. Parameter also accepts a comma separated list of folders to check the user response in multiple folders. Parameter is case sensitive. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder||String|None|
+|Fetch Response Attachments|If selected and the recipient replies with an attachment, the action fetches the recipient response and adds it as an attachment for the action result.||Boolean|None|
+
+
+
+##### JSON Results
+```json
+{"Responses": [{"recipient": "aaa@aaa.com", "vote": "Approve"}]}
+```
 
 
 
@@ -380,36 +492,39 @@ Connector can be used to fetch emails from the Microsoft Graph Mail service. Con
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Proxy Server Address|The address of the proxy server to use.|False|None||
-|Proxy Username|The proxy username to authenticate with.|False|None||
-|Proxy Password|The proxy password to authenticate with.|False|None||
-|Mail field source|If enabled, user's mailbox address will be fetched from the 'mail' attribute of user's details. Otherwise, user's mailbox address will be fetched from the 'userPrincipalName' field.|False|None|false|
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the Microsoft Graph Mail server is valid.|False|None|true|
-|Base64 Encoded Private Key|Specify a base64 encoded private key that will be used to decrypt the email.|False|None||
-|Base64 Encoded Certificate|Specify a base64 encoded certificate that will be used to decrypt the email.|False|None||
-|Base64 Encoded CA certificate|Specify a base64 encoded trusted CA certificate for signature verification.|False|None||
-|Environment Field Name|Describes the name of the field where the environment name is stored.If environment field isn't found, environment is ""|False|None||
-|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field.Default is .* to catch all and return value unchanged.Used to allow the user to manipulate the environment field via regex logicIf regex pattern is null or empty, or the environment value is null, the final environment result is ""|False|None|.*|
-|Email exclude pattern|Regular expression to exclude specific emails from being ingested by the connector. Works with both subject and body part of email. Example is, to exclude mass mailing emails like news from being ingested.|False|None||
-|Azure AD Endpoint|Azure AD endpoint to connect to. Can be different for different tenant types.|True|None|https://login.microsoftonline.com|
-|Microsoft Graph Endpoint|Microsoft Graph endpoint to connect to.  Can be different for different tenant types.|True|None|https://graph.microsoft.com|
-|Mail Address|Mail address to use for connector.|True|None||
-|Client ID|For Office 365 Oauth authentication, Client (Application) ID of Azure Active Directory App that will be used for the integration.|True|None||
-|Client Secret|For Office 365 Oauth authentication, secret can be provided for the auth flow.|True|None||
-|Microsoft Entra ID Directory ID|For Microsoft 365 OAuth authentication, the tenant (directory) ID of the Microsoft Entra ID application that you used in the integration.|True|None||
-|Folder to check for emails|Parameter can be used to specify email folder on the mailbox to search for the emails. Parameter is case sensitive. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|None|Inbox|
-|Offset Time In Hours|Number of hours before the first connector iteration to retrieve emails from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|None|24|
-|Max Emails Per Cycle|Fetch X emails per connector cycle|True|None|10|
-|Unread Emails Only|If checked, cases will be pulled only from unread emails|False|None|false|
-|Mark Emails as Read|If checked, after the emails have been pulled they will be marked as read.|False|None|false|
-|Disable Overflow|If enabled, the connector will ignore the Siemplify overflow mechanism when creating alerts.|False|None|false|
-|Attach Original EML|If checked, the original email will be attached to the case info as an eml file.|False|None|false|
-|Original Received Mail Prefix|Prefix to add to the extracted event keys (to, from,subject,…) from the original email received in the monitored mailbox.|False|None|orig|
-|Attached Mail File Prefix|Prefix to add to the extracted event keys (to, from,subject,…) from the attached mail file received with the email in the monitored mailbox.|False|None|attach|
-|Create a Separate Siemplify Alert per Attached Mail File|If enabled, connector will create multiple alerts, 1 alert per attached mail file. This behavior can be useful when processing email with multiple mail files attached and Siemplify event mapping set to create entities from attached mail file.|False|None|false|
-|Headers to add to events|Specify what values should be filtered from the "internetMessageHeaders" list and what will be added to the Siemplify event. By default, all headers are added, if only specific headers are needed - specify them as a comma separated list by their name, example: "DKIM-Signature", "Received", "From". If no internetHeaders should be added specify a keyword: None|False|None||
-|Case Name Template|When provided, connector will add a new key called "custom_case_name" to the Siemplify Event. It can used to have a customer case name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Siemplify Event for placeholders. Only keys that have string value will be handled.|False|None||
-|Alert Name Template|If provided, connector will use this value for Siemplify Alert Name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Siemplify Event for placeholders. Only keys that have string value will be handled. If nothing is provided or user provides an invalid template, connector will use the default alert name.|False|None||
+|Proxy Server Address|The address of the proxy server to use.||String||
+|Proxy Username|The proxy username to authenticate with.||String||
+|Proxy Password|The proxy password to authenticate with.||Password|*****|
+|Mail field source|If enabled, user's mailbox address will be fetched from the 'mail' attribute of user's details. Otherwise, user's mailbox address will be fetched from the 'userPrincipalName' field.||Boolean|false|
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the Microsoft Graph Mail server is valid.||Boolean|true|
+|Base64 Encoded Private Key|Specify a base64 encoded private key that will be used to decrypt the email.||Password|*****|
+|Base64 Encoded Certificate|Specify a base64 encoded certificate that will be used to decrypt the email.||Password|*****|
+|Base64 Encoded CA certificate|Specify a base64 encoded trusted CA certificate for signature verification.||Password|*****|
+|DeviceProductField|Framework parameter, must be set for every connector.Describes the name of the field where the product name is stored|True|String|device_product|
+|EventClassId|Framework parameter, must be set for every connector.Describes the name of the field where the event name is stored|True|String|event_name|
+|Environment Field Name|Describes the name of the field where the environment name is stored.If environment field isn't found, environment is ""||String||
+|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field.Default is .* to catch all and return value unchanged.Used to allow the user to manipulate the environment field via regex logicIf regex pattern is null or empty, or the environment value is null, the final environment result is ""||String|.*|
+|Email exclude pattern|Regular expression to exclude specific emails from being ingested by the connector. Works with both subject and body part of email. Example is, to exclude mass mailing emails like news from being ingested.||String||
+|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|300|
+|Azure AD Endpoint|Azure AD endpoint to connect to. Can be different for different tenant types.|True|String|https://login.microsoftonline.com|
+|Microsoft Graph Endpoint|Microsoft Graph endpoint to connect to.  Can be different for different tenant types.|True|String|https://graph.microsoft.com|
+|Mail Address|Mail address to use for connector.|True|String||
+|Client ID|For Office 365 Oauth authentication, Client (Application) ID of Azure Active Directory App that will be used for the integration.|True|String||
+|Client Secret|For Office 365 Oauth authentication, secret can be provided for the auth flow.|True|Password|*****|
+|Microsoft Entra ID Directory ID|For Microsoft 365 OAuth authentication, the tenant (directory) ID of the Microsoft Entra ID application that you used in the integration.|True|String||
+|Folder to check for emails|Parameter can be used to specify email folder on the mailbox to search for the emails. Parameter is case sensitive. '/' separator can be used to specify a subfolder to search in, example: Inbox/Subfolder|True|String|Inbox|
+|Offset Time In Hours|Number of hours before the first connector iteration to retrieve emails from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Integer|24|
+|Max Emails Per Cycle|Fetch X emails per connector cycle|True|Integer|10|
+|Unread Emails Only|If checked, cases will be pulled only from unread emails||Boolean|false|
+|Mark Emails as Read|If checked, after the emails have been pulled they will be marked as read.||Boolean|false|
+|Disable Overflow|If enabled, the connector will ignore the Siemplify overflow mechanism when creating alerts.||Boolean|false|
+|Attach Original EML|If checked, the original email will be attached to the case info as an eml file.||Boolean|false|
+|Original Received Mail Prefix|Prefix to add to the extracted event keys (to, from,subject,…) from the original email received in the monitored mailbox.||String|orig|
+|Attached Mail File Prefix|Prefix to add to the extracted event keys (to, from,subject,…) from the attached mail file received with the email in the monitored mailbox.||String|attach|
+|Create a Separate Siemplify Alert per Attached Mail File|If enabled, connector will create multiple alerts, 1 alert per attached mail file. This behavior can be useful when processing email with multiple mail files attached and Siemplify event mapping set to create entities from attached mail file.||Boolean|false|
+|Headers to add to events|Specify what values should be filtered from the "internetMessageHeaders" list and what will be added to the Siemplify event. By default, all headers are added, if only specific headers are needed - specify them as a comma separated list by their name, example: "DKIM-Signature", "Received", "From". If no internetHeaders should be added specify a keyword: None||String||
+|Case Name Template|When provided, connector will add a new key called "custom_case_name" to the Siemplify Event. It can used to have a customer case name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Siemplify Event for placeholders. Only keys that have string value will be handled.||String||
+|Alert Name Template|If provided, connector will use this value for Siemplify Alert Name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Siemplify Event for placeholders. Only keys that have string value will be handled. If nothing is provided or user provides an invalid template, connector will use the default alert name.||String||
 
 
 

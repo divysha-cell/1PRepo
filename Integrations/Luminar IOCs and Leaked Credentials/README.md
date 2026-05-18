@@ -8,14 +8,14 @@ Luminar is an asset-based cybersecurity intelligence platform that empowers ente
 “Luminar IOCs and Leaked Credentials” App allows integration of intelligence-based IOC data and customer-related leaked records identified by Luminar.
 
 
-Python Version - V3_11
+Python Version - 3
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Luminar Base URL|Please enter valid Luminar Base URL|True|String||
-|Luminar API Account ID|Please enter valid Luminar API Account ID|True|Password||
-|Luminar API Client ID|Please enter valid Luminar API Client ID|True|Password||
-|Luminar API Client Secret|Please enter valid Luminar API Client Secret|True|Password||
+|Luminar Base URL|Please enter valid Luminar Base URL|True|String|https://demo.cyberluminar.com|
+|Luminar API Account ID|Please enter valid Luminar API Account ID|True|Password|*****|
+|Luminar API Client ID|Please enter valid Luminar API Client ID|True|Password|*****|
+|Luminar API Client Secret|Please enter valid Luminar API Client Secret|True|Password|*****|
 
 
 #### Dependencies
@@ -45,8 +45,8 @@ Timeout - 600 Seconds
 
 |Name|IsMandatory|Type|DefaultValue|
 |----|-----------|----|------------|
-|Siemplify Username|True|None|None|
-|Siemplify Password|True|None||
+|Siemplify Username|True|String|None|
+|Siemplify Password|True|Password|*****|
 
 
 
@@ -56,15 +56,18 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Luminar API Account ID|Please enter valid Luminar API Account ID|True|None|None|
-|Luminar API Client ID|Please enter valid Luminar API Client ID|True|None|None|
-|Luminar API Client Secret|Please enter valid Luminar API Client Secret|True|None|None|
-|Luminar Base URL|Please enter valid Luminar Base URL|True|None|https://demo.cyberluminar.com|
-|Proxy Password|Please enter valid proxy server Password|False|None|None|
-|Proxy Port|Please enter valid Proxy port|False|None|None|
-|Proxy Server Address|Please enter valid proxy server details|False|None|None|
-|Proxy Username |Please enter valid Proxy Username |False|None|None|
-|Verify SSL |Please select SSL |False|None|false|
+|DeviceProductField|The field name used to determine the device product|True|String|device_product|
+|EventClassId|The field name used to determine the event name (sub-type)|True|String|event_type|
+|Luminar API Account ID|Please enter valid Luminar API Account ID|True|Password|*****|
+|Luminar API Client ID|Please enter valid Luminar API Client ID|True|Password|*****|
+|Luminar API Client Secret|Please enter valid Luminar API Client Secret|True|Password|*****|
+|Luminar Base URL|Please enter valid Luminar Base URL|True|String|https://demo.cyberluminar.com|
+|Proxy Password|Please enter valid proxy server Password||Password|*****|
+|Proxy Port|Please enter valid Proxy port||Integer|None|
+|Proxy Server Address|Please enter valid proxy server details||String|None|
+|Proxy Username |Please enter valid Proxy Username ||String|None|
+|PythonProcessTimeout|The timeout limit (in seconds) for the python process running current script|True|String|930|
+|Verify SSL |Please select SSL ||Boolean|false|
 
 
 

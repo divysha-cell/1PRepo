@@ -3,13 +3,13 @@
 
 ZeroFox is the leading Threat Intelligence and Digital Risk Protection platform, helping you secure your digital world.
 
-Python Version - V3_11
+Python Version - 3
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |API Root|The API root of the Zerofox instance.|True|String||
-|API Token|The Zerofox API token.|True|Password||
-|Verify SSL|If selected, the integration validates the SSL certificate when connecting to Zerofox. Selected by default.|False|Boolean||
+|API Token|The Zerofox API token.|True|Password|*****|
+|Verify SSL|If selected, the integration validates the SSL certificate when connecting to Zerofox. Selected by default.||Boolean|true|
 
 
 #### Dependencies
@@ -53,7 +53,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|ID of the Zerofox Alert.|True|None||
+|Alert ID|ID of the Zerofox Alert.|True|String||
 
 
 
@@ -70,8 +70,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|ID of the Zerofox Alert.|True|None||
-|Filepath|Absolute file path for the evidence that needs to be submitted to the alert.|True|None||
+|Alert ID|ID of the Zerofox Alert.|True|String||
+|Filepath|Absolute file path for the evidence that needs to be submitted to the alert.|True|String||
 
 
 
@@ -82,8 +82,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|ID of the Zerofox Alert.|True|None||
-|Note|Note for the alert.|True|None||
+|Alert ID|ID of the Zerofox Alert.|True|String||
+|Note|Note for the alert.|True|String||
 
 
 
@@ -94,7 +94,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|ID of the Zerofox Alert.|True|None||
+|Alert ID|ID of the Zerofox Alert.|True|String||
 
 
 

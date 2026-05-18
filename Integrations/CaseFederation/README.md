@@ -3,7 +3,7 @@
 
 Enables the Case Federation feature to sync metadata of cases from external platforms to a primary platform.
 
-Python Version - V3_11
+Python Version - 3
 
 
 #### Dependencies
@@ -56,8 +56,8 @@ This job will sync case metadata to an external platform for central management.
 
 |Name|IsMandatory|Type|DefaultValue|
 |----|-----------|----|------------|
-|Target Platform|True|None|None|
-|API Key|True|None||
+|Target Platform|True|String|None|
+|API Key|True|Password|*****|
 
 
 

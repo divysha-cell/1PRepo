@@ -3,17 +3,17 @@
 
 Azure Monitor is a comprehensive monitoring solution for collecting, analyzing, and responding to monitoring data from your cloud and on-premises environments.
 
-Python Version - V3_11
+Python Version - 3
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Login API Root|The login API root of the Azure Monitor service.|True|String||
-|API Root|The API root of the Azure Monitor service.|True|String||
+|Login API Root|The login API root of the Azure Monitor service.|True|String|https://login.microsoftonline.com|
+|API Root|The API root of the Azure Monitor service.|True|String|https://api.loganalytics.io|
 |Tenant ID|The Azure Monitor account tenant ID.|True|String||
 |Client ID|The Azure Monitor account Client ID.|True|String||
-|Client Secret|The Azure Monitor account Client Secret.|True|Password||
-|Workspace ID|The Azure Monitor account Workspace ID.|False|String||
-|Verify SSL|If selected, the integration validates the SSL certificate when connecting to the Azure Monitor server. Enabled by default.|False|Boolean||
+|Client Secret|The Azure Monitor account Client Secret.|True|Password|*****|
+|Workspace ID|The Azure Monitor account Workspace ID.||String||
+|Verify SSL|If selected, the integration validates the SSL certificate when connecting to the Azure Monitor server. Enabled by default.||Boolean|true|
 
 
 #### Dependencies
@@ -57,12 +57,19 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Workspace ID|ID of the workspace that needs to be searched. If nothing is provided, action will take the Workspace ID provided in the integration configuration.|False|None||
-|Query|Query that needs to be executed.|True|None||
-|Time Frame|Time frame for the query. If "Custom" is selected, you also need to provide "Start Time".|False|None||
-|Start Time|Start time for the query. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601.|False|None||
-|End Time|End time for the query. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.|False|None||
-|Max Results To Return|How many results should be returned from the search. Maximum: 1000.|True|None||
+|Workspace ID|ID of the workspace that needs to be searched. If nothing is provided, action will take the Workspace ID provided in the integration configuration.||String||
+|Query|Query that needs to be executed.|True|String||
+|Time Frame|Time frame for the query. If "Custom" is selected, you also need to provide "Start Time".||List|Last Hour|
+|Start Time|Start time for the query. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601.||String||
+|End Time|End time for the query. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.||String||
+|Max Results To Return|How many results should be returned from the search. Maximum: 1000.|True|String|100|
+
+
+
+##### JSON Results
+```json
+[{"TimeGenerated": "2025-10-29T11:50:45.3033407Z", "OperationName": "Update Documents"}, {"TimeGenerated": "2025-10-29T11:50:47.0376269Z", "OperationName": "Update Incidents"}]
+```
 
 
 

@@ -3,26 +3,26 @@
 
 Google Cloud Identity and Access Management (IAM) lets administrators authorize who can take action on specific resources, giving you full control and visibility to manage Google Cloud resources centrally. For enterprises with complex organizational structures, hundreds of workgroups, and many projects, IAM provides a unified view into security policy across your entire organization, with built-in auditing to ease compliance processes.
 
-Python Version - V3_11
+Python Version - 3
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|API Root|API root of the Google Cloud IAM instance.|False|String||
-|Account Type|Type of the Google Cloud account. Located at the “type” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|String||
-|Project ID|Project ID of the Google Cloud account. Located at the “project_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|String||
-|Quota Project ID|ID of your Google Cloud project for Google Cloud API usage and billing. If no value is provided, the project ID defined in your Google Cloud service account is used. For this parameter to work, make sure to grant the “Service Usage Consumer” IAM role to your Google Cloud service account.|False|String||
-|Private Key ID|Private Key ID of the Google Cloud account. Located at the “private_key_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|Password||
-|Private Key|Private Key of the Google Cloud account. Located at the “private_key” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|Password||
-|Client Email|Client Email of the Google Cloud account. Located at the “client_email” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|String||
-|Client ID|Client ID of the Google Cloud account. Located at the “client_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|String||
-|Auth URI|Auth URI of the Google Cloud account. Located at the “auth_uri” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|String||
-|Token URI|Token URI of the Google Cloud account. Located at the “token_uri” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|String||
-|Auth Provider X509 URL|Auth Provider X509 URL of the Google Cloud account. Located at the “auth_provider_x509_cert_url” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|String||
-|Client X509 URL|Client X509 URL of the Google Cloud account. Located at the “client_x509_cert_url” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.|False|String||
-|Organization ID|ID of the organization that can be used with the Google Cloud IAM integration.|False|String||
-|Service Account Json File Content|Optional: Instead of specifying private key id, private key and other parameters, specify here the full JSON content of the service account file. Other connection parameters will be ignored if this parameter is provided.|False|Password||
-|Workload Identity Email|A Service Account Client Email to replace the usage of "Service Account Json File Content", which will be used for Impersonation. Note that the SOAR Service Account must be granted the "Service Account Token Creator" IAM role on the User Service Account.|False|String||
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the Google Cloud IAM service is valid.|False|Boolean||
+|API Root|API root of the Google Cloud IAM instance.||String|https://iam.googleapis.com|
+|Account Type|Type of the Google Cloud account. Located at the “type” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||String|service_account|
+|Project ID|Project ID of the Google Cloud account. Located at the “project_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||String||
+|Quota Project ID|ID of your Google Cloud project for Google Cloud API usage and billing. If no value is provided, the project ID defined in your Google Cloud service account is used. For this parameter to work, make sure to grant the “Service Usage Consumer” IAM role to your Google Cloud service account.||String||
+|Private Key ID|Private Key ID of the Google Cloud account. Located at the “private_key_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||Password|*****|
+|Private Key|Private Key of the Google Cloud account. Located at the “private_key” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||Password|*****|
+|Client Email|Client Email of the Google Cloud account. Located at the “client_email” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||String||
+|Client ID|Client ID of the Google Cloud account. Located at the “client_id” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||String||
+|Auth URI|Auth URI of the Google Cloud account. Located at the “auth_uri” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||String|https://accounts.google.com/o/oauth2/auth|
+|Token URI|Token URI of the Google Cloud account. Located at the “token_uri” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||String|https://oauth2.googleapis.com/token|
+|Auth Provider X509 URL|Auth Provider X509 URL of the Google Cloud account. Located at the “auth_provider_x509_cert_url” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||String|https://www.googleapis.com/oauth2/v1/certs|
+|Client X509 URL|Client X509 URL of the Google Cloud account. Located at the “client_x509_cert_url” parameter in the authentication JSON file. You need to copy the value and put it in this integration configuration parameter.||String||
+|Organization ID|ID of the organization that can be used with the Google Cloud IAM integration.||String||
+|Service Account Json File Content|Optional: Instead of specifying private key id, private key and other parameters, specify here the full JSON content of the service account file. Other connection parameters will be ignored if this parameter is provided.||Password|*****|
+|Workload Identity Email|A Service Account Client Email to replace the usage of "Service Account Json File Content", which will be used for Impersonation. Note that the SOAR Service Account must be granted the "Service Account Token Creator" IAM role on the User Service Account.||String||
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the Google Cloud IAM service is valid.||Boolean|true|
 
 
 #### Dependencies
@@ -65,9 +65,16 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Project ID|Specify the name of the project, where you want to create the role. If nothing is provided, the project will be extracted from integration configuration.|False|None||
-|Role ID|Specify role id for newly created IAM role.|True|None||
-|Role Definition|Specify JSON policy document to use as the role definition.|True|None||
+|Project ID|Specify the name of the project, where you want to create the role. If nothing is provided, the project will be extracted from integration configuration.||String||
+|Role ID|Specify role id for newly created IAM role.|True|String||
+|Role Definition|Specify JSON policy document to use as the role definition.|True|String||
+
+
+
+##### JSON Results
+```json
+[{"name": "projects/XXXXXX-XXXXXX/roles/XXXXXXX","role_id":"XXXXXXX","title":"XXXXXX","description":"XXXXX XXXXXX","includedPermissions": ["XXXXXXXXXXXX.XXXXXXXXX.XXXX"],"stage": "XX","etag": "XXXXXXXXXXXX"}]
+```
 
 
 
@@ -78,7 +85,14 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Service Account|A comma-separated list of service accounts for which to rotate keys. This parameter works alongside entities. If provided, the action rotates keys for these specific accounts in addition to any service account entities identified in the action scope.|False|None||
+|Service Account|A comma-separated list of service accounts for which to rotate keys. This parameter works alongside entities. If provided, the action rotates keys for these specific accounts in addition to any service account entities identified in the action scope.||String||
+
+
+
+##### JSON Results
+```json
+[{"Entity": "xxxx","EntityResult": {"name": "xxxx","validAfterTime": "xxxx","validBeforeTime": "xxxx","keyAlgorithm": "xxxx","keyOrigin": "xxxx","keyType": "xxxx"}}]
+```
 
 
 
@@ -89,8 +103,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Project ID|Specify the name of the project, where you want to delete the role. If nothing is provided, the project will be extracted from integration configuration.|False|None||
-|Role ID|Specify role id for newly created IAM role.|True|None||
+|Project ID|Specify the name of the project, where you want to delete the role. If nothing is provided, the project will be extracted from integration configuration.||String||
+|Role ID|Specify role id for newly created IAM role.|True|String||
+
+
+
+##### JSON Results
+```json
+[{"name": "projects/XXXXXX-XXXXXX/roles/XXXXXXX","role_id":"XXXXXXX","title":"XXXXXX","description": "XXXXX XXXXXX","includedPermissions":["XXXXXXXXXXXX.XXXXXXXXX.XXXX"],"stage":"XX","etag":"XXXXXXXXXXXX"}]
+```
 
 
 
@@ -101,7 +122,14 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Policy|Specify JSON policy document to set for service account.|True|None||
+|Policy|Specify JSON policy document to set for service account.|True|String||
+
+
+
+##### JSON Results
+```json
+[{"Entity":"XXXXXXXXXX@XXXXXX-XXXXXX-XXXXXXX.iam.gserviceaccount.com","EntityResult":{"version":1,"etag":"XXXXXXX","bindings":[{"role":"roles/iam.XXXXXXX","members":["user:XXXXXX@XXXXXX.XX"]}]}}]
+```
 
 
 
@@ -118,11 +146,18 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Project ID|Specify the name of the project, where you want to list the roles. If nothing is provided, the project will be extracted from integration configuration.|False|None||
-|View|Specify which view should be used to return role information.|False|None||
-|Max Rows To Return|Specify how many roles the action should return.|False|None||
-|List Custom Roles Only?|If enabled, action will return only custom roles defined for the current project or orgranization.|False|None||
-|Show Deleted|If enabled, action will also return deleted roles.|False|None||
+|Project ID|Specify the name of the project, where you want to list the roles. If nothing is provided, the project will be extracted from integration configuration.||String||
+|View|Specify which view should be used to return role information.||List|Basic|
+|Max Rows To Return|Specify how many roles the action should return.||String|50|
+|List Custom Roles Only?|If enabled, action will return only custom roles defined for the current project or orgranization.||Boolean|false|
+|Show Deleted|If enabled, action will also return deleted roles.||Boolean|false|
+
+
+
+##### JSON Results
+```json
+[{"roles":[{"name":"roles/XXXXXX.XXXXX","role_id":"XXXXXXX","title":"XXXXXXXXXXXXXXX","description":"XXXXXXXXXXXXXX","stage":"XXXX","etag":"XXXXX"},{"name":"roles/XXXXXXXXX.XXXXX","role_id":"XXXXXXX","title":"XXXXXXXXXXXXXXX","description":"XXXXXXXXXXXXXX","includedPermissions":["XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX","XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX","XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX","XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX","XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX","XXXXXXXXXXXXXX.XXXXXXXX.XXXXXXX"],"stage":"XXXX","etag":"XXXX"}]}]
+```
 
 
 
@@ -132,9 +167,23 @@ Timeout - 600 Seconds
 
 
 
+##### JSON Results
+```json
+[[{"Entity": "XXXX-XXXX@XXXX-XXXX-XXXX.XXX.XXXXXXXXXXXX.XXX","EntityResult": {"name": "XXXXXXX/XXXXXX-XXXXX-XXXXXX/XXXXXXXXXXX/XX-XXXXXXX@XXXXXX-XXXXX-XXXXXX.XXX.XXXXXXXXX.XXX","projectId": "XXXXXX-XXXXXX-XXXXXX","uniqueId": "XXXXXXXXXXXXXXXXXXXXXX","email": "XXXXXX-XXXXXX@XXXXXX-XXXXXX-XXXXXX.XXX.XXXXXXXXXXXX.XXX","displayName": "XXXXX XXXXXX","etag": "XXXXXXXXXX=","oauth2ClientId": "XXXXXXXX","disabled": "true","version": "1","bindings": [{"role": "roles/owner","members": ["XXXX:XXXXXXX.XXXXXX@XXXXXXX.XX"]},{"role": "roles/viewer","members": ["XXXX:XXXX.XXXXXXX@XXXXXXX.XX"]}]}}]]
+```
+
+
+
 #### Get Service Account IAM Policy
 Gets the access control policy for the service account. Supported entities: Username, Deployment. Note: the supported formats for entities are IAM service account email and resource name.
 Timeout - 600 Seconds
+
+
+
+##### JSON Results
+```json
+[[{"Entity":"XXXXXXXXXX@XXXXXX-XXXXXX-XXXXXXX.iam.gserviceaccount.com","EntityResult":{"version":1,"etag":"XXXXXXX","bindings":[{"role":"roles/iam.XXXXXXX","members":["user:XXXXXX@XXXXXX.XX"]}]}}]]
+```
 
 
 
@@ -151,10 +200,17 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Project ID|Specify the name of the project to list service accounts in. If nothing is provided, the project will be extracted from integration configuration.|False|None||
-|Service Account Display Name|Specify service account display name to return. Parameter accepts multiple values as a comma separated string.|False|None||
-|Service Account Email|Specify service account email to return. Parameter accepts multiple values as a comma separated string.|False|None||
-|Max Rows To Return|Specify how many service accounts the action should return.|False|None||
+|Project ID|Specify the name of the project to list service accounts in. If nothing is provided, the project will be extracted from integration configuration.||String||
+|Service Account Display Name|Specify service account display name to return. Parameter accepts multiple values as a comma separated string.||String||
+|Service Account Email|Specify service account email to return. Parameter accepts multiple values as a comma separated string.||String||
+|Max Rows To Return|Specify how many service accounts the action should return.||String|50|
+
+
+
+##### JSON Results
+```json
+[{"accounts":[{"name":"XXXXXXX/XXXXX-XXXXX-XXXXXX/XXXXXXXXX/XXXXXXX-XXXXXX-XXXXXXX-XXXXX@XXXXXX-XXXXXXX-XXXXXXX.XXX.XXXXXXXXXX.XXX","projectId":"XXXXXX-XXXXX-XXXXXX","uniqueId":"XXXXXXXXXXXXXXXXXX","email":"XXXXXX-XXXXXX-XXXXXX-XXXX@XXXXXX-XXXXXX-XXXX.XXX.XXXXXXXXXX.XXX","displayName":"XXXXXXX-XXXXX-XXXXXX-XXXX","etag":"XXXXXXXX","description":"XXXXXXX XXXXX XXXXX XXXXXXX XXXX XXXXX","oauth2ClientId":"XXXXXXXXXXXXXXXXXX"}]}]
+```
 
 
 
@@ -171,10 +227,17 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Project ID|Specify the name of the project to create service accounts in. If nothing is provided, the project will be extracted from integration configuration.|False|None||
-|Service Account ID|Specify service account id to create.|True|None||
-|Service Account Display Name|Specify service account display name to create.|False|None||
-|Service Account Description|Specify service account description to create.|False|None||
+|Project ID|Specify the name of the project to create service accounts in. If nothing is provided, the project will be extracted from integration configuration.||String||
+|Service Account ID|Specify service account id to create.|True|String||
+|Service Account Display Name|Specify service account display name to create.||String||
+|Service Account Description|Specify service account description to create.||String||
+
+
+
+##### JSON Results
+```json
+[{"name": "XXXXXXXXX/XXXXXXX-XXXXXX-XXXXXXX/XXXXXXXXX/XXXXXXXX@XXXXXX-XXXXXX-XXXXX.XXXX.XXXX.XXX","projectId": "XXXXXX-XXXXX-XXXXX","uniqueId": "XXXXXXXXXXXXXX","email": "XXXXXXXX@XXXXXX-XXXXXX-XXXXXX.XXX.XXXXXXXXX.XXX","displayName": "XXXXXXX","etag": "XXXXXXXXX","oauth2ClientId": "XXXXXXXXXXXXXXXXXX"}]
+```
 
 
 
