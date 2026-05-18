@@ -1,21 +1,19 @@
-<p align="center"><img src="./Resources/MicrosoftGraphSecurity.svg" 
-     alt="MicrosoftGraphSecurity" width="200"/></p>
 
 # MicrosoftGraphSecurity
 
 Microsoft Graph Security provide integrating with Intelligent Security Graph providers that enable your app to retrieve alerts and update alert lifecycle properties
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Client ID|None|True|String||
-|Secret ID|None||Password|*****|
-|Certificate Path|None||String||
-|Certificate Password|None||Password|*****|
+|Secret ID|None|False|Password||
+|Certificate Path|None|False|String||
+|Certificate Password|None|False|Password||
 |Tenant|None|True|String||
-|Use V2 API|If enabled, integration will use V2 API endpoints inside actions.||Boolean|false|
-|Verify SSL|None||Boolean|false|
+|Use V2 API|If enabled, integration will use V2 API endpoints inside actions.|False|Boolean||
+|Verify SSL|None|False|Boolean||
 
 
 #### Dependencies
@@ -64,8 +62,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert that needs to be updated.|True|String||
-|Comment|Specify the comment for the alert.|True|String||
+|Alert ID|Specify the ID of the alert that needs to be updated.|True|None||
+|Comment|Specify the comment for the alert.|True|None||
 
 
 
@@ -76,14 +74,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Incident ID|Specify the ID of the incident.|True|String||
-
-
-
-##### JSON Results
-```json
-{"@odata.context": "https://abc.com", "id": "251409", "tenantId": "dagre", "status": "active", "incidentWebUrl": "https://abc.com", "redirectIncidentId": null, "displayName": "Example Name", "createdDateTime": "2023-10-03T16:06:52.4266667Z", "lastUpdateDateTime": "2024-11-13T16:17:36.5266667Z", "assignedTo": null, "classification": "unknown", "determination": "unknown", "severity": "high", "customTags": [], "systemTags": [], "description": null, "lastModifiedBy": "Automation", "resolvingComment": null, "summary": null, "comments": []}
-```
+|Incident ID|Specify the ID of the incident.|True|None||
 
 
 
@@ -100,13 +91,13 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|The ID of the alert to update.|True|String||
-|Assigned To|Name of the analyst the alert is assigned to for triage, investigation, or remediation.||String||
-|Closed Date Time|Time at which the alert was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Note: this parameter is not supported in the V2 version of API.||String||
-|Comments|Analyst comments on the alert (for customer alert management), separated by comma. This method can update the comments field with the following values only: Closed in IPC, Closed in MCAS. Note: in V2 version of API this parameter works as a string and a single comment will be added to the Alert.||String||
-|Feedback|Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Note: in V2 version of API this parameter is mapped to "classification" and has the following possible values: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.||String||
-|Status|Alert lifecycle status (stage). Possible values are: unknown, newAlert, inProgress, resolved.||String||
-|Tags|User-definable labels that can be applied to an alert. Separated by comma. Note: this parameter is not supported in the V2 version of API.||String||
+|Alert ID|The ID of the alert to update.|True|None||
+|Assigned To|Name of the analyst the alert is assigned to for triage, investigation, or remediation.|False|None||
+|Closed Date Time|Time at which the alert was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Note: this parameter is not supported in the V2 version of API.|False|None||
+|Comments|Analyst comments on the alert (for customer alert management), separated by comma. This method can update the comments field with the following values only: Closed in IPC, Closed in MCAS. Note: in V2 version of API this parameter works as a string and a single comment will be added to the Alert.|False|None||
+|Feedback|Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Note: in V2 version of API this parameter is mapped to "classification" and has the following possible values: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.|False|None||
+|Status|Alert lifecycle status (stage). Possible values are: unknown, newAlert, inProgress, resolved.|False|None||
+|Tags|User-definable labels that can be applied to an alert. Separated by comma. Note: this parameter is not supported in the V2 version of API.|False|None||
 
 
 
@@ -117,7 +108,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Redirect URL|Use the redirect url you registered to request an authorization.|True|String||
+|Redirect URL|Use the redirect url you registered to request an authorization.|True|None||
 
 
 
@@ -128,7 +119,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|userPrincipalName | ID|The user's username used during sign in or the user Unique ID provided by Azure AD|True|String||
+|userPrincipalName | ID|The user's username used during sign in or the user Unique ID provided by Azure AD|True|None||
 
 
 
@@ -139,14 +130,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Alert ID|True|String||
-
-
-
-##### JSON Results
-```json
-{"feedback": "@odata.type: microsoft.graph.alertFeedback", "recommendedActions": ["String"], "networkConnections": [{"applicationName": "String", "natDestinationPort": "String", "destinationAddress": "String", "localDnsName": "String", "natDestinationAddress": "String", "destinationUrl": "String", "natSourceAddress": "String", "sourceAddress": "String", "direction": "@odata.type: microsoft.graph.connectionDirection", "domainRegisteredDateTime": "String (timestamp)", "status": "@odata.type: microsoft.graph.connectionStatus", "destinationDomain": "String", "destinationPort": "String", "sourcePort": "String", "protocol": "@odata.type: microsoft.graph.securityNetworkProtocol", "natSourcePort": "String", "riskScore": "String", "urlParameters": "String"}], "cloudAppStates": [{"destinationServiceIp": "String", "riskScore": "String", "destinationServiceName": "String"}], "detectionIds": ["String"], "id": "String (identifier)", "category": "String", "fileStates": [{"path": "String", "riskScore": "String", "name": "String", "fileHash": {"hashType": "@odata.type: microsoft.graph.fileHashType", "hashValue": "String"}}], "severity": "@odata.type: microsoft.graph.alertSeverity", "title": "String", "sourceMaterials": ["String"], "comments": ["String"], "assignedTo": "String", "eventDateTime": "String (timestamp)", "activityGroupName": "String", "status": "@odata.type: microsoft.graph.alertStatus", "description": "String", "tags": ["String"], "confidence": 1024, "vendorInformation": {"providerVersion": "String", "vendor": "String", "subProvider": "String", "provider": "String"}, "userStates": [{"emailRole": "@odata.type: microsoft.graph.emailRole", "logonId": "String", "domainName": "String", "onPremisesSecurityIdentifier": "String", "userPrincipalName": "String", "userAccountType": "@odata.type: microsoft.graph.userAccountSecurityType", "logonIp": "String", "logonDateTime": "String (timestamp)", "logonType": "@odata.type: microsoft.graph.logonType", "logonLocation": "String", "aadUserId": "String", "accountName": "String", "riskScore": "String", "isVpn": "true"}], "malwareStates": [{"category": "String", "wasRunning": "true", "name": "String", "family": "String", "severity": "String"}], "processes": [{"processId": 1024, "integrityLevel": "@odata.type: microsoft.graph.processIntegrityLevel", "name": "String", "fileHash": {"hashType": "@odata.type: microsoft.graph.fileHashType", "hashValue": "String"}, "parentProcessId": 1024, "createdDateTime": "String (timestamp)", "commandLine": "String", "parentProcessName": "String", "accountName": "String", "isElevated": "true", "path": "String", "parentProcessCreatedDateTime": "String (timestamp)"}], "azureTenantId": "String", "triggers": [{"type": "String", "name": "String", "value": "String"}], "createdDateTime": "String (timestamp)", "vulnerabilityStates": [{"cve": "String", "severity": "String", "wasRunning": "true"}], "hostStates": [{"isAzureAadRegistered": "true", "riskScore": "String", "fqdn": "String", "isHybridAzureDomainJoined": "true", "netBiosName": "String", "publicIpAddress": "String", "isAzureAadJoined": "true", "os": "String", "privateIpAddress": "String"}], "lastModifiedDateTime": "String (timestamp)", "registryKeyStates": [{"processId": 1024, "oldKey": "String", "oldValueName": "String", "valueType": "@odata.type: microsoft.graph.registryValueType", "oldValueData": "String", "hive": "@odata.type: microsoft.graph.registryHive", "valueData": "String", "key": "String", "valueName": "String", "operation": "@odata.type: microsoft.graph.registryOperation"}], "closedDateTime": "String (timestamp)", "azureSubscriptionId": "String"}
-```
+|Alert ID|Alert ID|True|None||
 
 
 
@@ -157,17 +141,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Filter Key|Specify the key that needs to be used to filter alerts. Note: "Title" option is not supported in the V2 API.||List||
-|Filter Logic|Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.||List||
-|Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.||String||
-|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records.||String||
-
-
-
-##### JSON Results
-```json
-[{"category": "category-value", "azureTenantId": "azureTenantId-value", "assignedTo": "assignedTo-value", "activityGroupName": "activityGroupName-value", "closedDateTime": "datetime-value", "azureSubscriptionId": "azureSubscriptionId-value"}]
-```
+|Filter Key|Specify the key that needs to be used to filter alerts. Note: "Title" option is not supported in the V2 API.|False|None||
+|Filter Logic|Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.|False|None||
+|Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.|False|None||
+|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records.|False|None||
 
 
 
@@ -178,17 +155,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Filter Key|Specify the key that needs to be used to filter incidents.||List||
-|Filter Logic|Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.||List||
-|Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the “Filter Key“ parameter.||String||
-|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records.||String||
-
-
-
-##### JSON Results
-```json
-[{"id": "251409", "tenantId": "d48f52", "status": "active", "incidentWebUrl": "https://sav.com", "redirectIncidentId": null, "displayName": "Example Name", "createdDateTime": "2023-10-03T16:06:52.4266667Z", "lastUpdateDateTime": "2024-11-12T16:11:21.8233333Z", "assignedTo": null, "classification": "unknown", "determination": "unknown", "severity": "high", "customTags": [], "systemTags": [], "description": null, "lastModifiedBy": "Automation", "resolvingComment": null, "summary": null, "comments": []}]
-```
+|Filter Key|Specify the key that needs to be used to filter incidents.|False|None||
+|Filter Logic|Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the “Filter Key” parameter.|False|None||
+|Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the “Filter Key“ parameter.|False|None||
+|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records.|False|None||
 
 
 
@@ -204,25 +174,22 @@ Ingest Office 365 Security and Compliance alerts using Graph API
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|NOT SUPPORTED | Describes the name of the field where the product name is stored.|True|String|ProductFieldName|
-|EventClassId|NOT SUPPORTED | Describes the name of the field where the event name is stored.||String|event_class|
-|PythonProcessTimeout|The timeout limit (in seconds) for the python process running current script|True|String|30|
-|Environment Field Name|Describes the name of the field where the environment name is stored.||String||
-|Environment Regex Pattern|A regex pattern to run on the value found in the Environment Field Name field.||String|.*|
-|Client ID|Client (Application) ID that was added for the app registration in Azure Active Directory for this integration.|True|String||
-|Client Secret|Secret that was entered for Azure AD app registration.||Password|*****|
-|Certificate Path|If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server.||String||
-|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.||Password|*****|
-|Azure Active Directory ID|Azure Active Directory Tenant ID|True|String||
-|Use V2 API|If enabled, connector will use V2 API endpoints. Note: the structure of the alerts and events will change.||Boolean|false|
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the server is valid.||Boolean|true|
-|Offset Time In Hours|Fetch alerts from X hours backwards.|True|Integer|120|
-|Alert Statuses to fetch|Specify statuses of the alerts that should be fetched by the Siemplify server. Values should be comma separated.||String|Dismissed, Active, Investigating, Resolved|
-|Alert Severities to fetch|Specify severities of the alerts that should be fetched by the Siemplify server. Values should be comma separated.||String|high, medium, low, informational, unknown|
-|Max Alerts Per Cycle|How many alerts should be processed during one connector run.|True|Integer|50|
-|Proxy Server Address|The address of the proxy server to use.||String||
-|Proxy Username|The proxy username to authenticate with.||String||
-|Proxy Password|The proxy password to authenticate with.||Password|*****|
+|Environment Field Name|Describes the name of the field where the environment name is stored.|False|None||
+|Environment Regex Pattern|A regex pattern to run on the value found in the Environment Field Name field.|False|None|.*|
+|Client ID|Client (Application) ID that was added for the app registration in Azure Active Directory for this integration.|True|None||
+|Client Secret|Secret that was entered for Azure AD app registration.|False|None||
+|Certificate Path|If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server.|False|None||
+|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.|False|None||
+|Azure Active Directory ID|Azure Active Directory Tenant ID|True|None||
+|Use V2 API|If enabled, connector will use V2 API endpoints. Note: the structure of the alerts and events will change.|False|None|false|
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the server is valid.|False|None|true|
+|Offset Time In Hours|Fetch alerts from X hours backwards.|True|None|120|
+|Alert Statuses to fetch|Specify statuses of the alerts that should be fetched by the Siemplify server. Values should be comma separated.|False|None|Dismissed, Active, Investigating, Resolved|
+|Alert Severities to fetch|Specify severities of the alerts that should be fetched by the Siemplify server. Values should be comma separated.|False|None|high, medium, low, informational, unknown|
+|Max Alerts Per Cycle|How many alerts should be processed during one connector run.|True|None|50|
+|Proxy Server Address|The address of the proxy server to use.|False|None||
+|Proxy Username|The proxy username to authenticate with.|False|None||
+|Proxy Password|The proxy password to authenticate with.|False|None||
 
 
 #### Microsoft Graph Security Connector
@@ -230,26 +197,23 @@ Microsoft Graph security Alerts Connector ingests alerts published in Microsoft 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|NOT SUPPORTED | Describes the name of the field where the product name is stored.|True|String|ProductFieldName|
-|EventClassId|NOT SUPPORTED | Describes the name of the field where the event name is stored.||String|event_class|
-|PythonProcessTimeout|The timeout limit (in seconds) for the python process running current script|True|String|30|
-|Environment Field Name|Describes the name of the field where the environment name is stored.||String||
-|Environment Regex Pattern|A regex pattern to run on the value found in the Environment Field Name field.||String|.*|
-|Client ID|Client (Application) ID that was added for the app registration in Azure Active Directory for this integration.|True|String||
-|Client Secret|Secret that was entered for Azure AD app registration.||Password|*****|
-|Certificate Path|If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server.||String||
-|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.||Password|*****|
-|Azure Active Directory ID|Azure Active Directory Tenant ID|True|String||
-|Use V2 API|If enabled, connector will use V2 API endpoints. Note: the structure of the alerts and events will change. Additionally, parameter "Fetch Alerts only from" will require different values to be provided.||Boolean|false|
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the server is valid.||Boolean|false|
-|Offset Time In Hours|Fetch alerts from X hours backwards.|True|Integer|120|
-|Fetch Alerts only from|A comma-separated list of providers to pull alerts from Microsoft Graph. If you set the 'Fetch Alerts only from' parameter to Office 365 Security and Compliance, the connector doesn't support multiple values in the Alert Statuses to fetch or Alert Severities to fetch parameters. If 'Use V2 API' is enabled, then this parameter will work with 'serviceSource' property of the alert.||String||
-|Alert Statuses to fetch|Specify statuses of the alerts that should be fetched by the Siemplify server. Values should be comma separated.|True|String|unknown, newAlert, inProgress, resolved|
-|Alert Severities to fetch|Specify severities of the alerts that should be fetched by the Siemplify server. Values should be comma separated.|True|String|high, medium, low, informational, unknown|
-|Max Alerts Per Cycle|How many alerts should be processed during one connector run.|True|Integer|50|
-|Proxy Server Address|The address of the proxy server to use.||String||
-|Proxy Username|The proxy username to authenticate with.||String||
-|Proxy Password|The proxy password to authenticate with.||Password|*****|
+|Environment Field Name|Describes the name of the field where the environment name is stored.|False|None||
+|Environment Regex Pattern|A regex pattern to run on the value found in the Environment Field Name field.|False|None|.*|
+|Client ID|Client (Application) ID that was added for the app registration in Azure Active Directory for this integration.|True|None||
+|Client Secret|Secret that was entered for Azure AD app registration.|False|None||
+|Certificate Path|If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server.|False|None||
+|Certificate Password|Optional, if certificate is password-protected, specify the password to open the certificate file.|False|None||
+|Azure Active Directory ID|Azure Active Directory Tenant ID|True|None||
+|Use V2 API|If enabled, connector will use V2 API endpoints. Note: the structure of the alerts and events will change. Additionally, parameter "Fetch Alerts only from" will require different values to be provided.|False|None|false|
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the server is valid.|False|None|false|
+|Offset Time In Hours|Fetch alerts from X hours backwards.|True|None|120|
+|Fetch Alerts only from|A comma-separated list of providers to pull alerts from Microsoft Graph. If you set the 'Fetch Alerts only from' parameter to Office 365 Security and Compliance, the connector doesn't support multiple values in the Alert Statuses to fetch or Alert Severities to fetch parameters. If 'Use V2 API' is enabled, then this parameter will work with 'serviceSource' property of the alert.|False|None||
+|Alert Statuses to fetch|Specify statuses of the alerts that should be fetched by the Siemplify server. Values should be comma separated.|True|None|unknown, newAlert, inProgress, resolved|
+|Alert Severities to fetch|Specify severities of the alerts that should be fetched by the Siemplify server. Values should be comma separated.|True|None|high, medium, low, informational, unknown|
+|Max Alerts Per Cycle|How many alerts should be processed during one connector run.|True|None|50|
+|Proxy Server Address|The address of the proxy server to use.|False|None||
+|Proxy Username|The proxy username to authenticate with.|False|None||
+|Proxy Password|The proxy password to authenticate with.|False|None||
 
 
 

@@ -1,16 +1,14 @@
-<p align="center"><img src="./Resources/Certly.svg" 
-     alt="Certly" width="200"/></p>
 
 # Certly
 
  Determining whether or not a domain or link is malicious.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Api Root|None|True|String|https://<server-address>|
-|Api Token|None|True|Password|*****|
+|Api Root|None|True|String||
+|Api Token|None|True|Password||
 
 
 

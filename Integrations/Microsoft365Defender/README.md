@@ -3,17 +3,17 @@
 
 Microsoft 365 Defender is a unified pre- and post-breach enterprise defense suite that natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Login API Root|None|True|String|https://login.microsoftonline.com|
-|Graph API Root|None|True|String|https://graph.microsoft.com|
-|API Root|None|True|String|https://api.security.microsoft.com|
+|Login API Root|None|True|String||
+|Graph API Root|None|True|String||
+|API Root|None|True|String||
 |Tenant ID|None|True|String||
 |Client ID|None|True|String||
-|Client Secret|None|True|Password|*****|
-|Verify SSL|None||Boolean|True|
+|Client Secret|None|True|Password||
+|Verify SSL|None|False|Boolean||
 
 
 #### Dependencies
@@ -64,8 +64,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Comment|Specify the comment that needs to be added to the incident.|True|String||
-|Incident ID|Specify the id of the incident that needs to be updated.|True|String||
+|Comment|Specify the comment that needs to be added to the incident.|True|None||
+|Incident ID|Specify the id of the incident that needs to be updated.|True|None||
 
 
 
@@ -76,29 +76,22 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Table Names|Specify what tables should be queried.|True|String||
-|Time Frame|Specify a time frame for the results. If "Custom" is selected, you also need to provide "Start Time".||List|Last Hour|
-|Start Time|Specify the start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601||String||
-|End Time|Specify the end time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.||String||
-|Fields To Return|Specify what fields to return.||String||
-|Sort Field|Specify what parameter should be used for sorting.||String|Timestamp|
-|Sort Order|Specify the order of sorting.||List|ASC|
-|Max Results To Return|Specify how many results to return. Default: 50.||String|50|
-|IP Entity Key|Specify what key should be used with IP entities. Please refer to the action documentation for details.||String||
-|Hostname Entity Key|Specify what key should be used with Hostname entities. Please refer to the action documentation for details.||String||
-|File Hash Entity Key|Specify what key should be used with File Hash entities. Please refer to the action documentation for details.||String||
-|User Entity Key|Specify what key should be used with User entities. Please refer to the action documentation for details.||String||
-|URL Entity Key|Specify what key should be used with URL entities. Please refer to the action documentation for details.||String||
-|Email Address Entity Key|Specify what key should be used with Email Address (User entity with email regex) entities. Please refer to the action documentation for details.||String||
-|Stop If Not Enough Entities|If enabled, action will not start execution, unless all of the entity types are available for the specified “.. Entity Keys”. Example: if “IP Entity Key” and “File Hash Entity Key” are specified, but in the scope there are no file hashes then if this parameter is enabled, action will not execute the query.||Boolean|true|
-|Cross Entity Operator|Specify what should be the logical operator used between different entity types.|True|List|OR|
-
-
-
-##### JSON Results
-```json
-[{"Timestamp":"2021-04-29T10:04:27.9049321Z","AlertId":"","ServiceSource":"","EntityType":"","EvidenceRole":"","EvidenceDirection":"","FileName":"","FolderPath":"","SHA1":"","SHA256":"","FileSize":null,"ThreatFamily":"","RemoteIP":"","RemoteUrl":"","AccountName":"","AccountDomain":"","AccountSid":"","AccountObjectId":"","AccountUpn":"","DeviceId":"4404d21581b65a3dbxxxxxxxxxxxxxxxxxxxxxxxxxxx","DeviceName":"desktop-xxxxxx","LocalIP":"","NetworkMessageId":"","EmailSubject":"","ApplicationId":null,"Application":"","OAuthApplicationId":"","ProcessCommandLine":"","AdditionalFields":"{\"IsLocalLogon\":true}","RegistryKey":"","RegistryValueName":"","RegistryValueData":"","Title":"","Category":"","Severity":"","DetectionSource":"","AttackTechniques":"","ClientVersion":"","PublicIP":"","OSArchitecture":"","OSPlatform":"","OSBuild":null,"IsAzureADJoined":null,"AadDeviceId":"","LoggedOnUsers":"","RegistryDeviceTag":"","OSVersion":"","MachineGroup":"","ReportId":2826,"OnboardingStatus":"","DeviceCategory":"","DeviceType":"","DeviceSubType":"","Model":"","Vendor":"","OSDistribution":"","OSVersionInfo":"","MergedDeviceIds":"","MergedToDeviceId":"","DeviceObjectId":"","NetworkAdapterName":"","MacAddress":"","NetworkAdapterType":"","NetworkAdapterStatus":"","TunnelType":"","ConnectedNetworks":"","DnsAddresses":"","IPv4Dhcp":"","IPv6Dhcp":"","DefaultGateways":"","IPAddresses":"","NetworkAdapterVendor":"","ActionType":"LogonFailed","LogonType":"Network","Protocol":"Kerberos","FailureReason":"","IsLocalAdmin":null,"LogonId":null,"RemoteDeviceName":"","RemoteIPType":"","RemotePort":null,"InitiatingProcessAccountDomain":"nt authority","InitiatingProcessAccountName":"system","InitiatingProcessAccountSid":"S-1-5-18","InitiatingProcessAccountUpn":"","InitiatingProcessAccountObjectId":"","InitiatingProcessIntegrityLevel":"","InitiatingProcessTokenElevation":"None","InitiatingProcessSHA1":"75c5a97f521f760e32a4a9639axxxxxxxxxxxxxx","InitiatingProcessSHA256":"","InitiatingProcessMD5":"9520a99e77d6196d0d0xxxxxxxxxxxxx","InitiatingProcessFileName":"svchost.exe","InitiatingProcessFileSize":null,"InitiatingProcessVersionInfoCompanyName":"","InitiatingProcessVersionInfoProductName":"","InitiatingProcessVersionInfoProductVersion":"","InitiatingProcessVersionInfoInternalFileName":"","InitiatingProcessVersionInfoOriginalFileName":"","InitiatingProcessVersionInfoFileDescription":"","InitiatingProcessId":3020,"InitiatingProcessCommandLine":"svchost.exe -k netsvcs -p -s Winmgmt","InitiatingProcessCreationTime":"2021-04-29T09:59:11.8716716Z","InitiatingProcessFolderPath":"C:\\Windows\\System32","InitiatingProcessParentId":728,"InitiatingProcessParentFileName":"\\Device\\HarddiskVolume4\\Windows\\System32\\services.exe","InitiatingProcessParentCreationTime":"2021-04-29T09:59:09.9224656Z","AppGuardContainerId":""}]
-```
+|Table Names|Specify what tables should be queried.|True|None||
+|Time Frame|Specify a time frame for the results. If "Custom" is selected, you also need to provide "Start Time".|False|None||
+|Start Time|Specify the start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601|False|None||
+|End Time|Specify the end time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.|False|None||
+|Fields To Return|Specify what fields to return.|False|None||
+|Sort Field|Specify what parameter should be used for sorting.|False|None||
+|Sort Order|Specify the order of sorting.|False|None||
+|Max Results To Return|Specify how many results to return. Default: 50.|False|None||
+|IP Entity Key|Specify what key should be used with IP entities. Please refer to the action documentation for details.|False|None||
+|Hostname Entity Key|Specify what key should be used with Hostname entities. Please refer to the action documentation for details.|False|None||
+|File Hash Entity Key|Specify what key should be used with File Hash entities. Please refer to the action documentation for details.|False|None||
+|User Entity Key|Specify what key should be used with User entities. Please refer to the action documentation for details.|False|None||
+|URL Entity Key|Specify what key should be used with URL entities. Please refer to the action documentation for details.|False|None||
+|Email Address Entity Key|Specify what key should be used with Email Address (User entity with email regex) entities. Please refer to the action documentation for details.|False|None||
+|Stop If Not Enough Entities|If enabled, action will not start execution, unless all of the entity types are available for the specified “.. Entity Keys”. Example: if “IP Entity Key” and “File Hash Entity Key” are specified, but in the scope there are no file hashes then if this parameter is enabled, action will not execute the query.|False|None||
+|Cross Entity Operator|Specify what should be the logical operator used between different entity types.|True|None||
 
 
 
@@ -109,11 +102,11 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Incident ID|Specify the id of the incident that needs to be updated.|True|String||
-|Status|Specify what status to set for the incident.||List|Select One|
-|Classification|Specify what classification to set for the incident..||List|Select One|
-|Determination|Specify what determination to set for the incident. Note: determination can only be set, when classification is true positive.||List|Select One|
-|Assign To|Specify to whom to assign this incident.||String||
+|Incident ID|Specify the id of the incident that needs to be updated.|True|None||
+|Status|Specify what status to set for the incident.|False|None||
+|Classification|Specify what classification to set for the incident..|False|None||
+|Determination|Specify what determination to set for the incident. Note: determination can only be set, when classification is true positive.|False|None||
+|Assign To|Specify to whom to assign this incident.|False|None||
 
 
 
@@ -130,15 +123,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Query|Specify the query that needs to be executed. Use this parameter to provide |where clauses. Note: Note: you don't need to provide a limiting ("top" keyword).|True|String||
-|Max Results To Return|Specify how many results to return. Default: 50.||String|50|
-
-
-
-##### JSON Results
-```json
-[{"Timestamp":"2021-04-12T07:25:00Z","AlertId":"fa7a318954-6c4c-eaab-xxx-xxxxxxxxxx","Title":"CC_Sensitive information","Category":"InitialAccess","Severity":"Medium","ServiceSource":"Microsoft Defender for Office 365","DetectionSource":"Microsoft Defender for Office 365","AttackTechniques":""}]
-```
+|Query|Specify the query that needs to be executed. Use this parameter to provide |where clauses. Note: Note: you don't need to provide a limiting ("top" keyword).|True|None||
+|Max Results To Return|Specify how many results to return. Default: 50.|False|None||
 
 
 
@@ -149,22 +135,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Table Names|Specify what tables should be queried.|True|String||
-|Query|Specify the query that needs to be executed. Use this parameter to provide |where clauses. Note: you don’t need to provide time filter, limiting and sorting.||String||
-|Time Frame|Specify a time frame for the results. If "Custom" is selected, you also need to provide "Start Time".||List|Last Hour|
-|Start Time|Specify the start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601||String||
-|End Time|Specify the end time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.||String||
-|Fields To Return|Specify what fields to return.||String||
-|Sort Field|Specify what parameter should be used for sorting.||String|Timestamp|
-|Sort Order|Specify the order of sorting.||List|ASC|
-|Max Results To Return|Specify how many results to return. Default: 50.||String|50|
-
-
-
-##### JSON Results
-```json
-[{"Timestamp":"2021-04-12T07:25:00Z","AlertId":"fa7a318954-6c4c-eaab-xxx-xxxxxxxxxx","Title":"CC_Sensitive information","Category":"InitialAccess","Severity":"Medium","ServiceSource":"Microsoft Defender for Office 365","DetectionSource":"Microsoft Defender for Office 365","AttackTechniques":""}]
-```
+|Table Names|Specify what tables should be queried.|True|None||
+|Query|Specify the query that needs to be executed. Use this parameter to provide |where clauses. Note: you don’t need to provide time filter, limiting and sorting.|False|None||
+|Time Frame|Specify a time frame for the results. If "Custom" is selected, you also need to provide "Start Time".|False|None||
+|Start Time|Specify the start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601|False|None||
+|End Time|Specify the end time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.|False|None||
+|Fields To Return|Specify what fields to return.|False|None||
+|Sort Field|Specify what parameter should be used for sorting.|False|None||
+|Sort Order|Specify the order of sorting.|False|None||
+|Max Results To Return|Specify how many results to return. Default: 50.|False|None||
 
 
 
@@ -178,16 +157,16 @@ This job synchronizes Google SecOps Alerts and Microsoft Defender XDR Alerts. It
 
 |Name|IsMandatory|Type|DefaultValue|
 |----|-----------|----|------------|
-|Environment Name|True|String|Default Environment|
-|Login API Root|True|String|https://login.microsoftonline.com|
-|Graph API Root|True|String|https://graph.microsoft.com|
-|API Root|True|String|https://api.security.microsoft.com|
-|Tenant ID|True|String||
-|Client ID|True|String||
-|Client Secret|True|Password|*****|
-|Max Hours Backwards|True|Integer|24|
-|Sync Assignee||Boolean|false|
-|Verify SSL||Boolean|true|
+|Environment Name|True|None|Default Environment|
+|Login API Root|True|None|https://login.microsoftonline.com|
+|Graph API Root|True|None|https://graph.microsoft.com|
+|API Root|True|None|https://api.security.microsoft.com|
+|Tenant ID|True|None||
+|Client ID|True|None||
+|Client Secret|True|None||
+|Max Hours Backwards|True|None|24|
+|Sync Assignee|False|None|false|
+|Verify SSL|False|None|true|
 
 
 
@@ -197,31 +176,28 @@ Pull information about incidents and related alerts from Microsoft 365 Defender.
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|event_type|
-|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|@odata.type|
-|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.||String||
-|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.||String|.*|
-|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
-|Login API Root|Login API root of the Microsoft 365 Defender instance.|True|String|https://login.microsoftonline.com|
-|Graph API Root|API root of the Microsoft Graph service.|True|String|https://graph.microsoft.com|
-|Tenant ID|Microsoft 365 Defender account tenant ID.|True|String||
-|Client ID|Microsoft 365 Defender account client ID.|True|String||
-|Client Secret|Microsoft 365 Defender account client secret.|True|Password|*****|
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the Microsoft 365 Defender server is valid.||Boolean|true|
-|Lowest Severity To Fetch|Lowest severity that will be used to fetch incidents. Possible values: Informational, Low, Medium, High.||String||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve incidents from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.||Integer|1|
-|Max Incidents To Fetch|How many incidents  to process per one connector iteration. Maximum is 20.||Integer|10|
-|Dynamic List Field|Field that can be used in the dynamic list for filtering. Possible values: Incident Name, Alert Name. If nothing is provided, connector will work with the incident name.||String|Incident Name|
-|Incident Status Filter|A comma-separated list of incident statuses that need to be ingested. If nothing is provided, the connector will ingest incidents with status “Active” and “In Progress”. Possible values:Active, In Progress, Resolved, Redirected.Note: it’s not recommended to ingest redirected incidents, because in most situations they will be empty.||String|Active, In Progress|
-|Alert Detection Source Filter|A comma-separated list of detection sources of alerts that need to be ingested. Note: this is a case sensitive parameter. Example of the values:antivirus, microsoftDefenderForEndpoint||String||
-|Alert Service Source Filter|A comma-separated list of service sources of alerts that need to be ingested. Note: this is a case sensitive parameter. Example of the values:antivirus, microsoftDefenderForEndpoint||String||
-|Use whitelist as a blacklist|If enabled, whitelist will be used as a blacklist.||Boolean|false|
-|Disable Overflow|If enabled, connector will ignore the overflow mechanism.||Boolean|true|
-|Lowest Alert Severity To Fetch|Lowest severity that will be used to fetch alerts. Possible values: Informational, Low, Medium, High.||String||
-|Disable Alert Tracking|If enabled, the connector will stop tracking updates associated with alerts.||Boolean|false|
-|Proxy Server Address|The address of the proxy server to use.||String||
-|Proxy Username|The proxy username to authenticate with.||String||
-|Proxy Password|The proxy password to authenticate with.||Password|*****|
+|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|None||
+|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|None|.*|
+|Login API Root|Login API root of the Microsoft 365 Defender instance.|True|None|https://login.microsoftonline.com|
+|Graph API Root|API root of the Microsoft Graph service.|True|None|https://graph.microsoft.com|
+|Tenant ID|Microsoft 365 Defender account tenant ID.|True|None||
+|Client ID|Microsoft 365 Defender account client ID.|True|None||
+|Client Secret|Microsoft 365 Defender account client secret.|True|None||
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the Microsoft 365 Defender server is valid.|False|None|true|
+|Lowest Severity To Fetch|Lowest severity that will be used to fetch incidents. Possible values: Informational, Low, Medium, High.|False|None||
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve incidents from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|None|1|
+|Max Incidents To Fetch|How many incidents  to process per one connector iteration. Maximum is 20.|False|None|10|
+|Dynamic List Field|Field that can be used in the dynamic list for filtering. Possible values: Incident Name, Alert Name. If nothing is provided, connector will work with the incident name.|False|None|Incident Name|
+|Incident Status Filter|A comma-separated list of incident statuses that need to be ingested. If nothing is provided, the connector will ingest incidents with status “Active” and “In Progress”. Possible values:Active, In Progress, Resolved, Redirected.Note: it’s not recommended to ingest redirected incidents, because in most situations they will be empty.|False|None|Active, In Progress|
+|Alert Detection Source Filter|A comma-separated list of detection sources of alerts that need to be ingested. Note: this is a case sensitive parameter. Example of the values:antivirus, microsoftDefenderForEndpoint|False|None||
+|Alert Service Source Filter|A comma-separated list of service sources of alerts that need to be ingested. Note: this is a case sensitive parameter. Example of the values:antivirus, microsoftDefenderForEndpoint|False|None||
+|Use whitelist as a blacklist|If enabled, whitelist will be used as a blacklist.|False|None|false|
+|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|None|true|
+|Lowest Alert Severity To Fetch|Lowest severity that will be used to fetch alerts. Possible values: Informational, Low, Medium, High.|False|None||
+|Disable Alert Tracking|If enabled, the connector will stop tracking updates associated with alerts.|False|None|false|
+|Proxy Server Address|The address of the proxy server to use.|False|None||
+|Proxy Username|The proxy username to authenticate with.|False|None||
+|Proxy Password|The proxy password to authenticate with.|False|None||
 
 
 

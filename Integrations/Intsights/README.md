@@ -3,14 +3,14 @@
 
 The only all-in-one external threat protection platform designed to neutralize cyberattacks outside the wire.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Api Root|None|True|String|https://<server-address>|
-|Account ID|None|True|String|None|
-|Api Key|None|True|Password|*****|
-|Verify SSL|None||Boolean|False|
+|Api Root|None|True|String||
+|Account ID|None|True|String||
+|Api Key|None|True|Password||
+|Verify SSL|None|False|Boolean||
 
 
 #### Dependencies
@@ -37,29 +37,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert for which you want to download CSV.|True|String||
-|Download Folder Path|Specify the path to the folder, where you want to store the CSV file.|True|String||
-|Overwrite|If enabled, action will overwrite the file with the same name.||Boolean|false|
-
-
-
-##### JSON Results
-```json
-{"absolute_path":"/opt/file_1"}
-```
+|Alert ID|Specify the ID of the alert for which you want to download CSV.|True|None||
+|Download Folder Path|Specify the path to the folder, where you want to store the CSV file.|True|None||
+|Overwrite|If enabled, action will overwrite the file with the same name.|False|None||
 
 
 
 #### Search IOCs
 Search IOCs
 Timeout - 600 Seconds
-
-
-
-##### JSON Results
-```json
-[{"Entity":"http://markossolomon.com/F1q7QX.php","EntityResult":{"value":"http://markossolomon.com/F1q7QX.php","type":"Urls","status":"Retired","severity":"Low","score":10,"lastUpdateDate":"2020-03-03T21:29:17.874Z","lastSeen":"2019-10-22T09:46:14.000Z","firstSeen":"2015-11-05T01:23:46.000Z","relatedMalware":["cryptowall"],"relatedCampaigns":[],"relatedThreatActors":[],"reportedFeeds":[{"id":"587cc90ac294fxxxxxxxxxxx","name":"Ransomware Tracker","confidenceLevel":2}],"whitelisted":false,"tags":[]}},{"Entity":"49.236.xxx.xxx","EntityResult":{"value":"185.220.xxx.xxx","type":"IpAddresses","status":"Retired","severity":"High","score":70,"lastUpdateDate":"2022-08-22T07:27:31.372Z","lastSeen":"2022-08-22T07:19:38.648Z","firstSeen":"2020-03-19T15:50:56.971Z","geolocation":"DE","relatedMalware":["vulcanops"],"relatedCampaigns":["log4j-cve-2021-xxxxx","log4shell"],"relatedThreatActors":["primitivebear"],"reportedFeeds":[{"id":"5935163fcadf65xxxxxxxxxx","name":"Threat Library","confidenceLevel":3}],"whitelisted":false,"tags":["log4j - cve-2021-xxxxx campaign"]}}]
-```
 
 
 
@@ -76,10 +62,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert which you want to close.|True|String||
-|Additional Info|Specify additional information explaining why the alert should be closed.||String||
-|Rate|Specify the rating of the alert. Maximum is 5.||String||
-|Reason|Specify the reason why the alert needs to be closed.|True|List|Problem Solved|
+|Alert ID|Specify the ID of the alert which you want to close.|True|None||
+|Additional Info|Specify additional information explaining why the alert should be closed.|False|None||
+|Rate|Specify the rating of the alert. Maximum is 5.|False|None||
+|Reason|Specify the reason why the alert needs to be closed.|True|None||
 
 
 
@@ -90,9 +76,9 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert on which you want to change the assignment.|True|String||
-|Assignee ID|Specify the ID of the analyst that should be assigned to the alert. Note: If both Assignee ID and Assignee Email Address are specified, action will prioritize Assignee ID.||String||
-|Assignee Email Address|Specify the email address of the analyst that should be assigned to the alert. Note: If both Assignee ID and Assignee Email Address are specified, action will prioritize Assignee ID.||String||
+|Alert ID|Specify the ID of the alert on which you want to change the assignment.|True|None||
+|Assignee ID|Specify the ID of the analyst that should be assigned to the alert. Note: If both Assignee ID and Assignee Email Address are specified, action will prioritize Assignee ID.|False|None||
+|Assignee Email Address|Specify the email address of the analyst that should be assigned to the alert. Note: If both Assignee ID and Assignee Email Address are specified, action will prioritize Assignee ID.|False|None||
 
 
 
@@ -103,8 +89,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert where you want to ask the analyst.|True|String||
-|Comment|Specify the comment for the analyst.|True|String||
+|Alert ID|Specify the ID of the alert where you want to ask the analyst.|True|None||
+|Comment|Specify the comment for the analyst.|True|None||
 
 
 
@@ -115,14 +101,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert Image IDs|Specify the comma-separated list of alert image IDs. Example: id1,id2.|True|String||
-
-
-
-##### JSON Results
-```json
-[{"image_name":"5b59daf4bdafd90xxxxxx","image_base64_content":"image content in base64"}]
-```
+|Alert Image IDs|Specify the comma-separated list of alert image IDs. Example: id1,id2.|True|None||
 
 
 
@@ -133,7 +112,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert which you want to reopen.|True|String||
+|Alert ID|Specify the ID of the alert which you want to reopen.|True|None||
 
 
 
@@ -144,8 +123,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert to which you want to add a note.|True|String||
-|Note|Specify the note for the alert.|True|String||
+|Alert ID|Specify the ID of the alert to which you want to add a note.|True|None||
+|Note|Specify the note for the alert.|True|None||
 
 
 
@@ -161,18 +140,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|The field name used to determine the device product|True|String|Details_Source_NetworkType|
-|EventClassId|The field name used to determine the event name (sub-type)||String|Details_Title|
-|PythonProcessTimeout|The timeout limit (in seconds) for the python process running current script|True|String|60|
-|Api Root|The api root of the Intsights server|True|String|https://api.intsights.com|
-|Account ID|The account ID to login with|True|String||
-|Api Key|The API key to login with.|True|Password|*****|
-|Verify SSL|Whether to verify the SSL certificate of the server||Boolean|FALSE|
-|Max Days Backwards|Number of days before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Integer|3|
-|Max Alerts Per Cycle|Max number of alerts to fetch per single connector cycle|True|Integer|10|
-|Proxy Server Address|The address of the proxy server to use.||String||
-|Proxy Username|The proxy username to authenticate with.||String||
-|Proxy Password|The proxy password to authenticate with.||Password|*****|
+|Api Root|The api root of the Intsights server|True|None|https://api.intsights.com|
+|Account ID|The account ID to login with|True|None||
+|Api Key|The API key to login with.|True|None||
+|Verify SSL|Whether to verify the SSL certificate of the server|False|None|FALSE|
+|Max Days Backwards|Number of days before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|None|3|
+|Max Alerts Per Cycle|Max number of alerts to fetch per single connector cycle|True|None|10|
+|Proxy Server Address|The address of the proxy server to use.|False|None||
+|Proxy Username|The proxy username to authenticate with.|False|None||
+|Proxy Password|The proxy password to authenticate with.|False|None||
 
 
 

@@ -3,16 +3,16 @@
 
 Azure Active Directory (Azure AD) is Microsoft's cloud-based identity and access management service, which helps your employees sign in and access  both internal and external resources.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Login API Root|None||String|https://login.microsoftonline.com|
-|API Root|None||String|https://graph.microsoft.com|
+|Login API Root|None|False|String||
+|API Root|None|False|String||
 |Client ID|None|True|String||
-|Client Secret|None|True|Password|*****|
+|Client Secret|None|True|Password||
 |Directory ID|None|True|String||
-|Verify SSL|None||Boolean|True|
+|Verify SSL|None|False|Boolean||
 
 
 #### Dependencies
@@ -41,29 +41,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Fields To Return|A comma-separated list of fields that you want to return. If nothing is provided, action will return fields that are considered to be default by API.||String||
-|Include MFA Details|If enabled, action will return MFA details about the user.||Boolean|false|
-|Include Last Sign In Details|If selected, the action retrieves the user's sign-in activity, including both interactive and non-interactive sign-in timestamps.||Boolean|true|
-
-
-
-##### JSON Results
-```json
-[{"Entity":"user@domain.com","EntityResult":{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users/$entity","accountEnabled":true,"ageGroup":null,"businessPhones":[],"city":"New York","companyName":"ExampleCorp","consentProvidedForMinor":null,"country":"US","createdDateTime":"2025-01-01T00:00:00Z","creationType":null,"department":"Security","displayName":"User Name","mail":"user@domain.com","employeeId":"12345","employeeHireDate":null,"employeeType":null,"externalUserStateChangeDateTime":null,"faxNumber":null,"givenName":"User","imAddresses":[],"externalUserState":null,"jobTitle":"Security Analyst","surname":"Surname","lastPasswordChangeDateTime":"2025-01-01T00:00:00Z","legalAgeGroupClassification":null,"mailNickname":"usernickname","mobilePhone":"+11234567890","id":"user-id-12345","officeLocation":null,"onPremisesSamAccountName":null,"onPremisesDistinguishedName":null,"onPremisesDomainName":null,"onPremisesImmutableId":null,"onPremisesLastSyncDateTime":null,"onPremisesProvisioningErrors":[],"onPremisesSecurityIdentifier":null,"onPremisesSyncEnabled":null,"onPremisesUserPrincipalName":null,"otherMails":[],"passwordPolicies":"None","preferredDataLocation":null,"preferredLanguage":"en-US","proxyAddresses":[],"signInSessionsValidFromDateTime":"2025-01-01T00:00:00Z","state":"NY","streetAddress":"123 Main St","usageLocation":"US","userPrincipalName":"user@domain.com","userType":"Member","postalCode":"10001","deletedDateTime":null,"showInAddressList":null,"isResourceAccount":null,"refreshTokensValidFromDateTime":"2025-01-01T00:00:00Z","employeeOrgData":null,"passwordProfile":null,"authorizationInfo":{"certificateUserIds":[]},"mfa_details":{"id":"user-id-12345","userPrincipalName":"user@domain.com","userDisplayName":"User Name","userType":"member","isAdmin":false,"isSsprRegistered":true,"isSsprEnabled":true,"isSsprCapable":true,"isMfaRegistered":true,"isMfaCapable":true,"isPasswordlessCapable":false,"methodsRegistered":["email","mobilePhone"],"defaultMfaMethod":"mobilePhone","isSystemPreferredAuthenticationMethodEnabled":false,"systemPreferredAuthenticationMethods":[],"userPreferredMethodForSecondaryAuthentication":"oath","lastUpdatedDateTime":"2026-01-01T00:00:00Z"},"sign_in_details":{"lastSignInDateTime":"2025-12-29T12:31:14Z","lastSignInRequestId":"8d002042-da0b-4cfc-aada-d0a04ab9d700","lastNonInteractiveSignInDateTime":"2025-12-29T14:03:57Z","lastNonInteractiveSignInRequestId":"7578a9b8-cd6b-4338-9e3e-4aa2297def00","lastSuccessfulSignInDateTime":"2025-12-29T14:03:57Z","lastSuccessfulSignInRequestId":"7578a9b8-cd6b-4338-9e3e-4aa2297def00"}}}]
-```
+|Fields To Return|A comma-separated list of fields that you want to return. If nothing is provided, action will return fields that are considered to be default by API.|False|None||
+|Include MFA Details|If enabled, action will return MFA details about the user.|False|None||
+|Include Last Sign In Details|If selected, the action retrieves the user's sign-in activity, including both interactive and non-interactive sign-in timestamps.|False|None||
 
 
 
 #### Enrich Host
 Enrich Siemplify Host entity with information from Azure Active Directory. Action finds a match for a provided Host entity based on the devices displayName field in Azure AD
 Timeout - 600 Seconds
-
-
-
-##### JSON Results
-```json
-[{"Entity":"SENINELONE-xxxxx","EntityResult":{"@odata.id":"https://graph.microsoft.com/v2/d48f52ca-5b1a-4708-8ed0-xxxxx/directoryObjects/433e2228-0aea-448c-9b78-xxxxx/Microsoft.DirectoryServices.Device","id":"433e2228-0aea-448c-9b78-xxxxxx","if":"433e2228-0aea-448c-9b78-xxxxxx","deletedDateTime":null,"accountEnabled":true,"approximateLastSignInDateTime":"2021-08-05T06:24:30Z","complianceExpirationDateTime":null,"createdDateTime":"2021-02-08T12:14:31Z","deviceCategory":null,"deviceId":"356c1602-7255-4191-8590-xxxxx","deviceMetadata":null,"deviceOwnership":"Personal","deviceVersion":2,"displayName":"SENINELONE-H01","domainName":null,"enrollmentProfileName":null,"enrollmentType":"AutoEnrollment","externalSourceName":null,"isCompliant":true,"isManaged":true,"isRooted":false,"managementType":"MDM","manufacturer":"VMware, Inc.","mdmAppId":"0000000a-0000-0000-xxxx-xxxx","model":"VMware Virtual Platform","onPremisesLastSyncDateTime":null,"onPremisesSyncEnabled":null,"operatingSystem":"Windows","operatingSystemVersion":"10.0.18363.1679","physicalIds":["[USER-GID]:b786d3cf-e97d-4511-b61c-xxxxx:6825788988304991","[GID]:g:6825788988xxxx","[USER-HWID]:b786d3cf-e97d-4511-b61c-xxxxx:6825788988304990","[HWID]:h:6825788988xxxx"],"profileType":"RegisteredDevice","registrationDateTime":"2021-02-08T12:14:31Z","sourceType":null,"systemLabels":[],"trustType":"Workplace","extensionAttributes":{"extensionAttribute1":null,"extensionAttribute2":null},"alternativeSecurityIds":[{"type":2,"identityProvider":null,"key":"WAA1ADAAOQA6ADwAUwBIAEEAMQAtAFQAUAAtAFAAVQBCAEsARQBZAD4AMQA4AEYARAAwADUAMwBDAEUAMgBGADEAOABBAEQARQA2ADQAQgA0AEUAQQA1ADMARgA5ADIARABGADgAOQA1AEIARAA2AEYARAAzADcxxxxxxxx"}]}}]
-```
 
 
 
@@ -86,14 +72,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Group ID|Azure AD group id in 00e40000-1971-439d-80fc-d0e000001dbd format.|True|String||
-
-
-
-##### JSON Results
-```json
-[{"EntityResult": "true","Entity": "user@mail.com"}]
-```
+|Group ID|Azure AD group id in 00e40000-1971-439d-80fc-d0e000001dbd format.|True|None||
 
 
 
@@ -104,7 +83,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Group ID|Azure AD group id in 00e40000-1971-439d-80fc-d0e000001dbd format.|True|String||
+|Group ID|Azure AD group id in 00e40000-1971-439d-80fc-d0e000001dbd format.|True|None||
 
 
 
@@ -115,16 +94,9 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Fields To Return|A comma-separated list of fields that you want to return. If nothing is provided, the action will return the Display Name, Mobile Phone, and Mail.||String||
-|Include MFA Details|If enabled, action will return MFA details about the user.||Boolean|false|
-|Include Last Sign In Details|If selected, the action retrieves the user's sign-in activity, including both interactive and non-interactive sign-in timestamps.||Boolean|true|
-
-
-
-##### JSON Results
-```json
-[{"Entity":"user@domain.com","EntityResult":{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(accountEnabled,ageGroup,assignedLicenses,businessPhones,city,companyName,consentProvidedForMinor,country,createdDateTime,creationType,department,displayName,mail,employeeId,employeeHireDate,employeeOrgData,employeeType,onPremisesExtensionAttributes,externalUserStateChangeDateTime,faxNumber,givenName,imAddresses,identities,externalUserState,jobTitle,surname,lastPasswordChangeDateTime,legalAgeGroupClassification,mailNickname,mobilePhone,id,officeLocation,onPremisesSamAccountName,onPremisesDistinguishedName,onPremisesDomainName,onPremisesImmutableId,onPremisesLastSyncDateTime,onPremisesProvisioningErrors,onPremisesSecurityIdentifier,onPremisesSyncEnabled,onPremisesUserPrincipalName,otherMails,passwordPolicies,passwordProfile,preferredDataLocation,preferredLanguage,proxyAddresses,signInSessionsValidFromDateTime,state,streetAddress,usageLocation,userPrincipalName,userType,postalCode,authorizationInfo,deletedDateTime,showInAddressList,isResourceAccount,refreshTokensValidFromDateTime,sponsors())/$entity","accountEnabled":true,"ageGroup":null,"businessPhones":[],"city":"New York","companyName":"ExampleCorp","consentProvidedForMinor":null,"country":"US","createdDateTime":"2025-01-01T00:00:00Z","creationType":null,"department":"Security","displayName":"Manager Name","mail":"manager@domain.com","employeeId":"12345","employeeHireDate":null,"employeeType":"Full-time","externalUserStateChangeDateTime":null,"faxNumber":null,"givenName":"Manager","imAddresses":[],"externalUserState":null,"jobTitle":"Lead Manager","surname":"Surname","lastPasswordChangeDateTime":"2025-01-01T00:00:00Z","legalAgeGroupClassification":null,"mailNickname":"managernickname","mobilePhone":"+11234567890","id":"manager-id-12345","officeLocation":null,"onPremisesSamAccountName":null,"onPremisesDistinguishedName":null,"onPremisesDomainName":null,"onPremisesImmutableId":null,"onPremisesLastSyncDateTime":null,"onPremisesProvisioningErrors":[],"onPremisesSecurityIdentifier":null,"onPremisesSyncEnabled":null,"onPremisesUserPrincipalName":null,"otherMails":[],"passwordPolicies":null,"passwordProfile":null,"preferredDataLocation":null,"preferredLanguage":"en-US","proxyAddresses":[],"signInSessionsValidFromDateTime":"2025-01-01T00:00:00Z","state":"NY","streetAddress":"123 Main St","usageLocation":"US","userPrincipalName":"manager@domain.com","userType":"Member","postalCode":"10001","deletedDateTime":null,"showInAddressList":null,"isResourceAccount":null,"refreshTokensValidFromDateTime":"2025-01-01T00:00:00Z","employeeOrgData":null,"authorizationInfo":{"certificateUserIds":[]},"sponsors":[],"mfa_details":{"id":"manager-id-12345","userPrincipalName":"manager@domain.com","userDisplayName":"Manager Name","userType":"member","isAdmin":true,"isSsprRegistered":false,"isSsprEnabled":true,"isSsprCapable":false,"isMfaRegistered":true,"isMfaCapable":true,"isPasswordlessCapable":false,"methodsRegistered":["mobilePhone","softwareOneTimePasscode"],"defaultMfaMethod":"softwareOneTimePasscode","isSystemPreferredAuthenticationMethodEnabled":true,"systemPreferredAuthenticationMethods":["SoftwareOTP"],"userPreferredMethodForSecondaryAuthentication":"oath","lastUpdatedDateTime":"2026-01-01T00:00:00Z"},"sign_in_details":{"lastSignInDateTime":"2025-12-29T12:31:14Z","lastSignInRequestId":"8d002042-da0b-4cfc-aada-d0a04ab9d700","lastNonInteractiveSignInDateTime":"2025-12-29T14:03:57Z","lastNonInteractiveSignInRequestId":"7578a9b8-cd6b-4338-9e3e-4aa2297def00","lastSuccessfulSignInDateTime":"2025-12-29T14:03:57Z","lastSuccessfulSignInRequestId":"7578a9b8-cd6b-4338-9e3e-4aa2297def00"}}}]
-```
+|Fields To Return|A comma-separated list of fields that you want to return. If nothing is provided, the action will return the Display Name, Mobile Phone, and Mail.|False|None||
+|Include MFA Details|If enabled, action will return MFA details about the user.|False|None||
+|Include Last Sign In Details|If selected, the action retrieves the user's sign-in activity, including both interactive and non-interactive sign-in timestamps.|False|None||
 
 
 
@@ -135,19 +107,12 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Filter|Specifies which fields will be included in the results. By default, we will return all the fields.||List|All Fields|
-|Order By Field|Specifies the field based on which the results are ordered.||List|displayName|
-|Order By|Specifies the result order.||List|DESC|
-|Results Limit|Specify max number of users to return.||String||
-|Advanced Filter Logic|Specify what filter logic should be applied. Advanced filtering is working on the Username (userPrincipalName) field.||List|Equal|
-|Advanced Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied.  Advanced filtering is working on the Username (userPrincipalName) field.||String||
-
-
-
-##### JSON Results
-```json
-[{"Username": "someusername@mail.com", "Surname": "TestSurname", "Name": "TestName", "Job_Title": "Engineer", "Mobile_Phone": "123456789", "Preferred_Language": "English", "Mail": "someusername@mail.com", "Givenname": "TestGivenName", "Id": "12345678-1234-1234-1234-1234567890"}]
-```
+|Filter|Specifies which fields will be included in the results. By default, we will return all the fields.|False|None||
+|Order By Field|Specifies the field based on which the results are ordered.|False|None||
+|Order By|Specifies the result order.|False|None||
+|Results Limit|Specify max number of users to return.|False|None||
+|Advanced Filter Logic|Specify what filter logic should be applied. Advanced filtering is working on the Username (userPrincipalName) field.|False|None||
+|Advanced Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied.  Advanced filtering is working on the Username (userPrincipalName) field.|False|None||
 
 
 
@@ -164,8 +129,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Username|User name to change password for. Parameter expects value in a username@domain format and accepts multiple values as a comma separated string.||String||
-|Password|User Authentication password.|True|Password|*****|
+|Username|User name to change password for. Parameter expects value in a username@domain format and accepts multiple values as a comma separated string.|False|None||
+|Password|User Authentication password.|True|None||
 
 
 
@@ -176,17 +141,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Order By|Specifies the result order. Groups are sorted by their display name.||List|ASC|
-|Results Limit|Specify max number of groups to return.||String||
-|Filter Logic|Specify what filter logic should be applied. Filtering is working on the Name field.||List|Equal|
-|Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering is working on the Name field.||String||
-
-
-
-##### JSON Results
-```json
-[{"Group_Type": "managed", "Id": "1212-12312-123","Name": "Group Name","Description": "This group is ...", "Created_Time":"2019-10-24T19:10:18Z", "onPremisesSamAccountName": "jdoe"}]
-```
+|Order By|Specifies the result order. Groups are sorted by their display name.|False|None||
+|Results Limit|Specify max number of groups to return.|False|None||
+|Filter Logic|Specify what filter logic should be applied. Filtering is working on the Name field.|False|None||
+|Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if “Contains“ is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering is working on the Name field.|False|None||
 
 
 
@@ -197,22 +155,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User Name|Specify user name to remove from the target group. User name should be specified in username@domain format. Parameter accepts multiple values as a comma separated string.||String||
-|Group Name|Specify group name to remove user from.||String||
-|Group ID|Specify the ID of the group from which you want to remove the user. If both "Group Name" and "Group ID" are provided, then "Group ID" will have priority. Example of the id: 00e40000-1971-439d-80fc-d0e000001dbd.||String||
+|User Name|Specify user name to remove from the target group. User name should be specified in username@domain format. Parameter accepts multiple values as a comma separated string.|False|None||
+|Group Name|Specify group name to remove user from.|False|None||
+|Group ID|Specify the ID of the group from which you want to remove the user. If both "Group Name" and "Group ID" are provided, then "Group ID" will have priority. Example of the id: 00e40000-1971-439d-80fc-d0e000001dbd.|False|None||
 
 
 
 #### Revoke User Session
 Revoke user session. Supported entities: Username, Email Address (username that matches email regex).
 Timeout - 600 Seconds
-
-
-
-##### JSON Results
-```json
-[{"Entity":"user@domain.onmicrosoft.com","EntityResult":{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#Edm.Boolean","value":true}},{"Entity":"username","EntityResult":{"error":"User not found."}}]
-```
 
 
 
@@ -223,19 +174,12 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records.||String|50|
-|Group Name|Specify group name to return user list for.||String||
-|Group ID|Specify the ID of the group in which you want to list the members. If both "Group Name" and "Group ID" are provided, then "Group ID" will have priority. Example of the id: 00e40000-1971-439d-80fc-d0e000001dbd.||String||
-|Filter Key|Specify the key that needs to be used to filter group members.||List|Select One|
-|Filter Logic|Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the "Filter Key" parameter.||List|Not Specified|
-|Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if "Contains" is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the "Filter Key" parameter.||String||
-
-
-
-##### JSON Results
-```json
-[{"@odata.type": "#microsoft.graph.user", "id": "b786d3cf-e97d-4511-b61c-0559e9f4da75", "businessPhones": [], "displayName": "John Doe", "givenName": "John", "jobTitle": "Software Engineer", "mail": "john.doe@example.com", "mobilePhone": null, "officeLocation": "Building A", "preferredLanguage": "en-US", "surname": "Doe", "userPrincipalName": "john.doe@example.com"}]
-```
+|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records.|False|None||
+|Group Name|Specify group name to return user list for.|False|None||
+|Group ID|Specify the ID of the group in which you want to list the members. If both "Group Name" and "Group ID" are provided, then "Group ID" will have priority. Example of the id: 00e40000-1971-439d-80fc-d0e000001dbd.|False|None||
+|Filter Key|Specify the key that needs to be used to filter group members.|False|None||
+|Filter Logic|Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the "Filter Key" parameter.|False|None||
+|Filter Value|Specify what value should be used in the filter. If “Equal“ is selected, action will try to find the exact match among results and if "Contains" is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the "Filter Key" parameter.|False|None||
 
 
 
@@ -246,20 +190,13 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User Name|Specify user name to return groups membership for. User name should be specified in username@domain format. Parameter accepts multiple values as a comma separated string.||String||
-|Return Only Security Enabled Groups|If enabled, only security groups that the user is a member of will be returned.||Boolean|false|
-|Return Detailed Groups Information|If enabled, detailed information on the AD groups will be returned.||Boolean|false|
-|Filter Key|Specify the key that needs to be used to filter groups.||List|Select One|
-|Filter Logic|Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the "Filter Key" parameter.||List|Not Specified|
-|Filter Value|Specify what value should be used in the filter. If "Equal" is selected, action will try to find the exact match among results and if "Contains" is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the "Filter Key" parameter.||String||
-|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records.||String|50|
-
-
-
-##### JSON Results
-```json
-[{"Entity": "test@example.com", "EntityResult": [{"id": "00b135d0-603d-4b1e-93e4-24xxxxxxxxxx", "deletedDateTime": null, "classification": null, "createdDateTime": "2021-11-28T20:28:56Z", "creationOptions": ["ProvisionGroupHomepage", "HubSiteId:00000000-0000-0000-0000-000000000000", "SPSiteLanguage:1033"], "description": "SiemplifyIntegration2", "displayName": "SiemplifyIntegration2", "expirationDateTime": null, "groupTypes": ["Unified"], "isAssignableToRole": null, "mail": "test@example.com", "mailEnabled": true, "mailNickname": "SiemplifyIntegration2", "membershipRule": null, "membershipRuleProcessingState": null, "onPremisesDomainName": null, "onPremisesLastSyncDateTime": null, "onPremisesNetBiosName": null, "onPremisesSamAccountName": null, "onPremisesSecurityIdentifier": null, "onPremisesSyncEnabled": null, "preferredDataLocation": null, "preferredLanguage": null, "proxyAddresses": ["SPO:SPO_80b058c6-6886-47d4-adcc-8cffa88aca4c@SPO_d48f52ca-5b1a-4708-8ed0-ebxxxxxxxxxx", "SMTP:test@example.com"], "renewedDateTime": "2021-11-28T20:28:56Z", "resourceBehaviorOptions": [], "resourceProvisioningOptions": [], "securityEnabled": false, "securityIdentifier": "S-1-12-1-11613648-1260281917-3844400275-xxxxxxxxxx", "theme": null, "visibility": "Private", "onPremisesProvisioningErrors": []}, {"id": "59a278af-e84f-48ed-acab-84xxxxxxxxxx", "deletedDateTime": null, "classification": null, "createdDateTime": "2021-11-10T13:36:47Z", "creationOptions": [], "description": "k8s", "displayName": "k8s", "expirationDateTime": null, "groupTypes": [], "isAssignableToRole": true, "mail": null, "mailEnabled": false, "mailNickname": "4eccf442-d", "membershipRule": null, "membershipRuleProcessingState": null, "onPremisesDomainName": null, "onPremisesLastSyncDateTime": null, "onPremisesNetBiosName": null, "onPremisesSamAccountName": null, "onPremisesSecurityIdentifier": null, "onPremisesSyncEnabled": null, "preferredDataLocation": null, "preferredLanguage": null, "proxyAddresses": [], "renewedDateTime": "2021-11-10T13:36:47Z", "resourceBehaviorOptions": [], "resourceProvisioningOptions": [], "securityEnabled": true, "securityIdentifier": "S-1-12-1-1503819951-1223551055-3062148012-xxxxxxxxx", "theme": null, "visibility": "Private", "onPremisesProvisioningErrors": []}]}]
-```
+|User Name|Specify user name to return groups membership for. User name should be specified in username@domain format. Parameter accepts multiple values as a comma separated string.|False|None||
+|Return Only Security Enabled Groups|If enabled, only security groups that the user is a member of will be returned.|False|None||
+|Return Detailed Groups Information|If enabled, detailed information on the AD groups will be returned.|False|None||
+|Filter Key|Specify the key that needs to be used to filter groups.|False|None||
+|Filter Logic|Specify what filter logic should be applied. Filtering logic is working based on the value  provided in the "Filter Key" parameter.|False|None||
+|Filter Value|Specify what value should be used in the filter. If "Equal" is selected, action will try to find the exact match among results and if "Contains" is selected, action will try to find results that contain that substring. If nothing is provided in this parameter, the filter will not be applied. Filtering logic is working based on the value  provided in the "Filter Key" parameter.|False|None||
+|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records.|False|None||
 
 
 

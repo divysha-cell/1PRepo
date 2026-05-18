@@ -5,19 +5,19 @@ Silverfort identity security platform integration for Google SecOps.
 
 In case of any queries, please reach out to support@silverfort.com.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|API Root|Base URL for Silverfort API (e.g., https://your-instance.silverfort.io)|True|String|https://your-silverfort-instance.com|
-|External API Key|External API Key from Silverfort Admin Console (X-Console-API-Key header)|True|Password|*****|
-|Risk App User ID|App User ID for Risk API credentials||String||
-|Risk App User Secret|App User Secret for Risk API credentials||Password|*****|
-|Service Accounts App User ID|App User ID for Service Accounts API credentials||String||
-|Service Accounts App User Secret|App User Secret for Service Accounts API credentials||Password|*****|
-|Policies App User ID|App User ID for Policies API credentials||String||
-|Policies App User Secret|App User Secret for Policies API credentials||Password|*****|
-|Verify SSL|If selected, the integration validates the SSL certificate when connecting to Silverfort API||Boolean|true|
+|API Root|Base URL for Silverfort API (e.g., https://your-instance.silverfort.io)|True|String||
+|External API Key|External API Key from Silverfort Admin Console (X-Console-API-Key header)|True|Password||
+|Risk App User ID|App User ID for Risk API credentials|False|String||
+|Risk App User Secret|App User Secret for Risk API credentials|False|Password||
+|Service Accounts App User ID|App User ID for Service Accounts API credentials|False|String||
+|Service Accounts App User Secret|App User Secret for Service Accounts API credentials|False|Password||
+|Policies App User ID|App User ID for Policies API credentials|False|String||
+|Policies App User Secret|App User Secret for Policies API credentials|False|Password||
+|Verify SSL|If selected, the integration validates the SSL certificate when connecting to Silverfort API|False|Boolean||
 
 
 #### Dependencies
@@ -66,15 +66,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User Principal Name|The user principal name (e.g., user@domain.com). Either this or Resource Name must be provided.||String||
-|Resource Name|The resource name for non-user entities. Either this or User Principal Name must be provided.||String||
-
-
-
-##### JSON Results
-```json
-{"user_principal_name": "user@example.com", "risk_score": 65.0, "severity": "medium", "risk_factors": [{"type": "activity_risk", "severity": "medium", "description": "Suspicious login activity detected"}, {"type": "malware_risk", "severity": "low", "description": "Potential malware indicator"}], "last_updated": "2026-01-13T10:30:00Z"}
-```
+|User Principal Name|The user principal name (e.g., user@domain.com). Either this or Resource Name must be provided.|False|None||
+|Resource Name|The resource name for non-user entities. Either this or User Principal Name must be provided.|False|None||
 
 
 
@@ -85,15 +78,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Policy ID|The ID of the policy to enable or disable.|True|String||
-|Enable Policy|Set to true to enable the policy, false to disable it.||Boolean|true|
-
-
-
-##### JSON Results
-```json
-{"policy_id": "42", "enabled": true, "status": "enabled"}
-```
+|Policy ID|The ID of the policy to enable or disable.|True|None||
+|Enable Policy|Set to true to enable the policy, false to disable it.|False|None||
 
 
 
@@ -104,18 +90,11 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User Principal Name|The user principal name (e.g., user@domain.com) to update risk for.|True|String||
-|Risk Type|The type of risk to update.|True|List|activity_risk|
-|Severity|The severity level of the risk.|True|List|medium|
-|Valid For Hours|How long (in hours) the risk indicator should be valid.|True|String|24|
-|Description|Description of the risk indicator.|True|String||
-
-
-
-##### JSON Results
-```json
-{"user_principal_name": "user@example.com", "risk_type": "activity_risk", "severity": "high", "valid_for": 24, "description": "Suspicious activity detected by SIEM", "status": "updated"}
-```
+|User Principal Name|The user principal name (e.g., user@domain.com) to update risk for.|True|None||
+|Risk Type|The type of risk to update.|True|None||
+|Severity|The severity level of the risk.|True|None||
+|Valid For Hours|How long (in hours) the risk indicator should be valid.|True|None||
+|Description|Description of the risk indicator.|True|None||
 
 
 
@@ -126,25 +105,18 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Service Account GUID|The GUID of the service account whose policy to update.|True|String||
-|Enabled|Enable or disable the policy.||Boolean||
-|Block|Enable or disable blocking for policy violations.||Boolean||
-|Send to SIEM|Enable or disable SIEM logging.||Boolean||
-|Risk Level|Risk level threshold for the policy.||List||
-|Allow All Sources|Allow all sources (if true, ignores specific allowed sources list).||Boolean||
-|Allow All Destinations|Allow all destinations (if true, ignores specific allowed destinations list).||Boolean||
-|Protocols|Comma-separated list of protocols to allow (Kerberos, ldap, ntlm).||String||
-|Add Allowed Sources|JSON array of sources to add to the allowlist. Format: [{"key": "10.0.0.1", "key_type": "ip"}]||String||
-|Remove Allowed Sources|JSON array of sources to remove from the allowlist. Format: [{"key": "10.0.0.1", "key_type": "ip"}]||String||
-|Add Allowed Destinations|JSON array of destinations to add to the allowlist. Format: [{"key": "10.0.0.1", "key_type": "ip"}]||String||
-|Remove Allowed Destinations|JSON array of destinations to remove from the allowlist. Format: [{"key": "10.0.0.1", "key_type": "ip"}]||String||
-
-
-
-##### JSON Results
-```json
-{"guid": "82132169-b41b-8b47-ba4b-494814500785", "status": "updated"}
-```
+|Service Account GUID|The GUID of the service account whose policy to update.|True|None||
+|Enabled|Enable or disable the policy.|False|None||
+|Block|Enable or disable blocking for policy violations.|False|None||
+|Send to SIEM|Enable or disable SIEM logging.|False|None||
+|Risk Level|Risk level threshold for the policy.|False|None||
+|Allow All Sources|Allow all sources (if true, ignores specific allowed sources list).|False|None||
+|Allow All Destinations|Allow all destinations (if true, ignores specific allowed destinations list).|False|None||
+|Protocols|Comma-separated list of protocols to allow (Kerberos, ldap, ntlm).|False|None||
+|Add Allowed Sources|JSON array of sources to add to the allowlist. Format: [{"key": "10.0.0.1", "key_type": "ip"}]|False|None||
+|Remove Allowed Sources|JSON array of sources to remove from the allowlist. Format: [{"key": "10.0.0.1", "key_type": "ip"}]|False|None||
+|Add Allowed Destinations|JSON array of destinations to add to the allowlist. Format: [{"key": "10.0.0.1", "key_type": "ip"}]|False|None||
+|Remove Allowed Destinations|JSON array of destinations to remove from the allowlist. Format: [{"key": "10.0.0.1", "key_type": "ip"}]|False|None||
 
 
 
@@ -155,21 +127,14 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Policy ID|The ID of the policy to update.|True|String||
-|Enabled|Enable or disable the policy.||Boolean||
-|Add Users and Groups|JSON array of users/groups to add to the policy. Format: [{"identifierType": "upn", "identifier": "user@domain.com", "displayName": "User Name", "domain": "domain.com"}]||String||
-|Remove Users and Groups|JSON array of users/groups to remove from the policy. Format: [{"identifierType": "upn", "identifier": "user@domain.com", "displayName": "User Name", "domain": "domain.com"}]||String||
-|Add Sources|JSON array of sources to add to the policy. Format: [{"identifierType": "ip", "identifier": "10.0.0.1", "displayName": "Server"}]||String||
-|Remove Sources|JSON array of sources to remove from the policy. Format: [{"identifierType": "ip", "identifier": "10.0.0.1", "displayName": "Server"}]||String||
-|Add Destinations|JSON array of destinations to add to the policy. Format: [{"identifierType": "hostname", "identifier": "server.domain.com", "displayName": "Server", "domain": "domain.com", "services": ["rdp"]}]||String||
-|Remove Destinations|JSON array of destinations to remove from the policy. Format: [{"identifierType": "hostname", "identifier": "server.domain.com", "displayName": "Server", "domain": "domain.com", "services": ["rdp"]}]||String||
-
-
-
-##### JSON Results
-```json
-{"policy_id": "42", "status": "updated"}
-```
+|Policy ID|The ID of the policy to update.|True|None||
+|Enabled|Enable or disable the policy.|False|None||
+|Add Users and Groups|JSON array of users/groups to add to the policy. Format: [{"identifierType": "upn", "identifier": "user@domain.com", "displayName": "User Name", "domain": "domain.com"}]|False|None||
+|Remove Users and Groups|JSON array of users/groups to remove from the policy. Format: [{"identifierType": "upn", "identifier": "user@domain.com", "displayName": "User Name", "domain": "domain.com"}]|False|None||
+|Add Sources|JSON array of sources to add to the policy. Format: [{"identifierType": "ip", "identifier": "10.0.0.1", "displayName": "Server"}]|False|None||
+|Remove Sources|JSON array of sources to remove from the policy. Format: [{"identifierType": "ip", "identifier": "10.0.0.1", "displayName": "Server"}]|False|None||
+|Add Destinations|JSON array of destinations to add to the policy. Format: [{"identifierType": "hostname", "identifier": "server.domain.com", "displayName": "Server", "domain": "domain.com", "services": ["rdp"]}]|False|None||
+|Remove Destinations|JSON array of destinations to remove from the policy. Format: [{"identifierType": "hostname", "identifier": "server.domain.com", "displayName": "Server", "domain": "domain.com", "services": ["rdp"]}]|False|None||
 
 
 
@@ -180,16 +145,9 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Page Size|Number of results per page (1-100).||String|50|
-|Page Number|Page number to retrieve.||String|1|
-|Fields|Comma-separated list of fields to include in the response. Available fields: guid, display_name, sources_count, destinations_count, number_of_authentications, risk, predictability, protected, upn, dn, spn, comment, owner, type, domain, category, creation_date, highly_privileged, interactive_login, broadly_used, suspected_brute_force, repetitive_behavior. If not specified, all fields are returned.||String||
-
-
-
-##### JSON Results
-```json
-{"service_accounts": [{"guid": "82132169-b41b-8b47-ba4b-494814500785", "display_name": "svc_backup", "risk": "low", "predictability": "high", "protected": true}, {"guid": "4e9f7309-5a48-f542-8f2b-334f72cf2c89", "display_name": "svc_monitoring", "risk": "medium", "predictability": "medium", "protected": true}, {"guid": "aa123456-1234-5678-9abc-def012345678", "display_name": "svc_deploy", "risk": "high", "predictability": "low", "protected": false}], "total_count": 3, "page_number": 1, "page_size": 50}
-```
+|Page Size|Number of results per page (1-100).|False|None||
+|Page Number|Page number to retrieve.|False|None||
+|Fields|Comma-separated list of fields to include in the response. Available fields: guid, display_name, sources_count, destinations_count, number_of_authentications, risk, predictability, protected, upn, dn, spn, comment, owner, type, domain, category, creation_date, highly_privileged, interactive_login, broadly_used, suspected_brute_force, repetitive_behavior. If not specified, all fields are returned.|False|None||
 
 
 
@@ -200,14 +158,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Fields|Comma-separated list of fields to include in the response. Available fields: enabled, policyName, authType, protocols, policyType, allUsersAndGroups, usersAndGroups, allDevices, sources, allDestinations, destinations, action, MFAPrompt, all, bridgeType. If not specified, all fields are returned.||String||
-
-
-
-##### JSON Results
-```json
-{"policies": [{"policyId": "1", "policyName": "Block Compromised Users", "enabled": true, "policyType": "block", "action": "block"}, {"policyId": "42", "policyName": "Critical Server MFA", "enabled": true, "policyType": "authentication", "action": "mfa"}, {"policyId": "100", "policyName": "VPN Access Policy", "enabled": false, "policyType": "authentication", "action": "mfa"}]}
-```
+|Fields|Comma-separated list of fields to include in the response. Available fields: enabled, policyName, authType, protocols, policyType, allUsersAndGroups, usersAndGroups, allDevices, sources, allDestinations, destinations, action, MFAPrompt, all, bridgeType. If not specified, all fields are returned.|False|None||
 
 
 
@@ -218,14 +169,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Service Account GUID|The GUID of the service account to retrieve.|True|String||
-
-
-
-##### JSON Results
-```json
-{"guid": "82132169-b41b-8b47-ba4b-494814500785", "display_name": "svc_backup", "upn": "svc_backup@ad.example.com", "dn": "CN=svc_backup,CN=Service Accounts,DC=ad,DC=example,DC=com", "domain": "ad.example.com", "category": "machine_to_machine", "risk": "low", "predictability": "high", "protected": true, "owner": "626be9e4-7557-3749-b8bc-e03420c3ed78", "comment": "Backup service account for nightly jobs", "sources_count": 5, "destinations_count": 10, "number_of_authentications": 15420, "creation_date": "2024-06-15T08:00:00Z", "highly_privileged": false, "interactive_login": false, "broadly_used": false, "suspected_brute_force": false, "repetitive_behavior": true, "account_type": "user"}
-```
+|Service Account GUID|The GUID of the service account to retrieve.|True|None||
 
 
 
@@ -236,14 +180,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Policy ID|The ID of the policy to retrieve.|True|String||
-
-
-
-##### JSON Results
-```json
-{"policyId": "42", "policyName": "Critical Server MFA", "enabled": true, "policyType": "authentication", "authType": "mfa", "protocols": ["Kerberos", "NTLM"], "action": "mfa", "MFAPrompt": "always", "allUsersAndGroups": false, "usersAndGroups": [{"identifierType": "group", "identifier": "CN=IT-Admins,CN=Groups,DC=example,DC=com", "displayName": "IT Admins", "domain": "example.com"}], "allDevices": false, "sources": [], "allDestinations": false, "destinations": [{"identifierType": "hostname", "identifier": "dc01.example.com", "displayName": "Domain Controller 1", "domain": "example.com", "services": ["ldap", "kerberos"]}, {"identifierType": "hostname", "identifier": "dc02.example.com", "displayName": "Domain Controller 2", "domain": "example.com", "services": ["ldap", "kerberos"]}], "bridgeType": "ad"}
-```
+|Policy ID|The ID of the policy to retrieve.|True|None||
 
 
 

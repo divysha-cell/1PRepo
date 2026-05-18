@@ -3,17 +3,17 @@
 
 CyberArk's Privileged Access Manager is a full life-cycle solution for managing the most privileged accounts and SSH Keys in the enterprise. It enables organizations to secure, provision, manage, control and monitor all activities associated with all types of privileged identities.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Api Root|Specify the API root url.|True|String|https://x.x.x.x:port|
+|Api Root|Specify the API root url.|True|String||
 |Username|Specify the username to use to connect with.|True|String||
-|Password|Specify the password to use to connect with.|True|Password|*****|
-|Verify SSL|If enabled, the certificate configured for the API root is validated.||Boolean|false|
-|CA Certificate|Specify the CA certificate to use to validate the secure connection to the API root. Parameter accepts the CA certificate in a form of base64 encoded string.||String||
-|Client Certificate|Optional if configured for CyberArk PAM, specify the CyberArk client certificate to use to establish connection to the API root. Certificate should be provided in the .p12 format, parameter expects certificate as base64 encoded string.||String||
-|Client Certificate Passphrase|Optionally, if the client certificate is requiring a passphrase, specify it for this parameter.||Password|*****|
+|Password|Specify the password to use to connect with.|True|Password||
+|Verify SSL|If enabled, the certificate configured for the API root is validated.|False|Boolean||
+|CA Certificate|Specify the CA certificate to use to validate the secure connection to the API root. Parameter accepts the CA certificate in a form of base64 encoded string.|False|String||
+|Client Certificate|Optional if configured for CyberArk PAM, specify the CyberArk client certificate to use to establish connection to the API root. Certificate should be provided in the .p12 format, parameter expects certificate as base64 encoded string.|False|String||
+|Client Certificate Passphrase|Optionally, if the client certificate is requiring a passphrase, specify it for this parameter.|False|Password||
 
 
 #### Dependencies
@@ -41,18 +41,11 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Account|Specify the account id to retrieve the password value for. Note that you can get the account id from the List Accounts action.|True|String||
-|Reason|Specify the reason that account password value is accessed.|True|String|Retrieved automatically by Chronicle SOAR.|
-|Ticketing System Name|Specify the name of the ticketing system.||String||
-|Ticket ID|Specify the ticketing system ticket id.||String||
-|Version|Specify the account password value version to retrieve.||String||
-
-
-
-##### JSON Results
-```json
-{"content": "\"XXXX\""}
-```
+|Account|Specify the account id to retrieve the password value for. Note that you can get the account id from the List Accounts action.|True|None||
+|Reason|Specify the reason that account password value is accessed.|True|None||
+|Ticketing System Name|Specify the name of the ticketing system.|False|None||
+|Ticket ID|Specify the ticketing system ticket id.|False|None||
+|Version|Specify the account password value version to retrieve.|False|None||
 
 
 
@@ -69,19 +62,12 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Search Query|Specify the search query to use in action.||String||
-|Search operator|Specify the search operator action should use to search based on the provided search query.||List|contains|
-|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records (API default).||String|50|
-|Records Offset|Specify the offset the action should use to return the values.||String|0|
-|Filter Query|Specify the filter query action should use. Filter can be based on safeName or modificationTime parameters.||String||
-|Saved Filter|Specify the saved filter query action should use. Takes priority over the Filter Query parameter.||String||
-
-
-
-##### JSON Results
-```json
-[{"categoryModificationTime": "1667915248", "platformId": "", "safeName": "XXXXX", "id": "12_23", "name": "xxxx", "userName": "xxxx", "secretType": "password", "secretManagement_automaticManagementEnabled": "True", "secretManagement_lastModifiedTime": "1667918145", "createdTime": "1667915248"}]
-```
+|Search Query|Specify the search query to use in action.|False|None||
+|Search operator|Specify the search operator action should use to search based on the provided search query.|False|None||
+|Max Records To Return|Specify how many records to return. If nothing is provided, action will return 50 records (API default).|False|None||
+|Records Offset|Specify the offset the action should use to return the values.|False|None||
+|Filter Query|Specify the filter query action should use. Filter can be based on safeName or modificationTime parameters.|False|None||
+|Saved Filter|Specify the saved filter query action should use. Takes priority over the Filter Query parameter.|False|None||
 
 
 

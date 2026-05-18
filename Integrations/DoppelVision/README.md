@@ -3,13 +3,13 @@
 
 Test Integration for DoppelVision Playbook
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|API Key|API key required to authenticate Doppel APIs|True|Password|*****|
-|User API Key|User API key required to authenticate Doppel APIs||Password|*****|
-|Organization Code|Organization code required to authenticate Doppel APIs for multi-tenant setup||String|None|
+|API Key|API key required to authenticate Doppel APIs|True|Password||
+|User API Key|User API key required to authenticate Doppel APIs|False|Password||
+|Organization Code|Organization code required to authenticate Doppel APIs for multi-tenant setup|False|String||
 
 
 #### Dependencies
@@ -30,7 +30,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Entity|Entity to be Alerted|True|String|https://dummyabuseurl.com|
+|Entity|Entity to be Alerted|True|None||
 
 
 
@@ -47,10 +47,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert_ID|Unique identity for each specific alert in Doppel tenant||String|None|
-|Entity|Entity to be alerted||String|https://dummyurl.com|
-|Queue_State|Queue state value of the Alerts Values : "doppel_review","needs_confirmation","monitoring","taken_down","actioned", "archived"|True|List|actioned|
-|Entity_State|Entity state of Alerts Values : "active", "down", "parked"|True|List|active|
+|Alert_ID|Unique identity for each specific alert in Doppel tenant|False|None||
+|Entity|Entity to be alerted|False|None||
+|Queue_State|Queue state value of the Alerts Values : "doppel_review","needs_confirmation","monitoring","taken_down","actioned", "archived"|True|None||
+|Entity_State|Entity state of Alerts Values : "active", "down", "parked"|True|None||
 
 
 
@@ -62,15 +62,15 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Search Key|Currently only supports search by url||String|None|
-|Product|Product category the report belongs to.||List||
-|Created Before|Filter alerts created before this date. '2024-01-05T13:45:30' -- Represents the 5th of January 2024, at 1:45:30 PM||String|None|
-|Created After|Filter alerts created after this date. '2024-01-05T13:45:30' -- Represents the 5th of January 2024, at 1:45:30 PM||String|None|
-|Sort Type|The field to sort the reports by. Defaults to date_sourced.||List||
-|Sort Order|The order to sort the reports by. Defaults to desc.||List||
-|Page|Page number for pagination; defaults to 0||String||
-|Queue State|New queue status to update alert with (id required)||List||
-|Tags|List of tags to filter alerts||String|None|
+|Search Key|Currently only supports search by url|False|None||
+|Product|Product category the report belongs to.|False|None||
+|Created Before|Filter alerts created before this date. '2024-01-05T13:45:30' -- Represents the 5th of January 2024, at 1:45:30 PM|False|None||
+|Created After|Filter alerts created after this date. '2024-01-05T13:45:30' -- Represents the 5th of January 2024, at 1:45:30 PM|False|None||
+|Sort Type|The field to sort the reports by. Defaults to date_sourced.|False|None||
+|Sort Order|The order to sort the reports by. Defaults to desc.|False|None||
+|Page|Page number for pagination; defaults to 0|False|None||
+|Queue State|New queue status to update alert with (id required)|False|None||
+|Tags|List of tags to filter alerts|False|None||
 
 
 
@@ -81,7 +81,7 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Entity|Entity to be alerted.|True|String|https://dummyrul.com|
+|Entity|Entity to be alerted.|True|None||
 
 
 
@@ -92,8 +92,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Entity|Entity to be alerted.||String|https://dummyurl.com|
-|Alert_ID|The unique ID of the created Alert on Doppel Tenant||String|TST-1|
+|Entity|Entity to be alerted.|False|None||
+|Alert_ID|The unique ID of the created Alert on Doppel Tenant|False|None||
 
 
 

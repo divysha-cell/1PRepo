@@ -3,17 +3,17 @@
 
 The Okta Identity Cloud provides secure identity management with Single Sign-On, Multi-factor Authentication, Lifecycle Management (Provisioning), and more.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Api Root|The base URL of the Okta instance.|True|String|https://|
-|Api Token|The API token (SSWS) used for authentication with the Okta instance. This parameter is mandatory if Use Oauth Authentication is disabled.||Password|*****|
-|Use Oauth Authentication|If enabled, the integration uses OAuth 2.0 for authentication instead of an API token.||Boolean|False|
-|Client ID|The unique identifier for the Okta OAuth application. This parameter is mandatory if Use Oauth Authentication is enabled. Leave this field blank if authenticating using an API token.||String||
-|Key ID|The ID of the public key associated with the private key used for OAuth authentication. This parameter is mandatory if Use Oauth Authentication is enabled.||String||
-|Private Key|The private key in PEM format used for OAuth authentication. This parameter is mandatory if Use Oauth Authentication is enabled. Leave this field blank if authenticating using an API Token.||Password|*****|
-|Verify SSL|If enabled, the integration validates the SSL certificate when connecting to the Okta server.||Boolean|False|
+|Api Root|The base URL of the Okta instance.|True|String||
+|Api Token|The API token (SSWS) used for authentication with the Okta instance. This parameter is mandatory if Use Oauth Authentication is disabled.|False|Password||
+|Use Oauth Authentication|If enabled, the integration uses OAuth 2.0 for authentication instead of an API token.|False|Boolean||
+|Client ID|The unique identifier for the Okta OAuth application. This parameter is mandatory if Use Oauth Authentication is enabled. Leave this field blank if authenticating using an API token.|False|String||
+|Key ID|The ID of the public key associated with the private key used for OAuth authentication. This parameter is mandatory if Use Oauth Authentication is enabled.|False|String||
+|Private Key|The private key in PEM format used for OAuth authentication. This parameter is mandatory if Use Oauth Authentication is enabled. Leave this field blank if authenticating using an API Token.|False|Password||
+|Verify SSL|If enabled, the integration validates the SSL certificate when connecting to the Okta server.|False|Boolean||
 
 
 #### Dependencies
@@ -68,8 +68,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Group Name|The name of the group in Okta|True|String||
-|Group Description|The description for the group||String||
+|Group Name|The name of the group in Okta|True|None||
+|Group Description|The description for the group|False|None||
 
 
 
@@ -80,9 +80,9 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User IDs|Ids of users in Okta||String||
-|Role Types|The type of role to assign to the users|True|String||
-|Also Run On Scope|Whether to run on entities as well as the input||Boolean|false|
+|User IDs|Ids of users in Okta|False|None||
+|Role Types|The type of role to assign to the users|True|None||
+|Also Run On Scope|Whether to run on entities as well as the input|False|None||
 
 
 
@@ -93,8 +93,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User IDs|Ids of users in Okta||String||
-|Also Run On Scope|Whether to run on entities as well as the input||Boolean|false|
+|User IDs|Ids of users in Okta|False|None||
+|Also Run On Scope|Whether to run on entities as well as the input|False|None||
 
 
 
@@ -105,10 +105,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User IDs Or Logins|Ids of users in Okta||String||
-|Is Deactivate|Whether to dactivate or only suspend the user||Boolean|false|
-|Send Email If Deactivate|Whether to send an email after deactivating or not||Boolean|false|
-|Also Run On Scope|Whether to run on entities as well as the input||Boolean|false|
+|User IDs Or Logins|Ids of users in Okta|False|None||
+|Is Deactivate|Whether to dactivate or only suspend the user|False|None||
+|Send Email If Deactivate|Whether to send an email after deactivating or not|False|None||
+|Also Run On Scope|Whether to run on entities as well as the input|False|None||
 
 
 
@@ -119,10 +119,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User IDs|Ids of users in Okta||String||
-|Role IDs Or Names|Ids or names of roles in Okta|True|String||
-|Is Id|Whether the values are ids or names||Boolean|false|
-|Also Run On Scope|Whether to run on entities as well as the input||Boolean|false|
+|User IDs|Ids of users in Okta|False|None||
+|Role IDs Or Names|Ids or names of roles in Okta|True|None||
+|Is Id|Whether the values are ids or names|False|None||
+|Also Run On Scope|Whether to run on entities as well as the input|False|None||
 
 
 
@@ -139,8 +139,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User IDs Or Logins|A comma-separated list of Okta user IDs or login identifiers.||String||
-|Also Run On Scope|If selected, the action revokes active Identity Provider (IdP) sessions for all users identified in the entity scope, in addition to those explicitly listed in User IDs Or Logins.||Boolean||
+|User IDs Or Logins|A comma-separated list of Okta user IDs or login identifiers.|False|None||
+|Also Run On Scope|If selected, the action revokes active Identity Provider (IdP) sessions for all users identified in the entity scope, in addition to those explicitly listed in User IDs Or Logins.|False|None||
 
 
 
@@ -151,15 +151,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User Ids Or Logins|Ids or logins (email or short email name) of a user in Okta, e.g. test@gmail.com or simply 'test'||String||
-|Also Run On Scope|Whether to run on entities as well as the input||Boolean|false|
-
-
-
-##### JSON Results
-```json
-[{"status":"ACTIVE","profile":{"mobilePhone":null,"firstName":"Test","lastName":"User","secondEmail":null,"login":"test.user@asd.com","email":"test.user@asd.com"},"passwordChanged":"2022-07-11T06:11:25.000Z","created":"2022-07-11T06:07:55.000Z","activated":null,"lastUpdated":"2022-07-11T06:11:25.000Z","_links":{"schema":{"href":"https://trial-0000.okta.com/api/v1/meta/schemas/user/osc1xxxxxxxx"},"suspend":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/suspend","method":"POST"},"forgotPassword":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/credentials/forgot_password","method":"POST"},"self":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx"},"expirePassword":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/expire_password","method":"POST"},"resetFactors":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/reset_factors","method":"POST"},"deactivate":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/deactivate","method":"POST"},"changePassword":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/credentials/change_password","method":"POST"},"changeRecoveryQuestion":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/credentials/change_recovery_question","method":"POST"},"type":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx"},"resetPassword":{"href":"https://trial-0000.okta.com/api/v1/users/00u1xxxxxxxx/lifecycle/reset_password","method":"POST"}},"lastLogin":"2022-07-11T06:15:14.000Z","credentials":{"password":{},"provider":{"type":"OKTA","name":"OKTA"}},"type":{"id":"oty1xxxxxxxxxxxxx"},"id":"oty1xxxxxxxxxxxxx","statusChanged":"2022-07-11T06:11:25.000Z"}]
-```
+|User Ids Or Logins|Ids or logins (email or short email name) of a user in Okta, e.g. test@gmail.com or simply 'test'|False|None||
+|Also Run On Scope|Whether to run on entities as well as the input|False|None||
 
 
 
@@ -170,10 +163,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Query|Search for a match in the firstname, lastname or in the email||String||
-|Filter|Custom search query for a subset of properties||String||
-|Search|Custom search query for most properties||String||
-|Limit|Max amount of results to return||String|200|
+|Query|Search for a match in the firstname, lastname or in the email|False|None||
+|Filter|Custom search query for a subset of properties|False|None||
+|Search|Custom search query for most properties|False|None||
+|Limit|Max amount of results to return|False|None||
 
 
 
@@ -184,8 +177,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Group Ids Or Names|Ids or names of groups in Okta|True|String||
-|Is Id|Whether the value is an id or a name||Boolean|false|
+|Group Ids Or Names|Ids or names of groups in Okta|True|None||
+|Is Id|Whether the value is an id or a name|False|None||
 
 
 
@@ -196,13 +189,13 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Key ID|The ID of the public key, used to verify the private key’s signature.|True|String||
-|Private Key|Private key used to sign the signal. Provided in a string format (including the “BEGIN” and “END” statements).|True|Password|*****|
-|User Email|Email address of the affected user.|True|String||
-|Timestamp|Timestamp of the signal occurrence. Timestamp format is ISO 8601.|True|String||
-|Reason|Reason for the signal creation.|True|String||
-|Severity|Severity of the signal.|True|List|Medium|
-|Issuer URL|Creation source of the signal.|True|String||
+|Key ID|The ID of the public key, used to verify the private key’s signature.|True|None||
+|Private Key|Private key used to sign the signal. Provided in a string format (including the “BEGIN” and “END” statements).|True|None||
+|User Email|Email address of the affected user.|True|None||
+|Timestamp|Timestamp of the signal occurrence. Timestamp format is ISO 8601.|True|None||
+|Reason|Reason for the signal creation.|True|None||
+|Severity|Severity of the signal.|True|None||
+|Issuer URL|Creation source of the signal.|True|None||
 
 
 
@@ -213,9 +206,9 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Query|Search the name property for a match||String||
-|Type|Filter by type||String||
-|Limit|Max amount of results to return||String|20|
+|Query|Search the name property for a match|False|None||
+|Type|Filter by type|False|None||
+|Limit|Max amount of results to return|False|None||
 
 
 
@@ -226,8 +219,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User IDs Or Logins|Ids or logins of users in Okta||String||
-|Also Run On Scope|Whether to run on entities as well as the input||Boolean|false|
+|User IDs Or Logins|Ids or logins of users in Okta|False|None||
+|Also Run On Scope|Whether to run on entities as well as the input|False|None||
 
 
 
@@ -238,9 +231,9 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User IDs Or Logins|Ids or logins of users in Okta||String||
-|Send Email|Whether to send an email for the password reset or return the token for every user||Boolean|false|
-|Also Run On Scope|Whether to run on entities as well as the input||Boolean|false|
+|User IDs Or Logins|Ids or logins of users in Okta|False|None||
+|Send Email|Whether to send an email for the password reset or return the token for every user|False|None||
+|Also Run On Scope|Whether to run on entities as well as the input|False|None||
 
 
 
@@ -251,10 +244,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User IDs Or Logins|Ids or logins of users in Okta||String||
-|New Password|The new password|True|String||
-|Add 10 Random Chars|Whether to add extra characters to every user password or not||Boolean|false|
-|Also Run On Scope|Whether to run on entities as well as the input||Boolean|false|
+|User IDs Or Logins|Ids or logins of users in Okta|False|None||
+|New Password|The new password|True|None||
+|Add 10 Random Chars|Whether to add extra characters to every user password or not|False|None||
+|Also Run On Scope|Whether to run on entities as well as the input|False|None||
 
 
 
@@ -265,10 +258,10 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|User IDs Or Logins|Ids or logins of users in Okta||String||
-|Is Activate|Whether to activate the user or just unsuspend||Boolean|false|
-|Send Email If Activate|Whether to send an email after activating or not||Boolean|false|
-|Also Run On Scope|Whether to run on entities as well as the input||Boolean|false|
+|User IDs Or Logins|Ids or logins of users in Okta|False|None||
+|Is Activate|Whether to activate the user or just unsuspend|False|None||
+|Send Email If Activate|Whether to send an email after activating or not|False|None||
+|Also Run On Scope|Whether to run on entities as well as the input|False|None||
 
 
 
