@@ -58,18 +58,6 @@ Python Version - V3_11
 
 
 ## Actions
-#### Add Comment to Detection
-Deprecated. Add a comment to the detection in Crowdstrike Falcon.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Detection ID|Specify the id of the detection to which you want to add a comment.|True|None||
-|Comment|Specify the comment that needs to be added to the detection.|True|None||
-
-
-
 #### Add Alert Comment
 Add a comment to alert in Crowdstrike. 
 Timeout - 600 Seconds
@@ -94,12 +82,6 @@ Timeout - 600 Seconds
 
 
 
-#### Delete IOC
-Delete custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
-Timeout - 600 Seconds
-
-
-
 #### Add Incident Comment
 Deprecated. Add comment to incident in Crowdstrike.
 Timeout - 600 Seconds
@@ -109,6 +91,12 @@ Timeout - 600 Seconds
 |----|-----------|-----------|----|------------|
 |Incident ID|Specify the ID of the incident that needs to be updated.|True|None||
 |Comment|Specify the comment for the incident.|True|None||
+
+
+
+#### Delete IOC
+Delete custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
+Timeout - 600 Seconds
 
 
 
@@ -124,15 +112,26 @@ Timeout - 600 Seconds
 
 
 
-#### Close Detection
-Deprecated. Close a Crowdstrike Falcon detection. Note: Action "Update Detection" is the best practice for this use case.
+#### Get Alert Details
+Get details of an alert in Crowdstrike.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Detection ID|Specify the id of the detection that needs to be closed.|True|None||
-|Hide Detection|If enabled, action will hide the detection in the UI.|False|None||
+|Alert ID|Specify the ID of the alert.|True|None||
+
+
+
+#### Add Comment to Detection
+Deprecated. Add a comment to the detection in Crowdstrike Falcon.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Detection ID|Specify the id of the detection to which you want to add a comment.|True|None||
+|Comment|Specify the comment that needs to be added to the detection.|True|None||
 
 
 
@@ -149,29 +148,15 @@ Timeout - 600 Seconds
 
 
 
-#### Execute Command
-Execute commands on the hosts in Crowdstrike Falcon. Supported entities: IP Address and Hostname.
+#### Close Detection
+Deprecated. Close a Crowdstrike Falcon detection. Note: Action "Update Detection" is the best practice for this use case.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|None||
-|Command|Specify what command to execute on the hosts.|True|None||
-|Admin Command|If enabled, action will execute commands with the admin level permissions. This is necessary for certain commands like "put".|False|None||
-|Hostname|Comma-separated list of hostnames on which you want to execute the action. Note: action will run the action on both entities + this parameter values.|False|None||
-|Queue Offline|If enabled, commands targeting offline hosts are queued and executed once the host reconnects to the network.|False|None||
-
-
-
-#### Get Alert Details
-Get details of an alert in Crowdstrike.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert.|True|None||
+|Detection ID|Specify the id of the detection that needs to be closed.|True|None||
+|Hide Detection|If enabled, action will hide the detection in the UI.|False|None||
 
 
 
@@ -183,6 +168,12 @@ Timeout - 600 Seconds
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Max Events To Process|Specify how many events the action needs to process starting from the offset from 30 days ago.|True|None||
+
+
+
+#### Get Hosts by IOC
+DEPRECATED. List hosts related to the IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
+Timeout - 600 Seconds
 
 
 
@@ -198,6 +189,17 @@ Timeout - 600 Seconds
 
 
 
+#### Get Process Name By IOC
+DEPRECATED. Retrieve processes related to the IOCs and provided devices in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported. IP address entities are treated as IOCs.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Devices Names|Specify a comma-separated list of devices for which you want to retrieve processes related to entities.|True|None||
+
+
+
 #### Hide Hosts
 Use the Hide Hosts action to hide one or more hosts from the CrowdStrike Falcon console. Supported entities: IP Address, Hostname.
 Timeout - 600 Seconds
@@ -207,65 +209,6 @@ Timeout - 600 Seconds
 |----|-----------|-----------|----|------------|
 |Hostname|A comma-separated list of hostnames to hide in CrowdStrike Falcon. The action processes both the input values provided in this parameter and the Hostname and IP Address entities attached to the case.|False|None||
 |Customer ID|The unique CrowdStrike Customer ID (CID) used to target a specific tenant. This parameter is required in Falcon Flight Control or multi-tenant environments to perform the action on a specific child CID.|False|None||
-
-
-
-#### List Uploaded IOCs
-List available custom IOCs in CrowdStrike Falcon.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|IOC Type Filter|Specify a comma-separated list of IOC types that should be returned. If nothing is provided, action will return IOCs from all types. Possible values: ipv4,ipv6,md5,sha256,domain.|False|None||
-|Value Filter Logic|Specify the value filter logic. If "Equal" is selected, action will try to find the exact match among IOCs and if "Contains" is selected, action will try to find IOCs that contain that substring.|False|None||
-|Value Filter String|Specify the string that should be searched among IOCs.|False|None||
-|Max IOCs To Return|Specify how many IOCs to return. Default: 50. Maximum: 500.|False|None||
-
-
-
-#### Get Hosts by IOC
-DEPRECATED. List hosts related to the IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
-Timeout - 600 Seconds
-
-
-
-#### List Hosts
-List available hosts in Crowdstrike Falcon.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|None||
-|Filter Logic|Specify what logic should be used, when searching for hosts.|False|None||
-|Filter Value|Specify the value that should be used to filter hosts.|False|None||
-|Max Hosts To Return|Specify how many hosts to return. Default: 50. Maximum: 1000.|False|None||
-
-
-
-#### List Host Vulnerabilities
-List vulnerabilities found on the host in Crowdstrike Falcon. Supported entities: IP Address and Hostname. Note: requires Falcon Spotlight license and permissions. 
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|None||
-|Severity Filter|Specify the comma-separated list of severities for vulnerabilities.If nothing is provided, action will ingest all related vulnerabilities. Possible values: Critical, High, Medium, Low, Unknown.|False|None||
-|Create Insight|If enabled, action will create an insight per entity containing statistical information about related vulnerabilities.|False|None||
-|Max Vulnerabilities To Return|Specify how many vulnerabilities to return per host. If nothing is provided action will process all of the related vulnerabilities.|False|None||
-
-
-
-#### Get Process Name By IOC
-DEPRECATED. Retrieve processes related to the IOCs and provided devices in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported. IP address entities are treated as IOCs.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Devices Names|Specify a comma-separated list of devices for which you want to retrieve processes related to entities.|True|None||
 
 
 
@@ -305,49 +248,39 @@ Timeout - 600 Seconds
 
 
 
-#### Run Script
-Execute a powershell script on the endpoints in Crowdstrike. Supported entities: IP Address, Hostname. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for the action, as needed.
+#### List Hosts
+List available hosts in Crowdstrike Falcon.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
+|Filter Logic|Specify what logic should be used, when searching for hosts.|False|None||
 |Customer ID|Specify the ID of the customer for which you want to execute the action.|False|None||
-|Script Name|The name of the script file that needs to be executed. Note: either “Script Name” or “Raw Script” should be provided. If both “Script Name” and “Raw Script” are provided, then “Raw Script” will have the priority.|False|None||
-|Raw Script|Raw powershell script payload that needs to be executed on the endpoints. Note: either “Script Name” or “Raw Script” should be provided. If both “Script Name” and “Raw Script” are provided, then “Raw Script” will have the priority.|False|None||
-|Hostname|Comma-separated list of hostnames on which you want to execute the action. Note: action will run the action on both entities + this parameter values.|False|None||
-|Queue Offline|If enabled, commands targeting offline hosts are queued and executed once the host reconnects to the network.|False|None||
+|Filter Value|Specify the value that should be used to filter hosts.|False|None||
+|Max Hosts To Return|Specify how many hosts to return. Default: 50. Maximum: 1000.|False|None||
 
 
 
-#### Submit File
-Submit files to a sandbox in Crowdstrike. Note: This action requires a Falcon Sandbox license. For the list of supported file formats, refer to the documentation portal.
+#### Search Events
+Search events in Crowdstrike. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for action, as needed.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|File Paths|Specify the file paths to the files that need to be submitted. Refer to the documentation portal for a list of the supported file formats.|True|None||
-|Sandbox Environment|Specify the sandbox environment for the analysis.|False|None||
-|Network Environment|Specify the network environment for the analysis.|False|None||
-|Archive Password|Specify the password that would need to be used, when working with archive files.|False|None||
-|Document Password|Specify the password that would need to be used, when working with Adobe or Office files. Maximum: 32 characters.|False|None||
-|Check Duplicate|If enabled, the action checks if the file was already submitted previously and returns the available report. Note: during the validation “Network Environment” and “Sandbox Environment” are not taken into consideration.|False|None||
-|Comment|Specify the comment for the submission.|False|None||
-|Confidential Submission|If enabled, the file is only shown to users within your customer account.|False|None||
+|Repository|Repository that should be searched.|True|None||
+|Query|Query that needs to be executed in Crowdstrike. Note: don't provide "head" as part of the query. Action will provide it automatically based on the value provided in the "Max Results To Return" parameter.|True|None||
+|Time Frame|Time frame for the results. If "Custom" is selected, you also need to provide "Start Time".|False|None||
+|Start Time|Start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601.|False|None||
+|End Time|End time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.|False|None||
+|Max Results To Return|How many results to return for the query. Action will append "head" to the provided query. Default: 50. Maximum: 1000.|False|None||
 
 
 
-#### Update Detection
-Deprecated. Update detection in Crowdstrike Falcon.
+#### Ping
+Test Connectivity
 Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Detection ID|Specify the ID of the detection that needs to be updated.|True|None||
-|Status|Specify the new status for the detection.|True|None||
-|Assign Detection to|Specify the email address of the Crowdstrike Falcon user, who needs to be assigned to this detection|False|None||
 
 
 
@@ -379,20 +312,6 @@ Timeout - 600 Seconds
 
 
 
-#### Update IOC Information
-Update information about custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Description|Specify a new description for custom IOCs.|False|None||
-|Source|Specify the source for custom IOCs.|False|None||
-|Expiration days|Specify the amount of days till expiration.|False|None||
-|Detect policy|If enabled, IOCs that have been identifed, will send a notification. In other case, no action will be taken|False|None||
-
-
-
 #### Update Alert
 Update an alert in Crowdstrike.
 Timeout - 600 Seconds
@@ -407,6 +326,34 @@ Timeout - 600 Seconds
 
 
 
+#### List Host Vulnerabilities
+List vulnerabilities found on the host in Crowdstrike Falcon. Supported entities: IP Address and Hostname. Note: requires Falcon Spotlight license and permissions. 
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|None||
+|Severity Filter|Specify the comma-separated list of severities for vulnerabilities.If nothing is provided, action will ingest all related vulnerabilities. Possible values: Critical, High, Medium, Low, Unknown.|False|None||
+|Create Insight|If enabled, action will create an insight per entity containing statistical information about related vulnerabilities.|False|None||
+|Max Vulnerabilities To Return|Specify how many vulnerabilities to return per host. If nothing is provided action will process all of the related vulnerabilities.|False|None||
+
+
+
+#### Update IOC Information
+Update information about custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Description|Specify a new description for custom IOCs.|False|None||
+|Source|Specify the source for custom IOCs.|False|None||
+|Expiration days|Specify the amount of days till expiration.|False|None||
+|Detect policy|If enabled, IOCs that have been identifed, will send a notification. In other case, no action will be taken|False|None||
+
+
+
 #### Update Identity Protection Detection
 Update an identity protection detection in Crowdstrike. Note: this action requires an Identity Protection license.
 Timeout - 600 Seconds
@@ -417,6 +364,51 @@ Timeout - 600 Seconds
 |Detection ID|Specify the ID of the detection that needs to be updated.|True|None||
 |Status|Specify the status for the detection.|False|None||
 |Assign To|Specify the name of the analyst to whom the detection needs to be assigned. If "Unassign" is provided, action will remove assignment from the detection. Note: API will accept any value that is provided, even if the underlying user doesn't exist.|False|None||
+
+
+
+#### List Uploaded IOCs
+List available custom IOCs in CrowdStrike Falcon.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|IOC Type Filter|Specify a comma-separated list of IOC types that should be returned. If nothing is provided, action will return IOCs from all types. Possible values: ipv4,ipv6,md5,sha256,domain.|False|None||
+|Value Filter Logic|Specify the value filter logic. If "Equal" is selected, action will try to find the exact match among IOCs and if "Contains" is selected, action will try to find IOCs that contain that substring.|False|None||
+|Value Filter String|Specify the string that should be searched among IOCs.|False|None||
+|Max IOCs To Return|Specify how many IOCs to return. Default: 50. Maximum: 500.|False|None||
+
+
+
+#### Update Detection
+Deprecated. Update detection in Crowdstrike Falcon.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Detection ID|Specify the ID of the detection that needs to be updated.|True|None||
+|Status|Specify the new status for the detection.|True|None||
+|Assign Detection to|Specify the email address of the Crowdstrike Falcon user, who needs to be assigned to this detection|False|None||
+
+
+
+#### Submit File
+Submit files to a sandbox in Crowdstrike. Note: This action requires a Falcon Sandbox license. For the list of supported file formats, refer to the documentation portal.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|File Paths|Specify the file paths to the files that need to be submitted. Refer to the documentation portal for a list of the supported file formats.|True|None||
+|Sandbox Environment|Specify the sandbox environment for the analysis.|False|None||
+|Network Environment|Specify the network environment for the analysis.|False|None||
+|Archive Password|Specify the password that would need to be used, when working with archive files.|False|None||
+|Document Password|Specify the password that would need to be used, when working with Adobe or Office files. Maximum: 32 characters.|False|None||
+|Check Duplicate|If enabled, the action checks if the file was already submitted previously and returns the available report. Note: during the validation “Network Environment” and “Sandbox Environment” are not taken into consideration.|False|None||
+|Comment|Specify the comment for the submission.|False|None||
+|Confidential Submission|If enabled, the file is only shown to users within your customer account.|False|None||
 
 
 
@@ -436,25 +428,33 @@ Timeout - 600 Seconds
 
 
 
-#### Ping
-Test Connectivity
-Timeout - 600 Seconds
-
-
-
-#### Search Events
-Search events in Crowdstrike. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for action, as needed.
+#### Execute Command
+Execute commands on the hosts in Crowdstrike Falcon. Supported entities: IP Address and Hostname.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Repository|Repository that should be searched.|True|None||
-|Query|Query that needs to be executed in Crowdstrike. Note: don't provide "head" as part of the query. Action will provide it automatically based on the value provided in the "Max Results To Return" parameter.|True|None||
-|Time Frame|Time frame for the results. If "Custom" is selected, you also need to provide "Start Time".|False|None||
-|Start Time|Start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601.|False|None||
-|End Time|End time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.|False|None||
-|Max Results To Return|How many results to return for the query. Action will append "head" to the provided query. Default: 50. Maximum: 1000.|False|None||
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|None||
+|Command|Specify what command to execute on the hosts.|True|None||
+|Admin Command|If enabled, action will execute commands with the admin level permissions. This is necessary for certain commands like "put".|False|None||
+|Hostname|Comma-separated list of hostnames on which you want to execute the action. Note: action will run the action on both entities + this parameter values.|False|None||
+|Queue Offline|If enabled, commands targeting offline hosts are queued and executed once the host reconnects to the network.|False|None||
+
+
+
+#### Run Script
+Execute a powershell script on the endpoints in Crowdstrike. Supported entities: IP Address, Hostname. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for the action, as needed.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|None||
+|Script Name|The name of the script file that needs to be executed. Note: either “Script Name” or “Raw Script” should be provided. If both “Script Name” and “Raw Script” are provided, then “Raw Script” will have the priority.|False|None||
+|Raw Script|Raw powershell script payload that needs to be executed on the endpoints. Note: either “Script Name” or “Raw Script” should be provided. If both “Script Name” and “Raw Script” are provided, then “Raw Script” will have the priority.|False|None||
+|Hostname|Comma-separated list of hostnames on which you want to execute the action. Note: action will run the action on both entities + this parameter values.|False|None||
+|Queue Offline|If enabled, commands targeting offline hosts are queued and executed once the host reconnects to the network.|False|None||
 
 
 
@@ -478,8 +478,8 @@ This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job s
 
 
 ## Connectors
-#### Crowdstrike - Alerts Connector
-Pull alerts from Crowdstrike. Dynamic List works with the "display_name" parameter. Note: To fetch identity protection detections use "Identity Protection Detections Connector".
+#### Crowdstrike - Identity Protection Detections Connector
+Pull Identity Protection detections from Crowdstrike. Note: this connector requires an Identity Protection license. Dynamic List works with the “display_name” parameter.
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -489,13 +489,11 @@ Pull alerts from Crowdstrike. Dynamic List works with the "display_name" paramet
 |Client ID|Client ID  of the Crowdstrike account.|True|None||
 |Client Secret|Client Secret of the Crowdstrike account.|True|None||
 |Lowest Severity Score To Fetch|Lowest severity score of the identity protection detections to fetch. If nothing is provided, the connector will ingest detections with all severities. Maximum is 100. Note: action also supports the following values: Informational, Low, Medium, High, Critical.|False|None||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|None|1|
-|Max Alerts To Fetch|How many alerts to process per one connector iteration. Default: 10.|True|None|10|
-|Include Hidden Alerts|If enabled, connector will also fetch alerts that are labeled as "hidden" by Crowdstrike.|False|None|true|
-|Fallback Severity|Fallback severity for the SecOps alert that should be applied to the Crowdstrike alerts, which are missing severity information. Possible values: Informational, Low, Medium, High, Critical. If nothing is provided, connector will use "Informational" severity.|False|None|Informational|
-|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|None|false|
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|None|false|
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve detections from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|None|1|
+|Max Detections To Fetch|How many identity protection detections to process per one connector iteration. Default: 10.|False|None|10|
+|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|None|true|
 |Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|None|false|
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|None|false|
 |Proxy Server Address|The address of the proxy server to use.|False|None||
 |Proxy Username|The proxy username to authenticate with.|False|None||
 |Proxy Password|The proxy password to authenticate with.|False|None||
@@ -528,6 +526,28 @@ Crowdstrike Falcon Streaming Events Connector
 |Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|None||
 
 
+#### Crowdstrike - Incidents Connector
+Deprecated. Pull incident and related behaviors from Crowdstrike. Dynamic List works with the “incident_type” parameter.
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|API Root|API root of the Crowdstrike instance.|True|None|https://api.crowdstrike.com|
+|Client ID|Client ID  of the Crowdstrike account.|True|None||
+|Client Secret|Client Secret of the Crowdstrike account.|True|None||
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve incidents from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires. Default: 1|False|None|1|
+|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|None||
+|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|None|.*|
+|Lowest Severity Score To Fetch|Lowest severity score of the incidents to fetch. If nothing is provided, the connector will ingest incidents with all severities. Maximum is 100. Note: action also supports the following values: Low, Medium, High, Critical. In the Crowdstrike UI the same value is presented as divided by 10.|False|None||
+|Max Incidents To Fetch|How many incidents to process per one connector iteration. Default: 10. Max: 100.|False|None|10|
+|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|None|false|
+|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|None|false|
+|Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|None|false|
+|Proxy Server Address|The address of the proxy server to use.|False|None||
+|Proxy Username|The proxy username to authenticate with.|False|None||
+|Proxy Password|The proxy password to authenticate with.|False|None||
+|Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|None||
+
+
 #### Crowdstrike - Detections Connector
 Deprecated. Pull detections from Crowdstrike. Whitelist works with filters that are supported by the API of Crowdstrike. For the details, please refer to the documentation portal.
 
@@ -553,30 +573,8 @@ Deprecated. Pull detections from Crowdstrike. Whitelist works with filters that 
 |Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|None||
 
 
-#### Crowdstrike - Incidents Connector
-Deprecated. Pull incident and related behaviors from Crowdstrike. Dynamic List works with the “incident_type” parameter.
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|API Root|API root of the Crowdstrike instance.|True|None|https://api.crowdstrike.com|
-|Client ID|Client ID  of the Crowdstrike account.|True|None||
-|Client Secret|Client Secret of the Crowdstrike account.|True|None||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve incidents from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires. Default: 1|False|None|1|
-|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|None||
-|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|None|.*|
-|Lowest Severity Score To Fetch|Lowest severity score of the incidents to fetch. If nothing is provided, the connector will ingest incidents with all severities. Maximum is 100. Note: action also supports the following values: Low, Medium, High, Critical. In the Crowdstrike UI the same value is presented as divided by 10.|False|None||
-|Max Incidents To Fetch|How many incidents to process per one connector iteration. Default: 10. Max: 100.|False|None|10|
-|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|None|false|
-|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|None|false|
-|Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|None|false|
-|Proxy Server Address|The address of the proxy server to use.|False|None||
-|Proxy Username|The proxy username to authenticate with.|False|None||
-|Proxy Password|The proxy password to authenticate with.|False|None||
-|Customer ID|The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.|False|None||
-
-
-#### Crowdstrike - Identity Protection Detections Connector
-Pull Identity Protection detections from Crowdstrike. Note: this connector requires an Identity Protection license. Dynamic List works with the “display_name” parameter.
+#### Crowdstrike - Alerts Connector
+Pull alerts from Crowdstrike. Dynamic List works with the "display_name" parameter. Note: To fetch identity protection detections use "Identity Protection Detections Connector".
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -586,11 +584,13 @@ Pull Identity Protection detections from Crowdstrike. Note: this connector requi
 |Client ID|Client ID  of the Crowdstrike account.|True|None||
 |Client Secret|Client Secret of the Crowdstrike account.|True|None||
 |Lowest Severity Score To Fetch|Lowest severity score of the identity protection detections to fetch. If nothing is provided, the connector will ingest detections with all severities. Maximum is 100. Note: action also supports the following values: Informational, Low, Medium, High, Critical.|False|None||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve detections from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|None|1|
-|Max Detections To Fetch|How many identity protection detections to process per one connector iteration. Default: 10.|False|None|10|
-|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|None|true|
-|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|None|false|
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|None|1|
+|Max Alerts To Fetch|How many alerts to process per one connector iteration. Default: 10.|True|None|10|
+|Include Hidden Alerts|If enabled, connector will also fetch alerts that are labeled as "hidden" by Crowdstrike.|False|None|true|
+|Fallback Severity|Fallback severity for the SecOps alert that should be applied to the Crowdstrike alerts, which are missing severity information. Possible values: Informational, Low, Medium, High, Critical. If nothing is provided, connector will use "Informational" severity.|False|None|Informational|
+|Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|None|false|
 |Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|None|false|
+|Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|None|false|
 |Proxy Server Address|The address of the proxy server to use.|False|None||
 |Proxy Username|The proxy username to authenticate with.|False|None||
 |Proxy Password|The proxy password to authenticate with.|False|None||
