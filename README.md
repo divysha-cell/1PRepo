@@ -80,6 +80,8 @@
 |MITRE Enrichment|This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.|
 |New Playbook||
 |Nw Playbook||
+|Carbon Black Cloud Remediation||
+|Copy of Carbon Black Cloud Remediation - 1||
 
 
 ## Visual Families
