@@ -12,7 +12,7 @@
     "description": "An embedded workflow that can receive inputs and return an output.",
     "executionScope": 0,
     "environments": [
-        "SM"
+        "Env1"
     ],
     "categoryName": "SM_Canary",
     "categoryId": 16,
