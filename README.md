@@ -65,6 +65,13 @@
 |Zerofox|ZeroFox is the leading Threat Intelligence and Digital Risk Protection platform, helping you secure your digital world.|
 
 
+## Playbooks
+|Name|Description|
+|----|-----------|
+|New Playbook||
+|Nw Playbook||
+
+
 ## Visual Families
 |Name|Description|
 |----|-----------|
