@@ -78,7 +78,7 @@
 |GTI Enrichment|This block enhances case entities with Google Threat Intelligence enrichment information. Works for IPs, URLs, hostnames, domains, hashes (MD5, SHA-1, SHA-256), threat actors, and CVEs.|
 |Google SecOps Enrichment|This block retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.|
 |MITRE Enrichment|This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.|
-|New Playbook||
+|SecMon_Enrichment_and_Triage_Block|An embedded workflow that can receive inputs and return an output.|
 |Nw Playbook||
 |Carbon Black Cloud Remediation||
 |Copy of Carbon Black Cloud Remediation - 1||
