@@ -68,6 +68,7 @@
 ## Playbooks
 |Name|Description|
 |----|-----------|
+|AWS Instance Containment|This block allows you to stop EC2 instances that were identified in the alert as potentially compromised or suspicious, supporting the containment phase of the incident response process.It uses a boolean input to control manual or automatic execution and returns the containment result, false on failure, or an empty value if no action is taken.|
 |New Playbook||
 |Nw Playbook||
 
