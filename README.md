@@ -116,50 +116,58 @@
 ## Jobs
 |Name|Description|
 |----|-----------|
-|projects/project/locations/location/instances/instance/integrations/Jira/jobs/158/jobInstances/76|Automated test job instance configured by script. Index: 47|
-|projects/project/locations/location/instances/instance/integrations/AzureSecurityCenter/jobs/189/jobInstances/72|Automated test job instance configured by script. Index: 43|
-|projects/project/locations/location/instances/instance/integrations/Microsoft365Defender/jobs/61/jobInstances/105|Automated test job instance configured by script. Index: 1|
-|projects/project/locations/location/instances/instance/integrations/FreshworksFreshservice/jobs/134/jobInstances/52|Automated test job instance configured by script. Index: 23|
-|projects/project/locations/location/instances/instance/integrations/FreshworksFreshservice/jobs/135/jobInstances/53|Automated test job instance configured by script. Index: 24|
-|projects/project/locations/location/instances/instance/integrations/CaseFederation/jobs/42/jobInstances/114|Automated test job instance configured by script. Index: 0|
-|projects/project/locations/location/instances/instance/integrations/Group-IB-DRP/jobs/130/jobInstances/49|Automated test job instance configured by script. Index: 20|
-|projects/project/locations/location/instances/instance/integrations/FreshworksFreshservice/jobs/134/jobInstances/121|Automated test job instance configured by script. Index: 7|
-|projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/157/jobInstances/75|Automated test job instance configured by script. Index: 46|
-|projects/project/locations/location/instances/instance/integrations/Luminar IOCs and Leaked Credentials/jobs/129/jobInstances/48|Automated test job instance configured by script. Index: 19|
-|projects/project/locations/location/instances/instance/integrations/Exchange/jobs/133/jobInstances/51|Automated test job instance configured by script. Index: 22|
-|projects/project/locations/location/instances/instance/integrations/CrowdStrikeFalcon/jobs/63/jobInstances/106|Automated test job instance configured by script. Index: 2|
-|projects/project/locations/location/instances/instance/integrations/CaseFederation/jobs/42/jobInstances/104|Automated test job instance configured by script. Index: 0|
-|projects/project/locations/location/instances/instance/integrations/CrowdStrikeFalcon/jobs/63/jobInstances/96|Automated test job instance configured by script. Index: 2|
-|projects/project/locations/location/instances/instance/integrations/Exchange/jobs/132/jobInstances/50|Automated test job instance configured by script. Index: 21|
-|projects/project/locations/location/instances/instance/integrations/Microsoft365Defender/jobs/61/jobInstances/95|Automated test job instance configured by script. Index: 1|
-|projects/project/locations/location/instances/instance/integrations/CaseFederation/jobs/42/jobInstances/94|Automated test job instance configured by script. Index: 0|
-|projects/project/locations/location/instances/instance/integrations/CrowdStrikeFalcon/jobs/63/jobInstances/86|Automated test job instance configured by script. Index: 2|
-|projects/project/locations/location/instances/instance/integrations/CaseFederation/jobs/42/jobInstances/84|Automated test job instance configured by script. Index: 0|
-|projects/project/locations/location/instances/instance/integrations/CrowdStrikeFalcon/jobs/63/jobInstances/31|Automated test job instance configured by script. Index: 2|
-|projects/project/locations/location/instances/instance/integrations/Microsoft365Defender/jobs/61/jobInstances/30|Automated test job instance configured by script. Index: 1|
-|projects/project/locations/location/instances/instance/integrations/CaServiceDesk/jobs/191/jobInstances/55|Automated test job instance configured by script. Index: 26|
-|projects/project/locations/location/instances/instance/integrations/Group-IB-DRP/jobs/130/jobInstances/118|Automated test job instance configured by script. Index: 4|
-|projects/project/locations/location/instances/instance/integrations/FreshworksFreshservice/jobs/135/jobInstances/122|Automated test job instance configured by script. Index: 8|
-|projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/156/jobInstances/74|Automated test job instance configured by script. Index: 45|
-|projects/project/locations/location/instances/instance/integrations/NessusScanner/jobs/142/jobInstances/60|Automated test job instance configured by script. Index: 31|
-|projects/project/locations/location/instances/instance/integrations/Luminar IOCs and Leaked Credentials/jobs/129/jobInstances/117|Automated test job instance configured by script. Index: 3|
-|projects/project/locations/location/instances/instance/integrations/Exchange/jobs/133/jobInstances/120|Automated test job instance configured by script. Index: 6|
-|projects/project/locations/location/instances/instance/integrations/MicrosoftGraphMailDelegated/jobs/146/jobInstances/64|Automated test job instance configured by script. Index: 35|
-|projects/project/locations/location/instances/instance/integrations/LogRhythm/jobs/138/jobInstances/56|Automated test job instance configured by script. Index: 27|
-|projects/project/locations/location/instances/instance/integrations/Microsoft365Defender/jobs/61/jobInstances/85|Automated test job instance configured by script. Index: 1|
-|projects/project/locations/location/instances/instance/integrations/LogRhythm/jobs/140/jobInstances/58|Automated test job instance configured by script. Index: 29|
-|projects/project/locations/location/instances/instance/integrations/Microsoft365Defender/jobs/61/jobInstances/115|Automated test job instance configured by script. Index: 1|
-|projects/project/locations/location/instances/instance/integrations/LogRhythm/jobs/139/jobInstances/57|Automated test job instance configured by script. Index: 28|
-|projects/project/locations/location/instances/instance/integrations/LogRhythm/jobs/138/jobInstances/123|Automated test job instance configured by script. Index: 9|
-|projects/project/locations/location/instances/instance/integrations/LogRhythm/jobs/141/jobInstances/59|Automated test job instance configured by script. Index: 30|
-|projects/project/locations/location/instances/instance/integrations/BMCRemedyITSM/jobs/193/jobInstances/79|Automated test job instance configured by script. Index: 50|
-|projects/project/locations/location/instances/instance/integrations/Jira/jobs/159/jobInstances/77|Automated test job instance configured by script. Index: 48|
-|projects/project/locations/location/instances/instance/integrations/CaServiceDesk/jobs/192/jobInstances/54|Automated test job instance configured by script. Index: 25|
-|projects/project/locations/location/instances/instance/integrations/MicrosoftAzureSentinel/jobs/144/jobInstances/62|Automated test job instance configured by script. Index: 33|
-|projects/project/locations/location/instances/instance/integrations/MicrosoftAzureSentinel/jobs/143/jobInstances/61|Automated test job instance configured by script. Index: 32|
-|projects/project/locations/location/instances/instance/integrations/RSAArcher/jobs/155/jobInstances/73|Automated test job instance configured by script. Index: 44|
-|projects/project/locations/location/instances/instance/integrations/ServiceNow/jobs/164/jobInstances/82|Automated test job instance configured by script. Index: 53|
-|projects/project/locations/location/instances/instance/integrations/ServiceNow/jobs/165/jobInstances/83|Automated test job instance configured by script. Index: 54|
-|projects/project/locations/location/instances/instance/integrations/QRadar/jobs/160/jobInstances/78|Automated test job instance configured by script. Index: 49|
-|projects/project/locations/location/instances/instance/integrations/Exchange/jobs/132/jobInstances/119|Automated test job instance configured by script. Index: 5|
+|111Sync Comments - AutoTest 1|Automated test job instance configured by script. Index: 47|
+|11Refresh Token Renewal Job - AutoTest 1|Automated test job instance configured by script. Index: 43|
+|11Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
+|134Freshservice Sync Tickets Conversations Job - AutoTest 1|Automated test job instance configured by script. Index: 23|
+|13Freshservice Sync Tickets Closure Job - AutoTest 1|Automated test job instance configured by script. Index: 24|
+|1Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|1DRP Deduplication Job - AutoTest 1|Automated test job instance configured by script. Index: 20|
+|1Fr2eshservice Sync Tickets Conversations Job - AutoTest 1|Automated test job instance configured by script. Index: 7|
+|1Google Chronicle Alerts Creator Job - AutoTest 1|Automated test job instance configured by script. Index: 46|
+|1Luminar IOC and Leaked Credentials Job - AutoTest 1|Automated test job instance configured by script. Index: 19|
+|1Oauth Token Expiry Notification Job - AutoTest 1|Automated test job instance configured by script. Index: 22|
+|1Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 2|
+|2Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|2Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 2|
+|2Token Renewal Job - AutoTest 1|Automated test job instance configured by script. Index: 21|
+|2nSync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
+|3Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|3Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 2|
+|4Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|4Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 2|
+|5Case Federation Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 0|
+|5Sync Alerts|This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job synchronizes comments and status. Requires “Crowdstrike Alert” tag on the case. Note: If the alert didn’t originate from “Alerts Connector” or “Identity Protections Detection Connector” you will need to add an “Alert_ID” context value for the job to be able to find the correct information.|
+|6Refresh Token Renewal Job|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
+|6new Sync Alerts|This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job synchronizes comments and status. Requires “Crowdstrike Alert” tag on the case. Note: If the alert didn’t originate from “Alerts Connector” or “Identity Protections Detection Connector” you will need to add an “Alert_ID” context value for the job to be able to find the correct information.|
+|7Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
+|CA Close Ticket In CA For Closed Case - AutoTest 1|Automated test job instance configured by script. Index: 26|
+|DRP Deduplication Job - AutoTest 1|Automated test job instance configured by script. Index: 4|
+|Freshservice Sync Tickets Closure Job - AutoTest 11|Automated test job instance configured by script. Index: 8|
+|Google Chronicle Sync Job - AutoTest 1|Automated test job instance configured by script. Index: 45|
+|Google Chronicle Sync Job|This job will synchronize information about Chronicle SOAR Cases and Chronicle SOAR Alerts with Chronicle SIEM. Note: This job is only supported from Chronicle SOAR version 6.1.44 and higher.|
+|LaunchScanAndGetAReport - AutoTest 1|Automated test job instance configured by script. Index: 31|
+|Luminar IOC and Leaked Credentials Job - AutoTest 1|Automated test job instance configured by script. Index: 3|
+|Oauth Token Expiry Notification Job - AutoTest 1|Automated test job instance configured by script. Index: 6|
+|Refresh Token Renewal Job - AutoTest 1|Automated test job instance configured by script. Index: 52|
+|S1ync Closed Alarms - AutoTest 1|Automated test job instance configured by script. Index: 27|
+|S5ync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
+|Sync Alarm Comments - AutoTest 1|Automated test job instance configured by script. Index: 29|
+|Sync Alerts - AutoTest 1|Automated test job instance configured by script. Index: 1|
+|Sync Case Comments - AutoTest 1|Automated test job instance configured by script. Index: 28|
+|Sync Closed Alarms - AutoTest 1|Automated test job instance configured by script. Index: 9|
+|Sync Closed Cases - AutoTest 1|Automated test job instance configured by script. Index: 30|
+|Sync Closed Incidents By Tag - AutoTest 1|Automated test job instance configured by script. Index: 50|
+|Sync Closure - AutoTest 1|Automated test job instance configured by script. Index: 48|
+|Sync Comments - AutoTest 1|Automated test job instance configured by script. Index: 25|
+|Sync Incidents - AutoTest 1|Automated test job instance configured by script. Index: 33|
+|Sync Incidents V2 - AutoTest 1|Automated test job instance configured by script. Index: 32|
+|Sync Incidents|This job synchronizes Google SecOps Alerts and Palo Alto XDR Incidents. It ensures that comments and status are kept in sync between the two systems. For the job to identify the correct information, the Google SecOps case must have the "Palo Alto XDR Incident" tag. If the alert didn’t originate from "Palo Alto Cortex XDR Connector",  you will need to add an "Incident_ID" context value to the case for the job to be able to find the correct information.|
+|Sync Security Incidents - AutoTest 1|Automated test job instance configured by script. Index: 44|
+|Sync Table Record Comments - AutoTest 1|Automated test job instance configured by script. Index: 53|
+|Sync Table Record Comments By Tag - AutoTest 1|Automated test job instance configured by script. Index: 54|
+|SyncCloseOffenses - AutoTest 1|Automated test job instance configured by script. Index: 49|
+|Token Renewal Job - AutoTest 1|Automated test job instance configured by script. Index: 5|
+|sdsSync Incidents|This job synchronizes Google SecOps Alerts and Palo Alto XDR Incidents. It ensures that comments and status are kept in sync between the two systems. For the job to identify the correct information, the Google SecOps case must have the "Palo Alto XDR Incident" tag. If the alert didn’t originate from "Palo Alto Cortex XDR Connector",  you will need to add an "Incident_ID" context value to the case for the job to be able to find the correct information.|
+|wqrqwrqrSync Incidents|Deprecated. This job synchronizes Google SecOps Alerts and Microsoft Sentinel Incidents. It ensures that comments, status, and tags are kept in sync between the two systems. For the job to identify the correct information, the Google SecOps case must have the “Microsoft Sentinel Incident” tag. If the alert didn’t originate from “Microsoft Azure Sentinel Incident Connector v2”,  you will need to add an “Incident_ID” context value to the case for the job to be able to find the correct information.|
 
