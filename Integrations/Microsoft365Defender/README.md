@@ -64,56 +64,8 @@ Timeout - 600 Seconds
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
+|Incident ID|Specify the id of the incident that needs to be updated.|True|String||
 |Comment|Specify the comment that needs to be added to the incident.|True|String||
-|Incident ID|Specify the id of the incident that needs to be updated.|True|String||
-
-
-
-#### Execute Entity Query
-Execute a hunting query based on entities in Microsoft 365 Defender. Note: this action prepares a where filter based on entities. Please refer to the documentation for more details. Supported entities: IP, Host, User, Hash, URL.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Table Names|Specify what tables should be queried.|True|String||
-|Time Frame|Specify a time frame for the results. If "Custom" is selected, you also need to provide "Start Time".||List|Last Hour|
-|Start Time|Specify the start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601||String||
-|End Time|Specify the end time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.||String||
-|Fields To Return|Specify what fields to return.||String||
-|Sort Field|Specify what parameter should be used for sorting.||String|Timestamp|
-|Sort Order|Specify the order of sorting.||List|ASC|
-|Max Results To Return|Specify how many results to return. Default: 50.||String|50|
-|IP Entity Key|Specify what key should be used with IP entities. Please refer to the action documentation for details.||String||
-|Hostname Entity Key|Specify what key should be used with Hostname entities. Please refer to the action documentation for details.||String||
-|File Hash Entity Key|Specify what key should be used with File Hash entities. Please refer to the action documentation for details.||String||
-|User Entity Key|Specify what key should be used with User entities. Please refer to the action documentation for details.||String||
-|URL Entity Key|Specify what key should be used with URL entities. Please refer to the action documentation for details.||String||
-|Email Address Entity Key|Specify what key should be used with Email Address (User entity with email regex) entities. Please refer to the action documentation for details.||String||
-|Stop If Not Enough Entities|If enabled, action will not start execution, unless all of the entity types are available for the specified “.. Entity Keys”. Example: if “IP Entity Key” and “File Hash Entity Key” are specified, but in the scope there are no file hashes then if this parameter is enabled, action will not execute the query.||Boolean|true|
-|Cross Entity Operator|Specify what should be the logical operator used between different entity types.|True|List|OR|
-
-
-
-##### JSON Results
-```json
-[{"Timestamp":"2021-04-29T10:04:27.9049321Z","AlertId":"","ServiceSource":"","EntityType":"","EvidenceRole":"","EvidenceDirection":"","FileName":"","FolderPath":"","SHA1":"","SHA256":"","FileSize":null,"ThreatFamily":"","RemoteIP":"","RemoteUrl":"","AccountName":"","AccountDomain":"","AccountSid":"","AccountObjectId":"","AccountUpn":"","DeviceId":"4404d21581b65a3dbxxxxxxxxxxxxxxxxxxxxxxxxxxx","DeviceName":"desktop-xxxxxx","LocalIP":"","NetworkMessageId":"","EmailSubject":"","ApplicationId":null,"Application":"","OAuthApplicationId":"","ProcessCommandLine":"","AdditionalFields":"{\"IsLocalLogon\":true}","RegistryKey":"","RegistryValueName":"","RegistryValueData":"","Title":"","Category":"","Severity":"","DetectionSource":"","AttackTechniques":"","ClientVersion":"","PublicIP":"","OSArchitecture":"","OSPlatform":"","OSBuild":null,"IsAzureADJoined":null,"AadDeviceId":"","LoggedOnUsers":"","RegistryDeviceTag":"","OSVersion":"","MachineGroup":"","ReportId":2826,"OnboardingStatus":"","DeviceCategory":"","DeviceType":"","DeviceSubType":"","Model":"","Vendor":"","OSDistribution":"","OSVersionInfo":"","MergedDeviceIds":"","MergedToDeviceId":"","DeviceObjectId":"","NetworkAdapterName":"","MacAddress":"","NetworkAdapterType":"","NetworkAdapterStatus":"","TunnelType":"","ConnectedNetworks":"","DnsAddresses":"","IPv4Dhcp":"","IPv6Dhcp":"","DefaultGateways":"","IPAddresses":"","NetworkAdapterVendor":"","ActionType":"LogonFailed","LogonType":"Network","Protocol":"Kerberos","FailureReason":"","IsLocalAdmin":null,"LogonId":null,"RemoteDeviceName":"","RemoteIPType":"","RemotePort":null,"InitiatingProcessAccountDomain":"nt authority","InitiatingProcessAccountName":"system","InitiatingProcessAccountSid":"S-1-5-18","InitiatingProcessAccountUpn":"","InitiatingProcessAccountObjectId":"","InitiatingProcessIntegrityLevel":"","InitiatingProcessTokenElevation":"None","InitiatingProcessSHA1":"75c5a97f521f760e32a4a9639axxxxxxxxxxxxxx","InitiatingProcessSHA256":"","InitiatingProcessMD5":"9520a99e77d6196d0d0xxxxxxxxxxxxx","InitiatingProcessFileName":"svchost.exe","InitiatingProcessFileSize":null,"InitiatingProcessVersionInfoCompanyName":"","InitiatingProcessVersionInfoProductName":"","InitiatingProcessVersionInfoProductVersion":"","InitiatingProcessVersionInfoInternalFileName":"","InitiatingProcessVersionInfoOriginalFileName":"","InitiatingProcessVersionInfoFileDescription":"","InitiatingProcessId":3020,"InitiatingProcessCommandLine":"svchost.exe -k netsvcs -p -s Winmgmt","InitiatingProcessCreationTime":"2021-04-29T09:59:11.8716716Z","InitiatingProcessFolderPath":"C:\\Windows\\System32","InitiatingProcessParentId":728,"InitiatingProcessParentFileName":"\\Device\\HarddiskVolume4\\Windows\\System32\\services.exe","InitiatingProcessParentCreationTime":"2021-04-29T09:59:09.9224656Z","AppGuardContainerId":""}]
-```
-
-
-
-#### Update Incident
-Update incident in Microsoft 365 Defender.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Incident ID|Specify the id of the incident that needs to be updated.|True|String||
-|Status|Specify what status to set for the incident.||List|Select One|
-|Classification|Specify what classification to set for the incident..||List|Select One|
-|Determination|Specify what determination to set for the incident. Note: determination can only be set, when classification is true positive.||List|Select One|
-|Assign To|Specify to whom to assign this incident.||String||
 
 
 
@@ -165,6 +117,54 @@ Timeout - 600 Seconds
 ```json
 [{"Timestamp":"2021-04-12T07:25:00Z","AlertId":"fa7a318954-6c4c-eaab-xxx-xxxxxxxxxx","Title":"CC_Sensitive information","Category":"InitialAccess","Severity":"Medium","ServiceSource":"Microsoft Defender for Office 365","DetectionSource":"Microsoft Defender for Office 365","AttackTechniques":""}]
 ```
+
+
+
+#### Execute Entity Query
+Execute a hunting query based on entities in Microsoft 365 Defender. Note: this action prepares a where filter based on entities. Please refer to the documentation for more details. Supported entities: IP, Host, User, Hash, URL.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Table Names|Specify what tables should be queried.|True|String||
+|Time Frame|Specify a time frame for the results. If "Custom" is selected, you also need to provide "Start Time".||List|Last Hour|
+|Start Time|Specify the start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601||String||
+|End Time|Specify the end time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.||String||
+|Fields To Return|Specify what fields to return.||String||
+|Sort Field|Specify what parameter should be used for sorting.||String|Timestamp|
+|Sort Order|Specify the order of sorting.||List|ASC|
+|Max Results To Return|Specify how many results to return. Default: 50.||String|50|
+|IP Entity Key|Specify what key should be used with IP entities. Please refer to the action documentation for details.||String||
+|Hostname Entity Key|Specify what key should be used with Hostname entities. Please refer to the action documentation for details.||String||
+|File Hash Entity Key|Specify what key should be used with File Hash entities. Please refer to the action documentation for details.||String||
+|User Entity Key|Specify what key should be used with User entities. Please refer to the action documentation for details.||String||
+|URL Entity Key|Specify what key should be used with URL entities. Please refer to the action documentation for details.||String||
+|Email Address Entity Key|Specify what key should be used with Email Address (User entity with email regex) entities. Please refer to the action documentation for details.||String||
+|Stop If Not Enough Entities|If enabled, action will not start execution, unless all of the entity types are available for the specified “.. Entity Keys”. Example: if “IP Entity Key” and “File Hash Entity Key” are specified, but in the scope there are no file hashes then if this parameter is enabled, action will not execute the query.||Boolean|true|
+|Cross Entity Operator|Specify what should be the logical operator used between different entity types.|True|List|OR|
+
+
+
+##### JSON Results
+```json
+[{"Timestamp":"2021-04-29T10:04:27.9049321Z","AlertId":"","ServiceSource":"","EntityType":"","EvidenceRole":"","EvidenceDirection":"","FileName":"","FolderPath":"","SHA1":"","SHA256":"","FileSize":null,"ThreatFamily":"","RemoteIP":"","RemoteUrl":"","AccountName":"","AccountDomain":"","AccountSid":"","AccountObjectId":"","AccountUpn":"","DeviceId":"4404d21581b65a3dbxxxxxxxxxxxxxxxxxxxxxxxxxxx","DeviceName":"desktop-xxxxxx","LocalIP":"","NetworkMessageId":"","EmailSubject":"","ApplicationId":null,"Application":"","OAuthApplicationId":"","ProcessCommandLine":"","AdditionalFields":"{\"IsLocalLogon\":true}","RegistryKey":"","RegistryValueName":"","RegistryValueData":"","Title":"","Category":"","Severity":"","DetectionSource":"","AttackTechniques":"","ClientVersion":"","PublicIP":"","OSArchitecture":"","OSPlatform":"","OSBuild":null,"IsAzureADJoined":null,"AadDeviceId":"","LoggedOnUsers":"","RegistryDeviceTag":"","OSVersion":"","MachineGroup":"","ReportId":2826,"OnboardingStatus":"","DeviceCategory":"","DeviceType":"","DeviceSubType":"","Model":"","Vendor":"","OSDistribution":"","OSVersionInfo":"","MergedDeviceIds":"","MergedToDeviceId":"","DeviceObjectId":"","NetworkAdapterName":"","MacAddress":"","NetworkAdapterType":"","NetworkAdapterStatus":"","TunnelType":"","ConnectedNetworks":"","DnsAddresses":"","IPv4Dhcp":"","IPv6Dhcp":"","DefaultGateways":"","IPAddresses":"","NetworkAdapterVendor":"","ActionType":"LogonFailed","LogonType":"Network","Protocol":"Kerberos","FailureReason":"","IsLocalAdmin":null,"LogonId":null,"RemoteDeviceName":"","RemoteIPType":"","RemotePort":null,"InitiatingProcessAccountDomain":"nt authority","InitiatingProcessAccountName":"system","InitiatingProcessAccountSid":"S-1-5-18","InitiatingProcessAccountUpn":"","InitiatingProcessAccountObjectId":"","InitiatingProcessIntegrityLevel":"","InitiatingProcessTokenElevation":"None","InitiatingProcessSHA1":"75c5a97f521f760e32a4a9639axxxxxxxxxxxxxx","InitiatingProcessSHA256":"","InitiatingProcessMD5":"9520a99e77d6196d0d0xxxxxxxxxxxxx","InitiatingProcessFileName":"svchost.exe","InitiatingProcessFileSize":null,"InitiatingProcessVersionInfoCompanyName":"","InitiatingProcessVersionInfoProductName":"","InitiatingProcessVersionInfoProductVersion":"","InitiatingProcessVersionInfoInternalFileName":"","InitiatingProcessVersionInfoOriginalFileName":"","InitiatingProcessVersionInfoFileDescription":"","InitiatingProcessId":3020,"InitiatingProcessCommandLine":"svchost.exe -k netsvcs -p -s Winmgmt","InitiatingProcessCreationTime":"2021-04-29T09:59:11.8716716Z","InitiatingProcessFolderPath":"C:\\Windows\\System32","InitiatingProcessParentId":728,"InitiatingProcessParentFileName":"\\Device\\HarddiskVolume4\\Windows\\System32\\services.exe","InitiatingProcessParentCreationTime":"2021-04-29T09:59:09.9224656Z","AppGuardContainerId":""}]
+```
+
+
+
+#### Update Incident
+Update incident in Microsoft 365 Defender.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Incident ID|Specify the id of the incident that needs to be updated.|True|String||
+|Status|Specify what status to set for the incident.||List|Select One|
+|Classification|Specify what classification to set for the incident..||List|Select One|
+|Determination|Specify what determination to set for the incident. Note: determination can only be set, when classification is true positive.||List|Select One|
+|Assign To|Specify to whom to assign this incident.||String||
 
 
 
