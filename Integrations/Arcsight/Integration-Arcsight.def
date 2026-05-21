@@ -19,8 +19,8 @@
             "IsMandatory": true,
             "Value": "https://{IP_ADDR}:{PORT}",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779351515278,
-            "ModificationTimeUnixTimeInMs": 1779351515278
+            "CreationTimeUnixTimeInMs": 1779351703067,
+            "ModificationTimeUnixTimeInMs": 1779351703067
         },
         {
             "IntegrationIdentifier": "Arcsight",
@@ -31,8 +31,8 @@
             "IsMandatory": true,
             "Value": null,
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779351515278,
-            "ModificationTimeUnixTimeInMs": 1779351515278
+            "CreationTimeUnixTimeInMs": 1779351703067,
+            "ModificationTimeUnixTimeInMs": 1779351703067
         },
         {
             "IntegrationIdentifier": "Arcsight",
@@ -43,8 +43,8 @@
             "IsMandatory": true,
             "Value": null,
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779351515278,
-            "ModificationTimeUnixTimeInMs": 1779351515278
+            "CreationTimeUnixTimeInMs": 1779351703067,
+            "ModificationTimeUnixTimeInMs": 1779351703067
         },
         {
             "IntegrationIdentifier": "Arcsight",
@@ -55,8 +55,8 @@
             "IsMandatory": false,
             "Value": "",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779351515278,
-            "ModificationTimeUnixTimeInMs": 1779351515278
+            "CreationTimeUnixTimeInMs": 1779351703067,
+            "ModificationTimeUnixTimeInMs": 1779351703067
         },
         {
             "IntegrationIdentifier": "Arcsight",
@@ -67,80 +67,80 @@
             "IsMandatory": false,
             "Value": "false",
             "Id": 0,
-            "CreationTimeUnixTimeInMs": 1779351515278,
-            "ModificationTimeUnixTimeInMs": 1779351515278
+            "CreationTimeUnixTimeInMs": 1779351703067,
+            "ModificationTimeUnixTimeInMs": 1779351703067
         }
     ],
     "IntegrationSupportedActions": [
         {
-            "Name": "Get Activelist Entries",
-            "Description": "Retrieve active list entries in ArcSight",
-            "Id": 1785,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
-        },
-        {
-            "Name": "Ping",
-            "Description": "Test Connectivity",
-            "Id": 1786,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
+            "Name": "Add Entities To Active List",
+            "Description": "Add entities to the active list in ArcSight.",
+            "Id": 1813,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
         },
         {
             "Name": "Get Query Results",
             "Description": "Get results for the provided query in ArcSight",
-            "Id": 1787,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
-        },
-        {
-            "Name": "Add Entities To Active List",
-            "Description": "Add entities to the active list in ArcSight.",
-            "Id": 1788,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
-        },
-        {
-            "Name": "Is Value In Activelist Column",
-            "Description": "Action checks, if entities were found in ArcSight Activelist",
-            "Id": 1789,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
+            "Id": 1814,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
         },
         {
             "Name": "Search",
             "Description": "Search for available resources in ArcSight",
-            "Id": 1790,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
+            "Id": 1815,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
         },
         {
             "Name": "Change Case Stage",
             "Description": "Update the stage of the case in ArcSight.",
-            "Id": 1791,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
+            "Id": 1816,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
         },
         {
-            "Name": "Add Entries To Activelist",
-            "Description": "Add new entry to active list in ArcSight. Column values are separated by delimiter \u2018|' and entries are separated by \u2018;\u2019 in parameter \u2018Entries\u2019. Column names are separated by delimiter \u2018;\u2019 in parameter \u2018Columns\u2019. You can also use Entries JSON instead of \u2018Columns\u2019 + 'Entries\u2019\u201c.",
-            "Id": 1792,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
+            "Name": "Ping",
+            "Description": "Test Connectivity",
+            "Id": 1817,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
         },
         {
-            "Name": "List Resources",
-            "Description": "List available queries in ArcSight.",
-            "Id": 1793,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
+            "Name": "Get Activelist Entries",
+            "Description": "Retrieve active list entries in ArcSight",
+            "Id": 1818,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
         },
         {
             "Name": "Get Report",
             "Description": "Get details about report in ArcSight.",
-            "Id": 1794,
-            "CreationTimeUnixTimeInMs": 1779351515290,
-            "ModificationTimeUnixTimeInMs": 1779351515290
+            "Id": 1819,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
+        },
+        {
+            "Name": "Add Entries To Activelist",
+            "Description": "Add new entry to active list in ArcSight. Column values are separated by delimiter \u2018|' and entries are separated by \u2018;\u2019 in parameter \u2018Entries\u2019. Column names are separated by delimiter \u2018;\u2019 in parameter \u2018Columns\u2019. You can also use Entries JSON instead of \u2018Columns\u2019 + 'Entries\u2019\u201c.",
+            "Id": 1820,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
+        },
+        {
+            "Name": "Is Value In Activelist Column",
+            "Description": "Action checks, if entities were found in ArcSight Activelist",
+            "Id": 1821,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
+        },
+        {
+            "Name": "List Resources",
+            "Description": "List available queries in ArcSight.",
+            "Id": 1822,
+            "CreationTimeUnixTimeInMs": 1779351703079,
+            "ModificationTimeUnixTimeInMs": 1779351703079
         }
     ],
     "Categories": [
@@ -161,7 +161,7 @@
     "Internal": false,
     "GoogleSecOpsProduct": false,
     "Id": 0,
-    "CreationTimeUnixTimeInMs": 1779351515278,
-    "ModificationTimeUnixTimeInMs": 1779351515278,
+    "CreationTimeUnixTimeInMs": 1779351703067,
+    "ModificationTimeUnixTimeInMs": 1779351703067,
     "Custom": false
 }
