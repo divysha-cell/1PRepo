@@ -1,6 +1,6 @@
 {
-    "lastRunStatus": null,
-    "lastRunTime": null,
+    "lastRunStatus": 1,
+    "lastRunTime": 1779436685978,
     "uniqueIdentifier": "cf5d9a89-a8b0-4543-9312-52191add250b",
     "id": 0,
     "jobDefinitionId": 0,
@@ -14,16 +14,16 @@
     "version": 1,
     "parameters": [
         {
-            "id": 9588,
+            "id": 9603,
             "isMandatory": false,
             "name": "Integration Environments",
             "type": 2,
-            "value": "test_str_34c14f52"
+            "value": "test_str_34c14f52,35456fgg"
         }
     ],
     "runIntervalInSeconds": 60,
     "creationTime": "2026-05-21T12:11:22.592Z",
-    "lastModificationTime": "2026-05-22T07:54:37.114Z",
+    "lastModificationTime": "2026-05-22T07:58:05.99Z",
     "isSystemJob": false,
     "jobDefinitionName": "Refresh Token Renewal Job",
     "agentIdentifier": null,
