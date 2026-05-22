@@ -14,7 +14,7 @@
     "version": 1,
     "parameters": [
         {
-            "id": 9513,
+            "id": 9588,
             "isMandatory": false,
             "name": "Integration Environments",
             "type": 2,
@@ -23,11 +23,11 @@
     ],
     "runIntervalInSeconds": 60,
     "creationTime": "2026-05-21T12:11:22.592Z",
-    "lastModificationTime": "2026-05-22T06:41:55.995Z",
+    "lastModificationTime": "2026-05-22T07:54:37.114Z",
     "isSystemJob": false,
     "jobDefinitionName": "Refresh Token Renewal Job",
     "agentIdentifier": null,
-    "advanced": false,
+    "advanced": true,
     "advancedConfig": {
         "timeZone": "Europe/London",
         "scheduleType": "Once",
