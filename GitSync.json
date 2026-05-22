@@ -9,7 +9,9 @@
         "Visual Family": {},
         "Playbook": {},
         "Connector": {},
-        "Job": {},
+        "Job": {
+            "Refresh Token Renewal Job - AutoTest 1": "addonRefresh Token Renewal Job - AutoTest 1"
+        },
         "Block": {}
     },
     "settings": {
