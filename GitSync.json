@@ -8,7 +8,9 @@
         "Mappings": {},
         "Visual Family": {},
         "Playbook": {},
-        "Connector": {},
+        "Connector": {
+            "Google Chronicle - Chronicle Alerts Connector": "addonon"
+        },
         "Job": {
             "Refresh Token Renewal Job - AutoTest 1": "Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1Refresh Token Renewal Job - AutoTest 1"
         },
