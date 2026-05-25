@@ -28,4 +28,4 @@ Event Name Field: event_type
 |Validate Dynamic List Entries|If enabled, the connector will fail if any filter configured in the Dynamic List is invalid. If disabled, invalid filters will be ignored completely and warnings will be logged.|False|false|
 
 
-addonon
+This is a Readme addonon
