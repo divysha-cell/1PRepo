@@ -13,10 +13,7 @@
 |Name|Description|
 |----|-----------|
 |1New Playbook||
-|2New Playbook||
 |Google SecOps Enrichment|This block retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.|
-|New Playbook||
-|Nw Playbook||
 
 
 ## Visual Families
