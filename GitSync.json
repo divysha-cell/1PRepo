@@ -7,7 +7,12 @@
         },
         "Mappings": {},
         "Visual Family": {},
-        "Playbook": {},
+        "Playbook": {
+            "Nw Playbook": "A paragraph is a self-contained unit of writing consisting of one or more sentences that develop a single, controlling idea. It serves as a structural building block in prose, allowing writers to break complex ideas into digestible pieces and guiding readers through different points",
+            "New Playbook": "A paragraph is a self-contained unit of writing consisting of one or more sentences that develop a single, controlling idea. It serves as a structural building block in prose, allowing writers to break complex ideas into digestible pieces and guiding readers through different points",
+            "2New Playbook": "A paragraph is a self-contained unit of writing consisting of one or more sentences that develop a single, controlling idea. It serves as a structural building block in prose, allowing writers to break complex ideas into digestible pieces and guiding readers through different points",
+            "1New Playbook": "A paragraph is a self-contained unit of writing consisting of one or more sentences that develop a single, controlling idea. It serves as a structural building block in prose, allowing writers to break complex ideas into digestible pieces and guiding readers through different points"
+        },
         "Connector": {
             "Google Chronicle - Chronicle Alerts Connector": "This is a Readme addonon",
             "new Crowdstrike - Alerts Connector": "This is a Readme addonon",
