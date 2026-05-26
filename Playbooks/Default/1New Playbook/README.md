@@ -31,6 +31,7 @@
 |Step Name|Description|Integration|Original Action|
 |---------|-----------|-----------|---------------|
 |CrowdStrikeFalcon_Ping_1|Test Connectivity|CrowdStrikeFalcon|Ping|
+|GitSync_Ping_1|Test connectivity to GitSync|GitSync|Ping|
 
 ### Involved Blocks
 |Name|Description|
