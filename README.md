@@ -4,6 +4,7 @@
 |Name|Description|Has Mappings|
 |----|-----------|------------|
 |cdemnAlienVault USM Appliance Connector|asdfghjgfdsadfghjhgfdsdfghj|False|
+|Anomali Staxx - Indicators Connector|Pull indicators from Anomali Staxx|True|
 
 
 ## Playbooks
