@@ -25,6 +25,7 @@
 ## Visual Families
 |Name|Description|
 |----|-----------|
+|AV_THBn|newaddedmanually|
 |Copy of AV|Anti-virus alerts visualization|
 |Copy of AV_THBn|newaddedmanually|
 |Copy of Copy of AV_THBn|newaddedmanually|
