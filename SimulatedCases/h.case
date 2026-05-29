@@ -1,0 +1,64 @@
+{
+    "cases": [
+        {
+            "creatorUserId": null,
+            "events": [
+                {
+                    "_fields": {
+                        "baseEventIds": [],
+                        "parentEventId": 0,
+                        "deviceEventClassId": "h",
+                        "startTime": "1779179022979",
+                        "endTime": "1779179022979",
+                        "deviceProduct": "h"
+                    },
+                    "_rawDataFields": {
+                        "h": "b",
+                        "deviceEventClassId": "h",
+                        "deviceProduct": "h",
+                        "name": "h"
+                    },
+                    "environment": null,
+                    "sourceSystemName": null,
+                    "extensions": []
+                }
+            ],
+            "environment": null,
+            "sourceSystemName": "h",
+            "ticketId": null,
+            "description": null,
+            "displayId": null,
+            "reason": null,
+            "name": "h",
+            "deviceVendor": "h",
+            "deviceProduct": "h",
+            "startTime": 1779179022979,
+            "endTime": 1779179022979,
+            "type": 0,
+            "priority": -1,
+            "ruleGenerator": "h",
+            "sourceGroupingIdentifier": null,
+            "playbookTriggerKeywords": [],
+            "extensions": [
+                {
+                    "key": "h",
+                    "value": "h"
+                }
+            ],
+            "attachments": null,
+            "isTrimmed": false,
+            "dataType": 1,
+            "sourceType": 1,
+            "sourceSystemUrl": null,
+            "sourceRuleIdentifier": null,
+            "siemAlertId": null,
+            "updatedFields": [],
+            "alertUpdateSupported": false,
+            "alertMetadata": {},
+            "dataAccessScope": null
+        }
+    ],
+    "type": 0,
+    "connectorIdentifier": null,
+    "debugOutput": null
+}
