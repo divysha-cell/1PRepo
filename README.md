@@ -24,10 +24,47 @@
 ## Playbooks
 |Name|Description|
 |----|-----------|
+|AWS EC2 Containment|This block allows the playbook to automatically stop EC2 instances that were identified in the alert as potentially compromised or suspicious, supporting the containment phase of the incident response process.|
+|AWS EC2 Containment - 1|This block allows the playbook to automatically stop EC2 instances that were identified in the alert as potentially compromised or suspicious, supporting the containment phase of the incident response process.|
+|AWS EC2 Enrichment|This block retrieves EC2 instance data associated with the case and provides context for other actions or analysis.|
+|AWS Enrichment|This block retrieves EC2 instance data associated with the case and provides context for other actions or analysis.|
+|AWS Enrichment - 1|This block retrieves EC2 instance data associated with the case and provides context for other actions or analysis.|
+|AWS Instance Containment|This block allows you to stop EC2 instances that were identified in the alert as potentially compromised or suspicious, supporting the containment phase of the incident response process.It uses a boolean input to control manual or automatic execution and returns the containment result, false on failure, or an empty value if no action is taken.|
+|AWS User Containment|This block allows you to disable access for users referenced in the case, supporting containment actions during the incident response process. It uses a boolean input to control manual or automatic execution and returns the containment result, false on failure, or an empty value if no action is taken.|
+|AWS User Containment - 1|This block allows you to disable access for users referenced in the case, supporting containment actions during the incident response process. It uses a boolean input to control manual or automatic execution and returns the containment result, false on failure, or an empty value if no action is taken.|
+|AWS User Containment - 2|This block allows you to disable access for users referenced in the case, supporting containment actions during the incident response process. It uses a boolean input to control manual or automatic execution and returns the containment result, false on failure, or an empty value if no action is taken.|
+|AWS Users Containment|An embedded workflow that can receive inputs and return an output.|
+|AWS Users Containment - 1|An embedded workflow that can receive inputs and return an output.|
+|Amazon Web Services Cloud Platform Starting Playbook|Amazon Web Services Cloud Platform Starting Playbook provides reference implementation of how Amazon Web Services Cloud Platform alerts can be processed in Google SecOps.|
+|Amazon Web Services Cloud Platform Starting Playbook - 1|Amazon Web Services Cloud Platform Starting Playbook provides reference implementation of how Amazon Web Services Cloud Platform alerts can be processed in Google SecOps.|
+|Azure User Containment|This block applies containment actions to Azure user accounts by resetting passwords or disabling accounts. A boolean input controls manual or automatic mode. In automatic mode, the Disable Account and Password Reset flags determine which actions run. It returns true if successful, false on failure, or empty if no action is taken.|
+|Clean Case|Clean case (Tags, Alert scoring info, etc) when playbooks that are often rerun and can create duplicate evidence.  Extend this logic to meet your requirements.|
+|GCP Service Account Containment|This block disables one or more GCP service accounts as part of containment actions. It uses a boolean input to control manual or automatic execution and returns the containment result, false on failure, or an empty value if no action is taken.|
+|GTI Enrichment|This block enhances case entities with Google Threat Intelligence enrichment information. Works for IPs, URLs, hostnames, domains, hashes (MD5, SHA-1, SHA-256), threat actors, and CVEs.|
+|GTI Enrichment - 1|This block enhances case entities with Google Threat Intelligence enrichment information. Works for IPs, URLs, hostnames, domains, hashes (MD5, SHA-1, SHA-256), threat actors, and CVEs.|
+|Google SecOps Enrichment|This block retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.|
+|Google SecOps Enrichment - 1|This block retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.|
+|Google SecOps SIEM Enrichment|This block enriches entities and retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.|
+|Google Workspace User Containment|This block allows the playbook to update Google Workspace user accounts as part of containment or response actions, supporting account management and security controls. It uses a boolean input to control whether execution is manual or automatic. When running automatically, the Disable Account and Password Reset boolean inputs determine which actions are performed and which are ignored.|
+|High Risk Entities|This block increases the alert risk score when risky entities from a custom list are detected. It receives the Custom List Category and a Risk Score Increase value as inputs, which are used to increase the alert score if matches are found. The block returns true if successful or false on failure.|
+|MITRE Enrichment|This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.|
+|MITRE Enrichment - 1|This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.|
+|Mimecast Enrichment|This block performs an investigation by searching archived emails in Mimecast based on specified parameters and returns relevant information to support analysis and response activities within the case.|
+|Okta Containment|This block performs remediation on Okta users by generating a one‑time token for password resets or disabling accounts. A boolean input controls manual or automatic mode. In automatic mode, the Disable Account and Password Reset flags determine which actions run. It returns the remediation result, false on failure, or empty if no action is taken.|
+|Out Of Hours Check|This Block will check if the Alert is processing outside of typical business hours.  Some alert responses might react different (e.g. OOH escalation) at different parts of the day.|
+|Proofpoint Enrichment|This block uses the List Campaigns action to retrieve a list of active campaigns in Proofpoint TAP, providing relevant information to support investigation and threat analysis activities.|
+|Symantec Enrichment|This block supports remediation by retrieving system information for endpoints and listing all endpoints/sensors and groups configured on a specified Symantec-managed device, providing the necessary context for follow-up actions. It receives a boolean Scan Endpoint input; when set to true, the endpoint will be scanned.|
+|Tag Case with time span|A Block that Tags the case with the time span between Alerts.  Can be used for Case queue filters.|
+|11Copy of New Playbook2 - 2||
 |1New Playbook||
 |2New Playbook||
-|Google SecOps Enrichment|This block retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.|
+|Copy of 1New Playbook||
+|Copy of 1New Playbook - 2||
+|Copy of 2New Playbook||
+|Copy of New Playbook2||
 |New Playbook||
+|New Playbook1||
+|New Playbook2||
 |Nw Playbook||
 |Carbon Black Cloud Remediation||
 |Copy of Carbon Black Cloud Remediation - 1||
