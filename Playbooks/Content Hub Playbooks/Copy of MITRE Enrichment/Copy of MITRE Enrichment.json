@@ -1,0 +1,84 @@
+{
+    "id": 0,
+    "identifier": "ae8160ec-f795-4e8a-a03d-976e050ad59a",
+    "version": "0",
+    "isEnabled": true,
+    "isDebugMode": false,
+    "name": "Copy of MITRE Enrichment",
+    "creator": "28ff3096-2a98-4634-bc6c-bb0b19eacc62",
+    "modifiedBy": "28ff3096-2a98-4634-bc6c-bb0b19eacc62",
+    "priority": 2,
+    "description": "This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.",
+    "executionScope": 0,
+    "environments": [
+        "Default Environment"
+    ],
+    "categoryName": "Content Hub Playbooks",
+    "categoryId": 3,
+    "originalPlaybookIdentifier": "ae8160ec-f795-4e8a-a03d-976e050ad59a",
+    "creationTimeUnixTimeInMs": 1780410884839,
+    "modificationTimeUnixTimeInMs": 1780410884839,
+    "trigger": {
+        "id": 0,
+        "identifier": "93936dca-da29-48c2-b765-6328ddfe513c",
+        "type": 11,
+        "logicalOperator": 0,
+        "conditions": [],
+        "reactionLogicalOperator": 1,
+        "reactionConditions": [],
+        "executionMode": 0
+    },
+    "steps": [
+        {
+            "parallelActions": [],
+            "identifier": "29eba4b8-1820-4f6c-8ca5-bbb263610d86",
+            "originalStepIdentifier": "29eba4b8-1820-4f6c-8ca5-bbb263610d86",
+            "isAutomatic": true,
+            "isSkippable": false,
+            "instanceName": "Output_1",
+            "name": "Output",
+            "integration": "Flow",
+            "description": "",
+            "actionProvider": "Flow",
+            "actionName": "OutputAction",
+            "type": 6,
+            "parameters": [
+                {
+                    "name": "NestedWorkflowOutput",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                }
+            ],
+            "autoSkipOnFailure": false,
+            "isDebugMockData": false,
+            "debugData": null,
+            "parentStepContainerId": null,
+            "workflowIdentifier": "ae8160ec-f795-4e8a-a03d-976e050ad59a",
+            "isTouchedByAi": false,
+            "startLoopStepIdentifier": null,
+            "logsExplorerUrl": null,
+            "id": 0,
+            "creationTimeUnixTimeInMs": 1780410884839,
+            "modificationTimeUnixTimeInMs": 1780410884839,
+            "additionalProperties": {}
+        }
+    ],
+    "stepsRelations": [],
+    "templateName": null,
+    "playbookType": 1,
+    "debugData": {
+        "debugBaseAlertId": null,
+        "debugAlertId": null
+    },
+    "entityAccessLevel": 2,
+    "defaultAccessLevel": 2,
+    "permissions": [],
+    "overviewTemplates": [],
+    "creationSource": 1
+}
