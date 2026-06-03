@@ -3,7 +3,12 @@
 ## Integrations
 |Name|Description|
 |----|-----------|
+|Attivo|Efficiently derail attacker discovery, lateral movement, privilege escalation, & collection activities early in the attack cycle with Attivo.|
+|Darktrace|Darktrace empowers defenders to reduce risk and minimize cyber disruption. Its Self-Learning AI technology develops a deep and evolving understanding on your bespoke organization, allowing it to prevent, detect, and respond to unpredictable cyber-attacks across the entire digital environment – from cloud and email to endpoints and OT networks.|
 |Exchange|Integration provides support for Microsoft Exchange 2010 - 2019 and Microsoft Office365 mail servers. Integration uses Exchange Web Services (EWS) for communication. Integration includes a series of actions to send out emails and work with received emails, along with a connector to monitor specific mailboxes and ingest emails from that mailboxes as alerts to Google SecOps for further analysis.|
+|Luminar IOCs and Leaked Credentials|Cognyte is a global leader in security analytics software that empowers governments and enterprises with Actionable Intelligence for a safer world. Our open software fuses, analyzes and visualizes disparate data sets at scale to help security organizations find the needles in the haystacks. Over 1,000 government and enterprise customers in more than 100 countries rely on Cognyte’s solutions to accelerate security investigations and connect the dots to successfully identify, neutralize, and prevent threats to national security, business continuity and cyber security.Luminar is an asset-based cybersecurity intelligence platform that empowers enterprise organizations to build and maintain a proactive threat intelligence operation that enables to anticipate and mitigate cyber threats, reduce risk and enhance security resilience. Luminar enables security teams to define a customized, dynamic monitoring plan to uncover malicious activity in its earliest stages on all layers of the Web.“Luminar IOCs and Leaked Credentials” App allows integration of intelligence-based IOC data and customer-related leaked records identified by Luminar.|
+|MISP|MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threat about cyber security incidents|
+|Zerofox|ZeroFox is the leading Threat Intelligence and Digital Risk Protection platform, helping you secure your digital world.|
 
 
 ## Connectors
