@@ -4,6 +4,9 @@
 |Name|Description|
 |----|-----------|
 |Anomali|Anomali ThreatStream operationalizes threat intelligence, automating collection and integration, and enabling security teams to analyze and respond to threats.|
+|Enrichment|A set of entity enrichment actions to assist in the managing of entity attributes.|
+|Image Utilities|Use the Image Utilities integration to perform various image processing and manipulation tasks within your playbook workflows. Important: This integration requires a Remote Agent configured with the tesseract-ocr and playwright packages to function correctly.|
+|Insights|A set of insight actions created for Google SecOps Community to power up playbook capabilities.|
 
 
 ## Connectors
