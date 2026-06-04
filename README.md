@@ -7,6 +7,7 @@
 |Enrichment|A set of entity enrichment actions to assist in the managing of entity attributes.|
 |Image Utilities|Use the Image Utilities integration to perform various image processing and manipulation tasks within your playbook workflows. Important: This integration requires a Remote Agent configured with the tesseract-ocr and playwright packages to function correctly.|
 |Insights|A set of insight actions created for Google SecOps Community to power up playbook capabilities.|
+|Lists|A set of tools to facilitate managing custom lists within Google SecOps.|
 
 
 ## Connectors
