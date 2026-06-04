@@ -1,0 +1,66 @@
+{
+    "name": "projects/spsstg-ck6l5/locations/us/instances/96356bda-a057-49d1-9692-34b4b2c9c3f6/integrations/Tools/jobs/105/jobInstances/12",
+    "id": 0,
+    "job": "Close Cases Based On Search",
+    "integration": "Tools",
+    "createTime": 1780578092339,
+    "updateTime": 1780578092339,
+    "custom": true,
+    "script": "# Copyright 2025 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nfrom __future__ import annotations\n\nimport json\n\nfrom SiemplifyJob import SiemplifyJob\nfrom SiemplifyUtils import output_handler\nfrom TIPCommon.rest.soar_api import execute_bulk_close_case, search_cases_by_everything\n\nSCRIPT_NAME = \"CloseCasesBasedOnSearch\"\n\n\n@output_handler\ndef main():\n    siemplify = SiemplifyJob()\n    siemplify.script_name = SCRIPT_NAME\n    siemplify.LOGGER.info(\"----------------- Main - Started -----------------\")\n    try:\n        payload = json.loads(siemplify.parameters.get(\"Search Payload\"))\n        payload[\"isCaseClosed\"] = False\n        results = search_cases_by_everything(siemplify, payload).get(\"results\")\n        case_ids = [item.get(\"id\") for item in results]\n\n        if case_ids:\n            siemplify.LOGGER.info(f\"The following cases will be affected: {case_ids}\")\n\n            execute_bulk_close_case(\n                chronicle_soar=siemplify,\n                case_ids=case_ids,\n                close_reason=int(siemplify.parameters.get(\"Close Reason\")),\n                root_cause=siemplify.parameters.get(\"Root Cause\"),\n                close_comment=siemplify.parameters.get(\"Close Comment\"),\n            )\n            siemplify.LOGGER.info(f\"Successfully closed {len(case_ids)} cases\")\n\n        else:\n            siemplify.LOGGER.info(\"No cases found with the search payload\")\n\n    except Exception as e:\n        siemplify.LOGGER.error(f\"General error performing Job {SCRIPT_NAME}\")\n        siemplify.LOGGER.exception(e)\n        raise\n\n    siemplify.LOGGER.info(\"----------------- Main - Finished -----------------\")\n    siemplify.end_script()\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "author": "b19600ad-f8ec-46c5-84f3-24955929b4e4",
+    "agent": "",
+    "uniqueIdentifier": "075f892a-ac91-4f3d-8ee8-3f60fa43b660",
+    "enabled": false,
+    "displayName": "Close Cases Based On Search",
+    "description": "This job will close all cases based on a search query.  The Search Payload is the payload used in the 'CaseSearchEverything' API call.  To get an example of this value, go to Search in the UI and open Developer Tools.  Search for the cases to delete.  Look for the \"CaseSearchEverything\" api call in DevTools.  Copy the JSON payload of the POST request and paste in \"Search Payload\".  The Close Reason should be 0 or 1.   0 = malicious 1  = not malicious.  Root Cause comes from Settings -> Case Data -> Case Close Root Cause",
+    "intervalSeconds": 3600,
+    "advanced": false,
+    "advancedConfig": {
+        "timeZone": "Europe/London",
+        "scheduleType": "Once",
+        "oneTimeSchedule": {
+            "startDate": {
+                "year": 2026,
+                "month": 6,
+                "day": 5
+            },
+            "time": {
+                "hours": 13,
+                "minutes": 0,
+                "seconds": 0,
+                "nanos": 0
+            },
+            "interval": 0
+        }
+    },
+    "parameters": [
+        {
+            "id": 482,
+            "mandatory": false,
+            "type": "String",
+            "displayName": "Search Payload",
+            "value": "{}"
+        },
+        {
+            "id": 483,
+            "mandatory": true,
+            "type": "String",
+            "displayName": "Close Comment",
+            "value": "Closed"
+        },
+        {
+            "id": 484,
+            "mandatory": true,
+            "type": "Int",
+            "displayName": "Close Reason",
+            "value": "1"
+        },
+        {
+            "id": 485,
+            "mandatory": true,
+            "type": "String",
+            "displayName": "Root Cause",
+            "value": "Malicious"
+        }
+    ]
+}
