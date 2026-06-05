@@ -1,26 +1,18 @@
 [
     {
+        "name": "projects/spsstg-zah0o/locations/us/instances/ca7f7aca-5435-4c5f-81cb-5a58ea952220/environments/1",
         "id": 0,
-        "name": "Default Environment",
+        "system": true,
+        "displayName": "Default Environment",
         "description": "Default Environment",
-        "contactName": null,
-        "contactEmails": "",
-        "contactEmailsList": null,
-        "contactPhone": null,
-        "allowedActions": null,
-        "remediationDurationInDays": 0,
-        "shouldAllowRemediationActions": false,
-        "shouldNotifyOnRemediationActions": false,
-        "retentionDurationInMonths": 3,
-        "retentionDurationInMonthsInternal": null,
-        "base64Image": null,
-        "forDBMigration": false,
-        "environmentAllowedForAllUsers": false,
+        "contact": "N/A",
+        "contactEmails": "example@example.com",
+        "contactPhone": "0000000000",
+        "retentionDuration": 3,
         "dynamicParameters": [],
-        "properties": {},
-        "isSystem": true,
-        "aliases": [],
-        "instanceUrl": null,
-        "dataAccessScopes": []
+        "aliasesJson": "[]",
+        "dataAccessScopesJson": "[]",
+        "instanceUri": "",
+        "weight": 1
     }
 ]
