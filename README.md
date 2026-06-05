@@ -46,16 +46,6 @@
 |Tools|A set of utility actions for data manipulation and common platform tasks to power up playbook capabilities.|
 
 
-## Connectors
-|Name|Description|Has Mappings|
-|----|-----------|------------|
-|cdemnAlienVault USM Appliance Connector|asdfghjgfdsadfghjhgfdsdfghj|False|
-|Anomali Staxx - Indicators Connector|Pull indicators from Anomali Staxx|True|
-|Apache Kafka - Messages Connector|The Apache Kafka Connector retrieves messages from Apache Kafka.|False|
-|Azure AD Identity Protection - Risk Detections Connector|Pull information about risk detections from Azure AD Identity Protection. Note: whitelist filter works with "riskEventType" parameter.|False|
-|DRP Violations Connector|DRP Violations Connector|False|
-
-
 ## Playbooks
 |Name|Description|
 |----|-----------|
