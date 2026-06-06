@@ -10,7 +10,7 @@ Automated test job instance. Index: 21
 |API Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_d3d5c93b|
 |Password|String|True|test_str_8dc5c72e|
-|Group Filter|String||test_str_71a9ace1|
+|Group Filter|String|False|test_str_71a9ace1|
 |Group Field|String|True|test_str_2fc60d4d|
 |Ticket Final Status|String|True|test_str_4d58cb23|
 |Script Name|String|True|test_str_0aa2c6bb|
@@ -27,7 +27,7 @@ Automated test job instance. Index: 48
 |API Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_7f96754e|
 |Password|String|True|test_str_8e10676d|
-|Group Filter|String||test_str_7d62316e|
+|Group Filter|String|False|test_str_7d62316e|
 |Group Field|String|True|test_str_3373b772|
 |Ticket Final Status|String|True|test_str_11501259|
 |Script Name|String|True|test_str_b32ca1d9|
@@ -44,7 +44,7 @@ Sync closure of the tickets at the CA Desk Manager with Siemplify cases closure.
 |API Root|String|True|http://x.x.x.x:<port>|
 |Username|String|True|dfghj|
 |Password|String|True|dfgvhbn|
-|Group Filter|String||Test|
+|Group Filter|String|False|Test|
 |Group Field|String|True|group.combo_name|
 |Ticket Final Status|String|True|Closed|
 |Script Name|String|True|TEST CLOSE|
@@ -118,9 +118,9 @@ Automated test job instance. Index: 3
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Search Payload|String||test_str_2f6fd6f0|
+|Search Payload|String|False|test_str_2f6fd6f0|
 |Close Comment|String|True|test_str_06350e2b|
-|Close Reason|Integer|True|60|
+|Close Reason|Int|True|60|
 |Root Cause|String|True|test_str_a77fb6dd|
 
 ## Close Cases Based On Search - AutoTest 2
@@ -132,9 +132,9 @@ Automated test job instance. Index: 30
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Search Payload|String||test_str_a9b580bb|
+|Search Payload|String|False|test_str_a9b580bb|
 |Close Comment|String|True|test_str_1058bec6|
-|Close Reason|Integer|True|60|
+|Close Reason|Int|True|60|
 |Root Cause|String|True|test_str_8aa8d771|
 
 ## Close Cases Based On Search
@@ -146,9 +146,9 @@ This job will close all cases based on a search query.  The Search Payload is th
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Search Payload|String||{}|
+|Search Payload|String|False|{}|
 |Close Comment|String|True|Closed|
-|Close Reason|Integer|True|1|
+|Close Reason|Int|True|1|
 |Root Cause|String|True|Malicious|
 
 ## Google Chronicle Alerts Creator Job - AutoTest 1
@@ -162,9 +162,9 @@ Automated test job instance. Index: 17
 |----|----|------------|-----|
 |Environment|String|True|Default Environment|
 |API Root|String|True|https://backstory.googleapis.com|
-|Verify SSL|Boolean||true|
-|User's Service Account|Password||*****|
-|Workload Identity Email|Password||*****|
+|Verify SSL|Boolean|False|true|
+|User's Service Account|Password|False|*****|
+|Workload Identity Email|Password|False|*****|
 
 ## Google Chronicle Alerts Creator Job - AutoTest 2
 Automated test job instance. Index: 44
@@ -177,9 +177,9 @@ Automated test job instance. Index: 44
 |----|----|------------|-----|
 |Environment|String|True|Default Environment|
 |API Root|String|True|https://backstory.googleapis.com|
-|Verify SSL|Boolean||true|
-|User's Service Account|Password||*****|
-|Workload Identity Email|Password||*****|
+|Verify SSL|Boolean|False|true|
+|User's Service Account|Password|False|*****|
+|Workload Identity Email|Password|False|*****|
 
 ## Google Chronicle Sync Job - AutoTest 1
 Automated test job instance. Index: 16
@@ -192,10 +192,10 @@ Automated test job instance. Index: 16
 |----|----|------------|-----|
 |Environment|String|True|Default Environment|
 |API Root|String|True|https://backstory.googleapis.com|
-|Max Hours Backwards|String||test_str_8a5a8e7f|
-|Verify SSL|Boolean||true|
-|User's Service Account|Password||*****|
-|Workload Identity Email|Password||*****|
+|Max Hours Backwards|String|False|test_str_8a5a8e7f|
+|Verify SSL|Boolean|False|true|
+|User's Service Account|Password|False|*****|
+|Workload Identity Email|Password|False|*****|
 
 ## Google Chronicle Sync Job - AutoTest 2
 Automated test job instance. Index: 43
@@ -208,10 +208,10 @@ Automated test job instance. Index: 43
 |----|----|------------|-----|
 |Environment|String|True|Default Environment|
 |API Root|String|True|https://backstory.googleapis.com|
-|Max Hours Backwards|String||test_str_2278967c|
-|Verify SSL|Boolean||true|
-|User's Service Account|Password||*****|
-|Workload Identity Email|Password||*****|
+|Max Hours Backwards|String|False|test_str_2278967c|
+|Verify SSL|Boolean|False|true|
+|User's Service Account|Password|False|*****|
+|Workload Identity Email|Password|False|*****|
 
 ## Oauth Token Expiry Notification Job - AutoTest 1
 Automated test job instance. Index: 18
@@ -227,7 +227,7 @@ Automated test job instance. Index: 18
 |Notifications Recipients List|String|True|test_str_1d94b7be|
 |Client ID|String|True|test_str_180170ff|
 |Tenant (Directory) ID|String|True|test_str_0218d6e8|
-|Client Secret|Password||*****|
+|Client Secret|Password|False|*****|
 |Refresh Token|Password|True|*****|
 
 ## Oauth Token Expiry Notification Job - AutoTest 2
@@ -244,7 +244,7 @@ Automated test job instance. Index: 45
 |Notifications Recipients List|String|True|test_str_bbe6c65e|
 |Client ID|String|True|test_str_e3f84569|
 |Tenant (Directory) ID|String|True|test_str_77017193|
-|Client Secret|Password||*****|
+|Client Secret|Password|False|*****|
 |Refresh Token|Password|True|*****|
 
 ## Oauth Token Expiry Notification Job
@@ -261,7 +261,7 @@ Note that the job is deprecated and will be removed in the next 6 months. Oauth 
 |Notifications Recipients List|String|True|gfds|
 |Client ID|String|True|hgfdsa|
 |Tenant (Directory) ID|String|True|ds|
-|Client Secret|Password||*****|
+|Client Secret|Password|False|*****|
 |Refresh Token|Password|True|*****|
 
 ## Refresh Token Renewal Job - AutoTest 1
@@ -273,7 +273,7 @@ Automated test job instance. Index: 11
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String||test_str_16b9e576|
+|Integration Environments|String|False|test_str_16b9e576|
 
 ## Refresh Token Renewal Job - AutoTest 2
 Automated test job instance. Index: 38
@@ -284,7 +284,7 @@ Automated test job instance. Index: 38
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String||test_str_01b6a432|
+|Integration Environments|String|False|test_str_01b6a432|
 
 ## Refresh Token Renewal Job
 Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.
@@ -295,7 +295,7 @@ Token renewal job should be used to periodically update the refresh token config
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String|||
+|Integration Environments|String|False||
 
 ## Refresh Token Renewal Job1234556789
 Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.
@@ -306,7 +306,7 @@ Token renewal job should be used to periodically update the refresh token config
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String|||
+|Integration Environments|String|False||
 
 ## Refresh Token Renewal Job2345678
 Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.
@@ -317,8 +317,8 @@ Token renewal job should be used to periodically update the refresh token config
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String|||
-|Connector Names|String|||
+|Integration Environments|String|False||
+|Connector Names|String|False||
 
 ## Refresh Token Renewal Job23456789
 Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.
@@ -329,8 +329,8 @@ Token renewal job should be used to periodically update the refresh token config
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String||rewf|
-|Connector Names|String||ds|
+|Integration Environments|String|False|rewf|
+|Connector Names|String|False|ds|
 
 ## Refresh Token Renewal Job23466543
 Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.
@@ -341,8 +341,8 @@ Token renewal job should be used to periodically update the refresh token config
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Connector Names|String|||
-|Integration Environments|String|||
+|Connector Names|String|False||
+|Integration Environments|String|False||
 
 ## Refresh Token Renewal Job34
 Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.
@@ -353,8 +353,8 @@ Token renewal job should be used to periodically update the refresh token config
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String||Default|
-|Connector Names|String||test|
+|Integration Environments|String|False|Default|
+|Connector Names|String|False|test|
 
 ## Refresh Token Renewal Job345678
 Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.
@@ -365,8 +365,8 @@ Token renewal job should be used to periodically update the refresh token config
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String|||
-|Connector Names|String|||
+|Integration Environments|String|False||
+|Connector Names|String|False||
 
 ## Sync Alerts - AutoTest 1
 Automated test job instance. Index: 9
@@ -379,8 +379,8 @@ Automated test job instance. Index: 9
 |----|----|------------|-----|
 |Environment Name|String|True|test_str_fe5fd756|
 |API Root|String|True|https://backstory.googleapis.com|
-|Max Hours Backwards|Integer||60|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|False|60|
+|Verify SSL|Boolean|False|true|
 |API Token|Password|True|*****|
 
 ## Sync Alerts - AutoTest 2
@@ -394,9 +394,9 @@ Automated test job instance. Index: 36
 |----|----|------------|-----|
 |Environment Name|String|True|test_str_1704429d|
 |API Root|String|True|https://backstory.googleapis.com|
-|Max Hours Backwards|Integer||60|
+|Max Hours Backwards|Int|False|60|
 |API Token|Password|True|*****|
-|Verify SSL|Boolean||true|
+|Verify SSL|Boolean|False|true|
 
 ## Sync Alerts
 This job synchronizes Google SecOps Alerts and Microsoft Defender XDR Alerts. It ensures that comments and status are synchronized bi-directionally between both systems. Note: Assignee synchronization occurs exclusively from Microsoft Defender to Google SecOps. For the job to identify the correct information, the Google SecOps case must have the "Microsoft Defender XDR Alert" tag. If the alert didn’t originate from "Microsoft 365 Defender - Incidents Connector",  you will need to add an "Alert_ID" context value to the alert for the job to be able to find the correct information.
@@ -413,9 +413,9 @@ This job synchronizes Google SecOps Alerts and Microsoft Defender XDR Alerts. It
 |API Root|String|True|https://api.security.microsoft.com|
 |Tenant ID|String|True|dfghj|
 |Client ID|String|True|dfghjkl|
-|Max Hours Backwards|Integer|True|24|
-|Sync Assignee|Boolean||true|
-|Verify SSL|Boolean||false|
+|Max Hours Backwards|Int|True|24|
+|Sync Assignee|Boolean|False|true|
+|Verify SSL|Boolean|False|false|
 |Client Secret|Password|True|*****|
 
 ## Sync Alerts2
@@ -430,8 +430,8 @@ This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job s
 |Environment Name|String|True|Default Environment|
 |API Root|String|True|https://api.crowdstrike.com|
 |Client ID|String|True|dfghj|
-|Max Hours Backwards|Integer||24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|False|24|
+|Verify SSL|Boolean|False|true|
 |Client Secret|Password|True|*****|
 
 ## Sync Alerts234567
@@ -445,8 +445,8 @@ This job will synchronize Google SecOps Alerts and SentinelOne alerts. The job s
 |----|----|------------|-----|
 |Environment Name|String|True|Default Environment|
 |API Root|String|True|sdfghj|
-|Max Hours Backwards|Integer||24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|False|24|
+|Verify SSL|Boolean|False|true|
 |API Token|Password|True|*****|
 
 ## Sync Alerts2345678
@@ -464,9 +464,9 @@ This job synchronizes Google SecOps Alerts and Microsoft Defender XDR Alerts. It
 |API Root|String|True|https://api.security.microsoft.com|
 |Tenant ID|String|True|fds|
 |Client ID|String|True|gfd|
-|Max Hours Backwards|Integer|True|24|
-|Sync Assignee|Boolean||false|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|24|
+|Sync Assignee|Boolean|False|false|
+|Verify SSL|Boolean|False|true|
 |Client Secret|Password|True|*****|
 
 ## Sync Alerts2345678765
@@ -484,9 +484,9 @@ This job synchronizes Google SecOps Alerts and Microsoft Defender XDR Alerts. It
 |API Root|String|True|https://api.security.microsoft.com|
 |Tenant ID|String|True|dfghj|
 |Client ID|String|True|dfghj|
-|Max Hours Backwards|Integer|True|24|
-|Sync Assignee|Boolean||false|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|24|
+|Sync Assignee|Boolean|False|false|
+|Verify SSL|Boolean|False|true|
 |Client Secret|Password|True|*****|
 
 ## Sync Alerts34567
@@ -501,8 +501,8 @@ This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job s
 |Environment Name|String|True|Default Environment|
 |API Root|String|True|https://api.crowdstrike.com|
 |Client ID|String|True|fds|
-|Max Hours Backwards|Integer||24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|False|24|
+|Verify SSL|Boolean|False|true|
 |Client Secret|Password|True|*****|
 
 ## Sync Closed Incidents - AutoTest 1
@@ -516,13 +516,13 @@ Automated test job instance. Index: 5
 |----|----|------------|-----|
 |Api Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_04c12ccb|
-|Verify SSL|Boolean||true|
-|Client ID|String||test_str_a48f3bc3|
-|Use Oauth Authentication|Boolean||true|
-|Max Hours Backwards|Integer||60|
+|Verify SSL|Boolean|False|true|
+|Client ID|String|False|test_str_a48f3bc3|
+|Use Oauth Authentication|Boolean|False|true|
+|Max Hours Backwards|Int|False|60|
 |Table Name|String|True|test_str_bd7da694|
-|Client Secret|Password||*****|
-|Refresh Token|Password||*****|
+|Client Secret|Password|False|*****|
+|Refresh Token|Password|False|*****|
 |Password|Password|True|*****|
 
 ## Sync Closed Incidents - AutoTest 2
@@ -536,14 +536,14 @@ Automated test job instance. Index: 32
 |----|----|------------|-----|
 |Api Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_f7f0b372|
-|Verify SSL|Boolean||true|
-|Client ID|String||test_str_0583a459|
-|Use Oauth Authentication|Boolean||true|
-|Max Hours Backwards|Integer||60|
+|Verify SSL|Boolean|False|true|
+|Client ID|String|False|test_str_0583a459|
+|Use Oauth Authentication|Boolean|False|true|
+|Max Hours Backwards|Int|False|60|
 |Table Name|String|True|test_str_9697e225|
 |Password|Password|True|*****|
-|Client Secret|Password||*****|
-|Refresh Token|Password||*****|
+|Client Secret|Password|False|*****|
+|Refresh Token|Password|False|*****|
 
 ## Sync Closed Incidents By Tag - AutoTest 1
 Automated test job instance. Index: 23
@@ -557,9 +557,9 @@ Automated test job instance. Index: 23
 |Incident Table|String|True|test_str_e4b23bef|
 |API Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_19468cde|
-|Environment|String||Default Environment|
-|Max Hours Backwards|String||test_str_5b2b5f9a|
-|Verify SSL|Boolean||true|
+|Environment|String|False|Default Environment|
+|Max Hours Backwards|String|False|test_str_5b2b5f9a|
+|Verify SSL|Boolean|False|true|
 |Password|Password|True|*****|
 
 ## Sync Closed Incidents By Tag
@@ -574,9 +574,9 @@ This job will synchronize BMC Remedy ITSM incidents that were created within Sie
 |Incident Table|String|True|HPD:IncidentInterface|
 |API Root|String|True|https://{IP}:{port}|
 |Username|String|True|dfghj|
-|Environment|String|||
-|Max Hours Backwards|String||24|
-|Verify SSL|Boolean||true|
+|Environment|String|False||
+|Max Hours Backwards|String|False|24|
+|Verify SSL|Boolean|False|true|
 |Password|Password|True|*****|
 
 ## Sync Closed Incidents
@@ -590,14 +590,14 @@ This job will synchronize closed ServiceNow incidents and Google SecOps alerts. 
 |----|----|------------|-----|
 |Api Root|String|True|https://{dev-instance}.service-now.com/api/now/v1/|
 |Username|String|True|dfghj|
-|Verify SSL|Boolean||true|
-|Client ID|String||fghjk|
-|Use Oauth Authentication|Boolean||false|
-|Max Hours Backwards|Integer||24|
+|Verify SSL|Boolean|False|true|
+|Client ID|String|False|fghjk|
+|Use Oauth Authentication|Boolean|False|false|
+|Max Hours Backwards|Int|False|24|
 |Table Name|String|True|test|
 |Password|Password|True|*****|
-|Client Secret|Password||*****|
-|Refresh Token|Password||*****|
+|Client Secret|Password|False|*****|
+|Refresh Token|Password|False|*****|
 
 ## Sync Closed Requests By Tag - AutoTest 1
 Automated test job instance. Index: 1
@@ -609,8 +609,8 @@ Automated test job instance. Index: 1
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Api Root|String|True|https://backstory.googleapis.com|
-|Max Hours Backwards|String||test_str_a2298248|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|String|False|test_str_a2298248|
+|Verify SSL|Boolean|False|true|
 |Api Key|Password|True|*****|
 
 ## Sync Closed Requests By Tag - AutoTest 2
@@ -624,8 +624,8 @@ Automated test job instance. Index: 28
 |----|----|------------|-----|
 |Api Key|Password|True|*****|
 |Api Root|String|True|https://backstory.googleapis.com|
-|Max Hours Backwards|String||test_str_7abbd683|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|String|False|test_str_7abbd683|
+|Verify SSL|Boolean|False|true|
 
 ## Sync Closed Requests By Tag
 This job will synchronize ServiceDeskPlus requests that were created within Siemplify Case playbook and Siemplify cases. Note: in ServiceDeskPlus statuses "Cancelled", "Closed" and "Resolved" are treated as closed. Additionally, in order for the job to work, it’s required for the case to have 2 tags. First tag should be "ServiceDeskPlus" and the second should be with the prefix "ServiceDeskPlus Requests:{request id}".
@@ -638,8 +638,8 @@ This job will synchronize ServiceDeskPlus requests that were created within Siem
 |----|----|------------|-----|
 |Api Key|Password|True|*****|
 |Api Root|String|True|http://{IP OR FQDN}:8080/api/v3/|
-|Max Hours Backwards|String||24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|String|False|24|
+|Verify SSL|Boolean|False|true|
 
 ## Sync Closed Requests By Tag34567
 This job will synchronize ServiceDeskPlus requests that were created within Siemplify Case playbook and Siemplify cases. Note: in ServiceDeskPlus statuses "Cancelled", "Closed" and "Resolved" are treated as closed. Additionally, in order for the job to work, it’s required for the case to have 2 tags. First tag should be "ServiceDeskPlus" and the second should be with the prefix "ServiceDeskPlus Requests:{request id}".
@@ -652,8 +652,8 @@ This job will synchronize ServiceDeskPlus requests that were created within Siem
 |----|----|------------|-----|
 |Api Key|Password|True|*****|
 |Api Root|String|True|http://{IP OR FQDN}:8080/api/v3/|
-|Max Hours Backwards|String||24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|String|False|24|
+|Verify SSL|Boolean|False|true|
 
 ## Sync Closed Requests By Tag345678
 This job will synchronize ServiceDeskPlus requests that were created within Siemplify Case playbook and Siemplify cases. Note: in ServiceDeskPlus statuses "Cancelled", "Closed" and "Resolved" are treated as closed. Additionally, in order for the job to work, it’s required for the case to have 2 tags. First tag should be "ServiceDeskPlus" and the second should be with the prefix "ServiceDeskPlus Requests:{request id}".
@@ -665,8 +665,8 @@ This job will synchronize ServiceDeskPlus requests that were created within Siem
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Api Root|String|True|http://{IP OR FQDN}:8080/api/v3/|
-|Max Hours Backwards|String||24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|String|False|24|
+|Verify SSL|Boolean|False|true|
 |Api Key|Password|True|*****|
 
 ## Sync Closed Requests By Tag56789
@@ -680,8 +680,8 @@ This job will synchronize ServiceDeskPlus requests that were created within Siem
 |----|----|------------|-----|
 |Api Key|Password|True|*****|
 |Api Root|String|True|http://{IP OR FQDN}:8080/api/v3/|
-|Max Hours Backwards|String||24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|String|False|24|
+|Verify SSL|Boolean|False|true|
 
 ## Sync Comments - AutoTest 1
 Automated test job instance. Index: 22
@@ -697,10 +697,10 @@ Automated test job instance. Index: 22
 |Summery Field|String|True|test_str_8c815b56|
 |Ticket Fields|String|True|test_str_995296c3|
 |Script Name|String|True|test_str_6868e232|
-|Ticket Type Field|Boolean||true|
-|Analyst Type Field|Boolean||true|
-|Time Stamp Field|Boolean||true|
-|Timezone String|Boolean||true|
+|Ticket Type Field|Boolean|False|true|
+|Analyst Type Field|Boolean|False|true|
+|Time Stamp Field|Boolean|False|true|
+|Timezone String|Boolean|False|true|
 |Password|Password|True|*****|
 
 ## Sync Comments - AutoTest 2
@@ -712,16 +712,16 @@ Automated test job instance. Index: 49
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Timezone String|Boolean||true|
+|Timezone String|Boolean|False|true|
 |Password|Password|True|*****|
 |API Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_9991e669|
 |Summery Field|String|True|test_str_23338201|
 |Ticket Fields|String|True|test_str_bff826e4|
 |Script Name|String|True|test_str_99b37f79|
-|Ticket Type Field|Boolean||true|
-|Analyst Type Field|Boolean||true|
-|Time Stamp Field|Boolean||true|
+|Ticket Type Field|Boolean|False|true|
+|Analyst Type Field|Boolean|False|true|
+|Time Stamp Field|Boolean|False|true|
 
 ## Sync Comments56
 Sync comments from CA Desk Manager to Siemplify.
@@ -738,10 +738,10 @@ Sync comments from CA Desk Manager to Siemplify.
 |Password|Password|True|*****|
 |Ticket Fields|String|True|summery.combo_name,customer.combo_name,category.sym,status.sym,priority.sym,active,log_agent.combo_name,assignee.combo_name,group.combo_name,affected_service.name,severity.sym,urgency.sym,impact.sym,problem.ref_num,resolution_code.sym,call_back_date,change.chg_ref_num,caused_by_chg.chg_ref_num,external_system_ticket,resolution_method.sym,symptom_code.sym,requested_by.combo_name,persistent_id,summary,description,open_date,last_mod_dt,resolve_date,close_date,ref_num|
 |Script Name|String|True|Test|
-|Ticket Type Field|Boolean||true|
-|Analyst Type Field|Boolean||true|
-|Time Stamp Field|Boolean||true|
-|Timezone String|Boolean||true|
+|Ticket Type Field|Boolean|False|true|
+|Analyst Type Field|Boolean|False|true|
+|Time Stamp Field|Boolean|False|true|
+|Timezone String|Boolean|False|true|
 
 ## Sync IOC Feeds - AutoTest 1
 Automated test job instance. Index: 0
@@ -753,11 +753,11 @@ Automated test job instance. Index: 0
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Collection UUIDs|String|True|test_str_1a8c222d|
-|Max IOCs Per Feed|Integer||60|
-|Reference List Prefix|String||test_str_1769bf33|
+|Max IOCs Per Feed|Int|False|60|
+|Reference List Prefix|String|False|test_str_1769bf33|
 |API Root|String|True|https://backstory.googleapis.com|
 |Company ID|String|True|test_str_65d1afee|
-|Verify SSL|Boolean||true|
+|Verify SSL|Boolean|False|true|
 |API Key|Password|True|*****|
 
 ## Sync IOC Feeds - AutoTest 2
@@ -770,11 +770,11 @@ Automated test job instance. Index: 27
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Collection UUIDs|String|True|test_str_b513d705|
-|Max IOCs Per Feed|Integer||60|
-|Reference List Prefix|String||test_str_8402e1d5|
+|Max IOCs Per Feed|Int|False|60|
+|Reference List Prefix|String|False|test_str_8402e1d5|
 |API Root|String|True|https://backstory.googleapis.com|
 |Company ID|String|True|test_str_647cb01f|
-|Verify SSL|Boolean||true|
+|Verify SSL|Boolean|False|true|
 |API Key|Password|True|*****|
 
 ## Sync IOC Feeds
@@ -788,11 +788,11 @@ Scheduled job that fetches IOCs from configured SOCRadar Threat Feed collections
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Collection UUIDs|String|True|hgfds|
-|Max IOCs Per Feed|Integer||5000|
-|Reference List Prefix|String||SOCRadar_IOC|
+|Max IOCs Per Feed|Int|False|5000|
+|Reference List Prefix|String|False|SOCRadar_IOC|
 |API Root|String|True|https://platform.socradar.com/api|
 |Company ID|String|True|gfds|
-|Verify SSL|Boolean||true|
+|Verify SSL|Boolean|False|true|
 |API Key|Password|True|*****|
 
 ## Sync IOC Feeds109
@@ -806,11 +806,11 @@ Scheduled job that fetches IOCs from configured SOCRadar Threat Feed collections
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Collection UUIDs|String|True|ertfyguhi|
-|Max IOCs Per Feed|Integer||5000|
-|Reference List Prefix|String||SOCRadar_IOC|
+|Max IOCs Per Feed|Int|False|5000|
+|Reference List Prefix|String|False|SOCRadar_IOC|
 |API Root|String|True|https://platform.socradar.com/api|
 |Company ID|String|True|erftgyhujk|
-|Verify SSL|Boolean||true|
+|Verify SSL|Boolean|False|true|
 |API Key|Password|True|*****|
 
 ## Sync IOC Feeds345678
@@ -824,11 +824,11 @@ Scheduled job that fetches IOCs from configured SOCRadar Threat Feed collections
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Collection UUIDs|String|True|gfds|
-|Max IOCs Per Feed|Integer||5000|
-|Reference List Prefix|String||SOCRadar_IOC|
+|Max IOCs Per Feed|Int|False|5000|
+|Reference List Prefix|String|False|SOCRadar_IOC|
 |API Root|String|True|https://platform.socradar.com/api|
 |Company ID|String|True|jhgfdsgfds|
-|Verify SSL|Boolean||true|
+|Verify SSL|Boolean|False|true|
 |API Key|Password|True|*****|
 
 ## Sync Incidents - AutoTest 1
@@ -841,11 +841,11 @@ Automated test job instance. Index: 10
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Environment Name|String|True|test_str_db77b1df|
-|Api Root|String||https://backstory.googleapis.com|
+|Api Root|String|False|https://backstory.googleapis.com|
 |Api Key ID|String|True|test_str_45b5455b|
-|Max Hours Backwards|Integer|True|60|
-|User Mapping JSON|String||test_str_c955c4f7|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|60|
+|User Mapping JSON|String|False|test_str_c955c4f7|
+|Verify SSL|Boolean|False|true|
 |Api Key|Password|True|*****|
 
 ## Sync Incidents - AutoTest 2
@@ -858,11 +858,11 @@ Automated test job instance. Index: 37
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Api Key ID|String|True|test_str_7195bc49|
-|Max Hours Backwards|Integer|True|60|
-|User Mapping JSON|String||test_str_2300834b|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|60|
+|User Mapping JSON|String|False|test_str_2300834b|
+|Verify SSL|Boolean|False|true|
 |Environment Name|String|True|test_str_67910e8f|
-|Api Root|String||https://backstory.googleapis.com|
+|Api Root|String|False|https://backstory.googleapis.com|
 |Api Key|Password|True|*****|
 
 ## Sync Incidents Job - AutoTest 1
@@ -877,8 +877,8 @@ Automated test job instance. Index: 4
 |API Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_db580b75|
 |Sync Level|String|True|test_str_4b90fb73|
-|Max Hours Backwards|Integer|True|60|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|60|
+|Verify SSL|Boolean|False|true|
 |Password|Password|True|*****|
 
 ## Sync Incidents Job - AutoTest 2
@@ -893,8 +893,8 @@ Automated test job instance. Index: 31
 |API Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_e18bb996|
 |Sync Level|String|True|test_str_0270aa16|
-|Max Hours Backwards|Integer|True|60|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|60|
+|Verify SSL|Boolean|False|true|
 |Password|Password|True|*****|
 
 ## Sync Incidents Job
@@ -909,8 +909,8 @@ This job will synchronize incidents fields and attachments that are related to c
 |API Root|String|True|https://{dev-instance}.service-now.com/api/now/v1/|
 |Username|String|True|wwss|
 |Sync Level|String|True|Case|
-|Max Hours Backwards|Integer|True|24|
-|Verify SSL|Boolean||false|
+|Max Hours Backwards|Int|True|24|
+|Verify SSL|Boolean|False|false|
 |Password|Password|True|*****|
 
 ## Sync Incidents V2 - AutoTest 1
@@ -930,9 +930,9 @@ Automated test job instance. Index: 14
 |Azure Resource Group|String|True|test_str_11a89f56|
 |Azure Sentinel Workspace Name|String|True|test_str_c1e5a86f|
 |Client ID|String|True|test_str_16f9d9b2|
-|Max Hours Backwards|Integer||60|
-|Sync Assignee|Boolean||true|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|False|60|
+|Sync Assignee|Boolean|False|true|
+|Verify SSL|Boolean|False|true|
 |Client Secret|Password|True|*****|
 
 ## Sync Incidents V2 - AutoTest 2
@@ -952,9 +952,9 @@ Automated test job instance. Index: 41
 |Azure Resource Group|String|True|test_str_93175e32|
 |Azure Sentinel Workspace Name|String|True|test_str_eb338b99|
 |Client ID|String|True|test_str_5b0d6b07|
-|Max Hours Backwards|Integer||60|
-|Sync Assignee|Boolean||true|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|False|60|
+|Sync Assignee|Boolean|False|true|
+|Verify SSL|Boolean|False|true|
 |Client Secret|Password|True|*****|
 
 ## Sync Incidents V234567
@@ -974,9 +974,9 @@ Use the Sync Incidents V2 job to synchronize Google SecOps alerts with Microsoft
 |Azure Resource Group|String|True|cvbnm|
 |Azure Sentinel Workspace Name|String|True|fghj|
 |Client ID|String|True|dfghj|
-|Max Hours Backwards|Integer||24|
-|Sync Assignee|Boolean||true|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|False|24|
+|Sync Assignee|Boolean|False|true|
+|Verify SSL|Boolean|False|true|
 |Client Secret|Password|True|*****|
 
 ## Sync Incidents
@@ -993,8 +993,8 @@ Deprecated. This job synchronizes Google SecOps Alerts and Microsoft Sentinel In
 |OAUTH2 Login Endpoint Url|String|True|https://login.microsoftonline.com|
 |API Root|String|True|https://graph.microsoft.com|
 |Client ID|String|True|dfghjk,|
-|Max Hours Backwards|Integer||24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|False|24|
+|Verify SSL|Boolean|False|true|
 |Client Secret|Password|True|*****|
 
 ## Sync Incidents234
@@ -1007,11 +1007,11 @@ This job synchronizes Google SecOps Alerts and Palo Alto XDR Incidents. It ensur
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Environment Name|String|True|Default Environment|
-|Api Root|String||jhgf|
+|Api Root|String|False|jhgf|
 |Api Key ID|String|True|gfds|
-|Max Hours Backwards|Integer|True|24|
-|User Mapping JSON|String||{"Google SecOps Display Name": "XDR Username"}|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|24|
+|User Mapping JSON|String|False|{"Google SecOps Display Name": "XDR Username"}|
+|Verify SSL|Boolean|False|true|
 |Api Key|Password|True|*****|
 
 ## Sync Incidents34567
@@ -1025,11 +1025,11 @@ This job synchronizes Google SecOps Alerts and Palo Alto XDR Incidents. It ensur
 |----|----|------------|-----|
 |Api Key|Password|True|*****|
 |Environment Name|String|True|Default Environment|
-|Api Root|String||sdfghj|
+|Api Root|String|False|sdfghj|
 |Api Key ID|String|True|dfghj|
-|Max Hours Backwards|Integer|True|24|
-|User Mapping JSON|String||{"Google SecOps Display Name": "XDR Username"}|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|24|
+|User Mapping JSON|String|False|{"Google SecOps Display Name": "XDR Username"}|
+|Verify SSL|Boolean|False|true|
 
 ## Sync Incidents5778
 This job synchronizes Google SecOps Alerts and Palo Alto XDR Incidents. It ensures that comments and status are kept in sync between the two systems. For the job to identify the correct information, the Google SecOps case must have the "Palo Alto XDR Incident" tag. If the alert didn’t originate from "Palo Alto Cortex XDR Connector",  you will need to add an "Incident_ID" context value to the case for the job to be able to find the correct information.
@@ -1041,11 +1041,11 @@ This job synchronizes Google SecOps Alerts and Palo Alto XDR Incidents. It ensur
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Environment Name|String|True|Default Environment|
-|Api Root|String||dfghj|
+|Api Root|String|False|dfghj|
 |Api Key ID|String|True|sdfghjk|
-|Max Hours Backwards|Integer|True|24|
-|User Mapping JSON|String||{"Google SecOps Display Name": "XDR Username"}|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|24|
+|User Mapping JSON|String|False|{"Google SecOps Display Name": "XDR Username"}|
+|Verify SSL|Boolean|False|true|
 |Api Key|Password|True|*****|
 
 ## Sync Table Record Comments - AutoTest 1
@@ -1059,13 +1059,13 @@ Automated test job instance. Index: 6
 |----|----|------------|-----|
 |Api Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_1ac16942|
-|Verify SSL|Boolean||true|
-|Client ID|String||test_str_5937d6d4|
-|Use Oauth Authentication|Boolean||true|
+|Verify SSL|Boolean|False|true|
+|Client ID|String|False|test_str_5937d6d4|
+|Use Oauth Authentication|Boolean|False|true|
 |Table Name|String|True|test_str_844ef772|
 |Password|Password|True|*****|
-|Client Secret|Password||*****|
-|Refresh Token|Password||*****|
+|Client Secret|Password|False|*****|
+|Refresh Token|Password|False|*****|
 
 ## Sync Table Record Comments - AutoTest 2
 Automated test job instance. Index: 33
@@ -1078,13 +1078,13 @@ Automated test job instance. Index: 33
 |----|----|------------|-----|
 |Api Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_5be7dcd0|
-|Verify SSL|Boolean||true|
-|Client ID|String||test_str_1056b44c|
-|Use Oauth Authentication|Boolean||true|
+|Verify SSL|Boolean|False|true|
+|Client ID|String|False|test_str_1056b44c|
+|Use Oauth Authentication|Boolean|False|true|
 |Table Name|String|True|test_str_b97c562c|
 |Password|Password|True|*****|
-|Client Secret|Password||*****|
-|Refresh Token|Password||*****|
+|Client Secret|Password|False|*****|
+|Refresh Token|Password|False|*****|
 
 ## Sync Table Record Comments By Tag - AutoTest 1
 Automated test job instance. Index: 7
@@ -1098,7 +1098,7 @@ Automated test job instance. Index: 7
 |API Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_b5c62078|
 |Table Name|String|True|test_str_285db0e1|
-|Verify SSL|Boolean||true|
+|Verify SSL|Boolean|False|true|
 |Password|Password|True|*****|
 
 ## Sync Table Record Comments By Tag - AutoTest 2
@@ -1113,7 +1113,7 @@ Automated test job instance. Index: 34
 |API Root|String|True|https://backstory.googleapis.com|
 |Username|String|True|test_str_8799174f|
 |Table Name|String|True|test_str_7e3c04af|
-|Verify SSL|Boolean||true|
+|Verify SSL|Boolean|False|true|
 |Password|Password|True|*****|
 
 ## Sync Table Record Comments By Tag4567
@@ -1128,7 +1128,7 @@ This job will synchronize comments in ServiceNow table records and Siemplify cas
 |API Root|String|True|https://{dev-instance}.service-now.com/api/now/v1/|
 |Username|String|True|gfds|
 |Table Name|String|True|fds|
-|Verify SSL|Boolean||true|
+|Verify SSL|Boolean|False|true|
 |Password|Password|True|*****|
 
 ## Sync Threats - AutoTest 1
@@ -1142,8 +1142,8 @@ Automated test job instance. Index: 8
 |----|----|------------|-----|
 |Environment Name|String|True|test_str_bcbbbb82|
 |API Root|String|True|https://backstory.googleapis.com|
-|Max Hours Backwards|Integer|True|60|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|60|
+|Verify SSL|Boolean|False|true|
 |API Token|Password|True|*****|
 
 ## Sync Threats - AutoTest 2
@@ -1157,8 +1157,8 @@ Automated test job instance. Index: 35
 |----|----|------------|-----|
 |Environment Name|String|True|test_str_7413932e|
 |API Root|String|True|https://backstory.googleapis.com|
-|Max Hours Backwards|Integer|True|60|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|60|
+|Verify SSL|Boolean|False|true|
 |API Token|Password|True|*****|
 
 ## Sync Threats 2
@@ -1172,8 +1172,8 @@ This job will synchronize Google SecOps Alerts and SentinelOne threats. The job 
 |----|----|------------|-----|
 |Environment Name|String|True|Default Environment|
 |API Root|String|True|hgfds|
-|Max Hours Backwards|Integer|True|24|
-|Verify SSL|Boolean||false|
+|Max Hours Backwards|Int|True|24|
+|Verify SSL|Boolean|False|false|
 |API Token|Password|True|*****|
 
 ## Sync Threats
@@ -1187,8 +1187,8 @@ This job will synchronize Google SecOps Alerts and SentinelOne threats. The job 
 |----|----|------------|-----|
 |Environment Name|String|True|Default Environment|
 |API Root|String|True|dfghj|
-|Max Hours Backwards|Integer|True|24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|24|
+|Verify SSL|Boolean|False|true|
 |API Token|Password|True|*****|
 
 ## Sync Threats345678
@@ -1202,8 +1202,8 @@ This job will synchronize Google SecOps Alerts and SentinelOne threats. The job 
 |----|----|------------|-----|
 |Environment Name|String|True|Default Environment|
 |API Root|String|True|dfghjk|
-|Max Hours Backwards|Integer|True|24|
-|Verify SSL|Boolean||true|
+|Max Hours Backwards|Int|True|24|
+|Verify SSL|Boolean|False|true|
 |API Token|Password|True|*****|
 
 ## Tag Untouched Cases - AutoTest 1
@@ -1216,7 +1216,7 @@ Automated test job instance. Index: 2
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Tags|String|True|test_str_0e8e9989|
-|Unmodified Time|Integer|True|60|
+|Unmodified Time|Int|True|60|
 
 ## Tag Untouched Cases - AutoTest 2
 Automated test job instance. Index: 29
@@ -1228,7 +1228,7 @@ Automated test job instance. Index: 29
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Tags|String|True|test_str_59ac47ef|
-|Unmodified Time|Integer|True|60|
+|Unmodified Time|Int|True|60|
 
 ## Tag Untouched Cases new
 This job will search all open cases, and identify cases that have not been touched in Max Time hours, and apply the tag/tags listed in the tags parameter
@@ -1240,7 +1240,7 @@ This job will search all open cases, and identify cases that have not been touch
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Tags|String|True|Open Case Reviewfghm|
-|Unmodified Time|Integer|True|8|
+|Unmodified Time|Int|True|8|
 
 ## Tag Untouched Cases
 This job will search all open cases, and identify cases that have not been touched in Max Time hours, and apply the tag/tags listed in the tags parameter
@@ -1252,7 +1252,7 @@ This job will search all open cases, and identify cases that have not been touch
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Tags|String|True|Open Case Review|
-|Unmodified Time|Integer|True|8|
+|Unmodified Time|Int|True|8|
 
 ## Tag Untouched Cases34567
 This job will search all open cases, and identify cases that have not been touched in Max Time hours, and apply the tag/tags listed in the tags parameter
@@ -1264,7 +1264,7 @@ This job will search all open cases, and identify cases that have not been touch
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Tags|String|True|Open Case Reertyuview|
-|Unmodified Time|Integer|True|8e|
+|Unmodified Time|Int|True|8e|
 
 ## Tag Untouched Cases7890
 This job will search all open cases, and identify cases that have not been touched in Max Time hours, and apply the tag/tags listed in the tags parameter
@@ -1276,7 +1276,7 @@ This job will search all open cases, and identify cases that have not been touch
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
 |Tags|String|True|Open Case Review|
-|Unmodified Time|Integer|True|8|
+|Unmodified Time|Int|True|8|
 
 ## Token Renewal Job - AutoTest 1
 Automated test job instance. Index: 19
@@ -1287,8 +1287,8 @@ Automated test job instance. Index: 19
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String||test_str_69f41f92|
-|Connector Names|String||test_str_d0fc2dea|
+|Integration Environments|String|False|test_str_69f41f92|
+|Connector Names|String|False|test_str_d0fc2dea|
 
 ## Token Renewal Job - AutoTest 2
 Automated test job instance. Index: 46
@@ -1299,6 +1299,6 @@ Automated test job instance. Index: 46
 #### Parameters
 |Name|Type|Is Mandatory|Value|
 |----|----|------------|-----|
-|Integration Environments|String||test_str_7cc8d114|
-|Connector Names|String||test_str_484a35ff|
+|Integration Environments|String|False|test_str_7cc8d114|
+|Connector Names|String|False|test_str_484a35ff|
 
