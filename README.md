@@ -141,24 +141,24 @@
 |Name|Description|
 |----|-----------|
 |projects/project/locations/location/instances/instance/integrations/Siemplify/jobs/9/jobInstances/4|Notifies of all the actions, that have individually failed at least 3 times, in the last 3 hours|
-|projects/project/locations/location/instances/instance/integrations/CaServiceDesk/jobs/59/jobInstances/11|Automated test job instance. Index: 21|
-|projects/project/locations/location/instances/instance/integrations/CaServiceDesk/jobs/59/jobInstances/12|Automated test job instance. Index: 48|
-|projects/project/locations/location/instances/instance/integrations/CaServiceDesk/jobs/59/jobInstances/13|Sync closure of the tickets at the CA Desk Manager with Siemplify cases closure.|
-|projects/project/locations/location/instances/instance/integrations/CaseFederation/jobs/42/jobInstances/48|Automated test job instance. Index: 26|
-|projects/project/locations/location/instances/instance/integrations/CaseFederation/jobs/42/jobInstances/49|This job will sync case metadata to an external platform for central management.|
-|projects/project/locations/location/instances/instance/integrations/CaseFederation/jobs/42/jobInstances/50|This job will sync case metadata to an external platform for central management.|
-|projects/project/locations/location/instances/instance/integrations/CaseFederation/jobs/42/jobInstances/51|This job will sync case metadata to an external platform for central management.|
-|projects/project/locations/location/instances/instance/integrations/CaseFederation/jobs/42/jobInstances/52|This job will sync case metadata to an external platform for central management.|
-|projects/project/locations/location/instances/instance/integrations/Tools/jobs/82/jobInstances/53|Automated test job instance. Index: 3|
-|projects/project/locations/location/instances/instance/integrations/Tools/jobs/82/jobInstances/54|Automated test job instance. Index: 30|
-|projects/project/locations/location/instances/instance/integrations/Tools/jobs/82/jobInstances/55|This job will close all cases based on a search query.  The Search Payload is the payload used in the 'CaseSearchEverything' API call.  To get an example of this value, go to Search in the UI and open Developer Tools.  Search for the cases to delete.  Look for the "CaseSearchEverything" api call in DevTools.  Copy the JSON payload of the POST request and paste in "Search Payload".  The Close Reason should be 0 or 1.   0 = malicious 1  = not malicious.  Root Cause comes from Settings -> Case Data -> Case Close Root Cause|
-|projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/1/jobInstances/5|Automated test job instance. Index: 17|
-|projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/1/jobInstances/6|Automated test job instance. Index: 44|
-|projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/2/jobInstances/7|Automated test job instance. Index: 16|
-|projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/2/jobInstances/8|Automated test job instance. Index: 43|
-|projects/project/locations/location/instances/instance/integrations/Exchange/jobs/73/jobInstances/56|Automated test job instance. Index: 18|
-|projects/project/locations/location/instances/instance/integrations/Exchange/jobs/73/jobInstances/57|Automated test job instance. Index: 45|
-|projects/project/locations/location/instances/instance/integrations/Exchange/jobs/73/jobInstances/58|Note that the job is deprecated and will be removed in the next 6 months. Oauth Token Expiry Notification Job is recommended to use if integration is working with Oauth refresh tokens. Refresh tokens are valid only for 90 days, after that User will need to create a new refresh token to use in the integration. This job will send reminder emails to the configured recipient list when the token will expire in 10, 5 and 1 day. Once a new token is set in this job, the notification timer will start over.|
+|CA Close Ticket In CA For Closed Case - AutoTest 1|Automated test job instance. Index: 21|
+|CA Close Ticket In CA For Closed Case - AutoTest 2|Automated test job instance. Index: 48|
+|CA Close Ticket In CA For Closed Case|Sync closure of the tickets at the CA Desk Manager with Siemplify cases closure.|
+|Case Federation Sync Job - AutoTest 1|Automated test job instance. Index: 26|
+|Case Federation Sync Job|This job will sync case metadata to an external platform for central management.|
+|Case Federation Sync Job234567|This job will sync case metadata to an external platform for central management.|
+|Case Federation Sync Job2345678|This job will sync case metadata to an external platform for central management.|
+|Case Federation Sync Job4567890|This job will sync case metadata to an external platform for central management.|
+|Close Cases Based On Search - AutoTest 1|Automated test job instance. Index: 3|
+|Close Cases Based On Search - AutoTest 2|Automated test job instance. Index: 30|
+|Close Cases Based On Search|This job will close all cases based on a search query.  The Search Payload is the payload used in the 'CaseSearchEverything' API call.  To get an example of this value, go to Search in the UI and open Developer Tools.  Search for the cases to delete.  Look for the "CaseSearchEverything" api call in DevTools.  Copy the JSON payload of the POST request and paste in "Search Payload".  The Close Reason should be 0 or 1.   0 = malicious 1  = not malicious.  Root Cause comes from Settings -> Case Data -> Case Close Root Cause|
+|Google Chronicle Alerts Creator Job - AutoTest 1|Automated test job instance. Index: 17|
+|Google Chronicle Alerts Creator Job - AutoTest 2|Automated test job instance. Index: 44|
+|Google Chronicle Sync Job - AutoTest 1|Automated test job instance. Index: 16|
+|Google Chronicle Sync Job - AutoTest 2|Automated test job instance. Index: 43|
+|Oauth Token Expiry Notification Job - AutoTest 1|Automated test job instance. Index: 18|
+|Oauth Token Expiry Notification Job - AutoTest 2|Automated test job instance. Index: 45|
+|Oauth Token Expiry Notification Job|Note that the job is deprecated and will be removed in the next 6 months. Oauth Token Expiry Notification Job is recommended to use if integration is working with Oauth refresh tokens. Refresh tokens are valid only for 90 days, after that User will need to create a new refresh token to use in the integration. This job will send reminder emails to the configured recipient list when the token will expire in 10, 5 and 1 day. Once a new token is set in this job, the notification timer will start over.|
 |projects/project/locations/location/instances/instance/integrations/MicrosoftTeams/jobs/80/jobInstances/59|Automated test job instance. Index: 11|
 |projects/project/locations/location/instances/instance/integrations/MicrosoftTeams/jobs/80/jobInstances/60|Automated test job instance. Index: 38|
 |projects/project/locations/location/instances/instance/integrations/MicrosoftTeams/jobs/80/jobInstances/61|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
@@ -168,7 +168,7 @@
 |projects/project/locations/location/instances/instance/integrations/AzureSecurityCenter/jobs/83/jobInstances/64|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
 |projects/project/locations/location/instances/instance/integrations/MicrosoftGraphMailDelegated/jobs/68/jobInstances/28|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
 |projects/project/locations/location/instances/instance/integrations/MicrosoftGraphMailDelegated/jobs/68/jobInstances/29|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
-|projects/project/locations/location/instances/instance/integrations/Siemplify/jobs/7/jobInstances/102|Collect cases and connector logs from Publisher.|
+|Siemplify Job- Cases Collector|Collect cases and connector logs from Publisher.|
 |projects/project/locations/location/instances/instance/integrations/SentinelOneV2/jobs/70/jobInstances/30|Automated test job instance. Index: 9|
 |projects/project/locations/location/instances/instance/integrations/SentinelOneV2/jobs/70/jobInstances/31|Automated test job instance. Index: 36|
 |projects/project/locations/location/instances/instance/integrations/Microsoft365Defender/jobs/61/jobInstances/14|This job synchronizes Google SecOps Alerts and Microsoft Defender XDR Alerts. It ensures that comments and status are synchronized bi-directionally between both systems. Note: Assignee synchronization occurs exclusively from Microsoft Defender to Google SecOps. For the job to identify the correct information, the Google SecOps case must have the "Microsoft Defender XDR Alert" tag. If the alert didn’t originate from "Microsoft 365 Defender - Incidents Connector",  you will need to add an "Alert_ID" context value to the alert for the job to be able to find the correct information.|
