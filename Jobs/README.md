@@ -375,6 +375,18 @@ Token renewal job should be used to periodically update the refresh token config
 |Integration Environments|String|False||
 |Connector Names|String|False||
 
+## Siemplify Job- Cases Collector
+Collect cases and connector logs from Publisher.
+
+
+**Run Interval In Seconds:** 3600
+
+#### Parameters
+|Name|Type|Is Mandatory|Value|
+|----|----|------------|-----|
+|Publisher Id|Int|True|sd|
+|Verify SSL|Boolean|False|false|
+
 ## Sync Alerts - AutoTest 1
 Automated test job instance. Index: 9
 
