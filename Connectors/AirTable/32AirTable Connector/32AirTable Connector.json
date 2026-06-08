@@ -1,0 +1,228 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/AirTable/connectors/-/connectorInstances/15",
+    "id": 15,
+    "custom": false,
+    "identifier": "AirTable Connector_f6585ddb-634b-4ee1-ae08-e4d4bdbd9606",
+    "connectorDefinitionName": "AirTable Connector",
+    "integration": "AirTable",
+    "remote": false,
+    "loggingEnabledUntilUnixMs": 0,
+    "integrationVersion": "16",
+    "statistics": {
+        "pastDayAlertsCount": 0,
+        "avgAlertsPerDay": 0
+    },
+    "parameters": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Each Base can include multiple tables. The parameter indicates the name of the table within the base.",
+            "displayName": "Table name",
+            "value": "<table_name>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Determines the Alert name based on the airtable column name defined in the parameter",
+            "displayName": "Alert name field",
+            "value": "<alert_name_field>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The alert name prefix",
+            "displayName": "Alert name prefix",
+            "value": "<alert_name_prefix>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Determines the Alert type based on the airtable column name defined in the parameter",
+            "displayName": "Alert type",
+            "value": "<alert_type>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Your API Key can be found in your account overview under API",
+            "displayName": "Api key",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Base is a database in Airtable in which you store data. The base ID can be found in the URL of the API page of the base.",
+            "displayName": "Base id",
+            "value": "<base_id>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The field name that you would like to search the value by",
+            "displayName": "Field name",
+            "value": "<field_name>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The value that you would like to search for under the relevant field name",
+            "displayName": "Field value",
+            "value": "<field_value>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The maximum rows in the table that will be affected by the action",
+            "displayName": "Max records",
+            "value": "300",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "status": 1,
+    "updateAvailable": false,
+    "enabled": false,
+    "environment": "Default Environment",
+    "displayName": "32AirTable Connector",
+    "description": "The Connector ingests records from a given table in Airtable",
+    "intervalSeconds": 10,
+    "version": 1,
+    "productFieldName": "<none>",
+    "eventFieldName": "<none>",
+    "timeoutSeconds": 30,
+    "params": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Each Base can include multiple tables. The parameter indicates the name of the table within the base.",
+            "displayName": "Table name",
+            "value": "<table_name>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Determines the Alert name based on the airtable column name defined in the parameter",
+            "displayName": "Alert name field",
+            "value": "<alert_name_field>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The alert name prefix",
+            "displayName": "Alert name prefix",
+            "value": "<alert_name_prefix>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Determines the Alert type based on the airtable column name defined in the parameter",
+            "displayName": "Alert type",
+            "value": "<alert_type>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Your API Key can be found in your account overview under API",
+            "displayName": "Api key",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Base is a database in Airtable in which you store data. The base ID can be found in the URL of the API page of the base.",
+            "displayName": "Base id",
+            "value": "<base_id>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The field name that you would like to search the value by",
+            "displayName": "Field name",
+            "value": "<field_name>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The value that you would like to search for under the relevant field name",
+            "displayName": "Field value",
+            "value": "<field_value>",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The maximum rows in the table that will be affected by the action",
+            "displayName": "Max records",
+            "value": "300",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ]
+}
