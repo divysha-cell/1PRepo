@@ -418,7 +418,7 @@
             "mode": "Script",
             "description": "Mail address to use for connector.",
             "displayName": "Mail Address",
-            "value": "yhtrewsa",
+            "value": "yhtrewsa@gmail.com",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },
