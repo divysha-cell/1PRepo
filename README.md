@@ -201,6 +201,8 @@
 |New Playbook1||
 |New Playbook2||
 |Nw Playbook||
+|enrichment block|An embedded workflow that can receive inputs and return an output.|
+|Test||
 |Carbon Black Cloud Remediation||
 |Copy of Carbon Black Cloud Remediation - 1||
 
