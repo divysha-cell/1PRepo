@@ -195,6 +195,7 @@
 |Copy of New Playbook2||
 |Copy of New Playbook2 - 2||
 |Copy of Nw Playbook||
+|Latest New Playbook||
 |New Block|An embedded workflow that can receive inputs and return an output.|
 |New Playbook||
 |New Playbook1||
