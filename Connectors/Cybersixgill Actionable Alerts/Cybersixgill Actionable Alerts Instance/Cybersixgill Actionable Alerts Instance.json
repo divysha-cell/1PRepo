@@ -1,0 +1,162 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/Cybersixgill Actionable Alerts/connectors/64/connectorInstances/84",
+    "id": 84,
+    "custom": false,
+    "identifier": "Cybersixgill Actionable Alerts_63153eab-14a2-42f2-948a-c1e2da990de5",
+    "connectorDefinitionName": "Cybersixgill Actionable Alerts",
+    "integration": "Cybersixgill Actionable Alerts",
+    "remote": false,
+    "loggingEnabledUntilUnixMs": 0,
+    "connectorId": 64,
+    "integrationVersion": "8",
+    "statistics": {
+        "pastDayAlertsCount": 0,
+        "avgAlertsPerDay": 0
+    },
+    "parameters": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "number of alerts",
+            "displayName": "Alerts Limit",
+            "value": "50",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Client Id",
+            "displayName": "Client Id",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Client Secret",
+            "displayName": "Client Secret",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Org Id",
+            "displayName": "Organization id",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "level of threat",
+            "displayName": "Threat Level",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "type of threat",
+            "displayName": "Threat Type",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "status": 1,
+    "updateAvailable": false,
+    "enabled": false,
+    "environment": "Default Environment",
+    "displayName": "Cybersixgill Actionable Alerts Instance",
+    "intervalSeconds": 60,
+    "version": 1,
+    "productFieldName": "Cybersixgill Actionable Alerts",
+    "eventFieldName": "Cybersixgill Actionable Alerts",
+    "timeoutSeconds": 30,
+    "params": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "number of alerts",
+            "displayName": "Alerts Limit",
+            "value": "50",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Client Id",
+            "displayName": "Client Id",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Client Secret",
+            "displayName": "Client Secret",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Org Id",
+            "displayName": "Organization id",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "level of threat",
+            "displayName": "Threat Level",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "type of threat",
+            "displayName": "Threat Type",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ]
+}

@@ -1,0 +1,272 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/AlienVaultAppliance/connectors/38/connectorInstances/96",
+    "id": 96,
+    "custom": false,
+    "identifier": "AlienVault USM Appliance Connector_1bf9b803-ca16-4e88-a565-bbf8029bf21e",
+    "connectorDefinitionName": "AlienVault USM Appliance Connector",
+    "integration": "AlienVaultAppliance",
+    "remote": false,
+    "loggingEnabledUntilUnixMs": 0,
+    "connectorId": 38,
+    "integrationVersion": "28",
+    "statistics": {
+        "pastDayAlertsCount": 0,
+        "avgAlertsPerDay": 0
+    },
+    "parameters": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "e.g. https://<instance>.alienvault.com",
+            "displayName": "Api Root",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Username",
+            "displayName": "Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Password",
+            "displayName": "Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Limit the number of events per alert. e.g. 10",
+            "displayName": "Max Events Per Alert",
+            "value": "10",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "This field is used in the connector first running cycle and determine the connector start time. e.g. 3",
+            "displayName": "Max Days Backwards",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Limit the number of alerts in every cycle. e.g. 10",
+            "displayName": "Max Alerts Per Cycle",
+            "value": "10",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The timezone configured in the AlienVault's, ex. UTC, Asia/Jerusalem etc.",
+            "displayName": "Server Timezone",
+            "value": "UTC",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The name of the environment's field. e.g. AlienVault Sensor",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "The proxy password to authenticate with.",
+            "displayName": "Proxy Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "status": 1,
+    "updateAvailable": false,
+    "enabled": false,
+    "environment": "Default Environment",
+    "displayName": "AlienVault USM Appliance Connector Instance",
+    "intervalSeconds": 60,
+    "version": 1,
+    "productFieldName": "device_product",
+    "eventFieldName": "name",
+    "timeoutSeconds": 60,
+    "params": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "e.g. https://<instance>.alienvault.com",
+            "displayName": "Api Root",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Username",
+            "displayName": "Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Password",
+            "displayName": "Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Limit the number of events per alert. e.g. 10",
+            "displayName": "Max Events Per Alert",
+            "value": "10",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "This field is used in the connector first running cycle and determine the connector start time. e.g. 3",
+            "displayName": "Max Days Backwards",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Limit the number of alerts in every cycle. e.g. 10",
+            "displayName": "Max Alerts Per Cycle",
+            "value": "10",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The timezone configured in the AlienVault's, ex. UTC, Asia/Jerusalem etc.",
+            "displayName": "Server Timezone",
+            "value": "UTC",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The name of the environment's field. e.g. AlienVault Sensor",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "The proxy password to authenticate with.",
+            "displayName": "Proxy Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ]
+}

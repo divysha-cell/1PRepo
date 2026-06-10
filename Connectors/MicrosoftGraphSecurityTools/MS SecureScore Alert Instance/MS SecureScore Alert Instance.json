@@ -1,0 +1,184 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftGraphSecurityTools/connectors/58/connectorInstances/104",
+    "id": 104,
+    "custom": false,
+    "identifier": "MS SecureScore Alert_7aa340cf-47d7-46f3-a381-f713ba17d225",
+    "connectorDefinitionName": "MS SecureScore Alert",
+    "integration": "MicrosoftGraphSecurityTools",
+    "remote": false,
+    "loggingEnabledUntilUnixMs": 0,
+    "connectorId": 58,
+    "integrationVersion": "4",
+    "statistics": {
+        "pastDayAlertsCount": 0,
+        "avgAlertsPerDay": 0
+    },
+    "parameters": [
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Specify the Secure Score threshold. If your Secure Score drops below this threshold, an alert will be raised.",
+            "displayName": "Threshold",
+            "value": "0",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Tenant ID  from Azure",
+            "displayName": "Tenant ID",
+            "value": "x",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Secret ID from Azure",
+            "displayName": "Secret ID",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Set the default priority (-1 to 100). Informative = -1, Low = 40, Medium = 60, High = 80, Critical = 100",
+            "displayName": "Default Priority",
+            "value": "60",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Client ID from Azure",
+            "displayName": "Client ID",
+            "value": "x",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server",
+            "displayName": "Certificate Path",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Optional, if certificate is password-protected, specify the password to open the certificate file.",
+            "displayName": "Certificate Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "status": 1,
+    "updateAvailable": false,
+    "enabled": false,
+    "environment": "Default Environment",
+    "displayName": "MS SecureScore Alert Instance",
+    "intervalSeconds": 60,
+    "version": 1,
+    "productFieldName": "Microsoft 365",
+    "eventFieldName": "SecureScore",
+    "timeoutSeconds": 60,
+    "params": [
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Specify the Secure Score threshold. If your Secure Score drops below this threshold, an alert will be raised.",
+            "displayName": "Threshold",
+            "value": "0",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Tenant ID  from Azure",
+            "displayName": "Tenant ID",
+            "value": "x",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Secret ID from Azure",
+            "displayName": "Secret ID",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Set the default priority (-1 to 100). Informative = -1, Low = 40, Medium = 60, High = 80, Critical = 100",
+            "displayName": "Default Priority",
+            "value": "60",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Client ID from Azure",
+            "displayName": "Client ID",
+            "value": "x",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server",
+            "displayName": "Certificate Path",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Optional, if certificate is password-protected, specify the password to open the certificate file.",
+            "displayName": "Certificate Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ]
+}

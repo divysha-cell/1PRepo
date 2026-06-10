@@ -1,0 +1,74 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/PerimeterX/connectors/55/connectorInstances/98",
+    "id": 98,
+    "custom": false,
+    "identifier": "Slack Connector For Code Defender_fe2fa2d7-0fda-40a9-8420-e21c22db41dc",
+    "connectorDefinitionName": "Slack Connector For Code Defender",
+    "integration": "PerimeterX",
+    "remote": false,
+    "loggingEnabledUntilUnixMs": 0,
+    "connectorId": 55,
+    "integrationVersion": "7",
+    "statistics": {
+        "pastDayAlertsCount": 0,
+        "avgAlertsPerDay": 0
+    },
+    "parameters": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Enter the slack channel name without the preceding \"#\". If your slack channel name is \"#cd_alerts\", then enter \"cd_alerts\"",
+            "displayName": "Slack Channel",
+            "value": "cd_alerts",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "API Key used to connect to Slack",
+            "displayName": "Slack API Key",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "status": 1,
+    "updateAvailable": false,
+    "enabled": false,
+    "environment": "Default Environment",
+    "displayName": "Slack Connector For Code Defender Instance",
+    "intervalSeconds": 60,
+    "version": 1,
+    "productFieldName": "PerimterXCodeDefender",
+    "eventFieldName": "event_type",
+    "timeoutSeconds": 30,
+    "params": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Enter the slack channel name without the preceding \"#\". If your slack channel name is \"#cd_alerts\", then enter \"cd_alerts\"",
+            "displayName": "Slack Channel",
+            "value": "cd_alerts",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "API Key used to connect to Slack",
+            "displayName": "Slack API Key",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ]
+}

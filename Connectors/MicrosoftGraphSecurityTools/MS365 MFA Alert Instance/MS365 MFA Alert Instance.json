@@ -1,0 +1,206 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftGraphSecurityTools/connectors/57/connectorInstances/106",
+    "id": 106,
+    "custom": false,
+    "identifier": "MS365 MFA Alert_f574d82c-2c7f-4889-a56d-382516027da1",
+    "connectorDefinitionName": "MS365 MFA Alert",
+    "integration": "MicrosoftGraphSecurityTools",
+    "remote": false,
+    "loggingEnabledUntilUnixMs": 0,
+    "connectorId": 57,
+    "integrationVersion": "4",
+    "statistics": {
+        "pastDayAlertsCount": 0,
+        "avgAlertsPerDay": 0
+    },
+    "parameters": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Tenant ID from Azure",
+            "displayName": "Tenant ID",
+            "value": "x",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "Create alert when a user has the ability to self-service reset their password/MFA.",
+            "displayName": "Self Service Reset Alert",
+            "value": "false",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Secret ID from Azure",
+            "displayName": "Secret ID",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "Create alert when a user is not registered for MFA. Recommended.",
+            "displayName": "MFA Registration Alert",
+            "value": "true",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "Exclude guests/external users from alerts (emails containing #EXT#)",
+            "displayName": "Exclude Guests",
+            "value": "false",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Client ID from Azure",
+            "displayName": "Client ID",
+            "value": "x",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server",
+            "displayName": "Certificate Path",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Optional, if certificate is password-protected, specify the password to open the certificate file.",
+            "displayName": "Certificate Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "status": 1,
+    "updateAvailable": false,
+    "enabled": false,
+    "environment": "Default Environment",
+    "displayName": "MS365 MFA Alert Instance",
+    "intervalSeconds": 60,
+    "version": 1,
+    "productFieldName": "Microsoft 365",
+    "eventFieldName": "MFA Alert",
+    "timeoutSeconds": 60,
+    "params": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Tenant ID from Azure",
+            "displayName": "Tenant ID",
+            "value": "x",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "Create alert when a user has the ability to self-service reset their password/MFA.",
+            "displayName": "Self Service Reset Alert",
+            "value": "false",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Secret ID from Azure",
+            "displayName": "Secret ID",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "Create alert when a user is not registered for MFA. Recommended.",
+            "displayName": "MFA Registration Alert",
+            "value": "true",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "Exclude guests/external users from alerts (emails containing #EXT#)",
+            "displayName": "Exclude Guests",
+            "value": "false",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Client ID from Azure",
+            "displayName": "Client ID",
+            "value": "x",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "If authentication based on certificates is used instead of client secret, specify path to the certificate on Siemplify server",
+            "displayName": "Certificate Path",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Optional, if certificate is password-protected, specify the password to open the certificate file.",
+            "displayName": "Certificate Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ]
+}

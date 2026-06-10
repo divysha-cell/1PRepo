@@ -1,0 +1,118 @@
+{
+    "name": "projects/project/locations/location/instances/instance/integrations/EclecticIQ/connectors/61/connectorInstances/79",
+    "id": 79,
+    "custom": false,
+    "identifier": "EclecticIQ - Feed Connector_9fd7c042-7727-46c1-9af9-7485250b79be",
+    "connectorDefinitionName": "EclecticIQ - Feed Connector",
+    "integration": "EclecticIQ",
+    "remote": false,
+    "loggingEnabledUntilUnixMs": 0,
+    "connectorId": 61,
+    "integrationVersion": "4",
+    "statistics": {
+        "pastDayAlertsCount": 0,
+        "avgAlertsPerDay": 0
+    },
+    "parameters": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "toekn",
+            "displayName": "API Token",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "url",
+            "displayName": "EclecticIQ URL",
+            "value": "https://eclecticiq.local",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Outgoing Feed ID from which you want to fetch the entities.",
+            "displayName": "Outgoing Feed ID",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "verify",
+            "displayName": "Verify SSL",
+            "value": "true",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ],
+    "status": 1,
+    "updateAvailable": false,
+    "enabled": false,
+    "environment": "Default Environment",
+    "displayName": "EclecticIQ - Feed Connector Instance",
+    "intervalSeconds": 60,
+    "version": 1,
+    "productFieldName": "EclecticIQ",
+    "eventFieldName": "Threat Intelligence",
+    "timeoutSeconds": 30,
+    "params": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "toekn",
+            "displayName": "API Token",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "url",
+            "displayName": "EclecticIQ URL",
+            "value": "https://eclecticiq.local",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Outgoing Feed ID from which you want to fetch the entities.",
+            "displayName": "Outgoing Feed ID",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "verify",
+            "displayName": "Verify SSL",
+            "value": "true",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        }
+    ]
+}
