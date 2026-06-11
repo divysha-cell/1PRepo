@@ -11,7 +11,7 @@
     "description": "",
     "executionScope": 1,
     "environments": [
-        "*"
+        "Default Environment"
     ],
     "categoryName": "Default",
     "categoryId": 1,
