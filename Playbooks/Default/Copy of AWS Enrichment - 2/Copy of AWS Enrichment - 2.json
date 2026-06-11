@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of AWS Enrichment - 2",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block retrieves EC2 instance data associated with the case and provides context for other actions or analysis.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "cf5de7e7-6d8c-4f35-8928-3c0ee21a8bee",
     "creationTimeUnixTimeInMs": 1781160210355,
-    "modificationTimeUnixTimeInMs": 1781160210355,
+    "modificationTimeUnixTimeInMs": 1781160485735,
     "trigger": {
         "id": 0,
         "identifier": "9d0bf06d-e399-41f9-9d16-5d52fe1d0e20",
@@ -64,8 +64,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210355,
-            "modificationTimeUnixTimeInMs": 1781160210355,
+            "creationTimeUnixTimeInMs": 1781160484648,
+            "modificationTimeUnixTimeInMs": 1781160485735,
             "additionalProperties": {}
         },
         {
@@ -236,8 +236,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210355,
-            "modificationTimeUnixTimeInMs": 1781160210355,
+            "creationTimeUnixTimeInMs": 1781160484648,
+            "modificationTimeUnixTimeInMs": 1781160485735,
             "additionalProperties": {}
         },
         {
@@ -363,8 +363,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210355,
-            "modificationTimeUnixTimeInMs": 1781160210355,
+            "creationTimeUnixTimeInMs": 1781160484648,
+            "modificationTimeUnixTimeInMs": 1781160485735,
             "additionalProperties": {}
         },
         {
@@ -545,8 +545,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210355,
-            "modificationTimeUnixTimeInMs": 1781160210355,
+            "creationTimeUnixTimeInMs": 1781160484648,
+            "modificationTimeUnixTimeInMs": 1781160485735,
             "additionalProperties": {}
         }
     ],

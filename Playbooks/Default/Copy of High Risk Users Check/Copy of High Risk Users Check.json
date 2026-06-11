@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of High Risk Users Check",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block checks Google GTI sourced alerts against a SOAR custom list to find matches of targeted Industries.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "c79591c3-c871-4ae2-a782-546db1595baf",
     "creationTimeUnixTimeInMs": 1781159454076,
-    "modificationTimeUnixTimeInMs": 1781159454076,
+    "modificationTimeUnixTimeInMs": 1781160371063,
     "trigger": {
         "id": 0,
         "identifier": "ae17eb7b-efc2-4fb6-9026-6ca2d8cd32ff",
@@ -64,8 +64,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159454076,
-            "modificationTimeUnixTimeInMs": 1781159454076,
+            "creationTimeUnixTimeInMs": 1781160369855,
+            "modificationTimeUnixTimeInMs": 1781160371063,
             "additionalProperties": {}
         },
         {
@@ -103,8 +103,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159454076,
-            "modificationTimeUnixTimeInMs": 1781159454076,
+            "creationTimeUnixTimeInMs": 1781160369855,
+            "modificationTimeUnixTimeInMs": 1781160371063,
             "additionalProperties": {}
         },
         {
@@ -230,8 +230,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159454076,
-            "modificationTimeUnixTimeInMs": 1781159454076,
+            "creationTimeUnixTimeInMs": 1781160369855,
+            "modificationTimeUnixTimeInMs": 1781160371063,
             "additionalProperties": {}
         }
     ],

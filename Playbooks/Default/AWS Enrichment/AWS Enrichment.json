@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "AWS Enrichment",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block retrieves EC2 instance data associated with the case and provides context for other actions or analysis.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "4de33f5f-73f0-4a7f-8af4-35a52a3bfd82",
     "creationTimeUnixTimeInMs": 1781158638753,
-    "modificationTimeUnixTimeInMs": 1781159246593,
+    "modificationTimeUnixTimeInMs": 1781160434681,
     "trigger": {
         "id": 0,
         "identifier": "7d5eccc4-9d9a-40ce-8d5a-2645341e6eb2",
@@ -64,8 +64,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781158638753,
-            "modificationTimeUnixTimeInMs": 1781158638753,
+            "creationTimeUnixTimeInMs": 1781160433607,
+            "modificationTimeUnixTimeInMs": 1781160434681,
             "additionalProperties": {}
         },
         {
@@ -191,8 +191,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781158638753,
-            "modificationTimeUnixTimeInMs": 1781158638753,
+            "creationTimeUnixTimeInMs": 1781160433607,
+            "modificationTimeUnixTimeInMs": 1781160434681,
             "additionalProperties": {}
         },
         {
@@ -288,14 +288,15 @@
                 },
                 {
                     "name": "IntegrationInstance",
-                    "value": null,
+                    "value": "2f43fc6a-a74d-4793-9da0-a29b477b2a18",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
                     "id": 0,
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "additionalProperties": {}
+                    "additionalProperties": {},
+                    "InstanceDisplayName": "System Default Instance"
                 },
                 {
                     "name": "MessageToAssignee",
@@ -362,8 +363,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781158638753,
-            "modificationTimeUnixTimeInMs": 1781158638753,
+            "creationTimeUnixTimeInMs": 1781160433607,
+            "modificationTimeUnixTimeInMs": 1781160434681,
             "additionalProperties": {}
         },
         {
@@ -544,8 +545,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781158638753,
-            "modificationTimeUnixTimeInMs": 1781158638753,
+            "creationTimeUnixTimeInMs": 1781160433607,
+            "modificationTimeUnixTimeInMs": 1781160434681,
             "additionalProperties": {}
         }
     ],

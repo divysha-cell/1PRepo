@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of Copy of MITRE Enrichment",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "ed97dc4e-460b-471d-83bd-e417f0d93e22",
     "creationTimeUnixTimeInMs": 1781160213871,
-    "modificationTimeUnixTimeInMs": 1781160213871,
+    "modificationTimeUnixTimeInMs": 1781160429644,
     "trigger": {
         "id": 0,
         "identifier": "9391cb50-dfbd-4bbf-89d1-ae6ffe5dc9e8",
@@ -208,8 +208,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160213871,
-            "modificationTimeUnixTimeInMs": 1781160213871,
+            "creationTimeUnixTimeInMs": 1781160428604,
+            "modificationTimeUnixTimeInMs": 1781160429644,
             "additionalProperties": {}
         },
         {
@@ -247,8 +247,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160213871,
-            "modificationTimeUnixTimeInMs": 1781160213871,
+            "creationTimeUnixTimeInMs": 1781160428604,
+            "modificationTimeUnixTimeInMs": 1781160429644,
             "additionalProperties": {}
         }
     ],

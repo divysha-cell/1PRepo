@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "GTI Enrichment",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block enhances case entities with Google Threat Intelligence enrichment information. Works for IPs, URLs, hostnames, domains, hashes (MD5, SHA-1, SHA-256), threat actors, and CVEs.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "ca197ca6-93a3-4b2d-a0ad-c2c7d327032a",
     "creationTimeUnixTimeInMs": 1781158639086,
-    "modificationTimeUnixTimeInMs": 1781159246593,
+    "modificationTimeUnixTimeInMs": 1781160444777,
     "trigger": {
         "id": 0,
         "identifier": "c55aef5f-5dbd-4503-97f5-9071a035ec8d",
@@ -64,8 +64,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159119089,
-            "modificationTimeUnixTimeInMs": 1781159119188,
+            "creationTimeUnixTimeInMs": 1781160443773,
+            "modificationTimeUnixTimeInMs": 1781160444777,
             "additionalProperties": {}
         },
         {
@@ -103,8 +103,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159119089,
-            "modificationTimeUnixTimeInMs": 1781159119188,
+            "creationTimeUnixTimeInMs": 1781160443773,
+            "modificationTimeUnixTimeInMs": 1781160444777,
             "additionalProperties": {}
         },
         {
@@ -241,8 +241,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159119089,
-            "modificationTimeUnixTimeInMs": 1781159119188,
+            "creationTimeUnixTimeInMs": 1781160443773,
+            "modificationTimeUnixTimeInMs": 1781160444777,
             "additionalProperties": {}
         }
     ],

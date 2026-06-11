@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of Google Workspace Enrichment - 2",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block enriches user entities with relevant information from Google Workspace, providing additional context to support investigation and response activities.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "7ddb6bd3-bc80-442a-a8ce-7e682e85ca61",
     "creationTimeUnixTimeInMs": 1781160212071,
-    "modificationTimeUnixTimeInMs": 1781160212071,
+    "modificationTimeUnixTimeInMs": 1781160456287,
     "trigger": {
         "id": 0,
         "identifier": "56a9a269-aa70-4be8-9e1e-1325d603c2b4",
@@ -208,8 +208,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160212071,
-            "modificationTimeUnixTimeInMs": 1781160212071,
+            "creationTimeUnixTimeInMs": 1781160455036,
+            "modificationTimeUnixTimeInMs": 1781160456287,
             "additionalProperties": {}
         },
         {
@@ -247,8 +247,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160212071,
-            "modificationTimeUnixTimeInMs": 1781160212071,
+            "creationTimeUnixTimeInMs": 1781160455036,
+            "modificationTimeUnixTimeInMs": 1781160456287,
             "additionalProperties": {}
         }
     ],

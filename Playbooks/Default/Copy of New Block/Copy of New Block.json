@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of New Block",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "An embedded workflow that can receive inputs and return an output.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "3a99939b-62da-4c34-b10d-fed701e335db",
     "creationTimeUnixTimeInMs": 1781160215418,
-    "modificationTimeUnixTimeInMs": 1781160215418,
+    "modificationTimeUnixTimeInMs": 1781160471238,
     "trigger": {
         "id": 0,
         "identifier": "a9720de6-3fc0-4561-a37c-97401e1482e7",
@@ -208,8 +208,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160215418,
-            "modificationTimeUnixTimeInMs": 1781160215418,
+            "creationTimeUnixTimeInMs": 1781160470076,
+            "modificationTimeUnixTimeInMs": 1781160471238,
             "additionalProperties": {}
         },
         {
@@ -247,8 +247,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160215418,
-            "modificationTimeUnixTimeInMs": 1781160215418,
+            "creationTimeUnixTimeInMs": 1781160470076,
+            "modificationTimeUnixTimeInMs": 1781160471238,
             "additionalProperties": {}
         }
     ],

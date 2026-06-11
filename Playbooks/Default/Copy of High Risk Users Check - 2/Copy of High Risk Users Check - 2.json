@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of High Risk Users Check - 2",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block checks Google GTI sourced alerts against a SOAR custom list to find matches of targeted Industries.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "cfae00dc-a4d1-4cfb-b67d-27061145d387",
     "creationTimeUnixTimeInMs": 1781160211956,
-    "modificationTimeUnixTimeInMs": 1781160211956,
+    "modificationTimeUnixTimeInMs": 1781160499258,
     "trigger": {
         "id": 0,
         "identifier": "7697553c-6160-4bee-bb1e-8f3f818ce794",
@@ -152,8 +152,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160211956,
-            "modificationTimeUnixTimeInMs": 1781160211956,
+            "creationTimeUnixTimeInMs": 1781160498246,
+            "modificationTimeUnixTimeInMs": 1781160499258,
             "additionalProperties": {}
         },
         {
@@ -191,8 +191,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160211956,
-            "modificationTimeUnixTimeInMs": 1781160211956,
+            "creationTimeUnixTimeInMs": 1781160498246,
+            "modificationTimeUnixTimeInMs": 1781160499258,
             "additionalProperties": {}
         },
         {
@@ -230,8 +230,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160211956,
-            "modificationTimeUnixTimeInMs": 1781160211956,
+            "creationTimeUnixTimeInMs": 1781160498246,
+            "modificationTimeUnixTimeInMs": 1781160499258,
             "additionalProperties": {}
         }
     ],

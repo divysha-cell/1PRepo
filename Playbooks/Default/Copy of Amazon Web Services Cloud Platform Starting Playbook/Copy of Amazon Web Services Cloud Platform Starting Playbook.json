@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of Amazon Web Services Cloud Platform Starting Playbook",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 3,
     "description": "Amazon Web Services Cloud Platform Starting Playbook provides reference implementation of how Amazon Web Services Cloud Platform alerts can be processed in Google SecOps.",
     "executionScope": 1,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "a9d8c71d-f9a7-4568-9b5b-2f430216fc2b",
     "creationTimeUnixTimeInMs": 1781159451898,
-    "modificationTimeUnixTimeInMs": 1781159451898,
+    "modificationTimeUnixTimeInMs": 1781160556936,
     "trigger": {
         "id": 0,
         "identifier": "aa5d9f59-e957-4c7f-a492-e44266a5605c",
@@ -182,8 +182,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -354,8 +354,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -503,8 +503,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -675,8 +675,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -847,8 +847,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -1019,8 +1019,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -1191,8 +1191,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -1329,8 +1329,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -1501,8 +1501,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -1639,8 +1639,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -1777,8 +1777,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -1949,8 +1949,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -2087,8 +2087,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -2236,8 +2236,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -2408,8 +2408,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         },
         {
@@ -2546,8 +2546,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159451898,
-            "modificationTimeUnixTimeInMs": 1781159451898,
+            "creationTimeUnixTimeInMs": 1781160555723,
+            "modificationTimeUnixTimeInMs": 1781160556936,
             "additionalProperties": {}
         }
     ],

@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of AWS Users Containment - 2",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "An embedded workflow that can receive inputs and return an output.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "51cd0bde-91f7-4ebb-8144-b22bd1c16658",
     "creationTimeUnixTimeInMs": 1781160210983,
-    "modificationTimeUnixTimeInMs": 1781160210983,
+    "modificationTimeUnixTimeInMs": 1781160408853,
     "trigger": {
         "id": 0,
         "identifier": "833ede18-310c-436a-bfc5-4ebcd93814b8",
@@ -64,8 +64,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210983,
-            "modificationTimeUnixTimeInMs": 1781160210983,
+            "creationTimeUnixTimeInMs": 1781160407386,
+            "modificationTimeUnixTimeInMs": 1781160408853,
             "additionalProperties": {}
         },
         {
@@ -191,8 +191,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210983,
-            "modificationTimeUnixTimeInMs": 1781160210983,
+            "creationTimeUnixTimeInMs": 1781160407386,
+            "modificationTimeUnixTimeInMs": 1781160408853,
             "additionalProperties": {}
         },
         {
@@ -230,8 +230,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210983,
-            "modificationTimeUnixTimeInMs": 1781160210983,
+            "creationTimeUnixTimeInMs": 1781160407386,
+            "modificationTimeUnixTimeInMs": 1781160408853,
             "additionalProperties": {}
         },
         {
@@ -357,8 +357,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210983,
-            "modificationTimeUnixTimeInMs": 1781160210983,
+            "creationTimeUnixTimeInMs": 1781160407386,
+            "modificationTimeUnixTimeInMs": 1781160408853,
             "additionalProperties": {}
         },
         {
@@ -484,8 +484,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210983,
-            "modificationTimeUnixTimeInMs": 1781160210983,
+            "creationTimeUnixTimeInMs": 1781160407386,
+            "modificationTimeUnixTimeInMs": 1781160408853,
             "additionalProperties": {}
         },
         {
@@ -523,8 +523,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210983,
-            "modificationTimeUnixTimeInMs": 1781160210983,
+            "creationTimeUnixTimeInMs": 1781160407386,
+            "modificationTimeUnixTimeInMs": 1781160408853,
             "additionalProperties": {}
         }
     ],

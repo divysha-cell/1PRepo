@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of GTI Enrichment - 2",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block enhances case entities with Google Threat Intelligence enrichment information. Works for IPs, URLs, hostnames, domains, hashes (MD5, SHA-1, SHA-256), threat actors, and CVEs.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "fa7e6de2-8ec2-4474-a2e4-781d68486b4a",
     "creationTimeUnixTimeInMs": 1781160210690,
-    "modificationTimeUnixTimeInMs": 1781160210690,
+    "modificationTimeUnixTimeInMs": 1781160488319,
     "trigger": {
         "id": 0,
         "identifier": "2613f422-ae41-4cff-94d0-2af85fd650a9",
@@ -64,8 +64,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210690,
-            "modificationTimeUnixTimeInMs": 1781160210690,
+            "creationTimeUnixTimeInMs": 1781160487224,
+            "modificationTimeUnixTimeInMs": 1781160488319,
             "additionalProperties": {}
         },
         {
@@ -103,8 +103,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210690,
-            "modificationTimeUnixTimeInMs": 1781160210690,
+            "creationTimeUnixTimeInMs": 1781160487224,
+            "modificationTimeUnixTimeInMs": 1781160488319,
             "additionalProperties": {}
         },
         {
@@ -241,8 +241,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160210690,
-            "modificationTimeUnixTimeInMs": 1781160210690,
+            "creationTimeUnixTimeInMs": 1781160487224,
+            "modificationTimeUnixTimeInMs": 1781160488319,
             "additionalProperties": {}
         }
     ],

@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of Copy of GTI Enrichment - 1",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block enhances case entities with Google Threat Intelligence enrichment information. Works for IPs, URLs, hostnames, domains, hashes (MD5, SHA-1, SHA-256), threat actors, and CVEs.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "d2c95205-7673-4a87-a80b-7b6b73f286b8",
     "creationTimeUnixTimeInMs": 1781160214516,
-    "modificationTimeUnixTimeInMs": 1781160214516,
+    "modificationTimeUnixTimeInMs": 1781160483098,
     "trigger": {
         "id": 0,
         "identifier": "c1caa000-9517-4368-b5b6-2261d303f183",
@@ -163,8 +163,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160214516,
-            "modificationTimeUnixTimeInMs": 1781160214516,
+            "creationTimeUnixTimeInMs": 1781160481957,
+            "modificationTimeUnixTimeInMs": 1781160483098,
             "additionalProperties": {}
         },
         {
@@ -202,8 +202,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160214516,
-            "modificationTimeUnixTimeInMs": 1781160214516,
+            "creationTimeUnixTimeInMs": 1781160481957,
+            "modificationTimeUnixTimeInMs": 1781160483098,
             "additionalProperties": {}
         },
         {
@@ -241,8 +241,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160214516,
-            "modificationTimeUnixTimeInMs": 1781160214516,
+            "creationTimeUnixTimeInMs": 1781160481957,
+            "modificationTimeUnixTimeInMs": 1781160483098,
             "additionalProperties": {}
         }
     ],

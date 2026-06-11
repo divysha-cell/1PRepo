@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of Copy of CrowdStrike Containment",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block allows the playbook to perform containment actions on endpoints by targeting the IPs and hostnames associated with the case, helping to prevent further compromise during incident response.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "f950de05-a395-4309-99c2-039f03c4a7a0",
     "creationTimeUnixTimeInMs": 1781160213082,
-    "modificationTimeUnixTimeInMs": 1781160213082,
+    "modificationTimeUnixTimeInMs": 1781160453274,
     "trigger": {
         "id": 0,
         "identifier": "c740d7e2-85e1-4a6c-af5d-a0f3c605e37a",
@@ -159,8 +159,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160213082,
-            "modificationTimeUnixTimeInMs": 1781160213082,
+            "creationTimeUnixTimeInMs": 1781160451906,
+            "modificationTimeUnixTimeInMs": 1781160453274,
             "additionalProperties": {}
         },
         {
@@ -198,8 +198,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160213082,
-            "modificationTimeUnixTimeInMs": 1781160213082,
+            "creationTimeUnixTimeInMs": 1781160451906,
+            "modificationTimeUnixTimeInMs": 1781160453274,
             "additionalProperties": {}
         },
         {
@@ -325,8 +325,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160213082,
-            "modificationTimeUnixTimeInMs": 1781160213082,
+            "creationTimeUnixTimeInMs": 1781160451906,
+            "modificationTimeUnixTimeInMs": 1781160453274,
             "additionalProperties": {}
         },
         {
@@ -364,8 +364,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160213082,
-            "modificationTimeUnixTimeInMs": 1781160213082,
+            "creationTimeUnixTimeInMs": 1781160451906,
+            "modificationTimeUnixTimeInMs": 1781160453274,
             "additionalProperties": {}
         }
     ],

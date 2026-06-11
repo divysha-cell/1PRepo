@@ -6,7 +6,7 @@
     "isDebugMode": false,
     "name": "Copy of Google SecOps Enrichment",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
+    "modifiedBy": "Siemplify automation",
     "priority": 2,
     "description": "This block retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.",
     "executionScope": 0,
@@ -17,7 +17,7 @@
     "categoryId": 1,
     "originalPlaybookIdentifier": "8c76bd4b-2894-4d86-8c7c-5201b5e3cb91",
     "creationTimeUnixTimeInMs": 1781159452736,
-    "modificationTimeUnixTimeInMs": 1781159452736,
+    "modificationTimeUnixTimeInMs": 1781160459503,
     "trigger": {
         "id": 0,
         "identifier": "1715500d-b0b8-4f9f-b4f8-0cd061b4c3b3",
@@ -64,8 +64,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -103,8 +103,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -230,8 +230,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -269,8 +269,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -308,8 +308,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -435,8 +435,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -562,8 +562,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -689,8 +689,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -861,8 +861,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -1033,8 +1033,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -1205,8 +1205,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -1377,8 +1377,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         },
         {
@@ -1549,8 +1549,8 @@
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781159452736,
-            "modificationTimeUnixTimeInMs": 1781159452736,
+            "creationTimeUnixTimeInMs": 1781160458191,
+            "modificationTimeUnixTimeInMs": 1781160459503,
             "additionalProperties": {}
         }
     ],

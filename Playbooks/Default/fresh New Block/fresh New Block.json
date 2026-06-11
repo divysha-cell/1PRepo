@@ -1,26 +1,26 @@
 {
     "id": 0,
-    "identifier": "de7af8ce-369f-410c-80c2-75e08a134ffa",
-    "version": "0",
+    "identifier": "9daba553-ac4f-403b-9b51-fcfe2f677098",
+    "version": "1",
     "isEnabled": true,
     "isDebugMode": false,
-    "name": "High Risk Users Check",
+    "name": "fresh New Block",
     "creator": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
-    "modifiedBy": "Siemplify automation",
+    "modifiedBy": "b322264a-f82d-4f75-a3ab-9fca86ab90ee",
     "priority": 2,
-    "description": "This block checks Google GTI sourced alerts against a SOAR custom list to find matches of targeted Industries.",
+    "description": "An embedded workflow that can receive inputs and return an output.",
     "executionScope": 0,
     "environments": [
         "Default Environment"
     ],
     "categoryName": "Default",
     "categoryId": 1,
-    "originalPlaybookIdentifier": "de7af8ce-369f-410c-80c2-75e08a134ffa",
-    "creationTimeUnixTimeInMs": 1781158647262,
-    "modificationTimeUnixTimeInMs": 1781160421328,
+    "originalPlaybookIdentifier": "9daba553-ac4f-403b-9b51-fcfe2f677098",
+    "creationTimeUnixTimeInMs": 1781160575812,
+    "modificationTimeUnixTimeInMs": 1781160575812,
     "trigger": {
         "id": 0,
-        "identifier": "a8029f6f-2856-40e8-ba72-6e11a3e8d50c",
+        "identifier": "93bd9c7e-09a4-424c-8fee-94ddc75e8232",
         "type": 11,
         "logicalOperator": 0,
         "conditions": [],
@@ -31,8 +31,8 @@
     "steps": [
         {
             "parallelActions": [],
-            "identifier": "3686316b-7077-46ab-b343-bef237d2ba6e",
-            "originalStepIdentifier": "56e8cf1b-537f-4dc8-9f41-c517582769ab",
+            "identifier": "c6bc7869-0baa-4944-bf83-771d21c280f4",
+            "originalStepIdentifier": "c6bc7869-0baa-4944-bf83-771d21c280f4",
             "isAutomatic": true,
             "isSkippable": false,
             "instanceName": "Output_1",
@@ -59,28 +59,28 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "de7af8ce-369f-410c-80c2-75e08a134ffa",
+            "workflowIdentifier": "9daba553-ac4f-403b-9b51-fcfe2f677098",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160419979,
-            "modificationTimeUnixTimeInMs": 1781160421328,
+            "creationTimeUnixTimeInMs": 1781160575812,
+            "modificationTimeUnixTimeInMs": 1781160575812,
             "additionalProperties": {}
         },
         {
             "parallelActions": [],
-            "identifier": "d475ce8a-7017-4a20-9d93-cf4ca0fd3643",
-            "originalStepIdentifier": "9922c4e1-f5a6-46ea-b0e9-2675596c27b9",
+            "identifier": "e7d80225-69ea-445a-bbda-eb3f6a5c6c5e",
+            "originalStepIdentifier": "e7d80225-69ea-445a-bbda-eb3f6a5c6c5e",
             "isAutomatic": true,
             "isSkippable": false,
-            "instanceName": "Are there Matches",
-            "name": "Condition",
-            "integration": "Flow",
-            "description": "This condition determines the progress of the playbook. Conditions are built based on cases data (cases, alerts, vents, entities and environment properties) as-well as data that comes back from previous playbook steps.",
-            "actionProvider": "Flow",
-            "actionName": "IfFlowCondition",
-            "type": 4,
+            "instanceName": "Lists_Ping_1",
+            "name": "Lists_Ping",
+            "integration": "Lists",
+            "description": "Check connectivity",
+            "actionProvider": "Scripts",
+            "actionName": "Lists_Ping",
+            "type": 0,
             "parameters": [
                 {
                     "name": "AssignedUsers",
@@ -94,8 +94,8 @@
                     "additionalProperties": {}
                 },
                 {
-                    "name": "Branches",
-                    "value": "[{\"LogicalOperator\":0,\"Conditions\":[{\"Operator\":8,\"FieldName\":\"[Find Matches.ScriptResult]\",\"Type\":2,\"Value\":\"\",\"CustomOperatorName\":null}],\"Order\":1,\"IsDefaultBranch\":false,\"Name\":\"Branch\"},{\"LogicalOperator\":0,\"Conditions\":[],\"Order\":2,\"IsDefaultBranch\":true,\"Name\":\"Branch\"}]",
+                    "name": "DistinctDuplicateEntities",
+                    "value": "true",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -106,7 +106,7 @@
                 },
                 {
                     "name": "DynamicInjectionInstancePlaceholder",
-                    "value": null,
+                    "value": "",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -116,7 +116,7 @@
                     "additionalProperties": {}
                 },
                 {
-                    "name": "ErrorFallbackBranch",
+                    "name": "FallbackIntegrationInstance",
                     "value": null,
                     "type": null,
                     "isMandatory": false,
@@ -128,7 +128,7 @@
                 },
                 {
                     "name": "FetchInstanceByName",
-                    "value": null,
+                    "value": "false",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -147,6 +147,18 @@
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "additionalProperties": {}
+                },
+                {
+                    "name": "IntegrationInstance",
+                    "value": "81fc96b6-4212-4f0c-959c-ecae4d72c44a",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {},
+                    "InstanceDisplayName": "System Default Instance"
                 },
                 {
                     "name": "MessageToAssignee",
@@ -171,6 +183,39 @@
                     "additionalProperties": {}
                 },
                 {
+                    "name": "RetryConfiguration",
+                    "value": "{\"Enabled\":false,\"IntervalInSeconds\":30,\"NumberOfRetries\":1}",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "ScriptName",
+                    "value": "Lists_Ping",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "ScriptParametersEntityFields",
+                    "value": "{}",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
                     "name": "SelectedScopeName",
                     "value": "All entities",
                     "type": null,
@@ -180,38 +225,10 @@
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "additionalProperties": {}
-                }
-            ],
-            "autoSkipOnFailure": false,
-            "isDebugMockData": false,
-            "debugData": null,
-            "parentStepContainerId": null,
-            "workflowIdentifier": "de7af8ce-369f-410c-80c2-75e08a134ffa",
-            "isTouchedByAi": false,
-            "startLoopStepIdentifier": null,
-            "logsExplorerUrl": null,
-            "id": 0,
-            "creationTimeUnixTimeInMs": 1781160419979,
-            "modificationTimeUnixTimeInMs": 1781160421328,
-            "additionalProperties": {}
-        },
-        {
-            "parallelActions": [],
-            "identifier": "d6a95c47-a094-4a9d-9ab6-b76a8c9e070b",
-            "originalStepIdentifier": "8f9f3ed7-b76f-4044-a44b-dc2a4493dea4",
-            "isAutomatic": true,
-            "isSkippable": false,
-            "instanceName": "Output_3",
-            "name": "Output",
-            "integration": "Flow",
-            "description": "",
-            "actionProvider": "Flow",
-            "actionName": "OutputAction",
-            "type": 6,
-            "parameters": [
+                },
                 {
-                    "name": "NestedWorkflowOutput",
-                    "value": null,
+                    "name": "UseEntitiesLoopScope",
+                    "value": "true",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -225,35 +242,29 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "de7af8ce-369f-410c-80c2-75e08a134ffa",
+            "workflowIdentifier": "9daba553-ac4f-403b-9b51-fcfe2f677098",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160419979,
-            "modificationTimeUnixTimeInMs": 1781160421328,
+            "creationTimeUnixTimeInMs": 1781160575812,
+            "modificationTimeUnixTimeInMs": 1781160575812,
             "additionalProperties": {}
         }
     ],
     "stepsRelations": [
         {
-            "condition": "1",
-            "fromStep": "d475ce8a-7017-4a20-9d93-cf4ca0fd3643",
-            "toStep": "3686316b-7077-46ab-b343-bef237d2ba6e",
-            "destinationActionStatus": 0
-        },
-        {
-            "condition": "2",
-            "fromStep": "d475ce8a-7017-4a20-9d93-cf4ca0fd3643",
-            "toStep": "d6a95c47-a094-4a9d-9ab6-b76a8c9e070b",
+            "condition": "",
+            "fromStep": "e7d80225-69ea-445a-bbda-eb3f6a5c6c5e",
+            "toStep": "c6bc7869-0baa-4944-bf83-771d21c280f4",
             "destinationActionStatus": 0
         }
     ],
     "templateName": null,
     "playbookType": 1,
     "debugData": {
-        "debugBaseAlertId": "GOOGLECHRONICLE_RULE_SCC: EXECUTION: ADDED MALICIOUS BINARY EXECUTED_25EAEA61-7366-4C6F-97B0-3D96B6D6D0DD",
-        "debugAlertId": "GOOGLECHRONICLE_RULE_SCC: EXECUTION: ADDED MALICIOUS BINARY EXECUTED8E56BD5A-FF11-4AE9-BBC1-D2AF7041AE43"
+        "debugBaseAlertId": null,
+        "debugAlertId": null
     },
     "entityAccessLevel": 2,
     "defaultAccessLevel": 2,

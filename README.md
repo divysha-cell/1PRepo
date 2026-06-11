@@ -181,6 +181,8 @@
 |MITRE Enrichment|This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.|
 |New Block|An embedded workflow that can receive inputs and return an output.|
 |New Playbook||
+|fresh New Block|An embedded workflow that can receive inputs and return an output.|
+|fresh New Playbook||
 
 
 ## Jobs
