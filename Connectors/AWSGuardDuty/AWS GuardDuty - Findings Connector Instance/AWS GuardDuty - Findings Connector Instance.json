@@ -1,8 +1,8 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/AWSGuardDuty/connectors/40/connectorInstances/105",
-    "id": 105,
+    "name": "projects/project/locations/location/instances/instance/integrations/AWSGuardDuty/connectors/40/connectorInstances/116",
+    "id": 116,
     "custom": false,
-    "identifier": "AWS GuardDuty - Findings Connector_930db5b7-7ffd-43b2-84f1-e4d17c0c878a",
+    "identifier": "AWS GuardDuty - Findings Connector_6fe14f86-d8e2-49f6-aa1c-ddc8d9e1ec92",
     "connectorDefinitionName": "AWS GuardDuty - Findings Connector",
     "integration": "AWSGuardDuty",
     "remote": false,

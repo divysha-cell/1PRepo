@@ -1,30 +1,18 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/CaServiceDesk/connectors/2/connectorInstances/114",
-    "id": 114,
+    "name": "projects/project/locations/location/instances/instance/integrations/CaServiceDesk/connectors/-/connectorInstances/131",
+    "id": 131,
     "custom": false,
-    "identifier": "CA Service Desk Connector_66a4c1e8-ad72-4194-a771-7f5d307276a7",
+    "identifier": "CA Service Desk Connector_f77c0b68-4669-4e01-93f8-d8c1d91e4c6a",
     "connectorDefinitionName": "CA Service Desk Connector",
     "integration": "CaServiceDesk",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 2,
     "integrationVersion": "27",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "The proxy username to authenticate with.",
-            "displayName": "Proxy Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": true,
             "advanced": false,
@@ -66,6 +54,28 @@
             "description": "Incident id field key as it appear at the ticket JSON e.g. ref_num",
             "displayName": "Ticket ID Field",
             "value": "ref_num",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Filter incidents by groups",
+            "displayName": "Groups List",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },
@@ -162,19 +172,8 @@
             "advanced": false,
             "type": "String",
             "mode": "Script",
-            "description": "Filter incidents by groups",
-            "displayName": "Groups List",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "The address of the proxy server to use.",
-            "displayName": "Proxy Server Address",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
             "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
@@ -203,17 +202,6 @@
     "timeoutSeconds": 60,
     "params": [
         {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "The proxy username to authenticate with.",
-            "displayName": "Proxy Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
             "mandatory": true,
             "advanced": false,
             "type": "String",
@@ -254,6 +242,28 @@
             "description": "Incident id field key as it appear at the ticket JSON e.g. ref_num",
             "displayName": "Ticket ID Field",
             "value": "ref_num",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Filter incidents by groups",
+            "displayName": "Groups List",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },
@@ -350,19 +360,8 @@
             "advanced": false,
             "type": "String",
             "mode": "Script",
-            "description": "Filter incidents by groups",
-            "displayName": "Groups List",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "The address of the proxy server to use.",
-            "displayName": "Proxy Server Address",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
             "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0

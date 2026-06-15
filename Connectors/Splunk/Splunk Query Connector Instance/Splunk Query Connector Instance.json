@@ -1,20 +1,95 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Splunk/connectors/14/connectorInstances/82",
-    "id": 82,
+    "name": "projects/project/locations/location/instances/instance/integrations/Splunk/connectors/-/connectorInstances/173",
+    "id": 173,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/splunk#splunk-connector",
-    "identifier": "Splunk Query Connector_520b7547-0c03-42dc-b0cf-86c2bd733ec1",
+    "identifier": "Splunk Query Connector_eebfdd4c-b987-41e2-afd1-e66a69d15920",
     "connectorDefinitionName": "Splunk Query Connector",
     "integration": "Splunk",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 14,
     "integrationVersion": "65",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Number of days before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.",
+            "displayName": "Max Days Backwards",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "If enabled, the connector will combine all events under one alert.",
+            "displayName": "Aggregate Events Query",
+            "value": "FALSE",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "Password",
+            "mode": "Script",
+            "description": "The proxy password to authenticate with.",
+            "displayName": "Proxy Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "CA Certificate File",
+            "displayName": "CA Certificate File",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the 'Environment Field Name' field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
         {
             "mandatory": true,
             "advanced": false,
@@ -111,83 +186,6 @@
             "description": "Max amount of events to fetch per query, e.g: 10",
             "displayName": "Events Count Limit Per Query",
             "value": "10",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Number of days before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.",
-            "displayName": "Max Days Backwards",
-            "value": "1",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Boolean",
-            "mode": "Script",
-            "description": "If enabled, the connector will combine all events under one alert.",
-            "displayName": "Aggregate Events Query",
-            "value": "FALSE",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "The address of the proxy server to use.",
-            "displayName": "Proxy Server Address",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "The proxy username to authenticate with.",
-            "displayName": "Proxy Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "Password",
-            "mode": "Script",
-            "description": "The proxy password to authenticate with.",
-            "displayName": "Proxy Password",
-            "value": "***************",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "CA Certificate File",
-            "displayName": "CA Certificate File",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the 'Environment Field Name' field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -204,6 +202,83 @@
     "timeoutSeconds": 60,
     "params": [
         {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Number of days before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.",
+            "displayName": "Max Days Backwards",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "If enabled, the connector will combine all events under one alert.",
+            "displayName": "Aggregate Events Query",
+            "value": "FALSE",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "Password",
+            "mode": "Script",
+            "description": "The proxy password to authenticate with.",
+            "displayName": "Proxy Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "CA Certificate File",
+            "displayName": "CA Certificate File",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the 'Environment Field Name' field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
             "mandatory": true,
             "advanced": false,
             "type": "String",
@@ -299,83 +374,6 @@
             "description": "Max amount of events to fetch per query, e.g: 10",
             "displayName": "Events Count Limit Per Query",
             "value": "10",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Number of days before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.",
-            "displayName": "Max Days Backwards",
-            "value": "1",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Boolean",
-            "mode": "Script",
-            "description": "If enabled, the connector will combine all events under one alert.",
-            "displayName": "Aggregate Events Query",
-            "value": "FALSE",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "The address of the proxy server to use.",
-            "displayName": "Proxy Server Address",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "The proxy username to authenticate with.",
-            "displayName": "Proxy Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "Password",
-            "mode": "Script",
-            "description": "The proxy password to authenticate with.",
-            "displayName": "Proxy Password",
-            "value": "***************",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "CA Certificate File",
-            "displayName": "CA Certificate File",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the 'Environment Field Name' field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

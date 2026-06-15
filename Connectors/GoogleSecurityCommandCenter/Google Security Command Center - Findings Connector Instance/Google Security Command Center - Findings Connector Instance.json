@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/GoogleSecurityCommandCenter/connectors/56/connectorInstances/78",
-    "id": 78,
+    "name": "projects/project/locations/location/instances/instance/integrations/GoogleSecurityCommandCenter/connectors/56/connectorInstances/148",
+    "id": 148,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-security-command-center#findings-connector",
-    "identifier": "Google Security Command Center - Findings Connector_28b32e17-f0fd-4b1a-88d0-5dd019e95def",
+    "identifier": "Google Security Command Center - Findings Connector_933ebdf2-8e71-47ee-a228-5d69d67f2781",
     "connectorDefinitionName": "Google Security Command Center - Findings Connector",
     "integration": "GoogleSecurityCommandCenter",
     "remote": false,
@@ -15,83 +15,6 @@
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "API root of the Google Security Command Center instance.",
-            "displayName": "API Root",
-            "value": "https://securitycenter.googleapis.com",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "ID of the organization that should be used in Google Security Command Center integration.",
-            "displayName": "Organization ID",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "ID of the project that should be used in Google Security Command Center integration. Takes priority over Organization ID, if both are provided.",
-            "displayName": "Project ID",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "ID of your Google Cloud project for Google Cloud API usage and billing. If no value is provided, the project ID defined in your Google Cloud service account is used. For this parameter to work, make sure to grant the \u201cService Usage Consumer\u201d IAM role to your Google Cloud service account.",
-            "displayName": "Quota Project ID",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "ID of the location that should be used in Google Security Command Center integration. Defaults to \u2018global\u2019",
-            "displayName": "Location ID",
-            "value": "global",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": false,
             "advanced": false,
@@ -221,6 +144,83 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "API root of the Google Security Command Center instance.",
+            "displayName": "API Root",
+            "value": "https://securitycenter.googleapis.com",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "ID of the organization that should be used in Google Security Command Center integration.",
+            "displayName": "Organization ID",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "ID of the project that should be used in Google Security Command Center integration. Takes priority over Organization ID, if both are provided.",
+            "displayName": "Project ID",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "ID of your Google Cloud project for Google Cloud API usage and billing. If no value is provided, the project ID defined in your Google Cloud service account is used. For this parameter to work, make sure to grant the \u201cService Usage Consumer\u201d IAM role to your Google Cloud service account.",
+            "displayName": "Quota Project ID",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "ID of the location that should be used in Google Security Command Center integration. Defaults to \u2018global\u2019",
+            "displayName": "Location ID",
+            "value": "global",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -239,83 +239,6 @@
         {
             "mandatory": false,
             "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "API root of the Google Security Command Center instance.",
-            "displayName": "API Root",
-            "value": "https://securitycenter.googleapis.com",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "ID of the organization that should be used in Google Security Command Center integration.",
-            "displayName": "Organization ID",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "ID of the project that should be used in Google Security Command Center integration. Takes priority over Organization ID, if both are provided.",
-            "displayName": "Project ID",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "ID of your Google Cloud project for Google Cloud API usage and billing. If no value is provided, the project ID defined in your Google Cloud service account is used. For this parameter to work, make sure to grant the \u201cService Usage Consumer\u201d IAM role to your Google Cloud service account.",
-            "displayName": "Quota Project ID",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "ID of the location that should be used in Google Security Command Center integration. Defaults to \u2018global\u2019",
-            "displayName": "Location ID",
-            "value": "global",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
             "type": "Password",
             "mode": "Script",
             "description": "Service account of the Google Security Command Center instance. A full content of the service account JSON file should be provided. This or \"Workload Identity Email\" must be provided.",
@@ -442,6 +365,83 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "API root of the Google Security Command Center instance.",
+            "displayName": "API Root",
+            "value": "https://securitycenter.googleapis.com",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "ID of the organization that should be used in Google Security Command Center integration.",
+            "displayName": "Organization ID",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "ID of the project that should be used in Google Security Command Center integration. Takes priority over Organization ID, if both are provided.",
+            "displayName": "Project ID",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "ID of your Google Cloud project for Google Cloud API usage and billing. If no value is provided, the project ID defined in your Google Cloud service account is used. For this parameter to work, make sure to grant the \u201cService Usage Consumer\u201d IAM role to your Google Cloud service account.",
+            "displayName": "Quota Project ID",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "ID of the location that should be used in Google Security Command Center integration. Defaults to \u2018global\u2019",
+            "displayName": "Location ID",
+            "value": "global",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

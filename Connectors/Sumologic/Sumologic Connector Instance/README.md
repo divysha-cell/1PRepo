@@ -13,7 +13,6 @@ Event Name Field: _source
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
 |Api Root|The Sumologic Api root, i.e: https://api.{region}.sumologic.com|True|dummy_value|
-|Access ID|Sumologic access ID|False|dummy_value|
 |Access Key|Sumologic access key|False|*****|
 |Verify SSL|Whether to use ssl on connection or not|False|false|
 |Alert Name Field|The name of the field where the alert name is located (flat field path). e.g. _sourcecategory|True|_sourcecategory|
@@ -26,4 +25,5 @@ Event Name Field: _source
 |Proxy Server Address|The address of the proxy server to use.|False|dummy_value|
 |Proxy Username|The proxy username to authenticate with.|False|dummy_value|
 |Proxy Password|The proxy password to authenticate with.|False|*****|
+|Access ID|Sumologic access ID|False|dummy_value|
 

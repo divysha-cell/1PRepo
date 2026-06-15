@@ -1,14 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Group-IB-DRP/connectors/22/connectorInstances/110",
-    "id": 110,
+    "name": "projects/project/locations/location/instances/instance/integrations/Group-IB-DRP/connectors/-/connectorInstances/149",
+    "id": 149,
     "custom": false,
-    "documentationLink": "https://drp.group-ib.com/portal/tools/doc/customer/en/api/api-starting-guide/api-starting-guide/",
-    "identifier": "DRP Typosquatting Connector_1c2dc4a9-2027-4162-87cd-9387fc5b6992",
+    "identifier": "DRP Typosquatting Connector_14efea08-234d-4fe1-99ec-5bf05e738bd6",
     "connectorDefinitionName": "DRP Typosquatting Connector",
     "integration": "Group-IB-DRP",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 22,
     "integrationVersion": "1",
     "statistics": {
         "pastDayAlertsCount": 0,

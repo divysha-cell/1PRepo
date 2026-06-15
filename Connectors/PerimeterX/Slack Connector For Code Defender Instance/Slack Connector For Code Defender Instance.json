@@ -1,8 +1,8 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/PerimeterX/connectors/55/connectorInstances/98",
-    "id": 98,
+    "name": "projects/project/locations/location/instances/instance/integrations/PerimeterX/connectors/55/connectorInstances/164",
+    "id": 164,
     "custom": false,
-    "identifier": "Slack Connector For Code Defender_fe2fa2d7-0fda-40a9-8420-e21c22db41dc",
+    "identifier": "Slack Connector For Code Defender_03ab1b20-9723-4455-afd2-075b4b705706",
     "connectorDefinitionName": "Slack Connector For Code Defender",
     "integration": "PerimeterX",
     "remote": false,

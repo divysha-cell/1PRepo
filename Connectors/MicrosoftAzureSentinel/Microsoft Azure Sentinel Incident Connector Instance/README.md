@@ -12,7 +12,6 @@ Event Name Field: AlertName
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
-|Environment Field Name|Describes the name of the field where the environment name is stored.|False|dummy_value|
 |Environment Regex Pattern|If defined - the connector will implement the specific RegEx pattern on the data from "environment field" to extract specific string. For example - extract domain from sender's address: "(?<=@)(\S+$)"|False|0|
 |API Root|The API Root of Microsoft Azure Sentinel REST API root.|True|https://management.azure.com|
 |OAUTH2 Login Endpoint Url|Specify the url, that connector should use for OAUTH2 Login.|True|https://login.microsoftonline.com|
@@ -30,4 +29,5 @@ Event Name Field: AlertName
 |Proxy Server Address|Proxy server to use for connection.|False|dummy_value|
 |Proxy Server Username|Proxy server username|False|dummy_value|
 |Proxy Server Password|Proxy server password|False|*****|
+|Environment Field Name|Describes the name of the field where the environment name is stored.|False|dummy_value|
 

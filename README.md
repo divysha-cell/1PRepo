@@ -40,8 +40,8 @@
 ## Connectors
 |Name|Description|Has Mappings|
 |----|-----------|------------|
-|AWS Cloud Trail - Insights Connector Instance|None|False|
-|AWS GuardDuty - Findings Connector Instance|None|False|
+|AWS Cloud Trail - Insights Connector Instance|None|True|
+|AWS GuardDuty - Findings Connector Instance|None|True|
 |AWS IAM Access Analyzer - Findings Connector Instance|None|True|
 |AWS Security Hub - Findings Connector Instance|None|False|
 |AirTable Connector Instance|None|False|
@@ -52,11 +52,11 @@
 |Apache Kafka - Messages Connector Instance|None|False|
 |ArcSight - Security Events Connector Instance|None|False|
 |Arcsight ESM Connector Instance|None|False|
-|Azure Security Center - Security Alerts Connector Instance|None|False|
+|Azure Security Center - Security Alerts Connector Instance|None|True|
 |VMware Carbon Black Cloud Alerts Connector Instance|None|True|
 |VMware Carbon Black Cloud Alerts and Events Baseline Connector Instance|None|True|
 |VMware Carbon Black Cloud Alerts and Events Tracking Connector Instance|None|True|
-|CA Service Desk Connector Instance|None|False|
+|CA Service Desk Connector Instance|None|True|
 |Crowdstrike - Alerts Connector Instance|None|True|
 |Crowdstrike - Detections Connector Instance|None|True|
 |Crowdstrike - Identity Protection Detections Connector Instance|None|True|
@@ -92,13 +92,13 @@
 |Slack Connector For Code Defender Instance|None|False|
 |PhishRod - Incidents Connector Instance|None|False|
 |Qualys EDR - Events Connector Instance|None|False|
-|SOCRadar Alarms Connector Instance|None|False|
+|SOCRadar Alarms Connector Instance|None|True|
 |SentinelOne - Alerts Connector Instance|None|True|
 |SentinelOne - Threats Connector Instance|None|True|
-|ServiceNow Connector Instance|None|False|
-|Splunk ES - Notable Events Connector Instance|None|False|
-|Splunk Pull Connector Instance|None|False|
-|Splunk Query Connector Instance|None|False|
+|ServiceNow Connector Instance|None|True|
+|Splunk ES - Notable Events Connector Instance|None|True|
+|Splunk Pull Connector Instance|None|True|
+|Splunk Query Connector Instance|None|True|
 |Sumologic Connector Instance|None|False|
 |Vectra RUX - Entities Connector Instance|None|False|
 
@@ -176,15 +176,25 @@
 |fresh New Playbook||
 
 
+## Visual Families
+|Name|Description|
+|----|-----------|
+|Carbon Black File Modifications|VMware Carbon Black EDR captures four types of file system activity: File creation – the creation of a new file. File Write – the first time a file is written to after being opened or created. File Write Complete – the closing of a file that was written to.This event includes both the file path and also the MD5/SHA256 of the written file. The event is only captured for binaries (Windows PE files such as EXE, DLL and drivers), Adobe Docs (PDF), OfficeXML docs (docx, doc, xlsx, xls, pptx, ppt)  and zip archives (zip) that are smaller than 10MB in size. Can be enabled or disabled independently of filemod collection by deselecting "Non-binary file writes" Not available on macOS and Linux sensors File deletion – the deletion of an existing file.|
+|Carbon Black Network Connections Event|VMware Carbon Black EDR captures network connections with the following characteristics: Both TCP over IPv4 or UDP over IPv4 connections Both inbound and outbound connections Network connections record TCP or UDP protocol, the remote IPv4 address, port and the domain name associated with the remote IPv4 Address Inbound connections capture the local port. If the sensor is installed on a typically configured web server, the reported port is 80. Outbound connections capture the remote port, uutbound connections made after DNS resolution the name that resolves to the captured IPV4 address is also reported. The sensor utilizes a passive sensing approach to capturing the domain name, so no additional network traffic is generated in order to capture the name. For DNS/DHCP servers, high CPU and/or memory can be seen due to the high number of netconn events. Rather than disabling all netconns, disable DNS capture on that machine. CB Response: Windows Sensor Causing High CPU/memory Utilization on Netconn Intense Server.|
+|Carbon Black Process Event|Cross Process Event and Child Process Events: VMware Carbon Black EDR provides a cross-process event type that records an occurrence of a process that crosses the security boundary of another process. While some of these events are benign, others can indicate an attempt to change the behavior of the target process by a malicious process.|
+
+
 ## Jobs
 |Name|Description|
 |----|-----------|
+|12 Actions Monitor|Notifies of all the actions, that have individually failed at least 3 times, in the last 3 hours|
 |Refresh Token Renewal Job1234556789|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
 |Refresh Token Renewal Job2345678|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
 |Refresh Token Renewal Job23456789|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
 |Refresh Token Renewal Job23466543|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
 |Refresh Token Renewal Job34|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
 |Refresh Token Renewal Job345678|Token renewal job should be used to periodically update the refresh token configured for the integration. By default, the refresh token expires every 90 days, making integration unusable upon expiration. It is recommended to run this job every 7 or 14 days to make sure that refresh token will be up to date.|
+|Siemplify Job- Cases Collector|Collect cases and connector logs from Publisher.|
 |Sync Alerts - AutoTest 1|Automated test job instance. Index: 9|
 |Sync Alerts - AutoTest 2|Automated test job instance. Index: 36|
 |Sync Alerts|This job synchronizes Google SecOps Alerts and Microsoft Defender XDR Alerts. It ensures that comments and status are synchronized bi-directionally between both systems. Note: Assignee synchronization occurs exclusively from Microsoft Defender to Google SecOps. For the job to identify the correct information, the Google SecOps case must have the "Microsoft Defender XDR Alert" tag. If the alert didn’t originate from "Microsoft 365 Defender - Incidents Connector",  you will need to add an "Alert_ID" context value to the alert for the job to be able to find the correct information.|

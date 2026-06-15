@@ -1,42 +1,18 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Microsoft365Defender/connectors/8/connectorInstances/109",
-    "id": 109,
+    "name": "projects/project/locations/location/instances/instance/integrations/Microsoft365Defender/connectors/-/connectorInstances/155",
+    "id": 155,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/microsoft-365-defender#microsoft-365-defender-incidents-connector",
-    "identifier": "Microsoft 365 Defender - Incidents Connector_0153f792-f8e5-4a82-a8c5-d21d30293499",
+    "identifier": "Microsoft 365 Defender - Incidents Connector_a996da9b-d2ae-4c75-8a1c-ead89d31e407",
     "connectorDefinitionName": "Microsoft 365 Defender - Incidents Connector",
     "integration": "Microsoft365Defender",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 8,
     "integrationVersion": "26",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": true,
             "advanced": false,
@@ -254,6 +230,28 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -270,28 +268,6 @@
     "timeoutSeconds": 180,
     "params": [
         {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
             "mandatory": true,
             "advanced": false,
             "type": "String",
@@ -508,6 +484,28 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

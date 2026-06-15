@@ -1,31 +1,18 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftGraphMailDelegated/connectors/17/connectorInstances/113",
-    "id": 113,
+    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftGraphMailDelegated/connectors/-/connectorInstances/159",
+    "id": 159,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/microsoft-graph-mail-delegated#microsoft-graph-mail-delegated-connector",
-    "identifier": "Microsoft Graph Mail Delegated Connector_c8c61953-3b70-4bbc-acc1-409204cb6be5",
+    "identifier": "Microsoft Graph Mail Delegated Connector_4f808f1c-94ee-42f9-b6da-dfa543bb7828",
     "connectorDefinitionName": "Microsoft Graph Mail Delegated Connector",
     "integration": "MicrosoftGraphMailDelegated",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 17,
     "integrationVersion": "18",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "The address of the proxy server to use.",
-            "displayName": "Proxy Server Address",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": false,
             "advanced": true,
@@ -248,17 +235,6 @@
         },
         {
             "mandatory": false,
-            "advanced": false,
-            "type": "Boolean",
-            "mode": "Script",
-            "description": "If selected, the connector retrieves the mailbox address from the user details \u201cmail\u201d attribute. If not selected, the integration retrieves the mailbox address from the \u201cuserPrincipalName\u201d field. Selected by default.",
-            "displayName": "Mail Field Source",
-            "value": "true",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
             "advanced": true,
             "type": "String",
             "mode": "Script",
@@ -353,6 +329,28 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "If selected, the connector retrieves the mailbox address from the user details \u201cmail\u201d attribute. If not selected, the integration retrieves the mailbox address from the \u201cuserPrincipalName\u201d field. Selected by default.",
+            "displayName": "Mail Field Source",
+            "value": "true",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -372,17 +370,6 @@
             "mandatory": false,
             "advanced": true,
             "type": "String",
-            "mode": "Script",
-            "description": "The address of the proxy server to use.",
-            "displayName": "Proxy Server Address",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
             "mode": "Regular",
             "description": "The name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment. The default value is \"\"\n",
             "displayName": "Environment Field Name",
@@ -601,17 +588,6 @@
         },
         {
             "mandatory": false,
-            "advanced": false,
-            "type": "Boolean",
-            "mode": "Script",
-            "description": "If selected, the connector retrieves the mailbox address from the user details \u201cmail\u201d attribute. If not selected, the integration retrieves the mailbox address from the \u201cuserPrincipalName\u201d field. Selected by default.",
-            "displayName": "Mail Field Source",
-            "value": "true",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
             "advanced": true,
             "type": "String",
             "mode": "Script",
@@ -706,6 +682,28 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "If selected, the connector retrieves the mailbox address from the user details \u201cmail\u201d attribute. If not selected, the integration retrieves the mailbox address from the \u201cuserPrincipalName\u201d field. Selected by default.",
+            "displayName": "Mail Field Source",
+            "value": "true",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

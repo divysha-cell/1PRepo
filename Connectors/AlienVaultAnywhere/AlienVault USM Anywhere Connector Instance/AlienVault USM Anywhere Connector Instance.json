@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/AlienVaultAnywhere/connectors/43/connectorInstances/75",
-    "id": 75,
+    "name": "projects/project/locations/location/instances/instance/integrations/AlienVaultAnywhere/connectors/43/connectorInstances/120",
+    "id": 120,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/alienvault-usm-anywhere#connectors",
-    "identifier": "AlienVault USM Anywhere Connector_a14a47de-9d30-4714-adf0-3d02f8d70c03",
+    "identifier": "AlienVault USM Anywhere Connector_fa30a125-6137-48d9-96da-d23fb46692b5",
     "connectorDefinitionName": "AlienVault USM Anywhere Connector",
     "integration": "AlienVaultAnywhere",
     "remote": false,

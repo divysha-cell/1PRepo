@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/QualysEDR/connectors/63/connectorInstances/65",
-    "id": 65,
+    "name": "projects/project/locations/location/instances/instance/integrations/QualysEDR/connectors/63/connectorInstances/166",
+    "id": 166,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/qualys-edr#connector",
-    "identifier": "Qualys EDR - Events Connector_980cf9d1-f9e6-47a3-89fc-c02975510478",
+    "identifier": "Qualys EDR - Events Connector_5ffc63d2-16dc-47ce-946a-8c24ad058cf5",
     "connectorDefinitionName": "Qualys EDR - Events Connector",
     "integration": "QualysEDR",
     "remote": false,
@@ -15,6 +15,72 @@
         "avgAlertsPerDay": 0
     },
     "parameters": [
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Number of hours before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.",
+            "displayName": "Max Hours Backwards",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "How many alert logs to process per one connector iteration. Default: 100.",
+            "displayName": "Max Events To Fetch",
+            "value": "100",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "If enabled, whitelist will be used as a blacklist.",
+            "displayName": "Use whitelist as a blacklist",
+            "value": "true",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "The proxy password to authenticate with.",
+            "displayName": "Proxy Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
         {
             "mandatory": false,
             "advanced": false,
@@ -100,72 +166,6 @@
             "description": "Type filter for the events. Possible values: File,mutex,process,network,registry.",
             "displayName": "Type Filter",
             "value": "file, network",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "Number of hours before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.",
-            "displayName": "Max Hours Backwards",
-            "value": "1",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "How many alert logs to process per one connector iteration. Default: 100.",
-            "displayName": "Max Events To Fetch",
-            "value": "100",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Boolean",
-            "mode": "Script",
-            "description": "If enabled, whitelist will be used as a blacklist.",
-            "displayName": "Use whitelist as a blacklist",
-            "value": "true",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "The address of the proxy server to use.",
-            "displayName": "Proxy Server Address",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "The proxy username to authenticate with.",
-            "displayName": "Proxy Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Password",
-            "mode": "Script",
-            "description": "The proxy password to authenticate with.",
-            "displayName": "Proxy Password",
-            "value": "***************",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -184,6 +184,72 @@
         {
             "mandatory": false,
             "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Number of hours before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.",
+            "displayName": "Max Hours Backwards",
+            "value": "1",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "How many alert logs to process per one connector iteration. Default: 100.",
+            "displayName": "Max Events To Fetch",
+            "value": "100",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "If enabled, whitelist will be used as a blacklist.",
+            "displayName": "Use whitelist as a blacklist",
+            "value": "true",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The address of the proxy server to use.",
+            "displayName": "Proxy Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "The proxy username to authenticate with.",
+            "displayName": "Proxy Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "The proxy password to authenticate with.",
+            "displayName": "Proxy Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
             "type": "String",
             "mode": "Script",
             "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
@@ -266,72 +332,6 @@
             "description": "Type filter for the events. Possible values: File,mutex,process,network,registry.",
             "displayName": "Type Filter",
             "value": "file, network",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "Number of hours before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.",
-            "displayName": "Max Hours Backwards",
-            "value": "1",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "How many alert logs to process per one connector iteration. Default: 100.",
-            "displayName": "Max Events To Fetch",
-            "value": "100",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Boolean",
-            "mode": "Script",
-            "description": "If enabled, whitelist will be used as a blacklist.",
-            "displayName": "Use whitelist as a blacklist",
-            "value": "true",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "The address of the proxy server to use.",
-            "displayName": "Proxy Server Address",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "The proxy username to authenticate with.",
-            "displayName": "Proxy Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Password",
-            "mode": "Script",
-            "description": "The proxy password to authenticate with.",
-            "displayName": "Proxy Password",
-            "value": "***************",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

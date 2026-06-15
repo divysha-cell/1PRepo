@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Extrahop/connectors/67/connectorInstances/86",
-    "id": 86,
+    "name": "projects/project/locations/location/instances/instance/integrations/Extrahop/connectors/67/connectorInstances/143",
+    "id": 143,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/extrahop#detections-connector",
-    "identifier": "Extrahop - Detections Connector_dbd69607-ee6b-43cf-a601-25050a7bb696",
+    "identifier": "Extrahop - Detections Connector_6537ed52-652d-42cf-8c03-9d60ee06abf9",
     "connectorDefinitionName": "Extrahop - Detections Connector",
     "integration": "Extrahop",
     "remote": false,

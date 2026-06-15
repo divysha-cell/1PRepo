@@ -1,13 +1,13 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/AirTable/connectors/37/connectorInstances/85",
-    "id": 85,
+    "name": "projects/project/locations/location/instances/instance/integrations/AirTable/connectors/69/connectorInstances/119",
+    "id": 119,
     "custom": false,
-    "identifier": "AirTable Connector_d0efbf33-c4c6-4bf5-89ae-5ad2c1f9b161",
+    "identifier": "AirTable Connector_cf27e131-fa6a-43e2-9675-14fc55b5bb65",
     "connectorDefinitionName": "AirTable Connector",
     "integration": "AirTable",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 37,
+    "connectorId": 69,
     "integrationVersion": "16",
     "statistics": {
         "pastDayAlertsCount": 0,

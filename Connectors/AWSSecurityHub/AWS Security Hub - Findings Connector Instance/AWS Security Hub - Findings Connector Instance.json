@@ -1,8 +1,8 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/AWSSecurityHub/connectors/46/connectorInstances/92",
-    "id": 92,
+    "name": "projects/project/locations/location/instances/instance/integrations/AWSSecurityHub/connectors/46/connectorInstances/118",
+    "id": 118,
     "custom": false,
-    "identifier": "AWS Security Hub - Findings Connector_e3003a59-c22c-41ec-a03f-5e4696e7a345",
+    "identifier": "AWS Security Hub - Findings Connector_9d78cbc4-7ffb-4f80-8978-14e326a2ac42",
     "connectorDefinitionName": "AWS Security Hub - Findings Connector",
     "integration": "AWSSecurityHub",
     "remote": false,

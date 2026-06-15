@@ -1,14 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/SentinelOneV2/connectors/18/connectorInstances/95",
-    "id": 95,
+    "name": "projects/project/locations/location/instances/instance/integrations/SentinelOneV2/connectors/-/connectorInstances/169",
+    "id": 169,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/sentinelonev2#sentinelone_-_threats_connector",
-    "identifier": "SentinelOne - Threats Connector_4d9562d1-955e-4b84-84be-a1acd4686b09",
+    "identifier": "SentinelOne - Threats Connector_82642eb4-73ca-4e8d-8327-abda3110e9b5",
     "connectorDefinitionName": "SentinelOne - Threats Connector",
     "integration": "SentinelOneV2",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 18,
     "integrationVersion": "50",
     "statistics": {
         "pastDayAlertsCount": 0,

@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/McAfeeESM/connectors/51/connectorInstances/57",
-    "id": 57,
+    "name": "projects/project/locations/location/instances/instance/integrations/McAfeeESM/connectors/51/connectorInstances/153",
+    "id": 153,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/mcafee-esm#mcafee-esm-connector",
-    "identifier": "McAfee ESM Connector_54ee1413-e443-4dc7-9147-449454350bb7",
+    "identifier": "McAfee ESM Connector_f266e3bf-59db-4cf9-828e-f30dff1ad5b2",
     "connectorDefinitionName": "McAfee ESM Connector",
     "integration": "McAfeeESM",
     "remote": false,
@@ -15,72 +15,6 @@
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "srcZone",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "API root of the McAfee ESM instance. Format: https://{ip address}/rs/",
-            "displayName": "API Root",
-            "value": "https://{ip address}/rs/",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Username of the McAfee ESM account.",
-            "displayName": "Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "Password",
-            "mode": "Script",
-            "description": "Password of the McAfee ESM account.",
-            "displayName": "Password",
-            "value": "***************",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Version of Mcafee ESM. Possible values: 11.1, 11.2, 11.3, 11.4, 11.5.",
-            "displayName": "Product Version",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": false,
             "advanced": true,
@@ -265,6 +199,72 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
+            "value": "srcZone",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "API root of the McAfee ESM instance. Format: https://{ip address}/rs/",
+            "displayName": "API Root",
+            "value": "https://{ip address}/rs/",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Username of the McAfee ESM account.",
+            "displayName": "Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Password of the McAfee ESM account.",
+            "displayName": "Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Version of Mcafee ESM. Possible values: 11.1, 11.2, 11.3, 11.4, 11.5.",
+            "displayName": "Product Version",
+            "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -283,72 +283,6 @@
         {
             "mandatory": false,
             "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "srcZone",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "API root of the McAfee ESM instance. Format: https://{ip address}/rs/",
-            "displayName": "API Root",
-            "value": "https://{ip address}/rs/",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Username of the McAfee ESM account.",
-            "displayName": "Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "Password",
-            "mode": "Script",
-            "description": "Password of the McAfee ESM account.",
-            "displayName": "Password",
-            "value": "***************",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Version of Mcafee ESM. Possible values: 11.1, 11.2, 11.3, 11.4, 11.5.",
-            "displayName": "Product Version",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
             "type": "Boolean",
             "mode": "Script",
             "description": "If enabled, integration will authenticate using AES Encryption and will not do Base64 inside the code. Note: you need to provide Login and Password already as Base64 encoded strings.",
@@ -530,6 +464,72 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
+            "value": "srcZone",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "API root of the McAfee ESM instance. Format: https://{ip address}/rs/",
+            "displayName": "API Root",
+            "value": "https://{ip address}/rs/",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Username of the McAfee ESM account.",
+            "displayName": "Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Password of the McAfee ESM account.",
+            "displayName": "Password",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Version of Mcafee ESM. Possible values: 11.1, 11.2, 11.3, 11.4, 11.5.",
+            "displayName": "Product Version",
+            "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

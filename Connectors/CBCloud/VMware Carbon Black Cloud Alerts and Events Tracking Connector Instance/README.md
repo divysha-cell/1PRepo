@@ -12,6 +12,7 @@ Event Name Field: event_type
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
+|Max Alerts Per Cycle|How many alerts should be processed during one connector run.|True|100|
 |API Root|Vmware Carbon Black Cloud API Root URL|True|dummy_value|
 |Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is ""|False|dummy_value|
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is ""|False|.*|
@@ -19,7 +20,6 @@ Event Name Field: event_type
 |API ID|Vmware Carbon Black Cloud API ID (Custom API Key ID)|True|*****|
 |API Secret Key|Vmware Carbon Black Cloud API Secret Key (Custom API Secret Key)|True|*****|
 |Verify SSL|Verify SSL certificates for HTTPS requests to Microsoft Azure.|False|false|
-|Max Alerts Per Cycle|How many alerts should be processed during one connector run.|True|100|
 |Offset Time In Hours|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|24|
 |Minimum Severity to Fetch|Minimum severity of Carbon Black Cloud alert to be ingested to Siemplify, for example, 4 or 7|False|0|
 |What Alert Field to use for Name field|What Carbon Black Cloud alert field should be used for the Siemplify Alert Name field. Possible values are: type, policy_name|True|type|

@@ -1,0 +1,203 @@
+[
+    {
+        "environment": "*",
+        "integrationIdentifier": "GoogleSecOpsAiAgents",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System All Environments Default Instance",
+            "settings": [
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 99,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection.",
+                    "integrationIdentifier": "GoogleSecOpsAiAgents",
+                    "integrationInstance": "cb4df195-ed19-42e2-ae65-534e7aba2fff"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "Lists",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System Default Instance",
+            "settings": []
+        }
+    },
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "ActiveDirectory",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "ActiveDirectory_1",
+            "settings": [
+                {
+                    "propertyName": "Server",
+                    "value": "127.0.0.1",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 296,
+                    "propertyDisplayName": "Server",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ActiveDirectory",
+                    "integrationInstance": "4a5f96ed-91f4-496f-a5a3-1afaca207405"
+                },
+                {
+                    "propertyName": "Username",
+                    "value": "admin@domain.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 297,
+                    "propertyDisplayName": "Username",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ActiveDirectory",
+                    "integrationInstance": "4a5f96ed-91f4-496f-a5a3-1afaca207405"
+                },
+                {
+                    "propertyName": "Domain",
+                    "value": "domain.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 298,
+                    "propertyDisplayName": "Domain",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ActiveDirectory",
+                    "integrationInstance": "4a5f96ed-91f4-496f-a5a3-1afaca207405"
+                },
+                {
+                    "propertyName": "Password",
+                    "value": "dummy_ad_password",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 299,
+                    "propertyDisplayName": "Password",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ActiveDirectory",
+                    "integrationInstance": "4a5f96ed-91f4-496f-a5a3-1afaca207405"
+                },
+                {
+                    "propertyName": "Custom Query Fields",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 300,
+                    "propertyDisplayName": "Custom Query Fields",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ActiveDirectory",
+                    "integrationInstance": "4a5f96ed-91f4-496f-a5a3-1afaca207405"
+                },
+                {
+                    "propertyName": "CA Certificate File - parsed into Base64 String",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": false,
+                    "id": 301,
+                    "propertyDisplayName": "CA Certificate File - parsed into Base64 String",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ActiveDirectory",
+                    "integrationInstance": "4a5f96ed-91f4-496f-a5a3-1afaca207405"
+                },
+                {
+                    "propertyName": "Use SSL",
+                    "value": "False",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 302,
+                    "propertyDisplayName": "Use SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "ActiveDirectory",
+                    "integrationInstance": "4a5f96ed-91f4-496f-a5a3-1afaca207405"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "Functions",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System Default Instance",
+            "settings": []
+        }
+    },
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "VirusTotal",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "VirusTotal_1",
+            "settings": [
+                {
+                    "propertyName": "Api Key",
+                    "value": "dummy_vt_api_key",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": true,
+                    "id": 293,
+                    "propertyDisplayName": "Api key",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotal",
+                    "integrationInstance": "231f3dec-6f97-41d0-9fd5-013b7960cc6b"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 294,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "",
+                    "integrationIdentifier": "VirusTotal",
+                    "integrationInstance": "231f3dec-6f97-41d0-9fd5-013b7960cc6b"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "GoogleSecOpsAiAgents",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System All Environments Default Instance",
+            "settings": [
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 99,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection.",
+                    "integrationIdentifier": "GoogleSecOpsAiAgents",
+                    "integrationInstance": "cb4df195-ed19-42e2-ae65-534e7aba2fff"
+                }
+            ]
+        }
+    }
+]

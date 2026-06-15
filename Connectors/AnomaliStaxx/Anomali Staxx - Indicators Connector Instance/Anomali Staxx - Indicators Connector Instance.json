@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/AnomaliStaxx/connectors/41/connectorInstances/99",
-    "id": 99,
+    "name": "projects/project/locations/location/instances/instance/integrations/AnomaliStaxx/connectors/41/connectorInstances/123",
+    "id": 123,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/anomali-staxx#anomali-staxx-indicators-connector",
-    "identifier": "Anomali Staxx - Indicators Connector_194e2756-c766-440e-8a0d-272cd29b249f",
+    "identifier": "Anomali Staxx - Indicators Connector_15aaba0b-3661-493a-b56f-23df66d5ad6f",
     "connectorDefinitionName": "Anomali Staxx - Indicators Connector",
     "integration": "AnomaliStaxx",
     "remote": false,

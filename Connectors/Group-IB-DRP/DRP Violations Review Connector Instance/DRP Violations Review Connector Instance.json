@@ -1,31 +1,18 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Group-IB-DRP/connectors/20/connectorInstances/112",
-    "id": 112,
+    "name": "projects/project/locations/location/instances/instance/integrations/Group-IB-DRP/connectors/-/connectorInstances/151",
+    "id": 151,
     "custom": false,
-    "documentationLink": "https://drp.group-ib.com/portal/tools/doc/customer/en/api/api-starting-guide/api-starting-guide/",
-    "identifier": "DRP Violations Review Connector_f4f60a4b-4afe-4d24-86cb-9941afda9859",
+    "identifier": "DRP Violations Review Connector_e0efe2c2-2145-42da-9f89-afcd0473081c",
     "connectorDefinitionName": "DRP Violations Review Connector",
     "integration": "Group-IB-DRP",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 20,
     "integrationVersion": "1",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "Email",
-            "mode": "Script",
-            "description": "DRP username",
-            "displayName": "API login",
-            "value": "your@email.com ",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": true,
             "advanced": false,
@@ -100,6 +87,17 @@
             "description": "leave blank - auto takes -1 day",
             "displayName": "Start date ",
             "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Email",
+            "mode": "Script",
+            "description": "DRP username",
+            "displayName": "API login",
+            "value": "your@email.com ",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -118,17 +116,6 @@
         {
             "mandatory": true,
             "advanced": false,
-            "type": "Email",
-            "mode": "Script",
-            "description": "DRP username",
-            "displayName": "API login",
-            "value": "your@email.com ",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
             "type": "Password",
             "mode": "Script",
             "description": "your API token ",
@@ -200,6 +187,17 @@
             "description": "leave blank - auto takes -1 day",
             "displayName": "Start date ",
             "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Email",
+            "mode": "Script",
+            "description": "DRP username",
+            "displayName": "API login",
+            "value": "your@email.com ",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

@@ -1,6 +1,6 @@
 {
     "id": 0,
-    "identifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+    "identifier": "67962278-12b0-4b36-a5d7-570255c7776c",
     "version": "0",
     "isEnabled": false,
     "isDebugMode": false,
@@ -15,12 +15,12 @@
     ],
     "categoryName": "Default",
     "categoryId": 1,
-    "originalPlaybookIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
-    "creationTimeUnixTimeInMs": 1781158640110,
-    "modificationTimeUnixTimeInMs": 1781160523468,
+    "originalPlaybookIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
+    "creationTimeUnixTimeInMs": 1781177559645,
+    "modificationTimeUnixTimeInMs": 1781177559645,
     "trigger": {
         "id": 0,
-        "identifier": "0d52c4d7-cd9b-4dd5-8027-bafc82db8ee9",
+        "identifier": "ef5ab566-d74b-412b-bfaa-992b4d288dc8",
         "type": 10,
         "logicalOperator": 1,
         "conditions": [
@@ -119,7 +119,7 @@
                 },
                 {
                     "name": "NestedWorkflowIdentifier",
-                    "value": "4de33f5f-73f0-4a7f-8af4-35a52a3bfd82",
+                    "value": "d88fb153-5603-411f-86b9-06e0405f9f9e",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -177,13 +177,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -349,13 +349,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -429,7 +429,7 @@
                 },
                 {
                     "name": "NestedWorkflowIdentifier",
-                    "value": "c6922973-54f8-4f18-adfc-343858ce7ebd",
+                    "value": "2b138553-1c63-4649-b840-f46530e7370c",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -487,13 +487,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -596,8 +596,7 @@
                     "id": 0,
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "additionalProperties": {},
-                    "InstanceDisplayName": "System Default Instance"
+                    "additionalProperties": {}
                 },
                 {
                     "name": "MessageToAssignee",
@@ -659,13 +658,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -831,13 +830,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -1003,13 +1002,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -1083,7 +1082,7 @@
                 },
                 {
                     "name": "NestedWorkflowIdentifier",
-                    "value": "a1e02a4e-941a-4c59-b86e-9e82bc9ad0bb",
+                    "value": "c67ff535-b394-46ec-b550-5377fa260937",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -1141,13 +1140,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -1221,7 +1220,7 @@
                 },
                 {
                     "name": "NestedWorkflowIdentifier",
-                    "value": "3a8557e1-7f33-477e-928d-b1e92c4870a6",
+                    "value": "5d76f3f0-d45e-472e-af7e-10cb7c1f94b2",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -1279,13 +1278,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -1392,7 +1391,7 @@
                 },
                 {
                     "name": "NestedWorkflowSteps",
-                    "value": "[{\"identifier\":\"203c2a1f-b88b-46e5-b315-61998efe4a00\",\"integration\":\"Tools\",\"actionName\":\"Tools_Set Context Value\",\"instanceName\":\"Initi Summary\",\"stepType\":0},{\"identifier\":\"3d9783d5-60ee-4168-b6f3-0273cfd3cb0c\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Set Scope Context Value\",\"instanceName\":\"Fallback\",\"stepType\":0},{\"identifier\":\"4f811461-0721-4c64-a3c5-b97e94e419f9\",\"integration\":\"Flow\",\"actionName\":\"IfFlowCondition\",\"instanceName\":\"Set by alert severity \",\"stepType\":4},{\"identifier\":\"8932fde3-18e1-4162-aad4-7a830e248554\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Set Scope Context Value\",\"instanceName\":\"Set Initial Priority +25\",\"stepType\":0},{\"identifier\":\"98df5c61-e75d-4d53-b30b-c89cdabc6a06\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Set Scope Context Value\",\"instanceName\":\"Set Initial Priority +75\",\"stepType\":0},{\"identifier\":\"c1d59930-6f6b-4d60-896f-54c9471fcdd1\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Set Scope Context Value\",\"instanceName\":\"Set Initial Priority +50\",\"stepType\":0},{\"identifier\":\"d779f24f-d535-4cc1-8090-d0a04cde417a\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Set Scope Context Value\",\"instanceName\":\"Set Initial Priority +90\",\"stepType\":0}]",
+                    "value": "[]",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -1417,13 +1416,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -1526,8 +1525,7 @@
                     "id": 0,
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "additionalProperties": {},
-                    "InstanceDisplayName": "System Default Instance"
+                    "additionalProperties": {}
                 },
                 {
                     "name": "MessageToAssignee",
@@ -1589,13 +1587,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -1761,13 +1759,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -1874,7 +1872,7 @@
                 },
                 {
                     "name": "NestedWorkflowSteps",
-                    "value": "[{\"identifier\":\"4bdd5f5d-0022-472d-81b5-4b763f998524\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Change Alert Priority\",\"instanceName\":\"CRITICAL\",\"stepType\":0},{\"identifier\":\"69fdbf63-df86-44c4-907c-3873b75173b6\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Change Case Stage\",\"instanceName\":\"Case Stage Investigation\",\"stepType\":0},{\"identifier\":\"718b47b9-be3a-4a6d-bf0a-7eaf066f4c31\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Change Alert Priority\",\"instanceName\":\"HIGH \",\"stepType\":0},{\"identifier\":\"80165a2e-ddb9-44f8-9a27-0f40f5bd01b4\",\"integration\":\"Tools\",\"actionName\":\"Tools_Set Context Value\",\"instanceName\":\"Inconclusive - Update Alert Summary\",\"stepType\":0},{\"identifier\":\"8a9d22f8-982e-466a-8ea0-5532b7812214\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Change Alert Priority\",\"instanceName\":\"INFORMATIONAL\",\"stepType\":0},{\"identifier\":\"90d37f0e-a2e8-436e-b94c-fc647af13c34\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Raise Incident\",\"instanceName\":\"Raise Incident\",\"stepType\":0},{\"identifier\":\"97b8bdb6-915b-471a-a3ae-dabb38a06316\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Change Alert Priority\",\"instanceName\":\"LOW  \",\"stepType\":0},{\"identifier\":\"dcc522a8-7d4d-49cb-b2ef-62ca6bd227eb\",\"integration\":\"Flow\",\"actionName\":\"IfFlowCondition\",\"instanceName\":\"Assign Priority\",\"stepType\":4},{\"identifier\":\"e85e50e5-4dcd-4491-af95-a1c2eec30361\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Change Alert Priority\",\"instanceName\":\"MEDIUM\",\"stepType\":0},{\"identifier\":\"ff469663-a690-4a56-910a-cf4ac055bf1c\",\"integration\":\"Tools\",\"actionName\":\"Tools_Set Context Value\",\"instanceName\":\"RISKY - Update Alert Summary 2\",\"stepType\":0}]",
+                    "value": "[]",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -1899,13 +1897,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -1979,7 +1977,7 @@
                 },
                 {
                     "name": "NestedWorkflowIdentifier",
-                    "value": "ca197ca6-93a3-4b2d-a0ad-c2c7d327032a",
+                    "value": "20c4883a-e055-4a24-821f-38d431a0e6e9",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -2048,13 +2046,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -2157,8 +2155,7 @@
                     "id": 0,
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "additionalProperties": {},
-                    "InstanceDisplayName": "System Default Instance"
+                    "additionalProperties": {}
                 },
                 {
                     "name": "MessageToAssignee",
@@ -2220,13 +2217,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -2300,7 +2297,7 @@
                 },
                 {
                     "name": "NestedWorkflowIdentifier",
-                    "value": "1c413688-dc98-42a3-a294-607314ec4ef0",
+                    "value": "a9659f98-4de5-4ea3-8487-d85dc8550f97",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -2369,13 +2366,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         },
         {
@@ -2541,13 +2538,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "workflowIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160522341,
-            "modificationTimeUnixTimeInMs": 1781160523468,
+            "creationTimeUnixTimeInMs": 1781177559645,
+            "modificationTimeUnixTimeInMs": 1781177559645,
             "additionalProperties": {}
         }
     ],
@@ -2654,23 +2651,23 @@
     "permissions": [],
     "overviewTemplates": [
         {
-            "id": 3,
-            "identifier": "41937e5b-47f4-474b-b1a3-063adfc74d11",
+            "id": 29,
+            "identifier": "69ca416c-3f01-4648-a263-25361888ece0",
             "name": "Security Analyst",
             "creator": null,
-            "playbookIdentifier": "9f8b357b-be05-4e45-844f-11f51eff8455",
+            "playbookIdentifier": "67962278-12b0-4b36-a5d7-570255c7776c",
             "type": 0,
             "widgets": [
                 {
                     "metadata": {
-                        "id": 20,
-                        "identifier": "8c597911-1a6e-4563-bcf4-1091cc2023d0",
+                        "id": 113,
+                        "identifier": "67ee7874-4c96-4772-b0c5-277eecdff908",
                         "title": "Containment Summary",
                         "width": 2,
                         "order": 1,
                         "description": "",
                         "type": 3,
-                        "templateIdentifier": "41937e5b-47f4-474b-b1a3-063adfc74d11",
+                        "templateIdentifier": "69ca416c-3f01-4648-a263-25361888ece0",
                         "predefinedWidgetTemplateIdentifier": null,
                         "actionIdentifier": null,
                         "stepIdentifier": null,
@@ -2714,14 +2711,14 @@
                 },
                 {
                     "metadata": {
-                        "id": 19,
-                        "identifier": "d1fa946d-f01e-41fd-8eaa-1dc37f9e5945",
+                        "id": 114,
+                        "identifier": "433688e3-2a00-4a7b-8543-22c76d77cae2",
                         "title": "Entities Highlights",
                         "width": 2,
                         "order": 3,
                         "description": "This widget displays the highlighted fields for each entity.",
                         "type": 10,
-                        "templateIdentifier": "41937e5b-47f4-474b-b1a3-063adfc74d11",
+                        "templateIdentifier": "69ca416c-3f01-4648-a263-25361888ece0",
                         "predefinedWidgetTemplateIdentifier": null,
                         "actionIdentifier": null,
                         "stepIdentifier": null,
@@ -2742,14 +2739,14 @@
                 },
                 {
                     "metadata": {
-                        "id": 18,
-                        "identifier": "85e2dcf4-521f-4770-a85a-49de868079fa",
+                        "id": 115,
+                        "identifier": "e478d8c5-504b-4316-b414-133a65a8033f",
                         "title": "Risk Score",
                         "width": 1,
                         "order": 4,
                         "description": "",
                         "type": 3,
-                        "templateIdentifier": "41937e5b-47f4-474b-b1a3-063adfc74d11",
+                        "templateIdentifier": "69ca416c-3f01-4648-a263-25361888ece0",
                         "predefinedWidgetTemplateIdentifier": null,
                         "actionIdentifier": null,
                         "stepIdentifier": null,
@@ -2781,14 +2778,14 @@
                 },
                 {
                     "metadata": {
-                        "id": 23,
-                        "identifier": "aaa6411b-79b6-4eff-ae23-6d52be5e843b",
+                        "id": 116,
+                        "identifier": "656f3d5c-fb8d-4894-b725-8166b97829f3",
                         "title": "Pending Actions",
                         "width": 1,
                         "order": 5,
                         "description": "This Widget lists all playbook actions waiting for user input.",
                         "type": 11,
-                        "templateIdentifier": "41937e5b-47f4-474b-b1a3-063adfc74d11",
+                        "templateIdentifier": "69ca416c-3f01-4648-a263-25361888ece0",
                         "predefinedWidgetTemplateIdentifier": null,
                         "actionIdentifier": null,
                         "stepIdentifier": null,
@@ -2808,14 +2805,14 @@
                 },
                 {
                     "metadata": {
-                        "id": 25,
-                        "identifier": "f25395eb-e412-4d64-a599-8e363cdaa5e9",
+                        "id": 117,
+                        "identifier": "5eaa6cc3-75d2-441a-aa40-1cb4d2e4b8ef",
                         "title": "List Instances - EC2",
                         "width": 1,
                         "order": 6,
                         "description": "This widget highlights the most important items in List Instances",
                         "type": 3,
-                        "templateIdentifier": "41937e5b-47f4-474b-b1a3-063adfc74d11",
+                        "templateIdentifier": "69ca416c-3f01-4648-a263-25361888ece0",
                         "predefinedWidgetTemplateIdentifier": "011c6971-7eec-4f41-905f-ce68a3b9f263",
                         "actionIdentifier": null,
                         "stepIdentifier": "f2d9b753-eb20-42ed-902a-370e8c0464ca",
@@ -2880,7 +2877,7 @@
                 "SocManager",
                 "CISO"
             ],
-            "creationTimeUnixTimeInMs": 1781158640110
+            "creationTimeUnixTimeInMs": 1781177559645
         }
     ],
     "creationSource": 1

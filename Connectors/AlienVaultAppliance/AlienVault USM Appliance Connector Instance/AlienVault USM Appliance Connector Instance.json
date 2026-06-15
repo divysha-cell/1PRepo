@@ -1,13 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/AlienVaultAppliance/connectors/38/connectorInstances/96",
-    "id": 96,
+    "name": "projects/project/locations/location/instances/instance/integrations/AlienVaultAppliance/connectors/-/connectorInstances/121",
+    "id": 121,
     "custom": false,
-    "identifier": "AlienVault USM Appliance Connector_1bf9b803-ca16-4e88-a565-bbf8029bf21e",
+    "identifier": "AlienVault USM Appliance Connector_e235f749-d229-4feb-a0dd-3f4373d865a4",
     "connectorDefinitionName": "AlienVault USM Appliance Connector",
     "integration": "AlienVaultAppliance",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 38,
     "integrationVersion": "28",
     "statistics": {
         "pastDayAlertsCount": 0,

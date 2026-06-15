@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/CBCloud/connectors/49/connectorInstances/76",
-    "id": 76,
+    "name": "projects/project/locations/location/instances/instance/integrations/CBCloud/connectors/49/connectorInstances/129",
+    "id": 129,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/vmware-carbon-black-cloud#vmware-carbon-black-cloud-alerts-and-events-baseline-connector",
-    "identifier": "VMware Carbon Black Cloud Alerts and Events Baseline Connector_fc516d83-4db8-4d21-a770-79391e47607c",
+    "identifier": "VMware Carbon Black Cloud Alerts and Events Baseline Connector_97b69393-eb8e-4d9e-bcfb-65c93ac95470",
     "connectorDefinitionName": "VMware Carbon Black Cloud Alerts and Events Baseline Connector",
     "integration": "CBCloud",
     "remote": false,

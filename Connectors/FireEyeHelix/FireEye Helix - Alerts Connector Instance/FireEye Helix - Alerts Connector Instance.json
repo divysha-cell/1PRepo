@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/FireEyeHelix/connectors/65/connectorInstances/89",
-    "id": 89,
+    "name": "projects/project/locations/location/instances/instance/integrations/FireEyeHelix/connectors/65/connectorInstances/145",
+    "id": 145,
     "custom": false,
     "documentationLink": "",
-    "identifier": "FireEye Helix - Alerts Connector_988ebcf4-d8cc-4281-8fe9-ed1fd87d9cc7",
+    "identifier": "FireEye Helix - Alerts Connector_870909ff-fe15-417d-a1b3-36fb9bce914a",
     "connectorDefinitionName": "FireEye Helix - Alerts Connector",
     "integration": "FireEyeHelix",
     "remote": false,

@@ -1,8 +1,8 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/EclecticIQ/connectors/61/connectorInstances/79",
-    "id": 79,
+    "name": "projects/project/locations/location/instances/instance/integrations/EclecticIQ/connectors/61/connectorInstances/138",
+    "id": 138,
     "custom": false,
-    "identifier": "EclecticIQ - Feed Connector_9fd7c042-7727-46c1-9af9-7485250b79be",
+    "identifier": "EclecticIQ - Feed Connector_e78d413c-fe74-4645-8d8f-47083640b2b6",
     "connectorDefinitionName": "EclecticIQ - Feed Connector",
     "integration": "EclecticIQ",
     "remote": false,

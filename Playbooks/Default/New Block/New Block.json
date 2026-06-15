@@ -1,6 +1,6 @@
 {
     "id": 0,
-    "identifier": "0490e9ae-cae0-498b-9452-1749aaee9e6b",
+    "identifier": "233cebfd-e0af-4032-b38a-cd82977fd7c8",
     "version": "1",
     "isEnabled": true,
     "isDebugMode": false,
@@ -15,12 +15,12 @@
     ],
     "categoryName": "Default",
     "categoryId": 1,
-    "originalPlaybookIdentifier": "0490e9ae-cae0-498b-9452-1749aaee9e6b",
-    "creationTimeUnixTimeInMs": 1781159488535,
-    "modificationTimeUnixTimeInMs": 1781160449978,
+    "originalPlaybookIdentifier": "233cebfd-e0af-4032-b38a-cd82977fd7c8",
+    "creationTimeUnixTimeInMs": 1781177435258,
+    "modificationTimeUnixTimeInMs": 1781177435258,
     "trigger": {
         "id": 0,
-        "identifier": "34a1c1c8-a434-421e-8cf8-1b70245d362c",
+        "identifier": "87c17ea8-e47d-488b-b0c1-170c27eea578",
         "type": 11,
         "logicalOperator": 0,
         "conditions": [],
@@ -118,8 +118,7 @@
                     "id": 0,
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "additionalProperties": {},
-                    "InstanceDisplayName": "System Default Instance"
+                    "additionalProperties": {}
                 },
                 {
                     "name": "MessageToAssignee",
@@ -203,13 +202,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "0490e9ae-cae0-498b-9452-1749aaee9e6b",
+            "workflowIdentifier": "233cebfd-e0af-4032-b38a-cd82977fd7c8",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160448830,
-            "modificationTimeUnixTimeInMs": 1781160449978,
+            "creationTimeUnixTimeInMs": 1781177435258,
+            "modificationTimeUnixTimeInMs": 1781177435258,
             "additionalProperties": {}
         },
         {
@@ -242,13 +241,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "0490e9ae-cae0-498b-9452-1749aaee9e6b",
+            "workflowIdentifier": "233cebfd-e0af-4032-b38a-cd82977fd7c8",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781160448830,
-            "modificationTimeUnixTimeInMs": 1781160449978,
+            "creationTimeUnixTimeInMs": 1781177435258,
+            "modificationTimeUnixTimeInMs": 1781177435258,
             "additionalProperties": {}
         }
     ],

@@ -1,31 +1,20 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftAzureSentinel/connectors/10/connectorInstances/102",
-    "id": 102,
+    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftAzureSentinel/connectors/80/connectorInstances/156",
+    "id": 156,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/microsoft-azure-sentinel#microsoft-azure-sentinel-incidents-connector",
-    "identifier": "Microsoft Azure Sentinel Incident Connector_7bbe0098-73d5-4cdd-9a69-2f715096c248",
+    "identifier": "Microsoft Azure Sentinel Incident Connector_dbddf972-afb1-418c-a442-6e2408d181a1",
     "connectorDefinitionName": "Microsoft Azure Sentinel Incident Connector",
     "integration": "MicrosoftAzureSentinel",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 10,
+    "connectorId": 80,
     "integrationVersion": "63",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": false,
             "advanced": true,
@@ -212,10 +201,21 @@
             "value": "***************",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored.",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
         }
     ],
     "status": 1,
-    "updateAvailable": false,
+    "updateAvailable": true,
     "enabled": false,
     "environment": "Default Environment",
     "displayName": "Microsoft Azure Sentinel Incident Connector Instance",
@@ -228,17 +228,6 @@
         {
             "mandatory": false,
             "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
             "type": "Int",
             "mode": "Script",
             "description": "If defined - the connector will implement the specific RegEx pattern on the data from \"environment field\" to extract specific string. For example - extract domain from sender's address: \"(?<=@)(\\S+$)\"",
@@ -420,6 +409,17 @@
             "description": "Proxy server password",
             "displayName": "Proxy Server Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored.",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

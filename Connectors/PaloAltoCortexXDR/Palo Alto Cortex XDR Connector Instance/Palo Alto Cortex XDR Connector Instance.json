@@ -1,31 +1,18 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/PaloAltoCortexXDR/connectors/12/connectorInstances/68",
-    "id": 68,
+    "name": "projects/project/locations/location/instances/instance/integrations/PaloAltoCortexXDR/connectors/-/connectorInstances/163",
+    "id": 163,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/palo-alto-cortex-xdr#palo-alto-cortex-xdr-connector",
-    "identifier": "Palo Alto Cortex XDR Connector_ccddcc51-1a01-4cfd-8752-1f8f024ee47a",
+    "identifier": "Palo Alto Cortex XDR Connector_02660b1b-eb0b-4b23-9b44-ee734c0e73d2",
     "connectorDefinitionName": "Palo Alto Cortex XDR Connector",
     "integration": "PaloAltoCortexXDR",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 12,
     "integrationVersion": "28",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "Boolean",
-            "mode": "Script",
-            "description": "If selected, the integration validates the SSL certificate when connecting to the Palo Alto XDR server.",
-            "displayName": "Verify SSL",
-            "value": "true",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": true,
             "advanced": false,
@@ -232,6 +219,17 @@
             "description": "A comma-separated list of artifacts to exclude from Google SecOps event creation.",
             "displayName": "Artifacts To Ignore",
             "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "If selected, the integration validates the SSL certificate when connecting to the Palo Alto XDR server.",
+            "displayName": "Verify SSL",
+            "value": "true",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -248,17 +246,6 @@
     "timeoutSeconds": 180,
     "params": [
         {
-            "mandatory": false,
-            "advanced": true,
-            "type": "Boolean",
-            "mode": "Script",
-            "description": "If selected, the integration validates the SSL certificate when connecting to the Palo Alto XDR server.",
-            "displayName": "Verify SSL",
-            "value": "true",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
             "mandatory": true,
             "advanced": false,
             "type": "String",
@@ -464,6 +451,17 @@
             "description": "A comma-separated list of artifacts to exclude from Google SecOps event creation.",
             "displayName": "Artifacts To Ignore",
             "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "Boolean",
+            "mode": "Script",
+            "description": "If selected, the integration validates the SSL certificate when connecting to the Palo Alto XDR server.",
+            "displayName": "Verify SSL",
+            "value": "true",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

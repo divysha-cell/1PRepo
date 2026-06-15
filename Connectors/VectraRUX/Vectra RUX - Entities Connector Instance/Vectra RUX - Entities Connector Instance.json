@@ -1,13 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/VectraRUX/connectors/13/connectorInstances/56",
-    "id": 56,
+    "name": "projects/project/locations/location/instances/instance/integrations/VectraRUX/connectors/-/connectorInstances/175",
+    "id": 175,
     "custom": false,
-    "identifier": "Vectra RUX - Entities Connector_eed7d994-15d6-4cef-a8ee-53845446c6a5",
+    "identifier": "Vectra RUX - Entities Connector_440b6dae-990f-4175-acb8-de46dca06c99",
     "connectorDefinitionName": "Vectra RUX - Entities Connector",
     "integration": "VectraRUX",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 13,
     "integrationVersion": "3",
     "statistics": {
         "pastDayAlertsCount": 0,

@@ -1,14 +1,14 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/CrowdStrikeFalcon/connectors/27/connectorInstances/64",
-    "id": 64,
+    "name": "projects/project/locations/location/instances/instance/integrations/CrowdStrikeFalcon/connectors/77/connectorInstances/133",
+    "id": 133,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/crowdstrike-falcon#crowdstrike-detections-connector",
-    "identifier": "Crowdstrike - Detections Connector_b03aceed-8e5d-4326-9635-687e3fca0c47",
+    "identifier": "Crowdstrike - Detections Connector_c12a903e-64ac-4fce-9aa9-cae3a7999977",
     "connectorDefinitionName": "Crowdstrike - Detections Connector",
     "integration": "CrowdStrikeFalcon",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 27,
+    "connectorId": 77,
     "integrationVersion": "76",
     "statistics": {
         "pastDayAlertsCount": 0,

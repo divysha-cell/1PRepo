@@ -58,15 +58,227 @@ Python Version - V3_11
 
 
 ## Actions
-#### Add Alert Comment
-Add a comment to alert in Crowdstrike. 
+#### Update Detection
+Deprecated. Update detection in Crowdstrike Falcon.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert that needs to be updated.|True|String||
-|Comment|Specify the comment for the alert.|True|String||
+|Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
+|Status|Specify the new status for the detection.|True|List|Select One|
+|Assign Detection to|Specify the email address of the Crowdstrike Falcon user, who needs to be assigned to this detection|False|String||
+
+
+
+#### Submit URL
+Submit urls to a sandbox in Crowdstrike. Note: This action requires a Falcon Sandbox license.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|URLs|Specify the URLs that need to be submitted.|True|String||
+|Sandbox Environment|Specify the sandbox environment for the analysis.|False|List|Windows 10, 64-bit|
+|Network Environment|Specify the network environment for the analysis.|False|List|Default|
+|Check Duplicate|If enabled, the action checks if the file was already submitted previously and returns an available report. Note: during the validation “Network Environment” and “Sandbox Environment” are not taken into consideration.|False|Boolean|true|
+
+
+
+
+
+#### Search Events
+Search events in Crowdstrike. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for action, as needed.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Repository|Repository that should be searched.|True|List|All|
+|Query|Query that needs to be executed in Crowdstrike. Note: don't provide "head" as part of the query. Action will provide it automatically based on the value provided in the "Max Results To Return" parameter.|True|String||
+|Time Frame|Time frame for the results. If "Custom" is selected, you also need to provide "Start Time".|False|List|Last Hour|
+|Start Time|Start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601.|False|String||
+|End Time|End time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.|False|String||
+|Max Results To Return|How many results to return for the query. Action will append "head" to the provided query. Default: 50. Maximum: 1000.|False|String|50|
+
+
+
+
+
+#### Ping
+Test Connectivity
+Timeout - 600 Seconds
+
+
+
+#### Lift Contained Endpoint
+Lift endpoint containment in Crowdstrike Falcon. Supported entities: Hostname and IP address.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|Fail If Timeout|If enabled, action will be failed, if containment was not lifted on all endpoints.|False|Boolean|true|
+
+
+
+
+
+#### Get Alert Details
+Get details of an alert in Crowdstrike.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Alert ID|Specify the ID of the alert.|True|String||
+
+
+
+
+
+#### Delete IOC
+Delete custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
+Timeout - 600 Seconds
+
+
+
+#### Close Detection
+Deprecated. Close a Crowdstrike Falcon detection. Note: Action "Update Detection" is the best practice for this use case.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Detection ID|Specify the id of the detection that needs to be closed.|True|String||
+|Hide Detection|If enabled, action will hide the detection in the UI.|False|Boolean|true|
+
+
+
+#### Update IOC Information
+Update information about custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Description|Specify a new description for custom IOCs.|False|Content||
+|Source|Specify the source for custom IOCs.|False|Content||
+|Expiration days|Specify the amount of days till expiration.|False|String||
+|Detect policy|If enabled, IOCs that have been identifed, will send a notification. In other case, no action will be taken|False|Boolean|true|
+
+
+
+
+
+#### On-Demand Scan
+Scan the endpoint on demand in Crowdstrike. Note: only Windows hosts are supported. Supported entities: IP Address, Hostname. Note: Action is running as async, please adjust script timeout value in Chronicle SecOps IDE for action, as needed.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|File Paths To Scan|Comma-separated list of paths to scan.|True|String|C:\Windows|
+|File Paths To Exclude From Scan|Comma-separated list of paths to exclude from scanning.|False|String||
+|Host Group Name|Comma-separated list of host group names to initiate scanning for. Note: Separate scanning process is created for each host group.|False|String||
+|Scan Description|Description for the scan. If no value is provided, the action sets the description to the following: "Scan initialized by Chronicle SecOps."|False|String||
+|CPU Priority|The amount of CPU to  use for the underlying host during scanning.|False|List|Up to 25% CPU utilization|
+|Sensor Anti-malware Detection Level|Specify the sensor anti-malware detection level. Note: Detection level must be equal to or higher than the Prevention level.|False|List|Moderate|
+|Sensor Anti-malware Prevention Level|Specify the sensor anti-malware prevention level. Note: Detection level must be equal to or higher than the Prevention level.|False|List|Moderate|
+|Cloud Anti-malware Detection Level|Specify the cloud anti-malware detection level. Note: Detection level must be equal to or higher than the Prevention level.|False|List|Moderate|
+|Cloud Anti-malware Prevention Level|Specify the cloud anti-malware prevention level. Note: Detection level must be equal to or higher than the Prevention level.|False|List|Moderate|
+|Quarantine Hosts|If enabled, underlying hosts are quarantined as part of scanning.|False|Boolean|false|
+|Create Endpoint Notification|If enabled, the scanning process creates an endpoint notification.|False|Boolean|true|
+|Max Scan Duration|Number of hours for a scan to run. If no value is provided, the scan runs continuously.|False|String|1|
+|Hostname|Comma-separated list of hostnames on which you want to execute the action. Note: action will run the action on both entities + this parameter values.|False|String||
+
+
+
+
+
+#### Download File
+Download files from the hosts in Crowdstrike Falcon. Supported entities: File Name, IP Address and Hostname. Note: action requires both File Name and IP Address/Hostname entity to be in the scope of the Siemplify alert. The downloaded file will be in password-protected zip. Password is "infected".
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|Download Folder Path|Specify the path to the folder, where you want to store the threat file.|True|String||
+|Overwrite|If enabled, action will overwrite the file with the same name.|False|Boolean|false|
+
+
+
+
+
+#### Add Identity Protection Detection Comment
+Add a comment to identity protection detection in Crowdstrike.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
+|Comment|Specify the comment for the detection.|True|String||
+
+
+
+#### List Uploaded IOCs
+List available custom IOCs in CrowdStrike Falcon.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|IOC Type Filter|Specify a comma-separated list of IOC types that should be returned. If nothing is provided, action will return IOCs from all types. Possible values: ipv4,ipv6,md5,sha256,domain.|False|String|ipv4,ipv6,md5,sha256,domain|
+|Value Filter Logic|Specify the value filter logic. If "Equal" is selected, action will try to find the exact match among IOCs and if "Contains" is selected, action will try to find IOCs that contain that substring.|False|List|Equal|
+|Value Filter String|Specify the string that should be searched among IOCs.|False|String||
+|Max IOCs To Return|Specify how many IOCs to return. Default: 50. Maximum: 500.|False|String|50|
+
+
+
+
+
+#### List Host Vulnerabilities
+List vulnerabilities found on the host in Crowdstrike Falcon. Supported entities: IP Address and Hostname. Note: requires Falcon Spotlight license and permissions. 
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
+|Severity Filter|Specify the comma-separated list of severities for vulnerabilities.If nothing is provided, action will ingest all related vulnerabilities. Possible values: Critical, High, Medium, Low, Unknown.|False|String||
+|Create Insight|If enabled, action will create an insight per entity containing statistical information about related vulnerabilities.|False|Boolean|true|
+|Max Vulnerabilities To Return|Specify how many vulnerabilities to return per host. If nothing is provided action will process all of the related vulnerabilities.|False|String|100|
+
+
+
+
+
+#### Add Comment to Detection
+Deprecated. Add a comment to the detection in Crowdstrike Falcon.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Detection ID|Specify the id of the detection to which you want to add a comment.|True|String||
+|Comment|Specify the comment that needs to be added to the detection.|True|String||
+
+
+
+#### Get Process Name By IOC
+DEPRECATED. Retrieve processes related to the IOCs and provided devices in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported. IP address entities are treated as IOCs.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Devices Names|Specify a comma-separated list of devices for which you want to retrieve processes related to entities.|True|String||
+
+
 
 
 
@@ -84,28 +296,15 @@ Timeout - 600 Seconds
 
 
 
-#### Get Process Name By IOC
-DEPRECATED. Retrieve processes related to the IOCs and provided devices in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported. IP address entities are treated as IOCs.
+#### Add Alert Comment
+Add a comment to alert in Crowdstrike. 
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Devices Names|Specify a comma-separated list of devices for which you want to retrieve processes related to entities.|True|String||
-
-
-
-
-
-#### Add Identity Protection Detection Comment
-Add a comment to identity protection detection in Crowdstrike.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
-|Comment|Specify the comment for the detection.|True|String||
+|Alert ID|Specify the ID of the alert that needs to be updated.|True|String||
+|Comment|Specify the comment for the alert.|True|String||
 
 
 
@@ -129,21 +328,16 @@ Timeout - 600 Seconds
 
 
 
-#### Delete IOC
-Delete custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
-Timeout - 600 Seconds
-
-
-
-#### Add Comment to Detection
-Deprecated. Add a comment to the detection in Crowdstrike Falcon.
+#### Get Event Offset
+Action will retrieve the event offset that is used by the Event Streaming Connector. Note: action starts processing events from 30 days ago.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|Detection ID|Specify the id of the detection to which you want to add a comment.|True|String||
-|Comment|Specify the comment that needs to be added to the detection.|True|String||
+|Max Events To Process|Specify how many events the action needs to process starting from the offset from 30 days ago.|True|String|10000|
+
+
 
 
 
@@ -178,19 +372,6 @@ Timeout - 600 Seconds
 
 
 
-#### Get Event Offset
-Action will retrieve the event offset that is used by the Event Streaming Connector. Note: action starts processing events from 30 days ago.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Max Events To Process|Specify how many events the action needs to process starting from the offset from 30 days ago.|True|String|10000|
-
-
-
-
-
 #### Get Hosts by IOC
 DEPRECATED. List hosts related to the IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
 Timeout - 600 Seconds
@@ -213,75 +394,6 @@ Timeout - 600 Seconds
 
 
 
-#### Close Detection
-Deprecated. Close a Crowdstrike Falcon detection. Note: Action "Update Detection" is the best practice for this use case.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Detection ID|Specify the id of the detection that needs to be closed.|True|String||
-|Hide Detection|If enabled, action will hide the detection in the UI.|False|Boolean|true|
-
-
-
-#### Lift Contained Endpoint
-Lift endpoint containment in Crowdstrike Falcon. Supported entities: Hostname and IP address.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Fail If Timeout|If enabled, action will be failed, if containment was not lifted on all endpoints.|False|Boolean|true|
-
-
-
-
-
-#### Hide Hosts
-Use the Hide Hosts action to hide one or more hosts from the CrowdStrike Falcon console. Supported entities: IP Address, Hostname.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Hostname|A comma-separated list of hostnames to hide in CrowdStrike Falcon. The action processes both the input values provided in this parameter and the Hostname and IP Address entities attached to the case.|False|String||
-|Customer ID|The unique CrowdStrike Customer ID (CID) used to target a specific tenant. This parameter is required in Falcon Flight Control or multi-tenant environments to perform the action on a specific child CID.|False|String||
-
-
-
-
-
-#### Get Alert Details
-Get details of an alert in Crowdstrike.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert.|True|String||
-
-
-
-
-
-#### List Host Vulnerabilities
-List vulnerabilities found on the host in Crowdstrike Falcon. Supported entities: IP Address and Hostname. Note: requires Falcon Spotlight license and permissions. 
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Severity Filter|Specify the comma-separated list of severities for vulnerabilities.If nothing is provided, action will ingest all related vulnerabilities. Possible values: Critical, High, Medium, Low, Unknown.|False|String||
-|Create Insight|If enabled, action will create an insight per entity containing statistical information about related vulnerabilities.|False|Boolean|true|
-|Max Vulnerabilities To Return|Specify how many vulnerabilities to return per host. If nothing is provided action will process all of the related vulnerabilities.|False|String|100|
-
-
-
-
-
 #### List Hosts
 List available hosts in Crowdstrike Falcon.
 Timeout - 600 Seconds
@@ -298,43 +410,15 @@ Timeout - 600 Seconds
 
 
 
-#### List Uploaded IOCs
-List available custom IOCs in CrowdStrike Falcon.
+#### Hide Hosts
+Use the Hide Hosts action to hide one or more hosts from the CrowdStrike Falcon console. Supported entities: IP Address, Hostname.
 Timeout - 600 Seconds
 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|IOC Type Filter|Specify a comma-separated list of IOC types that should be returned. If nothing is provided, action will return IOCs from all types. Possible values: ipv4,ipv6,md5,sha256,domain.|False|String|ipv4,ipv6,md5,sha256,domain|
-|Value Filter Logic|Specify the value filter logic. If "Equal" is selected, action will try to find the exact match among IOCs and if "Contains" is selected, action will try to find IOCs that contain that substring.|False|List|Equal|
-|Value Filter String|Specify the string that should be searched among IOCs.|False|String||
-|Max IOCs To Return|Specify how many IOCs to return. Default: 50. Maximum: 500.|False|String|50|
-
-
-
-
-
-#### On-Demand Scan
-Scan the endpoint on demand in Crowdstrike. Note: only Windows hosts are supported. Supported entities: IP Address, Hostname. Note: Action is running as async, please adjust script timeout value in Chronicle SecOps IDE for action, as needed.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|File Paths To Scan|Comma-separated list of paths to scan.|True|String|C:\Windows|
-|File Paths To Exclude From Scan|Comma-separated list of paths to exclude from scanning.|False|String||
-|Host Group Name|Comma-separated list of host group names to initiate scanning for. Note: Separate scanning process is created for each host group.|False|String||
-|Scan Description|Description for the scan. If no value is provided, the action sets the description to the following: "Scan initialized by Chronicle SecOps."|False|String||
-|CPU Priority|The amount of CPU to  use for the underlying host during scanning.|False|List|Up to 25% CPU utilization|
-|Sensor Anti-malware Detection Level|Specify the sensor anti-malware detection level. Note: Detection level must be equal to or higher than the Prevention level.|False|List|Moderate|
-|Sensor Anti-malware Prevention Level|Specify the sensor anti-malware prevention level. Note: Detection level must be equal to or higher than the Prevention level.|False|List|Moderate|
-|Cloud Anti-malware Detection Level|Specify the cloud anti-malware detection level. Note: Detection level must be equal to or higher than the Prevention level.|False|List|Moderate|
-|Cloud Anti-malware Prevention Level|Specify the cloud anti-malware prevention level. Note: Detection level must be equal to or higher than the Prevention level.|False|List|Moderate|
-|Quarantine Hosts|If enabled, underlying hosts are quarantined as part of scanning.|False|Boolean|false|
-|Create Endpoint Notification|If enabled, the scanning process creates an endpoint notification.|False|Boolean|true|
-|Max Scan Duration|Number of hours for a scan to run. If no value is provided, the scan runs continuously.|False|String|1|
-|Hostname|Comma-separated list of hostnames on which you want to execute the action. Note: action will run the action on both entities + this parameter values.|False|String||
+|Hostname|A comma-separated list of hostnames to hide in CrowdStrike Falcon. The action processes both the input values provided in this parameter and the Hostname and IP Address entities attached to the case.|False|String||
+|Customer ID|The unique CrowdStrike Customer ID (CID) used to target a specific tenant. This parameter is required in Falcon Flight Control or multi-tenant environments to perform the action on a specific child CID.|False|String||
 
 
 
@@ -356,12 +440,6 @@ Timeout - 600 Seconds
 
 
 
-#### Ping
-Test Connectivity
-Timeout - 600 Seconds
-
-
-
 #### Upload IOCs
 Add custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
 Timeout - 600 Seconds
@@ -375,6 +453,22 @@ Timeout - 600 Seconds
 |Host Group Name|Specify the name of the host group.|False|String||
 |Action|Specify the action for the uploaded IOCs. Note: "Block" action can only be applied to hashes. Action will always apply "Detect" policy to all other IOC types.|False|List|Detect|
 |Days To Expire|The number of days before the IOC expires.|False|String||
+
+
+
+#### Update Alert
+Update an alert in Crowdstrike.
+Timeout - 600 Seconds
+
+
+|Name|Description|IsMandatory|Type|DefaultValue|
+|----|-----------|-----------|----|------------|
+|Alert ID|Specify the ID of the alert that needs to be updated.|True|String||
+|Status|Specify the status for the alert.|False|List|Select One|
+|Verdict|Specify the verdict for the alert.|False|List|Select One|
+|Assign To|Specify the name of the analyst to whom the alert needs to be assigned. If "Unassign" is provided, action will remove assignment from the alert. Note: API will accept any value that is provided, even if the underlying user doesn’t exist.|False|String||
+
+
 
 
 
@@ -395,54 +489,6 @@ Timeout - 600 Seconds
 
 
 
-#### Submit URL
-Submit urls to a sandbox in Crowdstrike. Note: This action requires a Falcon Sandbox license.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|URLs|Specify the URLs that need to be submitted.|True|String||
-|Sandbox Environment|Specify the sandbox environment for the analysis.|False|List|Windows 10, 64-bit|
-|Network Environment|Specify the network environment for the analysis.|False|List|Default|
-|Check Duplicate|If enabled, the action checks if the file was already submitted previously and returns an available report. Note: during the validation “Network Environment” and “Sandbox Environment” are not taken into consideration.|False|Boolean|true|
-
-
-
-
-
-#### Update Alert
-Update an alert in Crowdstrike.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Alert ID|Specify the ID of the alert that needs to be updated.|True|String||
-|Status|Specify the status for the alert.|False|List|Select One|
-|Verdict|Specify the verdict for the alert.|False|List|Select One|
-|Assign To|Specify the name of the analyst to whom the alert needs to be assigned. If "Unassign" is provided, action will remove assignment from the alert. Note: API will accept any value that is provided, even if the underlying user doesn’t exist.|False|String||
-
-
-
-
-
-#### Update IOC Information
-Update information about custom IOCs in Crowdstrike Falcon. Supported entities: Hostname, URL, IP address and Hash. Note: Hostname entities are treated as domain IOCs and action will extract domain part out of URLs. Only MD5 and SHA-256 hashes are supported.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Description|Specify a new description for custom IOCs.|False|Content||
-|Source|Specify the source for custom IOCs.|False|Content||
-|Expiration days|Specify the amount of days till expiration.|False|String||
-|Detect policy|If enabled, IOCs that have been identifed, will send a notification. In other case, no action will be taken|False|Boolean|true|
-
-
-
-
-
 #### Update Identity Protection Detection
 Update an identity protection detection in Crowdstrike. Note: this action requires an Identity Protection license.
 Timeout - 600 Seconds
@@ -453,52 +499,6 @@ Timeout - 600 Seconds
 |Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
 |Status|Specify the status for the detection.|False|List|Select One|
 |Assign To|Specify the name of the analyst to whom the detection needs to be assigned. If "Unassign" is provided, action will remove assignment from the detection. Note: API will accept any value that is provided, even if the underlying user doesn't exist.|False|String||
-
-
-
-
-
-#### Update Detection
-Deprecated. Update detection in Crowdstrike Falcon.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Detection ID|Specify the ID of the detection that needs to be updated.|True|String||
-|Status|Specify the new status for the detection.|True|List|Select One|
-|Assign Detection to|Specify the email address of the Crowdstrike Falcon user, who needs to be assigned to this detection|False|String||
-
-
-
-#### Download File
-Download files from the hosts in Crowdstrike Falcon. Supported entities: File Name, IP Address and Hostname. Note: action requires both File Name and IP Address/Hostname entity to be in the scope of the Siemplify alert. The downloaded file will be in password-protected zip. Password is "infected".
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Customer ID|Specify the ID of the customer for which you want to execute the action.|False|String||
-|Download Folder Path|Specify the path to the folder, where you want to store the threat file.|True|String||
-|Overwrite|If enabled, action will overwrite the file with the same name.|False|Boolean|false|
-
-
-
-
-
-#### Search Events
-Search events in Crowdstrike. Note: Action is running as async, please adjust script timeout value in Google SecOps IDE for action, as needed.
-Timeout - 600 Seconds
-
-
-|Name|Description|IsMandatory|Type|DefaultValue|
-|----|-----------|-----------|----|------------|
-|Repository|Repository that should be searched.|True|List|All|
-|Query|Query that needs to be executed in Crowdstrike. Note: don't provide "head" as part of the query. Action will provide it automatically based on the value provided in the "Max Results To Return" parameter.|True|String||
-|Time Frame|Time frame for the results. If "Custom" is selected, you also need to provide "Start Time".|False|List|Last Hour|
-|Start Time|Start time for the results. This parameter is mandatory, if "Custom" is selected for the "Time Frame" parameter. Format: ISO 8601.|False|String||
-|End Time|End time for the results. Format: ISO 8601. If nothing is provided and "Custom" is selected for the "Time Frame" parameter then this parameter will use current time.|False|String||
-|Max Results To Return|How many results to return for the query. Action will append "head" to the provided query. Default: 50. Maximum: 1000.|False|String|50|
 
 
 

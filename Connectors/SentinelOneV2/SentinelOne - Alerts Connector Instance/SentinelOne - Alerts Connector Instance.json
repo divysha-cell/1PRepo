@@ -1,64 +1,18 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/SentinelOneV2/connectors/19/connectorInstances/93",
-    "id": 93,
+    "name": "projects/project/locations/location/instances/instance/integrations/SentinelOneV2/connectors/-/connectorInstances/168",
+    "id": 168,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/sentinelonev2#sentinelone_-_alerts_connector",
-    "identifier": "SentinelOne - Alerts Connector_4a09fee9-7018-4b4c-8d61-af7a670c3de9",
+    "identifier": "SentinelOne - Alerts Connector_09db618e-9358-48b6-91c0-46fb787294b0",
     "connectorDefinitionName": "SentinelOne - Alerts Connector",
     "integration": "SentinelOneV2",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 19,
     "integrationVersion": "50",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Address of SentinelOne API root.",
-            "displayName": "API Root",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "Password",
-            "mode": "Script",
-            "description": "SentinelOne API token.",
-            "displayName": "API Token",
-            "value": "***************",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": false,
             "advanced": true,
@@ -188,6 +142,50 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Address of SentinelOne API root.",
+            "displayName": "API Root",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "SentinelOne API token.",
+            "displayName": "API Token",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -208,50 +206,6 @@
             "advanced": true,
             "type": "String",
             "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
-            "displayName": "Environment Regex Pattern",
-            "value": ".*",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Address of SentinelOne API root.",
-            "displayName": "API Root",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "Password",
-            "mode": "Script",
-            "description": "SentinelOne API token.",
-            "displayName": "API Token",
-            "value": "***************",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
             "description": "Comma-separated list of status that should be ingested. Possible values: Unresolved, In Progress, Resolved. If nothing is provided, the connector will fetch alerts with statuses Unresolved and InProgress.",
             "displayName": "Status Filter",
             "value": "Unresolved, In Progress",
@@ -376,6 +330,50 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Address of SentinelOne API root.",
+            "displayName": "API Root",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "SentinelOne API token.",
+            "displayName": "API Token",
+            "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
+            "displayName": "Environment Regex Pattern",
+            "value": ".*",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

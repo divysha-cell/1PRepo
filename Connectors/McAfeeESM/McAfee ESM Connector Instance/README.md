@@ -12,12 +12,6 @@ Event Name Field: alarmName
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
-|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|srcZone|
-|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|.*|
-|API Root|API root of the McAfee ESM instance. Format: https://{ip address}/rs/|True|https://{ip address}/rs/|
-|Username|Username of the McAfee ESM account.|True|dummy_value|
-|Password|Password of the McAfee ESM account.|True|*****|
-|Product Version|Version of Mcafee ESM. Possible values: 11.1, 11.2, 11.3, 11.4, 11.5.|True|dummy_value|
 |Use AES Encryption|If enabled, integration will authenticate using AES Encryption and will not do Base64 inside the code. Note: you need to provide Login and Password already as Base64 encoded strings.|False|false|
 |Verify SSL|If enabled, verifies that the SSL certificate for the connection to the McAfee ESM server is valid.|False|false|
 |Lowest Severity To Fetch|The lowest severity that needs to be used to fetch alarms. Possible values are in range from 0 to 100. If nothing is specified, the connector ingests alarms with all severities.|False|0|
@@ -35,4 +29,10 @@ Event Name Field: alarmName
 |Proxy Server Address|The address of the proxy server to use.|False|dummy_value|
 |Proxy Username|The proxy username to authenticate with.|False|dummy_value|
 |Proxy Password|The proxy password to authenticate with.|False|*****|
+|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|srcZone|
+|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|.*|
+|API Root|API root of the McAfee ESM instance. Format: https://{ip address}/rs/|True|https://{ip address}/rs/|
+|Username|Username of the McAfee ESM account.|True|dummy_value|
+|Password|Password of the McAfee ESM account.|True|*****|
+|Product Version|Version of Mcafee ESM. Possible values: 11.1, 11.2, 11.3, 11.4, 11.5.|True|dummy_value|
 

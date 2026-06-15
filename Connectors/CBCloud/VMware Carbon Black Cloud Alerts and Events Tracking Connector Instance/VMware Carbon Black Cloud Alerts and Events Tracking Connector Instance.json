@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/CBCloud/connectors/47/connectorInstances/77",
-    "id": 77,
+    "name": "projects/project/locations/location/instances/instance/integrations/CBCloud/connectors/47/connectorInstances/130",
+    "id": 130,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/vmware-carbon-black-cloud#vmware-carbon-black-cloud-alerts-and-events-tracking-connector",
-    "identifier": "VMware Carbon Black Cloud Alerts and Events Tracking Connector_9f5c87e5-c0f1-44dc-932c-ff7a0d69d32f",
+    "identifier": "VMware Carbon Black Cloud Alerts and Events Tracking Connector_91b9bd66-4ddd-4d23-87a3-c08bea4eceaa",
     "connectorDefinitionName": "VMware Carbon Black Cloud Alerts and Events Tracking Connector",
     "integration": "CBCloud",
     "remote": false,
@@ -15,6 +15,17 @@
         "avgAlertsPerDay": 0
     },
     "parameters": [
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "How many alerts should be processed during one connector run.",
+            "displayName": "Max Alerts Per Cycle",
+            "value": "100",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
         {
             "mandatory": true,
             "advanced": false,
@@ -89,17 +100,6 @@
             "description": "Verify SSL certificates for HTTPS requests to Microsoft Azure.",
             "displayName": "Verify SSL",
             "value": "false",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "How many alerts should be processed during one connector run.",
-            "displayName": "Max Alerts Per Cycle",
-            "value": "100",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },
@@ -294,6 +294,17 @@
         {
             "mandatory": true,
             "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "How many alerts should be processed during one connector run.",
+            "displayName": "Max Alerts Per Cycle",
+            "value": "100",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
             "type": "String",
             "mode": "Script",
             "description": "Vmware Carbon Black Cloud API Root URL",
@@ -365,17 +376,6 @@
             "description": "Verify SSL certificates for HTTPS requests to Microsoft Azure.",
             "displayName": "Verify SSL",
             "value": "false",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "How many alerts should be processed during one connector run.",
-            "displayName": "Max Alerts Per Cycle",
-            "value": "100",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },

@@ -12,11 +12,6 @@ Event Name Field: event_type
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
-|Environment Field Name|Describes the name of the field where the environment name is stored. If environment field isn't found, environment is "".|False|dummy_value|
-|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return value unchanged. Used to allow the user to manipulate the environment field via regex logic. If regex pattern is null or empty, or the environment value is null, the final environment result is "".|False|.*|
-|Azure Subscription ID|Microsoft Azure Subscription ID, can be viewed in Azure Portal > Subscriptions > <Your Subscription> > Subscription ID. |True|dummy_value|
-|Azure Active Directory ID|Azure Active Directory Tenant ID, can be viewed in Active Directory > App Registration > <Application you configured for your integration> > Directory (tenant) ID.|True|dummy_value|
-|API Root|The API Root of Microsoft Azure Sentinel REST API root.|True|https://management.azure.com|
 |OAUTH2 Login Endpoint Url|Specify the url, that connector should use for OAUTH2 Login.|True|https://login.microsoftonline.com|
 |Azure Resource Group|Name of Azure Resource Group where Azure Sentinel is located.|True|dummy_value|
 |Azure Sentinel Workspace Name|Name of the Azure Sentinel workspace to work with, can be viewed in Azure portal > Azure Sentinel > Azure Sentinel Workspaces.|True|dummy_value|
@@ -36,12 +31,6 @@ Event Name Field: event_type
 |VendorFieldFallback|Specify a comma separated list of incident attributes that should be used as a fallback for the "DeviceVendor" field in descending order. First attribute will have the highest priority, next if its not present or empty in the event - fallback to the next value from the list and so on.|True|vendorName|
 |StartTimeFallback|Specify a comma separated list of incident or alert attributes that should be used as a fallback for the “Start Time” alert field in descending order. Additionally, new “Siemplify_Start_Time“ attribute will be added to created events. First attribute will have the highest priority, next if its not present or empty in the event - fallback to the next value from the list and so on. If none of the fallback fields are found, connector will use createdTimeUTC, and if that's also non existent - alert ingestion time to Chronicle SOAR.|True|properties_firstActivityTimeGenerated,properties_startTimeUtc,properties_createdTimeUtc,properties_firstAlertTimeGenerated|
 |EndTimeFallback|Specify a comma separated list of incident or alert attributes that should be used as a fallback for the “End Time” alert field in descending order. Additionally, new “Siemplify_End_Time“ attribute will be added to created events. First attribute will have the highest priority, next if its not present or empty in the event - fallback to the next value from the list and so on. If none of the fallback fields are found, connector will use createdTimeUTC, and if that's also non existent - alert ingestion time to Chronicle SOAR.|True|properties_lastActivityTimeGenerated,properties_endTimeUtc,properties_createdTimeUtc,properties_lastAlertTimeGenerated|
-|Incidents Tags To Ingest|Specify a comma separated list of tags Sentinel incident should have to be ingested. Incidents that will not have tags from this list will be ignored. Example of how Sentinel tags can be provided: tag1, tag2|False|dummy_value|
-|Disable Overflow|If enabled, the connector will disable the overflow mechanism.|False|false|
-|Enable Fallback Logic Debug?|Specify if connector should add to the created events a “debug“ fields that will contain the values it used for fallback.|False|false|
-|Scheduled Alerts Events Limit to Ingest|Specify the maximum number of events the connector should ingest per a single Azure Sentinel Scheduled or NRT Alert.|False|100|
-|Create Chronicle SOAR Alerts for Sentinel incidents that do not have entities?|If enabled, connector will create Chronicle SOAR alerts from Microsoft Sentinel incidents that dont have entities. Otherwise, such incidents will be skipped for all Sentinel incidents types except Sentinel Scheduled and NRT alerts.|False|false|
-|Incident's Alerts Limit to Ingest|Specify the maximum number of  alerts the connector should ingest per a single Azure Sentinel incident.|False|10|
 |Proxy Server Address|Proxy server to use for connection.|False|dummy_value|
 |Proxy Username|Proxy server username|False|dummy_value|
 |Proxy Password|Proxy server password|False|*****|
@@ -51,4 +40,15 @@ Event Name Field: event_type
 |Create extra events for all entities|If enabled, when creating entities from the Sentinel API, connector will create extra SecOps events for all Sentinel incident's entities, not only Account, Mailbox, Host or Ip.|False|false|
 |Azure API Timeout In Seconds|If specified, the value will be applied as the maximum waiting time in seconds for any request made to Azure API. Defaults to 60.|False|60|
 |Wait For Scheduled/NRT Alert Object|If enabled, the connector will wait until a Scheduled/NRT alert object will be available.|False|false|
+|API Root|The API Root of Microsoft Azure Sentinel REST API root.|True|https://management.azure.com|
+|Environment Field Name|Describes the name of the field where the environment name is stored. If environment field isn't found, environment is "".|False|dummy_value|
+|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return value unchanged. Used to allow the user to manipulate the environment field via regex logic. If regex pattern is null or empty, or the environment value is null, the final environment result is "".|False|.*|
+|Azure Subscription ID|Microsoft Azure Subscription ID, can be viewed in Azure Portal > Subscriptions > <Your Subscription> > Subscription ID. |True|dummy_value|
+|Azure Active Directory ID|Azure Active Directory Tenant ID, can be viewed in Active Directory > App Registration > <Application you configured for your integration> > Directory (tenant) ID.|True|dummy_value|
+|Incidents Tags To Ingest|Specify a comma separated list of tags Sentinel incident should have to be ingested. Incidents that will not have tags from this list will be ignored. Example of how Sentinel tags can be provided: tag1, tag2|False|dummy_value|
+|Disable Overflow|If enabled, the connector will disable the overflow mechanism.|False|false|
+|Enable Fallback Logic Debug?|Specify if connector should add to the created events a “debug“ fields that will contain the values it used for fallback.|False|false|
+|Scheduled Alerts Events Limit to Ingest|Specify the maximum number of events the connector should ingest per a single Azure Sentinel Scheduled or NRT Alert.|False|100|
+|Create Chronicle SOAR Alerts for Sentinel incidents that do not have entities?|If enabled, connector will create Chronicle SOAR alerts from Microsoft Sentinel incidents that dont have entities. Otherwise, such incidents will be skipped for all Sentinel incidents types except Sentinel Scheduled and NRT alerts.|False|false|
+|Incident's Alerts Limit to Ingest|Specify the maximum number of  alerts the connector should ingest per a single Azure Sentinel incident.|False|10|
 

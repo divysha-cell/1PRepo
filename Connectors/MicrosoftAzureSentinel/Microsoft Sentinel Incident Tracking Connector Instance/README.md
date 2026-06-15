@@ -12,6 +12,17 @@ Event Name Field: event_type
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
+|Environment Field Name|Describes the name of the field where the environment name is stored. If environment field isn't found, environment is "".|False|dummy_value|
+|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return value unchanged. Used to allow the user to manipulate the environment field via regex logic. If regex pattern is null or empty, or the environment value is null, the final environment result is "".|False|.*|
+|Azure Subscription ID|Microsoft Azure Subscription ID, can be viewed in Azure Portal > Subscriptions > <Your Subscription> > Subscription ID. |True|dummy_value|
+|Entra ID Directory ID|Azure Entra ID Tenant ID, can be viewed in Active Directory > App Registration > <Application you configured for your integration> > Directory (tenant) ID.|True|dummy_value|
+|Api Root|Management.azure.com Api root url to use with integration.|True|https://management.azure.com|
+|OAUTH2 Login Endpoint Url|Specify the url, that connector should use for OAUTH2 Login.|True|https://login.microsoftonline.com|
+|Azure Resource Group|Name of Azure Resource Group where Azure Sentinel is located.|True|dummy_value|
+|Azure Sentinel Workspace Name|Name of the Azure Sentinel workspace to work with, can be viewed in Azure portal > Azure Sentinel > Azure Sentinel Workspaces.|True|dummy_value|
+|Client ID|Client (Application) ID that was added for the app registration in Azure Active Directory for this integration.|True|dummy_value|
+|Client Secret|Secret that was entered for Azure AD app registration.|True|*****|
+|Verify SSL|Verify SSL certificates for HTTPS requests to Microsoft Azure.|False|true|
 |Max Hours Backwards|Number of hours before the first connector iteration to retrieve incidents from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|24|
 |Incident Statuses to Fetch|Specify the statuses of the incidents that should be fetched by the SecOps server. Parameter can take multiple values as a comma separated string.|True|New,  Active, Closed|
 |Incident Severities to Fetch|Specify the severities of the incidents that should be fetched by the SecOps server. Parameter can take multiple values as a comma separated string.|True|Informational, Low, Medium, High|
@@ -40,15 +51,4 @@ Event Name Field: event_type
 |Create extra events for all entities|If enabled, when creating entities from the Sentinel API, connector will create extra SecOps events for all Sentinel incident's entities, not only Account, Mailbox, Host or Ip.|False|false|
 |Wait For Scheduled/NRT Alert Object|If enabled, the connector will wait until a Scheduled/NRT alert object will be available.|False|false|
 |Incident Creation Time Filter (days)|If specified, connector will only fetch incidents that were created within the defined number of days before now.|False|dummy_value|
-|Environment Field Name|Describes the name of the field where the environment name is stored. If environment field isn't found, environment is "".|False|dummy_value|
-|Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return value unchanged. Used to allow the user to manipulate the environment field via regex logic. If regex pattern is null or empty, or the environment value is null, the final environment result is "".|False|.*|
-|Azure Subscription ID|Microsoft Azure Subscription ID, can be viewed in Azure Portal > Subscriptions > <Your Subscription> > Subscription ID. |True|dummy_value|
-|Entra ID Directory ID|Azure Entra ID Tenant ID, can be viewed in Active Directory > App Registration > <Application you configured for your integration> > Directory (tenant) ID.|True|dummy_value|
-|Api Root|Management.azure.com Api root url to use with integration.|True|https://management.azure.com|
-|OAUTH2 Login Endpoint Url|Specify the url, that connector should use for OAUTH2 Login.|True|https://login.microsoftonline.com|
-|Azure Resource Group|Name of Azure Resource Group where Azure Sentinel is located.|True|dummy_value|
-|Azure Sentinel Workspace Name|Name of the Azure Sentinel workspace to work with, can be viewed in Azure portal > Azure Sentinel > Azure Sentinel Workspaces.|True|dummy_value|
-|Client ID|Client (Application) ID that was added for the app registration in Azure Active Directory for this integration.|True|dummy_value|
-|Client Secret|Secret that was entered for Azure AD app registration.|True|*****|
-|Verify SSL|Verify SSL certificates for HTTPS requests to Microsoft Azure.|False|true|
 

@@ -1,14 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Group-IB-DRP/connectors/21/connectorInstances/111",
-    "id": 111,
+    "name": "projects/project/locations/location/instances/instance/integrations/Group-IB-DRP/connectors/-/connectorInstances/150",
+    "id": 150,
     "custom": false,
-    "documentationLink": "https://drp.group-ib.com/portal/tools/doc/customer/en/api/api-starting-guide/api-starting-guide/",
-    "identifier": "DRP Violations Connector_3ccaf213-0614-4030-81aa-af6333f164f8",
+    "identifier": "DRP Violations Connector_208ad220-2526-4e72-b6df-b7208b3d3e9c",
     "connectorDefinitionName": "DRP Violations Connector",
     "integration": "Group-IB-DRP",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 21,
     "integrationVersion": "1",
     "statistics": {
         "pastDayAlertsCount": 0,

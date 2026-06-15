@@ -1,14 +1,14 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Arcsight/connectors/44/connectorInstances/73",
-    "id": 73,
+    "name": "projects/project/locations/location/instances/instance/integrations/Arcsight/connectors/73/connectorInstances/125",
+    "id": 125,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/arcsight#security-event-connector",
-    "identifier": "ArcSight - Security Events Connector_ff6e84f4-105f-4054-ad9c-f442dd44ec52",
+    "identifier": "ArcSight - Security Events Connector_b8322df1-7571-4143-b753-77f374ea144b",
     "connectorDefinitionName": "ArcSight - Security Events Connector",
     "integration": "Arcsight",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 44,
+    "connectorId": 73,
     "integrationVersion": "45",
     "statistics": {
         "pastDayAlertsCount": 0,

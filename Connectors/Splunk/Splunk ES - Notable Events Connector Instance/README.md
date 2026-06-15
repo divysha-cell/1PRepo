@@ -12,9 +12,6 @@ Event Name Field: app
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
-|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|dummy_value|
-|Environment Regex Pattern|A regex pattern to run on the value found in the 'Environment Field Name' field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|.*|
-|Rule Generator Field Name|The name of the field that will be used to map the rule generator value. Note: only information about notable event itself is used for mapping, events are disregarded. If invalid value is provided, connector will use "rule_name" as field.|False|dummy_value|
 |Server Address|Server address of the Splunk instance.|True|https://<ip>:8089|
 |Username|Username of the Splunk account.|False|dummy_value|
 |Password|Password of the Splunk account.|False|*****|
@@ -35,4 +32,7 @@ Event Name Field: app
 |Notable Event Data Along Base Event|If enabled, connector will create Siemplify Events based on both Notable Event and Base Events together.|False|false|
 |Multivalue Fields|A comma-separated list of fields that contain multiple entities. If, for example, one field can contain two hostnames, we would need to split notable event into two Siemplify Events in order to do a correct mapping of entities.|False|asset, src, dest, ip|
 |Alert Name Source|Source for the alert name. Possible values: Search Name, Rule Name.|False|Search Name|
+|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|dummy_value|
+|Environment Regex Pattern|A regex pattern to run on the value found in the 'Environment Field Name' field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|.*|
+|Rule Generator Field Name|The name of the field that will be used to map the rule generator value. Note: only information about notable event itself is used for mapping, events are disregarded. If invalid value is provided, connector will use "rule_name" as field.|False|dummy_value|
 

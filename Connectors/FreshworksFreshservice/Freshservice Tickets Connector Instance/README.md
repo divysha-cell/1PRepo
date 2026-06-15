@@ -12,7 +12,6 @@ Event Name Field: type
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
-|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|dummy_value|
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|.*|
 |API Root|Freshservice instance API Root.|True|https://yourdomain.freshservice.com|
 |API Key|Freshservice API Key to use in integration.|True|*****|
@@ -26,4 +25,5 @@ Event Name Field: type
 |Proxy Username|The proxy username to authenticate with.|False|dummy_value|
 |Proxy Password|The proxy password to authenticate with.|False|*****|
 |Workspace ID|ID of the workspace that should be used to fetch tickets. If nothing is provided, the action will fetch tickets only from the primary workspace. To fetch tickets from all workspaces provide “0” in the parameter.|False|dummy_value|
+|Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|dummy_value|
 

@@ -12,6 +12,7 @@ Event Name Field: name
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
+|CA Certificate File|Base 64 encoded CA certificate file.|False|dummy_value|
 |Server Address|Server address of the ArcSight instance|True|dummy_value|
 |Username|Username of the ArcSight account|True|dummy_value|
 |Password|Password of the ArcSight account|True|*****|
@@ -27,5 +28,4 @@ Event Name Field: name
 |Proxy Username|The proxy username to authenticate with.|False|dummy_value|
 |Proxy Password|The proxy password to authenticate with.|False|*****|
 |Verify SSL|If enabled, verify the SSL certificate for the connection to the ArcSight ESM server is valid.|False|false|
-|CA Certificate File|Base 64 encoded CA certificate file.|False|dummy_value|
 

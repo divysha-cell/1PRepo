@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/ApacheKafka/connectors/66/connectorInstances/67",
-    "id": 67,
+    "name": "projects/project/locations/location/instances/instance/integrations/ApacheKafka/connectors/66/connectorInstances/124",
+    "id": 124,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/apache-kafka#apache-kafka-connector",
-    "identifier": "Apache Kafka - Messages Connector_c63ba6b2-1cdd-49e3-b8b7-d0f9ac34915b",
+    "identifier": "Apache Kafka - Messages Connector_81253c31-ab44-442a-981c-9549272d75f9",
     "connectorDefinitionName": "Apache Kafka - Messages Connector",
     "integration": "ApacheKafka",
     "remote": false,

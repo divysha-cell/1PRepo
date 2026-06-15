@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/FreshworksFreshservice/connectors/53/connectorInstances/58",
-    "id": 58,
+    "name": "projects/project/locations/location/instances/instance/integrations/FreshworksFreshservice/connectors/53/connectorInstances/146",
+    "id": 146,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/freshworks-freshservice#freshservice-tickets-connector",
-    "identifier": "Freshservice Tickets Connector_fa0764af-1ef3-4b24-9f1f-2981aa5dc5fe",
+    "identifier": "Freshservice Tickets Connector_3a9fd875-3cb3-45a6-b862-92d617985009",
     "connectorDefinitionName": "Freshservice Tickets Connector",
     "integration": "FreshworksFreshservice",
     "remote": false,
@@ -15,17 +15,6 @@
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": false,
             "advanced": true,
@@ -165,6 +154,17 @@
             "mode": "Script",
             "description": "ID of the workspace that should be used to fetch tickets. If nothing is provided, the action will fetch tickets only from the primary workspace. To fetch tickets from all workspaces provide \u201c0\u201d in the parameter.",
             "displayName": "Workspace ID",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
             "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
@@ -186,17 +186,6 @@
             "advanced": true,
             "type": "String",
             "mode": "Script",
-            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
-            "displayName": "Environment Field Name",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": true,
-            "type": "String",
-            "mode": "Script",
             "description": "A regex pattern to run on the value found in the \"Environment Field Name\" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.",
             "displayName": "Environment Regex Pattern",
             "value": ".*",
@@ -331,6 +320,17 @@
             "mode": "Script",
             "description": "ID of the workspace that should be used to fetch tickets. If nothing is provided, the action will fetch tickets only from the primary workspace. To fetch tickets from all workspaces provide \u201c0\u201d in the parameter.",
             "displayName": "Workspace ID",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": true,
+            "type": "String",
+            "mode": "Script",
+            "description": "Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.",
+            "displayName": "Environment Field Name",
             "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0

@@ -1,14 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Exchange/connectors/26/connectorInstances/87",
-    "id": 87,
+    "name": "projects/project/locations/location/instances/instance/integrations/Exchange/connectors/-/connectorInstances/139",
+    "id": 139,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/exchange#exchange_eml_connector",
-    "identifier": "Exchange EML Connector_778dc8bd-49fa-4bc1-a876-265910a1f158",
+    "identifier": "Exchange EML Connector_33c53388-2e67-4995-8b2e-539ca9a643ea",
     "connectorDefinitionName": "Exchange EML Connector",
     "integration": "Exchange",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 26,
     "integrationVersion": "123",
     "statistics": {
         "pastDayAlertsCount": 0,

@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/FireEyeETP/connectors/59/connectorInstances/108",
-    "id": 108,
+    "name": "projects/project/locations/location/instances/instance/integrations/FireEyeETP/connectors/59/connectorInstances/144",
+    "id": 144,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/fireeye-etp#fireeye-etp-email-alerts-connector",
-    "identifier": "FireEye ETP - Email Alerts Connector_73989f88-ea98-4a48-92ec-99d42fd4425e",
+    "identifier": "FireEye ETP - Email Alerts Connector_0447c7ba-585f-4b80-9803-c7970ae695ca",
     "connectorDefinitionName": "FireEye ETP - Email Alerts Connector",
     "integration": "FireEyeETP",
     "remote": false,

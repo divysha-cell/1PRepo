@@ -1,42 +1,18 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/ServiceNow/connectors/34/connectorInstances/101",
-    "id": 101,
+    "name": "projects/project/locations/location/instances/instance/integrations/ServiceNow/connectors/-/connectorInstances/170",
+    "id": 170,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/servicenow#servicenow_connector",
-    "identifier": "ServiceNow Connector_3904f44d-d0b7-4f71-859b-1b010321a0b0",
+    "identifier": "ServiceNow Connector_8ea51344-b34d-4fd9-a52b-348bef266c47",
     "connectorDefinitionName": "ServiceNow Connector",
     "integration": "ServiceNow",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 34,
     "integrationVersion": "67",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "Fetch incidents from 'x' days backwards. e.g. 3",
-            "displayName": "Days Backwards",
-            "value": "5",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Regular",
-            "description": "The field name used to determine the rule generator.",
-            "displayName": "Rule Generator",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": true,
             "advanced": false,
@@ -276,6 +252,28 @@
             "description": "If enabled, whitelist will be used as a blacklist.",
             "displayName": "Use whitelist as a blacklist",
             "value": "false",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Fetch incidents from 'x' days backwards. e.g. 3",
+            "displayName": "Days Backwards",
+            "value": "5",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Regular",
+            "description": "The field name used to determine the rule generator.",
+            "displayName": "Rule Generator",
+            "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -292,28 +290,6 @@
     "timeoutSeconds": 60,
     "params": [
         {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "Fetch incidents from 'x' days backwards. e.g. 3",
-            "displayName": "Days Backwards",
-            "value": "5",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Regular",
-            "description": "The field name used to determine the rule generator.",
-            "displayName": "Rule Generator",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
             "mandatory": true,
             "advanced": false,
             "type": "String",
@@ -552,6 +528,28 @@
             "description": "If enabled, whitelist will be used as a blacklist.",
             "displayName": "Use whitelist as a blacklist",
             "value": "false",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Fetch incidents from 'x' days backwards. e.g. 3",
+            "displayName": "Days Backwards",
+            "value": "5",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Regular",
+            "description": "The field name used to determine the rule generator.",
+            "displayName": "Rule Generator",
+            "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

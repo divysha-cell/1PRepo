@@ -2,7 +2,3 @@
 |Product|Event Name|Visual Family|
 |-------|----------|-------------|
 |Cortex XDR|None|Default|
-|Cortex XDR|alert|Default|
-|Cortex XDR|network_artifact|Default|
-|Cortex XDR|incident|Default|
-Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.Exports mappings  to the repo.

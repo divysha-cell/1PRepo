@@ -1,64 +1,18 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Splunk/connectors/15/connectorInstances/83",
-    "id": 83,
+    "name": "projects/project/locations/location/instances/instance/integrations/Splunk/connectors/-/connectorInstances/172",
+    "id": 172,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/splunk#splunk-connector",
-    "identifier": "Splunk Pull Connector_e1638ffa-56b1-48ef-b27e-e9a693fefadf",
+    "identifier": "Splunk Pull Connector_f71a1540-3a9d-4cc6-b4b7-d82186c9aebc",
     "connectorDefinitionName": "Splunk Pull Connector",
     "integration": "Splunk",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 15,
     "integrationVersion": "65",
     "statistics": {
         "pastDayAlertsCount": 0,
         "avgAlertsPerDay": 0
     },
     "parameters": [
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "IP Address of Splunk API Server.",
-            "displayName": "Server Address",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "Port of the Splunk Instance.",
-            "displayName": "Port",
-            "value": "8089",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Splunk account username.",
-            "displayName": "Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Password",
-            "mode": "Script",
-            "description": "Splunk account password.",
-            "displayName": "Password",
-            "value": "***************",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
         {
             "mandatory": false,
             "advanced": false,
@@ -166,6 +120,50 @@
             "description": "CA Certificate File",
             "displayName": "CA Certificate File",
             "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "IP Address of Splunk API Server.",
+            "displayName": "Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Port of the Splunk Instance.",
+            "displayName": "Port",
+            "value": "8089",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Splunk account username.",
+            "displayName": "Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Splunk account password.",
+            "displayName": "Password",
+            "value": "***************",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -182,50 +180,6 @@
     "timeoutSeconds": 60,
     "params": [
         {
-            "mandatory": true,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "IP Address of Splunk API Server.",
-            "displayName": "Server Address",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": true,
-            "advanced": false,
-            "type": "Int",
-            "mode": "Script",
-            "description": "Port of the Splunk Instance.",
-            "displayName": "Port",
-            "value": "8089",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Splunk account username.",
-            "displayName": "Username",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
-            "type": "Password",
-            "mode": "Script",
-            "description": "Splunk account password.",
-            "displayName": "Password",
-            "value": "***************",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
             "mandatory": false,
             "advanced": false,
             "type": "Password",
@@ -332,6 +286,50 @@
             "description": "CA Certificate File",
             "displayName": "CA Certificate File",
             "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "IP Address of Splunk API Server.",
+            "displayName": "Server Address",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": true,
+            "advanced": false,
+            "type": "Int",
+            "mode": "Script",
+            "description": "Port of the Splunk Instance.",
+            "displayName": "Port",
+            "value": "8089",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Splunk account username.",
+            "displayName": "Username",
+            "value": "dummy_value",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "Password",
+            "mode": "Script",
+            "description": "Splunk account password.",
+            "displayName": "Password",
+            "value": "***************",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

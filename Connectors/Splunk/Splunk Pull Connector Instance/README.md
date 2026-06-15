@@ -12,10 +12,6 @@ Event Name Field: app
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
-|Server Address|IP Address of Splunk API Server.|True|dummy_value|
-|Port|Port of the Splunk Instance.|True|8089|
-|Username|Splunk account username.|False|dummy_value|
-|Password|Splunk account password.|False|*****|
 |API Token|Splunk API Token. API token has priority over other authentication methods, when this field is not empty.|False|*****|
 |Time Frame|Time frame of alerts to fetch. Examples: 1m - from 1 minute ago 3h - from 3 hours ago 1d - from 24 hours ago (1 day) 1w - from 1 week ago.|False|1h|
 |Alerts Count Limit|Limit the number of Alerts returned by the connector per 1 iteration.|False|100|
@@ -26,4 +22,8 @@ Event Name Field: app
 |Proxy Username|The proxy username to authenticate with.|False|dummy_value|
 |Proxy Password|The proxy password to authenticate with.|False|*****|
 |CA Certificate File|CA Certificate File|False|dummy_value|
+|Server Address|IP Address of Splunk API Server.|True|dummy_value|
+|Port|Port of the Splunk Instance.|True|8089|
+|Username|Splunk account username.|False|dummy_value|
+|Password|Splunk account password.|False|*****|
 

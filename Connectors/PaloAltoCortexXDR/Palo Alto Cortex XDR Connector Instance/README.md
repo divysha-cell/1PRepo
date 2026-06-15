@@ -12,7 +12,6 @@ Event Name Field: event_type
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
-|Verify SSL|If selected, the integration validates the SSL certificate when connecting to the Palo Alto XDR server.|False|true|
 |Api Root|The API root of the Palo Alto XDR instance.|True|https://api-{fqdn}|
 |Api Key|The Palo Alto XDR API key.|True|*****|
 |Api Key ID|The Palo Alto XDR API key ID.|True|3|
@@ -32,4 +31,5 @@ Event Name Field: event_type
 |Proxy Username|The proxy username to authenticate with.|False|dummy_value|
 |Proxy Password|The proxy password to authenticate with.|False|*****|
 |Artifacts To Ignore|A comma-separated list of artifacts to exclude from Google SecOps event creation.|False|dummy_value|
+|Verify SSL|If selected, the integration validates the SSL certificate when connecting to the Palo Alto XDR server.|False|true|
 

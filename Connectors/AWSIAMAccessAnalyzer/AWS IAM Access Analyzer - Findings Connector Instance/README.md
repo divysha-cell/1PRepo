@@ -15,8 +15,8 @@ Event Name Field: resourceType
 |Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|dummy_value|
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|.*|
 |AWS Access Key ID|AWS Access Key ID to use in integration.|True|dummy_value|
-|AWS Secret Key|AWS Secret Key to use in integration.|True|*****|
 |AWS Default Region|AWS default region to use in integration, for example us-west-2.|True|dummy_value|
+|AWS Secret Key|AWS Secret Key to use in integration.|True|*****|
 |Analyzer Name|Name of the analyzer that should be used in the integration.|True|dummy_value|
 |Alert Severity|Severity of the Siemplify Alerts created from this connector. Possible values: Critical, High, Medium , Low, Informational.|False|Medium|
 |Max Findings To Fetch|How many findings to process per one connector iteration.|False|50|

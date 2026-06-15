@@ -1,13 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftGraphSecurityTools/connectors/57/connectorInstances/106",
-    "id": 106,
+    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftGraphSecurityTools/connectors/-/connectorInstances/161",
+    "id": 161,
     "custom": false,
-    "identifier": "MS365 MFA Alert_f574d82c-2c7f-4889-a56d-382516027da1",
+    "identifier": "MS365 MFA Alert_c900a04b-5a7c-4313-a54c-d9ab62307b3b",
     "connectorDefinitionName": "MS365 MFA Alert",
     "integration": "MicrosoftGraphSecurityTools",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 57,
     "integrationVersion": "4",
     "statistics": {
         "pastDayAlertsCount": 0,

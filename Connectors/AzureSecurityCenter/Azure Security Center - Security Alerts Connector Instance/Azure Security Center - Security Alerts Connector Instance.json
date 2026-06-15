@@ -1,14 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/AzureSecurityCenter/connectors/33/connectorInstances/70",
-    "id": 70,
+    "name": "projects/project/locations/location/instances/instance/integrations/AzureSecurityCenter/connectors/-/connectorInstances/127",
+    "id": 127,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/azure-security-center#azure_security_center_-_security_alerts_connector",
-    "identifier": "Azure Security Center - Security Alerts Connector_9e8ab82a-d04e-474e-9207-20626ebee2a8",
+    "identifier": "Azure Security Center - Security Alerts Connector_31994673-4e55-4c46-8c88-233a440560d9",
     "connectorDefinitionName": "Azure Security Center - Security Alerts Connector",
     "integration": "AzureSecurityCenter",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 33,
     "integrationVersion": "15",
     "statistics": {
         "pastDayAlertsCount": 0,

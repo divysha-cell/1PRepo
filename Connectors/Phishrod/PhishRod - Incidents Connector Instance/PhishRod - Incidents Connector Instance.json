@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Phishrod/connectors/62/connectorInstances/94",
-    "id": 94,
+    "name": "projects/project/locations/location/instances/instance/integrations/Phishrod/connectors/62/connectorInstances/165",
+    "id": 165,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/phishrod#phishrod-incidents-connector",
-    "identifier": "PhishRod - Incidents Connector_2a2973ae-d224-405d-a405-9c2a55ae3735",
+    "identifier": "PhishRod - Incidents Connector_af040ada-72b4-4e97-be51-7e51eb2493da",
     "connectorDefinitionName": "PhishRod - Incidents Connector",
     "integration": "Phishrod",
     "remote": false,

@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/CBCloud/connectors/48/connectorInstances/74",
-    "id": 74,
+    "name": "projects/project/locations/location/instances/instance/integrations/CBCloud/connectors/48/connectorInstances/128",
+    "id": 128,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/vmware-carbon-black-cloud#configure-vmware-carbon-black-cloud-alerts-connector-on-siemplify",
-    "identifier": "VMware Carbon Black Cloud Alerts Connector_30f26f07-8e4b-4e97-ac52-b7dd488c35f3",
+    "identifier": "VMware Carbon Black Cloud Alerts Connector_38ebc149-c69a-41cf-96d9-031eae8ce85a",
     "connectorDefinitionName": "VMware Carbon Black Cloud Alerts Connector",
     "integration": "CBCloud",
     "remote": false,
@@ -66,7 +66,7 @@
             "mode": "Script",
             "description": "Vmware Carbon Black Cloud API ID (Custom API Key ID)",
             "displayName": "API ID",
-            "value": "***************",
+            "value": "",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },
@@ -77,7 +77,7 @@
             "mode": "Script",
             "description": "Vmware Carbon Black Cloud API Secret Key (Custom API Secret Key)",
             "displayName": "API Secret Key",
-            "value": "***************",
+            "value": "",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },
@@ -243,7 +243,7 @@
             "mode": "Script",
             "description": "Vmware Carbon Black Cloud API ID (Custom API Key ID)",
             "displayName": "API ID",
-            "value": "***************",
+            "value": "",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },
@@ -254,7 +254,7 @@
             "mode": "Script",
             "description": "Vmware Carbon Black Cloud API Secret Key (Custom API Secret Key)",
             "displayName": "API Secret Key",
-            "value": "***************",
+            "value": "",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },

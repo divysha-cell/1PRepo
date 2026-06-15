@@ -1,14 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/AWSCloudTrail/connectors/36/connectorInstances/69",
-    "id": 69,
+    "name": "projects/project/locations/location/instances/instance/integrations/AWSCloudTrail/connectors/-/connectorInstances/115",
+    "id": 115,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/aws-cloud-trail#connector",
-    "identifier": "AWS Cloud Trail - Insights Connector_416d78e9-4bf8-4730-82d6-ca9c538f7ae1",
+    "identifier": "AWS Cloud Trail - Insights Connector_de419113-2b49-400e-aeb6-bb0fc55aa949",
     "connectorDefinitionName": "AWS Cloud Trail - Insights Connector",
     "integration": "AWSCloudTrail",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 36,
     "integrationVersion": "7",
     "statistics": {
         "pastDayAlertsCount": 0,

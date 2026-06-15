@@ -1,9 +1,9 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Sumologic/connectors/60/connectorInstances/55",
-    "id": 55,
+    "name": "projects/project/locations/location/instances/instance/integrations/Sumologic/connectors/60/connectorInstances/174",
+    "id": 174,
     "custom": false,
     "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/sumologic",
-    "identifier": "Sumologic Connector_a8b99525-958a-40ab-820c-f51f49f23472",
+    "identifier": "Sumologic Connector_68200a25-e090-40f3-83b5-cdae63313b2e",
     "connectorDefinitionName": "Sumologic Connector",
     "integration": "Sumologic",
     "remote": false,
@@ -29,22 +29,11 @@
         {
             "mandatory": false,
             "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Sumologic access ID",
-            "displayName": "Access ID",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
             "type": "Password",
             "mode": "Script",
             "description": "Sumologic access key",
             "displayName": "Access Key",
-            "value": "***************",
+            "value": "",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },
@@ -166,6 +155,17 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Sumologic access ID",
+            "displayName": "Access ID",
+            "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }
@@ -195,22 +195,11 @@
         {
             "mandatory": false,
             "advanced": false,
-            "type": "String",
-            "mode": "Script",
-            "description": "Sumologic access ID",
-            "displayName": "Access ID",
-            "value": "dummy_value",
-            "creationTimeUnixTimeInMs": 0,
-            "modificationTimeUnixTimeInMs": 0
-        },
-        {
-            "mandatory": false,
-            "advanced": false,
             "type": "Password",
             "mode": "Script",
             "description": "Sumologic access key",
             "displayName": "Access Key",
-            "value": "***************",
+            "value": "",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         },
@@ -332,6 +321,17 @@
             "description": "The proxy password to authenticate with.",
             "displayName": "Proxy Password",
             "value": "***************",
+            "creationTimeUnixTimeInMs": 0,
+            "modificationTimeUnixTimeInMs": 0
+        },
+        {
+            "mandatory": false,
+            "advanced": false,
+            "type": "String",
+            "mode": "Script",
+            "description": "Sumologic access ID",
+            "displayName": "Access ID",
+            "value": "dummy_value",
             "creationTimeUnixTimeInMs": 0,
             "modificationTimeUnixTimeInMs": 0
         }

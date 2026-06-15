@@ -1,8 +1,8 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/AmazonMacie/connectors/42/connectorInstances/107",
-    "id": 107,
+    "name": "projects/project/locations/location/instances/instance/integrations/AmazonMacie/connectors/42/connectorInstances/122",
+    "id": 122,
     "custom": false,
-    "identifier": "Amazon Macie - Findings Connector_8c875db0-8547-4486-b09a-b3f8e7263bf9",
+    "identifier": "Amazon Macie - Findings Connector_b3618f06-af32-42e1-9926-e22f6ce0efec",
     "connectorDefinitionName": "Amazon Macie - Findings Connector",
     "integration": "AmazonMacie",
     "remote": false,

@@ -60,9 +60,9 @@
             "sourceGroupingIdentifier": null,
             "playbookTriggerKeywords": [],
             "extensions": [],
-            "attachments": [],
+            "attachments": null,
             "isTrimmed": false,
-            "dataType": 0,
+            "dataType": 1,
             "sourceType": 1,
             "sourceSystemUrl": null,
             "sourceRuleIdentifier": null,
@@ -70,7 +70,7 @@
             "updatedFields": [],
             "alertUpdateSupported": false,
             "alertMetadata": {},
-            "dataAccessScope": ""
+            "dataAccessScope": null
         }
     ],
     "type": 0,

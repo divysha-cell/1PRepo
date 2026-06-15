@@ -1,14 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/Exchange/connectors/25/connectorInstances/88",
-    "id": 88,
+    "name": "projects/project/locations/location/instances/instance/integrations/Exchange/connectors/-/connectorInstances/140",
+    "id": 140,
     "custom": false,
-    "documentationLink": "https://cloud.google.com/chronicle/docs/soar/marketplace-integrations/exchange#exchange_mail_connector",
-    "identifier": "Exchange Mail Connector_51dd8e98-0d87-4c9c-a344-d20796626ec3",
+    "identifier": "Exchange Mail Connector_a409d2cd-1514-40a5-8a82-edc4eee1c164",
     "connectorDefinitionName": "Exchange Mail Connector",
     "integration": "Exchange",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 25,
     "integrationVersion": "123",
     "statistics": {
         "pastDayAlertsCount": 0,

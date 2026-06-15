@@ -1,13 +1,12 @@
 {
-    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftGraphSecurityTools/connectors/58/connectorInstances/104",
-    "id": 104,
+    "name": "projects/project/locations/location/instances/instance/integrations/MicrosoftGraphSecurityTools/connectors/-/connectorInstances/160",
+    "id": 160,
     "custom": false,
-    "identifier": "MS SecureScore Alert_7aa340cf-47d7-46f3-a381-f713ba17d225",
+    "identifier": "MS SecureScore Alert_0cd4a52c-f609-4687-9358-8dda90306cfe",
     "connectorDefinitionName": "MS SecureScore Alert",
     "integration": "MicrosoftGraphSecurityTools",
     "remote": false,
     "loggingEnabledUntilUnixMs": 0,
-    "connectorId": 58,
     "integrationVersion": "4",
     "statistics": {
         "pastDayAlertsCount": 0,
