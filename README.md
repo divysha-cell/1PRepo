@@ -28,7 +28,6 @@
 |Google Security Command Center|Security management, data risk & compliance monitoring platform to help with vulnerability management. Detect & respond to security vulnerabilities.|
 |IntSights|The only all-in-one external threat protection platform designed to neutralize cyberattacks outside the wire.|
 |Lists|A set of tools to facilitate managing custom lists within Google SecOps.|
-|MISP|MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threat about cyber security incidents|
 |McAfeeESM|McAfee® Enterprise Security Manager, the industry-leading SIEM solution from McAfee, provides an intelligent, actionable, and integrated platform to protect your customers’ business and grow yours.|
 |Microsoft Azure Sentinel|Microsoft Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.|
 |PerimeterX|Integration of PerimeterX Code Defender alerting with Google SecOps|
@@ -36,6 +35,7 @@
 |Qualys EDR|Qualys Multi-Vector EDR unifies different context vectors like asset discovery, rich normalized software inventory, end-of-life visibility, vulnerabilities and exploits, misconfigurations, in-depth endpoint telemetry, and network reachability with a powerful backend to correlate it all for accurate assessment, detection and response – all in a single, cloud-based app.|
 |Sumologic|Sumo Logic is a cloud-based Machine data analytics company focusing on security, operations and BI usecases. It provides log management and analytics services that leverage machine-generated big data to deliver real-time IT insights.|
 |VirusTotal|VirusTotal is a service that analyzes files and URLs for viruses, worms, trojans and other kinds of malicious content. VirusTotal aggregates many antivirus products and online scan engines to check for viruses that the user's own antivirus may have missed, or to verify against any false positives. Use VirusTotal to investigate suspicious files, domains, URLs, IP addresses, and hashes.|
+|Zscaler|Zscaler is a cloud security solution built for performance and flexible scalability. Use the Zscaler integration to block and manage domains using whitelists and blacklists.|
 
 
 ## Connectors
