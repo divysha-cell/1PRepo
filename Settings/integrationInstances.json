@@ -79,7 +79,7 @@
                 },
                 {
                     "propertyName": "Password",
-                    "value": "dummy_ad_password",
+                    "value": "***************",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Password",
@@ -150,7 +150,7 @@
             "settings": [
                 {
                     "propertyName": "Api Key",
-                    "value": "dummy_vt_api_key",
+                    "value": "***************",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Password",
