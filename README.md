@@ -182,6 +182,36 @@
 |Carbon Black File Modifications|VMware Carbon Black EDR captures four types of file system activity: File creation – the creation of a new file. File Write – the first time a file is written to after being opened or created. File Write Complete – the closing of a file that was written to.This event includes both the file path and also the MD5/SHA256 of the written file. The event is only captured for binaries (Windows PE files such as EXE, DLL and drivers), Adobe Docs (PDF), OfficeXML docs (docx, doc, xlsx, xls, pptx, ppt)  and zip archives (zip) that are smaller than 10MB in size. Can be enabled or disabled independently of filemod collection by deselecting "Non-binary file writes" Not available on macOS and Linux sensors File deletion – the deletion of an existing file.|
 |Carbon Black Network Connections Event|VMware Carbon Black EDR captures network connections with the following characteristics: Both TCP over IPv4 or UDP over IPv4 connections Both inbound and outbound connections Network connections record TCP or UDP protocol, the remote IPv4 address, port and the domain name associated with the remote IPv4 Address Inbound connections capture the local port. If the sensor is installed on a typically configured web server, the reported port is 80. Outbound connections capture the remote port, uutbound connections made after DNS resolution the name that resolves to the captured IPV4 address is also reported. The sensor utilizes a passive sensing approach to capturing the domain name, so no additional network traffic is generated in order to capture the name. For DNS/DHCP servers, high CPU and/or memory can be seen due to the high number of netconn events. Rather than disabling all netconns, disable DNS capture on that machine. CB Response: Windows Sensor Causing High CPU/memory Utilization on Netconn Intense Server.|
 |Carbon Black Process Event|Cross Process Event and Child Process Events: VMware Carbon Black EDR provides a cross-process event type that records an occurrence of a process that crosses the security boundary of another process. While some of these events are benign, others can indicate an attempt to change the behavior of the target process by a malicious process.|
+|VisualFamily_1|Description for VisualFamily_1|
+|VisualFamily_10|Description for VisualFamily_10|
+|VisualFamily_11|Description for VisualFamily_11|
+|VisualFamily_12|Description for VisualFamily_12|
+|VisualFamily_13|Description for VisualFamily_13|
+|VisualFamily_14|Description for VisualFamily_14|
+|VisualFamily_15|Description for VisualFamily_15|
+|VisualFamily_16|Description for VisualFamily_16|
+|VisualFamily_17|Description for VisualFamily_17|
+|VisualFamily_18|Description for VisualFamily_18|
+|VisualFamily_19|Description for VisualFamily_19|
+|VisualFamily_2|Description for VisualFamily_2|
+|VisualFamily_20|Description for VisualFamily_20|
+|VisualFamily_21|Description for VisualFamily_21|
+|VisualFamily_22|Description for VisualFamily_22|
+|VisualFamily_23|Description for VisualFamily_23|
+|VisualFamily_24|Description for VisualFamily_24|
+|VisualFamily_25|Description for VisualFamily_25|
+|VisualFamily_26|Description for VisualFamily_26|
+|VisualFamily_27|Description for VisualFamily_27|
+|VisualFamily_28|Description for VisualFamily_28|
+|VisualFamily_29|Description for VisualFamily_29|
+|VisualFamily_3|Description for VisualFamily_3|
+|VisualFamily_30|Description for VisualFamily_30|
+|VisualFamily_4|Description for VisualFamily_4|
+|VisualFamily_5|Description for VisualFamily_5|
+|VisualFamily_6|Description for VisualFamily_6|
+|VisualFamily_7|Description for VisualFamily_7|
+|VisualFamily_8|Description for VisualFamily_8|
+|VisualFamily_9|Description for VisualFamily_9|
 
 
 ## Jobs
