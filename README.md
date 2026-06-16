@@ -28,6 +28,7 @@
 |Google Security Command Center|Security management, data risk & compliance monitoring platform to help with vulnerability management. Detect & respond to security vulnerabilities.|
 |IntSights|The only all-in-one external threat protection platform designed to neutralize cyberattacks outside the wire.|
 |Lists|A set of tools to facilitate managing custom lists within Google SecOps.|
+|MISP|MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threat about cyber security incidents|
 |McAfeeESM|McAfee® Enterprise Security Manager, the industry-leading SIEM solution from McAfee, provides an intelligent, actionable, and integrated platform to protect your customers’ business and grow yours.|
 |Microsoft Azure Sentinel|Microsoft Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.|
 |PerimeterX|Integration of PerimeterX Code Defender alerting with Google SecOps|
