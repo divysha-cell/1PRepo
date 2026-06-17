@@ -38,3 +38,4 @@
 |----|-----------|
 |Alert Prioritization|This blocks changes the alert priority value based on the alert score.|
 |New Block|An embedded workflow that can receive inputs and return an output.|
+Addon

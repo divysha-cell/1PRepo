@@ -52,3 +52,4 @@ Amazon Web Services Cloud Platform Starting Playbook provides reference implemen
 |Alert Priority|This block sets the alert priority using a previously defined playbook variable, ensuring consistent prioritization logic for the case workflow.|
 |GTI Enrichment|This block enhances case entities with Google Threat Intelligence enrichment information. Works for IPs, URLs, hostnames, domains, hashes (MD5, SHA-1, SHA-256), threat actors, and CVEs.|
 |AWS Users Containment|An embedded workflow that can receive inputs and return an output.|
+Addon

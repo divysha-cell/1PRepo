@@ -52,3 +52,4 @@ Amazon Web Services Cloud Platform Starting Playbook provides reference implemen
 |Google SecOps Enrichment|This block retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.|
 |AWS Users Containment|An embedded workflow that can receive inputs and return an output.|
 |MITRE Enrichment|This block retrieves detailed information about MITRE ATT&CK techniques and their associated mitigations, providing valuable context to understand adversary behaviors and possible defensive actions.|
+Addon

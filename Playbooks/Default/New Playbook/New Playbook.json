@@ -1,6 +1,6 @@
 {
     "id": 0,
-    "identifier": "b6dd2871-e6b3-46f2-8c0c-8d6f572b3914",
+    "identifier": "beb39d18-0fe0-4a38-b2b0-465f582e0a5c",
     "version": "1",
     "isEnabled": true,
     "isDebugMode": false,
@@ -15,12 +15,12 @@
     ],
     "categoryName": "Default",
     "categoryId": 1,
-    "originalPlaybookIdentifier": "b6dd2871-e6b3-46f2-8c0c-8d6f572b3914",
-    "creationTimeUnixTimeInMs": 1781177583485,
-    "modificationTimeUnixTimeInMs": 1781177583485,
+    "originalPlaybookIdentifier": "beb39d18-0fe0-4a38-b2b0-465f582e0a5c",
+    "creationTimeUnixTimeInMs": 1781690336141,
+    "modificationTimeUnixTimeInMs": 1781690336141,
     "trigger": {
         "id": 0,
-        "identifier": "457970aa-6a0a-4a71-bf1e-77144a69a634",
+        "identifier": "5d11e627-b605-43c8-85a2-278063693709",
         "type": 8,
         "logicalOperator": 0,
         "conditions": [
@@ -165,13 +165,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "b6dd2871-e6b3-46f2-8c0c-8d6f572b3914",
+            "workflowIdentifier": "beb39d18-0fe0-4a38-b2b0-465f582e0a5c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781177583485,
-            "modificationTimeUnixTimeInMs": 1781177583485,
+            "creationTimeUnixTimeInMs": 1781690336141,
+            "modificationTimeUnixTimeInMs": 1781690336141,
             "additionalProperties": {}
         },
         {
@@ -256,7 +256,7 @@
                 },
                 {
                     "name": "IntegrationInstance",
-                    "value": "86ca72e0-c95f-45de-a5ab-bbc0dcb3be49",
+                    "value": "63fa4ee4-e736-4541-85e5-67bb274405d7",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -348,13 +348,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "b6dd2871-e6b3-46f2-8c0c-8d6f572b3914",
+            "workflowIdentifier": "beb39d18-0fe0-4a38-b2b0-465f582e0a5c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781177583485,
-            "modificationTimeUnixTimeInMs": 1781177583485,
+            "creationTimeUnixTimeInMs": 1781690336141,
+            "modificationTimeUnixTimeInMs": 1781690336141,
             "additionalProperties": {}
         },
         {
@@ -446,8 +446,7 @@
                     "id": 0,
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "additionalProperties": {},
-                    "InstanceDisplayName": "System Default Instance"
+                    "additionalProperties": {}
                 },
                 {
                     "name": "MessageToAssignee",
@@ -531,13 +530,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "b6dd2871-e6b3-46f2-8c0c-8d6f572b3914",
+            "workflowIdentifier": "beb39d18-0fe0-4a38-b2b0-465f582e0a5c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781177583485,
-            "modificationTimeUnixTimeInMs": 1781177583485,
+            "creationTimeUnixTimeInMs": 1781690336141,
+            "modificationTimeUnixTimeInMs": 1781690336141,
             "additionalProperties": {}
         },
         {
@@ -600,7 +599,7 @@
                 },
                 {
                     "name": "NestedWorkflowIdentifier",
-                    "value": "233cebfd-e0af-4032-b38a-cd82977fd7c8",
+                    "value": "c48b7a15-f6d4-4754-9f9e-78d0db808dae",
                     "type": null,
                     "isMandatory": false,
                     "defaultValue": null,
@@ -669,13 +668,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "b6dd2871-e6b3-46f2-8c0c-8d6f572b3914",
+            "workflowIdentifier": "beb39d18-0fe0-4a38-b2b0-465f582e0a5c",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781177583485,
-            "modificationTimeUnixTimeInMs": 1781177583485,
+            "creationTimeUnixTimeInMs": 1781690336141,
+            "modificationTimeUnixTimeInMs": 1781690336141,
             "additionalProperties": {}
         }
     ],
@@ -710,23 +709,23 @@
     "permissions": [],
     "overviewTemplates": [
         {
-            "id": 34,
-            "identifier": "9bbb4d4b-32d8-4bec-8d80-c2021429b978",
+            "id": 4,
+            "identifier": "6bd002f2-9200-4385-aa3e-606affd476c7",
             "name": "widgetNP",
             "creator": null,
-            "playbookIdentifier": "b6dd2871-e6b3-46f2-8c0c-8d6f572b3914",
+            "playbookIdentifier": "beb39d18-0fe0-4a38-b2b0-465f582e0a5c",
             "type": 0,
             "widgets": [
                 {
                     "metadata": {
-                        "id": 134,
-                        "identifier": "e01de098-f057-4af3-ae5c-594646b1feff",
+                        "id": 23,
+                        "identifier": "45cddf50-3faa-4fc6-9a40-2caf79be70cc",
                         "title": "Siemplify_Case Tag_1",
                         "width": 1,
                         "order": 1,
                         "description": "This widget highlights the most important items in Case Tag",
                         "type": 3,
-                        "templateIdentifier": "9bbb4d4b-32d8-4bec-8d80-c2021429b978",
+                        "templateIdentifier": "6bd002f2-9200-4385-aa3e-606affd476c7",
                         "predefinedWidgetTemplateIdentifier": "bfcd0da2-ba12-456b-8db3-b63029006c17",
                         "actionIdentifier": null,
                         "stepIdentifier": "9002a9cf-d921-4dec-bda3-2f9e16ad74ee",
@@ -781,26 +780,26 @@
             "roleNames": [
                 "Administrator"
             ],
-            "creationTimeUnixTimeInMs": 1781177583485
+            "creationTimeUnixTimeInMs": 1781690336141
         },
         {
-            "id": 35,
-            "identifier": "7a45dc3a-ba2e-4020-adaa-81788c8d2a39",
+            "id": 5,
+            "identifier": "bab17652-ecef-42df-89d2-2eb7bcbadad2",
             "name": "widget",
             "creator": null,
-            "playbookIdentifier": "b6dd2871-e6b3-46f2-8c0c-8d6f572b3914",
+            "playbookIdentifier": "beb39d18-0fe0-4a38-b2b0-465f582e0a5c",
             "type": 0,
             "widgets": [
                 {
                     "metadata": {
-                        "id": 135,
-                        "identifier": "ef62f078-51ac-4997-b794-9c6077bab026",
+                        "id": 24,
+                        "identifier": "fed57bdf-ac9f-4bcd-a93f-d63aec4047fc",
                         "title": "Siemplify_Case Tag_1",
                         "width": 1,
                         "order": 1,
                         "description": "This widget highlights the most important items in Case Tag",
                         "type": 3,
-                        "templateIdentifier": "7a45dc3a-ba2e-4020-adaa-81788c8d2a39",
+                        "templateIdentifier": "bab17652-ecef-42df-89d2-2eb7bcbadad2",
                         "predefinedWidgetTemplateIdentifier": "bfcd0da2-ba12-456b-8db3-b63029006c17",
                         "actionIdentifier": null,
                         "stepIdentifier": "9002a9cf-d921-4dec-bda3-2f9e16ad74ee",
@@ -855,7 +854,7 @@
             "roleNames": [
                 "Administrator"
             ],
-            "creationTimeUnixTimeInMs": 1781177583485
+            "creationTimeUnixTimeInMs": 1781690336141
         }
     ],
     "creationSource": 1

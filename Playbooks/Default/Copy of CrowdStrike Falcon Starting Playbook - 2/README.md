@@ -49,3 +49,4 @@ CrowdStrike Falcon Starting Playbook provides reference implementation of how Cr
 |Set Initial Severity|This block sets the initial alert score based on the SIEM detection severity or the rule metadata severity label.|
 |Google SecOps Enrichment - 1|This block retrieves relevant details about users and assets involved in the case, enhancing the context available for analysis and subsequent actions within Google SecOps SOAR.|
 |CrowdStrike Containment|This block allows the playbook to perform containment actions on endpoints by targeting the IPs and hostnames associated with the case, helping to prevent further compromise during incident response.|
+Addon

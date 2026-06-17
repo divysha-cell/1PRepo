@@ -1,6 +1,6 @@
 {
     "id": 0,
-    "identifier": "c51f3800-86a1-480b-9668-aff545e7b3ba",
+    "identifier": "7a051c4c-4d43-4341-9341-5a523b10a47d",
     "version": "0",
     "isEnabled": true,
     "isDebugMode": false,
@@ -15,12 +15,12 @@
     ],
     "categoryName": "Default",
     "categoryId": 1,
-    "originalPlaybookIdentifier": "c51f3800-86a1-480b-9668-aff545e7b3ba",
-    "creationTimeUnixTimeInMs": 1781177501694,
-    "modificationTimeUnixTimeInMs": 1781177501694,
+    "originalPlaybookIdentifier": "7a051c4c-4d43-4341-9341-5a523b10a47d",
+    "creationTimeUnixTimeInMs": 1781690291389,
+    "modificationTimeUnixTimeInMs": 1781690291389,
     "trigger": {
         "id": 0,
-        "identifier": "60fd13ce-162b-4c96-81d7-6059cac14f0d",
+        "identifier": "790b1bf3-56da-4f99-a90e-f0b831cbe162",
         "type": 11,
         "logicalOperator": 0,
         "conditions": [],
@@ -202,13 +202,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "c51f3800-86a1-480b-9668-aff545e7b3ba",
+            "workflowIdentifier": "7a051c4c-4d43-4341-9341-5a523b10a47d",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781177501694,
-            "modificationTimeUnixTimeInMs": 1781177501694,
+            "creationTimeUnixTimeInMs": 1781690291389,
+            "modificationTimeUnixTimeInMs": 1781690291389,
             "additionalProperties": {}
         },
         {
@@ -311,8 +311,7 @@
                     "id": 0,
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "additionalProperties": {},
-                    "InstanceDisplayName": "System Default Instance"
+                    "additionalProperties": {}
                 },
                 {
                     "name": "MessageToAssignee",
@@ -374,13 +373,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "c51f3800-86a1-480b-9668-aff545e7b3ba",
+            "workflowIdentifier": "7a051c4c-4d43-4341-9341-5a523b10a47d",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781177501694,
-            "modificationTimeUnixTimeInMs": 1781177501694,
+            "creationTimeUnixTimeInMs": 1781690291389,
+            "modificationTimeUnixTimeInMs": 1781690291389,
             "additionalProperties": {}
         },
         {
@@ -413,13 +412,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "c51f3800-86a1-480b-9668-aff545e7b3ba",
+            "workflowIdentifier": "7a051c4c-4d43-4341-9341-5a523b10a47d",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781177501694,
-            "modificationTimeUnixTimeInMs": 1781177501694,
+            "creationTimeUnixTimeInMs": 1781690291389,
+            "modificationTimeUnixTimeInMs": 1781690291389,
             "additionalProperties": {}
         },
         {
@@ -540,13 +539,13 @@
             "isDebugMockData": false,
             "debugData": null,
             "parentStepContainerId": null,
-            "workflowIdentifier": "c51f3800-86a1-480b-9668-aff545e7b3ba",
+            "workflowIdentifier": "7a051c4c-4d43-4341-9341-5a523b10a47d",
             "isTouchedByAi": false,
             "startLoopStepIdentifier": null,
             "logsExplorerUrl": null,
             "id": 0,
-            "creationTimeUnixTimeInMs": 1781177501694,
-            "modificationTimeUnixTimeInMs": 1781177501694,
+            "creationTimeUnixTimeInMs": 1781690291389,
+            "modificationTimeUnixTimeInMs": 1781690291389,
             "additionalProperties": {}
         }
     ],
