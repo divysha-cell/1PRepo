@@ -24,8 +24,8 @@
 |Amazon Macie - Findings Connector Instance|None|False|
 |Anomali Staxx - Indicators Connector Instance|None|True|
 |Apache Kafka - Messages Connector Instance|None|False|
-|ArcSight - Security Events Connector Instance|None|False|
-|Arcsight ESM Connector Instance|None|False|
+|ArcSight - Security Events Connector Instance|None|True|
+|Arcsight ESM Connector|Arcsight ESM Connector|True|
 |Azure Security Center - Security Alerts Connector Instance|None|True|
 |VMware Carbon Black Cloud Alerts Connector Instance|None|False|
 |VMware Carbon Black Cloud Alerts and Events Baseline Connector Instance|None|False|
