@@ -1,80 +1,63 @@
 # GitSync
 
-## Integrations
-|Name|Description|
-|----|-----------|
-|CrowdStrike Falcon|CrowdStrike Falcon is the leader in next-generation endpoint protection, threat intelligence and incident response through cloud-based endpoint protection.|
-|GitSync|Sync Google SecOps integrations, playbooks, and settings with a GitHub, BitBucket or GitLab instance|
-|Google Chronicle|Google SecOps enables you to examine the aggregated security information for your enterprise going back for months or longer. Use Google SecOps to search across all of the domains accessed from within your enterprise. To enable the Google API client to communicate with the Backstory API you will need Google Developer Service Account Credential, https://developers.google.com/identity/protocols/OAuth2#serviceaccount.|
-|Google SecOps AI Agents|This integration provides first-party AI agents for Google Chronicle. It allows users to leverage Google's advanced AI capabilities for security operations and threat intelligence within the Chronicle platform.|
-|Palo Alto Cortex XDR|Cortex XDR - XDR is the world’s first detection and response app that natively integrates network, endpoint and cloud data to stop sophisticated attacks.  Cortex XDR accurately detects threats with behavioral analytics and reveals the root cause to speed up investigations.|
-|SOCRadar|Bidirectional integration between SOCRadar Extended Threat Intelligence (XTI) and Google SecOps SOAR. Ingests SOCRadar alarms as cases, provides IOC enrichment, threat feed collection, rapid reputation lookups, and full alarm lifecycle management. Support: integration@socradar.io|
-
-
 ## Connectors
 |Name|Description|Has Mappings|
 |----|-----------|------------|
-|AWS Cloud Trail - Insights Connector Instance|None|True|
-|AWS GuardDuty - Findings Connector Instance|None|True|
-|AWS IAM Access Analyzer - Findings Connector Instance|None|True|
-|AWS Security Hub - Findings Connector Instance|None|False|
-|AirTable Connector Instance|None|False|
-|AlienVault USM Anywhere Connector Instance|None|False|
-|AlienVault USM Appliance Connector Instance|None|False|
-|Amazon Macie - Findings Connector Instance|None|False|
-|Anomali Staxx - Indicators Connector Instance|None|True|
-|Apache Kafka - Messages Connector Instance|None|False|
-|ArcSight - Security Events Connector Instance|None|True|
-|Arcsight ESM Connector|Arcsight ESM Connector|True|
-|Azure Security Center - Security Alerts Connector Instance|None|True|
-|VMware Carbon Black Cloud Alerts Connector Instance|None|False|
-|VMware Carbon Black Cloud Alerts and Events Baseline Connector Instance|None|False|
-|VMware Carbon Black Cloud Alerts and Events Tracking Connector Instance|None|False|
-|CA Service Desk Connector Instance|None|True|
-|Crowdstrike - Alerts Connector Instance|None|True|
-|Crowdstrike - Detections Connector Instance|None|True|
-|Crowdstrike - Identity Protection Detections Connector Instance|None|True|
-|Crowdstrike - Incidents Connector Instance|None|True|
-|Crowdstrike Falcon Streaming Events Connector Instance|None|True|
-|Cybersixgill Actionable Alerts Instance|None|False|
-|EclecticIQ - Feed Connector Instance|None|False|
-|Exchange EML Connector Instance|None|True|
-|Exchange Mail Connector Instance|None|True|
-|Exchange Mail Connector v2 Instance|None|True|
-|Exchange Mail Connector v2 with Oauth Authentication Instance|None|True|
-|Extrahop - Detections Connector Instance|None|False|
-|FireEye ETP - Email Alerts Connector Instance|None|False|
-|FireEye Helix - Alerts Connector Instance|None|False|
-|Freshservice Tickets Connector Instance|None|False|
-|Google Chronicle - Chronicle Alerts Connector Instance|None|True|
-|Google Security Command Center - Findings Connector Instance|None|False|
-|DRP Typosquatting Connector Instance|None|False|
-|DRP Violations Connector Instance|None|False|
-|DRP Violations Review Connector Instance|None|False|
-|Intsights Connector Instance|None|False|
-|McAfee ESM Connector Instance|None|False|
-|McAfee ESM Correlations Connector Instance|None|False|
-|Microsoft 365 Defender - Incidents Connector Instance|None|True|
-|Microsoft Azure Sentinel Incident Connector Instance|None|True|
-|Microsoft Azure Sentinel Incident Connector v2 Instance|None|True|
-|Microsoft Sentinel Incident Tracking Connector Instance|None|True|
-|Microsoft Graph Mail Delegated Connector Instance|None|True|
-|MS SecureScore Alert Instance|None|False|
-|MS365 MFA Alert Instance|None|False|
-|ObserveIT - Alerts Connector Instance|None|False|
-|Palo Alto Cortex XDR Connector Instance|None|True|
-|Slack Connector For Code Defender Instance|None|False|
-|PhishRod - Incidents Connector Instance|None|False|
-|Qualys EDR - Events Connector Instance|None|False|
-|SOCRadar Alarms Connector Instance|None|True|
-|SentinelOne - Alerts Connector Instance|None|True|
-|SentinelOne - Threats Connector Instance|None|True|
-|ServiceNow Connector Instance|None|True|
-|Splunk ES - Notable Events Connector Instance|None|True|
-|Splunk Pull Connector Instance|None|True|
-|Splunk Query Connector Instance|None|True|
-|Sumologic Connector Instance|None|False|
-|Vectra RUX - Entities Connector Instance|None|False|
+|Connector_35_AWSCloudTrail|Pull insights from AWS Cloud Trail.|True|
+|Connector_54_AmazonMacie|Pull findings from Amazon Macie. Note: Whitelist works with Finding types, for example, SensitiveData:S3Object/Personal.|False|
+|Connector_23_AnomaliStaxx|Pull indicators from Anomali Staxx|True|
+|Connector_19_Arcsight|Arcsight ESM Connector|True|
+|Connector_31_AzureADIdentityProtection|Pull information about risk detections from Azure AD Identity Protection. Note: whitelist filter works with "riskEventType" parameter.|False|
+|Connector_42_AzureSecurityCenter|Deprecation Notice! This connector is planned to be deprecated on 30th March 2027. Visit documentation for more information. Pull security alerts from Azure Security Center. Note: whitelist works with alertType field.|True|
+|Connector_48_BMCHelixRemedyForce|Pull information about incidents from BMC Helix Remedyforce.|False|
+|Connector_53_BlueLiv|Pull security threats from BlueLiv. Connector fetches all of the latest threats from BlueLiv modules. Whitelist and blacklist filters work with BlueLiv module types. For example, if you want to get threats only from Hacktivism modules, you can turn on the whitelist and type in the Hacktivism type name.|False|
+|Connector_30_CiscoAMP|Pull security events from Cisco AMP into Siemplify. Note: whitelist works with eventType parameter.|False|
+|Connector_44_Devo|Connector can be used to fetch alert records from Devo siem.logtrust.alert.info table. Connector whitelist can be used to ingest only specific types of alerts based on alert context value.|False|
+|Connector_52_DigitalShadows|Connector ingest incidents from Digital Shadows into Siemplify.|False|
+|Connector_45_EmailV2|Configured Connector_45_EmailV2|False|
+|Connector_41_Extrahop|Pull information about detections from Extrahop. Note: whitelist filter works with "type" parameter.|False|
+|Connector_46_FireEyeHelix|Pull alerts from FireEye Helix.|False|
+|Connector_34_FireEyeNX|Connector ingests FireEye NX alert into Siemplify.|False|
+|Connector_51_FortiAnalyzer|Pull information about alerts from FortiAnalyzer. Note: Dynamic list filter works with the "subject" parameter.|False|
+|Connector_39_Fortigate|Pull information about different threat logs from Fortigate. Note: whitelist filter works with "eventtype" parameter.|False|
+|Connector_37_FortinetFortiSIEM|Connector can be used to fetch FortiSIEM incidents. Connector whitelist can be used to ingest only specific types of incidents based on incident’s “eventType” attribute value. SourceGroupIdentifier of the connector can be used to group Siemplify alerts based on incident id.  Connector requires FortiSIEM version 6.3 or newer.|False|
+|Connector_20_FreshworksFreshservice|Connector can be used to fetch Freshservice tickets to create Siemplify alerts from. Connector whitelist can be used to ingest only specific types of tickets - Incident or Service Request|False|
+|Connector_28_Gmail|The Gmail Connector retrieves Gmail emails from the specified mailbox. To filter specific values from the email body and subject, use the dynamic list regular expressions in the following format: “key: regex”. For example, after finding a match for the following regex: “subject: (?<=Subject: ).*”, the connector creates a Google SecOps alert event and adds a new key with the “subject” name to it. The new key value matches the regular expression.|False|
+|Connector_40_GoogleAlertCenter|Pull information about alerts from Google Alert Center. Note: whitelist filter works with "type" parameter.|False|
+|Connector_1_GoogleChronicle|Pull information about Rule based alerts from Google Chronicle. Note: dynamic list is used for filtering purposes. For all of the details please visit the documentation portal.|True|
+|Connector_25_GoogleThreatIntelligence|Use the Google Threat Intelligence - DTM Alerts Connector to retrieve alerts from Google Threat Intelligence. The dynamic listworks with the "alert_type" parameter.|False|
+|Connector_33_HarmonyMobile|Pull information about alerts from Harmony Mobile. Note: whitelist filter works with "threat_factors" parameter.|False|
+|Connector_43_IllusiveNetworks|Pull incidents with related forensic timeline from Illusive Networks. Note: This connector requires changes to the rate limiting on the Illusive Networks server. Default rate limit is too small. All of the steps are available in the documentation. Whitelisting and Blacklisting is done via type of the incident|False|
+|Connector_27_Intsights|Configured Connector_27_Intsights|False|
+|Connector_36_LogRhythm|Pull alerts from LogRhythm using Rest API. Note: this connector is only supported for LogRhythm version 7.7+.|False|
+|Connector_21_McAfeeEPO|Pull events from the EPOEvents table into Siemplify. Whitelist works with Analyzer names.|False|
+|Connector_55_McAfeeMvisionEPOV2|Pull events from McAfee Mvision EPO V2.|False|
+|Connector_49_NozomiNetworks|Connector to fetch Nozomi Networks Alerts to Siemplify.|False|
+|Connector_18_Office365CloudAppSecurity|Fetches alerts from Office 365 CloudApp Security.|False|
+|Connector_26_OpenSearch|OpenSearch Connector|False|
+|Connector_50_Outpost24|Pull information about outscan findings from Outpost24. Note: whitelist filter works with "productName" parameter.|False|
+|Connector_32_PaloAltoPrismaCloud|Pull alerts from Palo Alto Prisma Cloud. Dynamic List works with the “policy.name” parameter.|False|
+|Connector_47_Phishrod|Pull information about incidents from PhishRod. Note: dynamic list filter works with “emailSubject” parameter.|False|
+|Connector_22_QRadar|Qradar Baseline Offenses connector used to fetch offenses and create Chronicle SOAR alerts based on the Qradar offenses names. Connector will create a single SOAR alert per Qradar offense, and will not try to create additional SOAR alerts with new events from Qradar. Connector uses SOAR dynamic list, but by default if no whitelist rules are set, it will fetchingest all offenses returned from the Qradar API offenses. Connector requires Qradar API version 10.1 or higher.|False|
+|Connector_38_QualysVM|Pull detections from Qualys VM. Note: whitelist works with "Type" parameter.|False|
+|Connector_24_RSANetWitness|RSA Netwitness static query connector.|False|
+|Connector_29_Rapid7InsightIDR|This connector was built using API endpoints that are in preview release. Pull information about investigation from Rapid7 InsightIDR. Note: Dynamic list filter works with the "title" parameter.|False|
+|Connector_16_Site24x7|Pull information about alert logs from Site24x7.|False|
+|Connector_15_Sophos|Pull alerts from Sophos Central into Siemplify. Note: alerts are available to API only for 24 hours.|False|
+|Connector_17_Splunk|Splunk Pull Connector|True|
+|Connector_14_StellarCyberStarlight|Pull security events from Stellar Cyber Starlight.  Note: dynamic list works with the Chronicle SOAR alert name, which can be either “event_category: event_name” or “_source_xdr_event_xdr_killchain_stage:_source_xdr_event_name”|False|
+|Connector_11_SumoLogicCloudSIEM|Pull information about insights from Sumo Logic Cloud SIEM. Note: dynamic list filter works with "name" parameter.|False|
+|Connector_12_Sumologic|Sumologic Connector|False|
+|Connector_10_SymantecATP|Fetch incidents from Symantec ATP|False|
+|Connector_9_SymantecICDX|Fetching events from SymantecICDX server using a query|False|
+|Connector_13_SysdigSecure|Use the Sysdig Secure - Events Connector to pull events from Sysdig Secure. The dynamic list works with the "ruleName" parameter.|False|
+|Connector_7_TenableIO|Pull vulnerabilities from Tenable.io. Note: connector works with plugin families in whitelist.|False|
+|Connector_8_TenableSecurityCenter|Tenable Security Center Connector|False|
+|Connector_6_TrendVisionOne|Pull information about workbench alerts from Trend Vision One. Note: dynamic list filter works with "model" parameter.|False|
+|Connector_4_VaronisDataSecurityPlatform|Connector can be used to fetch alerts from the Varonis Data Security Platform. The connector dynamic list can be used to filter specific alerts for ingestion based on the Varonis Data Security Platform alert name.|False|
+|Connector_3_Vectra|Vectra - Detections Connector|False|
+|Connector_5_VirusTotalV3|Pull information about Livehunt notifications and related files from VirusTotal. Note: this connector requires a premium API token. Dynamic list works with "rule_name" parameter.|False|
+|Connector_2_Zabbix|Zabbix connector - fetches events from Zabbix.|False|
 
 
 ## Playbooks
