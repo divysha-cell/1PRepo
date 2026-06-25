@@ -11,12 +11,12 @@
 ## Connectors
 |Name|Description|Has Mappings|
 |----|-----------|------------|
-|Connector_35_AWSCloudTrail|Pull insights from AWS Cloud Trail.|True|
+|Connector_35_AWSCloudTrail|Pull insights from AWS Cloud Trail.|False|
 |Connector_54_AmazonMacie|Pull findings from Amazon Macie. Note: Whitelist works with Finding types, for example, SensitiveData:S3Object/Personal.|False|
-|Connector_23_AnomaliStaxx|Pull indicators from Anomali Staxx|True|
-|Connector_19_Arcsight|Arcsight ESM Connector|True|
+|Connector_23_AnomaliStaxx|Pull indicators from Anomali Staxx|False|
+|Connector_19_Arcsight|Arcsight ESM Connector|False|
 |Connector_31_AzureADIdentityProtection|Pull information about risk detections from Azure AD Identity Protection. Note: whitelist filter works with "riskEventType" parameter.|False|
-|Connector_42_AzureSecurityCenter|Deprecation Notice! This connector is planned to be deprecated on 30th March 2027. Visit documentation for more information. Pull security alerts from Azure Security Center. Note: whitelist works with alertType field.|True|
+|Connector_42_AzureSecurityCenter|Deprecation Notice! This connector is planned to be deprecated on 30th March 2027. Visit documentation for more information. Pull security alerts from Azure Security Center. Note: whitelist works with alertType field.|False|
 |Connector_48_BMCHelixRemedyForce|Pull information about incidents from BMC Helix Remedyforce.|False|
 |Connector_53_BlueLiv|Pull security threats from BlueLiv. Connector fetches all of the latest threats from BlueLiv modules. Whitelist and blacklist filters work with BlueLiv module types. For example, if you want to get threats only from Hacktivism modules, you can turn on the whitelist and type in the Hacktivism type name.|False|
 |Connector_30_CiscoAMP|Pull security events from Cisco AMP into Siemplify. Note: whitelist works with eventType parameter.|False|
@@ -32,7 +32,7 @@
 |Connector_20_FreshworksFreshservice|Connector can be used to fetch Freshservice tickets to create Siemplify alerts from. Connector whitelist can be used to ingest only specific types of tickets - Incident or Service Request|False|
 |Connector_28_Gmail|The Gmail Connector retrieves Gmail emails from the specified mailbox. To filter specific values from the email body and subject, use the dynamic list regular expressions in the following format: “key: regex”. For example, after finding a match for the following regex: “subject: (?<=Subject: ).*”, the connector creates a Google SecOps alert event and adds a new key with the “subject” name to it. The new key value matches the regular expression.|False|
 |Connector_40_GoogleAlertCenter|Pull information about alerts from Google Alert Center. Note: whitelist filter works with "type" parameter.|False|
-|Connector_1_GoogleChronicle|Pull information about Rule based alerts from Google Chronicle. Note: dynamic list is used for filtering purposes. For all of the details please visit the documentation portal.|True|
+|Connector_1_GoogleChronicle|Pull information about Rule based alerts from Google Chronicle. Note: dynamic list is used for filtering purposes. For all of the details please visit the documentation portal.|False|
 |Connector_25_GoogleThreatIntelligence|Use the Google Threat Intelligence - DTM Alerts Connector to retrieve alerts from Google Threat Intelligence. The dynamic listworks with the "alert_type" parameter.|False|
 |Connector_33_HarmonyMobile|Pull information about alerts from Harmony Mobile. Note: whitelist filter works with "threat_factors" parameter.|False|
 |Connector_43_IllusiveNetworks|Pull incidents with related forensic timeline from Illusive Networks. Note: This connector requires changes to the rate limiting on the Illusive Networks server. Default rate limit is too small. All of the steps are available in the documentation. Whitelisting and Blacklisting is done via type of the incident|False|
@@ -52,7 +52,7 @@
 |Connector_29_Rapid7InsightIDR|This connector was built using API endpoints that are in preview release. Pull information about investigation from Rapid7 InsightIDR. Note: Dynamic list filter works with the "title" parameter.|False|
 |Connector_16_Site24x7|Pull information about alert logs from Site24x7.|False|
 |Connector_15_Sophos|Pull alerts from Sophos Central into Siemplify. Note: alerts are available to API only for 24 hours.|False|
-|Connector_17_Splunk|Splunk Pull Connector|True|
+|Connector_17_Splunk|Splunk Pull Connector|False|
 |Connector_14_StellarCyberStarlight|Pull security events from Stellar Cyber Starlight.  Note: dynamic list works with the Chronicle SOAR alert name, which can be either “event_category: event_name” or “_source_xdr_event_xdr_killchain_stage:_source_xdr_event_name”|False|
 |Connector_11_SumoLogicCloudSIEM|Pull information about insights from Sumo Logic Cloud SIEM. Note: dynamic list filter works with "name" parameter.|False|
 |Connector_12_Sumologic|Sumologic Connector|False|
@@ -139,42 +139,4 @@
 |New Playbook||
 |fresh New Block|An embedded workflow that can receive inputs and return an output.|
 |fresh New Playbook||
-
-
-## Visual Families
-|Name|Description|
-|----|-----------|
-|Carbon Black File Modifications|VMware Carbon Black EDR captures four types of file system activity: File creation – the creation of a new file. File Write – the first time a file is written to after being opened or created. File Write Complete – the closing of a file that was written to.This event includes both the file path and also the MD5/SHA256 of the written file. The event is only captured for binaries (Windows PE files such as EXE, DLL and drivers), Adobe Docs (PDF), OfficeXML docs (docx, doc, xlsx, xls, pptx, ppt)  and zip archives (zip) that are smaller than 10MB in size. Can be enabled or disabled independently of filemod collection by deselecting "Non-binary file writes" Not available on macOS and Linux sensors File deletion – the deletion of an existing file.|
-|Carbon Black Network Connections Event|VMware Carbon Black EDR captures network connections with the following characteristics: Both TCP over IPv4 or UDP over IPv4 connections Both inbound and outbound connections Network connections record TCP or UDP protocol, the remote IPv4 address, port and the domain name associated with the remote IPv4 Address Inbound connections capture the local port. If the sensor is installed on a typically configured web server, the reported port is 80. Outbound connections capture the remote port, uutbound connections made after DNS resolution the name that resolves to the captured IPV4 address is also reported. The sensor utilizes a passive sensing approach to capturing the domain name, so no additional network traffic is generated in order to capture the name. For DNS/DHCP servers, high CPU and/or memory can be seen due to the high number of netconn events. Rather than disabling all netconns, disable DNS capture on that machine. CB Response: Windows Sensor Causing High CPU/memory Utilization on Netconn Intense Server.|
-|Carbon Black Process Event|Cross Process Event and Child Process Events: VMware Carbon Black EDR provides a cross-process event type that records an occurrence of a process that crosses the security boundary of another process. While some of these events are benign, others can indicate an attempt to change the behavior of the target process by a malicious process.|
-|VisualFamily_1|Description for VisualFamily_1|
-|VisualFamily_10|Description for VisualFamily_10|
-|VisualFamily_11|Description for VisualFamily_11|
-|VisualFamily_12|Description for VisualFamily_12|
-|VisualFamily_13|Description for VisualFamily_13|
-|VisualFamily_14|Description for VisualFamily_14|
-|VisualFamily_15|Description for VisualFamily_15|
-|VisualFamily_16|Description for VisualFamily_16|
-|VisualFamily_17|Description for VisualFamily_17|
-|VisualFamily_18|Description for VisualFamily_18|
-|VisualFamily_19|Description for VisualFamily_19|
-|VisualFamily_2|Description for VisualFamily_2|
-|VisualFamily_20|Description for VisualFamily_20|
-|VisualFamily_21|Description for VisualFamily_21|
-|VisualFamily_22|Description for VisualFamily_22|
-|VisualFamily_23|Description for VisualFamily_23|
-|VisualFamily_24|Description for VisualFamily_24|
-|VisualFamily_25|Description for VisualFamily_25|
-|VisualFamily_26|Description for VisualFamily_26|
-|VisualFamily_27|Description for VisualFamily_27|
-|VisualFamily_28|Description for VisualFamily_28|
-|VisualFamily_29|Description for VisualFamily_29|
-|VisualFamily_3|Description for VisualFamily_3|
-|VisualFamily_30|Description for VisualFamily_30|
-|VisualFamily_4|Description for VisualFamily_4|
-|VisualFamily_5|Description for VisualFamily_5|
-|VisualFamily_6|Description for VisualFamily_6|
-|VisualFamily_7|Description for VisualFamily_7|
-|VisualFamily_8|Description for VisualFamily_8|
-|VisualFamily_9|Description for VisualFamily_9|
 
