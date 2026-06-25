@@ -1,0 +1,17 @@
+{
+    "system_version": "6.1.6.176",
+    "readme_addons": {
+        "Integration": {},
+        "Mappings": {},
+        "Visual Family": {},
+        "Playbook": {},
+        "Connector": {
+            "Crowdstrike - Alerts Connector": "addon"
+        },
+        "Job": {},
+        "Block": {}
+    },
+    "settings": {
+        "update_root_readme": true
+    }
+}
