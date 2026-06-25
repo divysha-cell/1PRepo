@@ -1,7 +1,9 @@
 {
     "system_version": "6.1.6.176",
     "readme_addons": {
-        "Integration": {},
+        "Integration": {
+            "CrowdStrikeFalcon": "Addon"
+        },
         "Mappings": {},
         "Visual Family": {},
         "Playbook": {},
