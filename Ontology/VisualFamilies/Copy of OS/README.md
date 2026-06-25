@@ -15,3 +15,4 @@ User activity on machine
 |SourceUserName||||Linked|SourceHostName|SourceAddress|||
 |SourceHostName||||Linked|SourceAddress||||
 |DestinationHostName|DestinationAddress|||Linked|FileName||||
+Addon
