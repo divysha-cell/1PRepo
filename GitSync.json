@@ -10,7 +10,9 @@
         "Connector": {
             "Crowdstrike - Alerts Connector": "addon"
         },
-        "Job": {},
+        "Job": {
+            "projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/2/jobInstances/3": "addon"
+        },
         "Block": {}
     },
     "settings": {
