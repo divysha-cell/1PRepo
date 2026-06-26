@@ -16,7 +16,8 @@
             "projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/2/jobInstances/3": "addon"
         },
         "Block": {
-            "New Block": "Addon"
+            "New Block": "Addon",
+            "Newfolder block - New Block": "Addon"
         }
     },
     "settings": {
