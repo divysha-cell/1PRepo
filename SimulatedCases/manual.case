@@ -25,7 +25,7 @@
             ],
             "environment": null,
             "sourceSystemName": "manual",
-            "ticketId": null,
+            "ticketId": "manual",
             "description": null,
             "displayId": null,
             "reason": null,

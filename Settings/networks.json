@@ -1,10 +1,13 @@
 [
     {
-        "name": "projects/project/locations/location/instances/instance/soarNetworks/1",
-        "id": 1,
-        "displayName": "network",
         "address": "1.0.1.0/10",
-        "environmentsJson": "[\"Default Environment\"]",
-        "priority": 1
+        "name": "network",
+        "priority": 1,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 2,
+        "creationTimeUnixTimeInMs": 1782466410910,
+        "modificationTimeUnixTimeInMs": 1782466410910
     }
 ]

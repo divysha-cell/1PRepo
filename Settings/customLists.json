@@ -1,9 +1,13 @@
 [
     {
-        "id": 1,
-        "name": "projects/project/locations/location/instances/instance/customLists/1",
-        "category": "category",
         "entityIdentifier": "customlist",
-        "environments": "[\"Default Environment\"]"
+        "category": "category",
+        "forDBMigration": false,
+        "environments": [
+            "Default Environment"
+        ],
+        "id": 2,
+        "creationTimeUnixTimeInMs": 1782466411168,
+        "modificationTimeUnixTimeInMs": 1782466411168
     }
 ]

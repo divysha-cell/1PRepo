@@ -26,4 +26,3 @@ An embedded workflow that can receive inputs and return an output.
 |---------|-----------|-----------|---------------|
 |Siemplify_Add Entity Insight_1|Add an insight configurable message to each targeted entity|Siemplify|Add Entity Insight|
 
-Addon

@@ -1,16 +1,18 @@
 [
     {
-        "name": "projects/project/locations/location/instances/instance/slaDefinitions/1",
-        "id": 1,
-        "slaType": "AlertRuleGenerator",
-        "alertType": "AllAlerts",
-        "slaTypeValue": "",
+        "id": 2,
+        "valueType": 2,
+        "value": "",
+        "slaPeriodType": 0,
         "slaPeriod": 50.0,
-        "slaPeriodTimeUnit": "Minutes",
-        "criticalSlaPeriod": 10.0,
-        "criticalSlaPeriodTimeUnit": "Minutes",
+        "criticalPeriodType": 0,
+        "criticalPeriod": 10.0,
         "environments": [
             "Default Environment"
+        ],
+        "alertType": 0,
+        "values": [
+            ""
         ]
     }
 ]

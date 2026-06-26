@@ -1,13 +1,15 @@
 [
     {
-        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/3",
-        "id": 3,
-        "displayName": "manual1",
-        "matchCriteria": "ByEntityPropertyName",
         "value": "manual",
+        "name": "manual1",
         "propertyName": "manual",
-        "comparisonType": "Contain",
         "priority": 2,
-        "canBeCaseTitle": false
+        "isPotentialCaseName": false,
+        "environments": [],
+        "type": 3,
+        "compareType": 2,
+        "id": 4,
+        "creationTimeUnixTimeInMs": 1782466408215,
+        "modificationTimeUnixTimeInMs": 1782476450475
     }
 ]

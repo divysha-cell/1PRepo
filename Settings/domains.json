@@ -1,10 +1,12 @@
 [
     {
-        "alias": "projects/project/locations/location/instances/instance/soarDomains/1",
-        "id": 1,
+        "alias": null,
+        "id": 2,
         "domain": "domain",
-        "environments": "[\"Default Environment\"]",
-        "creationTimeUnixTimeInMs": 0,
-        "modificationTimeUnixTimeInMs": 0
+        "environments": [
+            "Default Environment"
+        ],
+        "creationTimeUnixTimeInMs": 1782466411035,
+        "modificationTimeUnixTimeInMs": 1782466411035
     }
 ]
