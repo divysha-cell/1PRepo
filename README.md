@@ -21,6 +21,12 @@
 |Newfolder block - New Block|An embedded workflow that can receive inputs and return an output.|
 
 
+## Visual Families
+|Name|Description|
+|----|-----------|
+|Copy of OS|User activity on machine|
+
+
 ## Jobs
 |Name|Description|
 |----|-----------|
