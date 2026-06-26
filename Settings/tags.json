@@ -1,0 +1,13 @@
+[
+    {
+        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/3",
+        "id": 3,
+        "displayName": "manual1",
+        "matchCriteria": "ByEntityPropertyName",
+        "value": "manual",
+        "propertyName": "manual",
+        "comparisonType": "Contain",
+        "priority": 2,
+        "canBeCaseTitle": false
+    }
+]

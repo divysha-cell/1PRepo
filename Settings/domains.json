@@ -1,0 +1,10 @@
+[
+    {
+        "alias": "projects/project/locations/location/instances/instance/soarDomains/1",
+        "id": 1,
+        "domain": "domain",
+        "environments": "[\"Default Environment\"]",
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
+    }
+]

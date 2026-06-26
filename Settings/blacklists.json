@@ -1,0 +1,10 @@
+[
+    {
+        "name": "projects/project/locations/location/instances/instance/entitiesBlocklists/1",
+        "id": 1,
+        "entityIdentifier": "blocklist",
+        "entityType": "ThreatActor",
+        "action": "DoNotGroupAlerts",
+        "environmentsJson": "[\"Default Environment\"]"
+    }
+]
