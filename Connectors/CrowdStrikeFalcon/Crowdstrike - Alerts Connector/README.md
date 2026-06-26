@@ -4,7 +4,7 @@ Pull alerts from Crowdstrike. Dynamic List works with the "display_name" paramet
 
 Integration: CrowdStrikeFalcon
 
-Integration Version: 76
+Integration Version: 76.0
 
 Device Product Field: Product Name
 
@@ -12,10 +12,11 @@ Event Name Field: type
 ### Parameters
 |Name|Description|Is Mandatory|Value|
 |----|-----------|------------|-----|
+|Client ID|Client ID  of the Crowdstrike account.|True|1|
 |Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False||
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field through regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|.*|
+|Script Timeout (Seconds)|Timeout limit for the python process running the current script.|True|180|
 |API Root|API root of the Crowdstrike instance.|True|https://api.crowdstrike.com|
-|Client ID|Client ID  of the Crowdstrike account.|True|1|
 |Client Secret|Client Secret of the Crowdstrike account.|True|*****|
 |Lowest Severity Score To Fetch|Lowest severity score of the identity protection detections to fetch. If nothing is provided, the connector will ingest detections with all severities. Maximum is 100. Note: action also supports the following values: Informational, Low, Medium, High, Critical.|False||
 |Max Hours Backwards|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|1|

@@ -7,7 +7,7 @@
         "product": "Falcon",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": "ChangeSourceUnspecified",
+        "changeSource": 0,
         "exampleEventFields": []
     },
     {
@@ -18,7 +18,7 @@
         "product": "CrowdStrike Falcon",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": "ChangeSourceUnspecified",
+        "changeSource": 0,
         "exampleEventFields": []
     },
     {
@@ -29,7 +29,7 @@
         "product": "Identity Protection",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": "ChangeSourceUnspecified",
+        "changeSource": 0,
         "exampleEventFields": []
     },
     {
@@ -40,7 +40,7 @@
         "product": "Incidents",
         "eventName": "Behavior",
         "mappingStatus": null,
-        "changeSource": "ChangeSourceUnspecified",
+        "changeSource": 0,
         "exampleEventFields": []
     },
     {
@@ -51,7 +51,7 @@
         "product": "Incidents",
         "eventName": "Incident Data",
         "mappingStatus": null,
-        "changeSource": "ChangeSourceUnspecified",
+        "changeSource": 0,
         "exampleEventFields": []
     },
     {
@@ -62,7 +62,7 @@
         "product": "Alerts",
         "eventName": null,
         "mappingStatus": null,
-        "changeSource": "ChangeSourceUnspecified",
+        "changeSource": 0,
         "exampleEventFields": []
     }
 ]

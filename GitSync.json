@@ -9,7 +9,9 @@
             "Copy of OS": "Addon"
         },
         "Playbook": {},
-        "Connector": {},
+        "Connector": {
+            "Crowdstrike - Alerts Connector": "addon"
+        },
         "Job": {},
         "Block": {}
     },
