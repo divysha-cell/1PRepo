@@ -6,14 +6,18 @@
         },
         "Mappings": {},
         "Visual Family": {},
-        "Playbook": {},
+        "Playbook": {
+            "New Playbook": "Addon"
+        },
         "Connector": {
             "Crowdstrike - Alerts Connector": "addon"
         },
         "Job": {
             "projects/project/locations/location/instances/instance/integrations/GoogleChronicle/jobs/2/jobInstances/3": "addon"
         },
-        "Block": {}
+        "Block": {
+            "New Block": "Addon"
+        }
     },
     "settings": {
         "update_root_readme": true
