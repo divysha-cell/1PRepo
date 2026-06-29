@@ -25,6 +25,7 @@
 ## Visual Families
 |Name|Description|
 |----|-----------|
+|Copy of AV|Anti-virus alerts visualization|
 |Copy of OS|User activity on machine|
 |Copy of RACF|Mainframe resource access|
 
