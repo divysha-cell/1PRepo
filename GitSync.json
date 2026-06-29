@@ -6,7 +6,8 @@
         },
         "Mappings": {},
         "Visual Family": {
-            "Copy of OS": "Addon"
+            "Copy of OS": "Addon",
+            "Copy of RACF": "Addon"
         },
         "Playbook": {},
         "Connector": {
