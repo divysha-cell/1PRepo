@@ -3,7 +3,7 @@
 
 CrowdStrike Falcon is the leader in next-generation endpoint protection, threat intelligence and incident response through cloud-based endpoint protection.
 
-Python Version - 3
+Python Version - V3_11
 #### Parameters
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
@@ -633,7 +633,7 @@ This job will synchronize Google SecOps Alerts and Crowdstrike alerts. The job s
 |API Root|True|String|https://api.crowdstrike.com|
 |Client ID|True|String||
 |Client Secret|True|Password|*****|
-|Max Hours Backwards|False|Integer|24|
+|Max Hours Backwards|False|Int|24|
 |Verify SSL|False|Boolean|true|
 
 
@@ -644,15 +644,12 @@ Deprecated. Pull incident and related behaviors from Crowdstrike. Dynamic List w
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|Product Name|
-|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|data_type|
 |API Root|API root of the Crowdstrike instance.|True|String|https://api.crowdstrike.com|
 |Client ID|Client ID  of the Crowdstrike account.|True|String||
 |Client Secret|Client Secret of the Crowdstrike account.|True|Password|*****|
 |Max Hours Backwards|Number of hours before the first connector iteration to retrieve incidents from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires. Default: 1|False|String|1|
 |Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
-|PythonProcessTimeout|Timeout limit for the python process running the current script. Default: 180|True|Integer|180|
 |Lowest Severity Score To Fetch|Lowest severity score of the incidents to fetch. If nothing is provided, the connector will ingest incidents with all severities. Maximum is 100. Note: action also supports the following values: Low, Medium, High, Critical. In the Crowdstrike UI the same value is presented as divided by 10.|False|String||
 |Max Incidents To Fetch|How many incidents to process per one connector iteration. Default: 10. Max: 100.|False|String|10|
 |Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|Boolean|false|
@@ -670,17 +667,14 @@ Pull alerts from Crowdstrike. Dynamic List works with the "display_name" paramet
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|Boolean|false|
-|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|Product Name|
-|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|type|
 |Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field through regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
-|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
 |API Root|API root of the Crowdstrike instance.|True|String|https://api.crowdstrike.com|
 |Client ID|Client ID  of the Crowdstrike account.|True|String||
 |Client Secret|Client Secret of the Crowdstrike account.|True|Password|*****|
 |Lowest Severity Score To Fetch|Lowest severity score of the identity protection detections to fetch. If nothing is provided, the connector will ingest detections with all severities. Maximum is 100. Note: action also supports the following values: Informational, Low, Medium, High, Critical.|False|String||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Integer|1|
-|Max Alerts To Fetch|How many alerts to process per one connector iteration. Default: 10.|True|Integer|10|
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve alerts from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|True|Int|1|
+|Max Alerts To Fetch|How many alerts to process per one connector iteration. Default: 10.|True|Int|10|
 |Include Hidden Alerts|If enabled, connector will also fetch alerts that are labeled as "hidden" by Crowdstrike.|False|Boolean|true|
 |Fallback Severity|Fallback severity for the SecOps alert that should be applied to the Crowdstrike alerts, which are missing severity information. Possible values: Informational, Low, Medium, High, Critical. If nothing is provided, connector will use "Informational" severity.|False|String|Informational|
 |Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|Boolean|false|
@@ -699,16 +693,13 @@ Pull Identity Protection detections from Crowdstrike. Note: this connector requi
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
 |Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
-|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|Product Name|
-|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|type|
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field through regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
-|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
 |API Root|API root of the Crowdstrike instance.|True|String|https://api.crowdstrike.com|
 |Client ID|Client ID  of the Crowdstrike account.|True|String||
 |Client Secret|Client Secret of the Crowdstrike account.|True|Password|*****|
 |Lowest Severity Score To Fetch|Lowest severity score of the identity protection detections to fetch. If nothing is provided, the connector will ingest detections with all severities. Maximum is 100. Note: action also supports the following values: Informational, Low, Medium, High, Critical.|False|String||
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve detections from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Integer|1|
-|Max Detections To Fetch|How many identity protection detections to process per one connector iteration. Default: 10.|False|Integer|10|
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve detections from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Int|1|
+|Max Detections To Fetch|How many identity protection detections to process per one connector iteration. Default: 10.|False|Int|10|
 |Use dynamic list as a blocklist|If enabled, the dynamic list will be used as a blocklist.|False|Boolean|true|
 |Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|false|
 |Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|Boolean|false|
@@ -725,19 +716,16 @@ Deprecated. Pull detections from Crowdstrike. Whitelist works with filters that 
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|Enter the source field name in order to retrieve the Product Field name.|True|String|Product Name|
-|EventClassId|Enter the source field name in order to retrieve the Event Field name.|True|String|behaviors_technique|
-|PythonProcessTimeout|Timeout limit for the python process running the current script.|True|Integer|180|
 |Environment Field Name|Describes the name of the field where the environment name is stored. If the environment field isn't found, the environment is the default environment.|False|String||
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field. Default is .* to catch all and return the value unchanged. Used to allow the user to manipulate the environment field via regex logic. If the regex pattern is null or empty, or the environment value is null, the final environment result is the default environment.|False|String|.*|
 |API Root|API root of the Crowdstrike instance.|True|String|https://api.crowdstrike.com|
 |Client ID|Client ID  of the Crowdstrike account.|True|String||
 |Client Secret|Client Secret of the Crowdstrike account.|True|Password|*****|
 |Lowest Severity Score To Fetch|Lowest severity score of the detections to fetch. If nothing is provided, the connector won't apply this filter. Maximum is 100. Note: action also supports the following values: Low, Medium, High, Critical.|False|String|50|
-|Lowest Confidence Score To Fetch|Lowest confidence score of the detections to fetch. If nothing is provided, the connector won't apply this filter. Maximum is 100.|False|Integer|0|
-|Max Hours Backwards|Number of hours before the first connector iteration to retrieve detections from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Integer|1|
-|Max Detections To Fetch|How many detections to process per one connector iteration. Default: 10.|False|Integer|10|
-|Padding Period|The number of hours that connector will use for padding. Maximum: 6.|False|Integer|1|
+|Lowest Confidence Score To Fetch|Lowest confidence score of the detections to fetch. If nothing is provided, the connector won't apply this filter. Maximum is 100.|False|Int|0|
+|Max Hours Backwards|Number of hours before the first connector iteration to retrieve detections from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Int|1|
+|Max Detections To Fetch|How many detections to process per one connector iteration. Default: 10.|False|Int|10|
+|Padding Period|The number of hours that connector will use for padding. Maximum: 6.|False|Int|1|
 |Disable Overflow|If enabled, connector will ignore the overflow mechanism.|False|Boolean|false|
 |Verify SSL|If enabled, verify the SSL certificate for the connection to the Crowdstrike server is valid.|False|Boolean|false|
 |Proxy Server Address|The address of the proxy server to use.|False|String||
@@ -753,18 +741,15 @@ Crowdstrike Falcon Streaming Events Connector
 
 |Name|Description|IsMandatory|Type|DefaultValue|
 |----|-----------|-----------|----|------------|
-|DeviceProductField|Describes the name of the field where the product name is stored.|True|String|device_product|
-|EventClassId|Describes the name of the field where the event name is stored.|True|String|Name|
-|PythonProcessTimeout|The timeout limit (in seconds) for the python process running current script|True|Integer|600|
 |Environment Field Name|Describes the name of the field where the environment name is stored. If environment field isn't found, environment is ""|False|String||
 |Environment Regex Pattern|A regex pattern to run on the value found in the "Environment Field Name" field.|False|String||
 |API Root|API root of the Crowdstrike instance|False|String|https://api.crowdstrike.com|
 |Client ID|Client ID for Crowdstrike API|True|String||
 |Client Secret|Client Secret for Crowdstrike API|True|Password|*****|
 |Event types|Specify a comma-separated list of event types. Examples of the event types: DetectionSummaryEvent, IncidentSummaryEvent, UserActivityAuditEvent, RemoteResponseSessionStartEvent, RemoteResponseSessionEndEvent, EppDetectionSummaryEvent. For more information visit documentation portal.|False|String|DetectionSummaryEvent, IncidentSummaryEvent, UserActivityAuditEvent, RemoteResponseSessionStartEvent, RemoteResponseSessionEndEvent, EppDetectionSummaryEvent|
-|Max Events per Cycle|Max events to process per connector run.|True|Integer|100|
-|Max Day Backwards|Number of days before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Integer|3|
-|Min Severity|Specify the events that should be ingested based on the events severity (detections events). The value ranges from 0-5. If other event types besides detections are ingested by the connector, connector sets a severity for them as -1 and this filter is not applied to those types of events|False|Integer|0|
+|Max Events per Cycle|Max events to process per connector run.|True|Int|100|
+|Max Day Backwards|Number of days before the first connector iteration to retrieve events from. This parameter applies to the initial connector iteration after you enable the connector for the first time, or used as a fallback value in cases where connector's last run timestamp expires.|False|Int|3|
+|Min Severity|Specify the events that should be ingested based on the events severity (detections events). The value ranges from 0-5. If other event types besides detections are ingested by the connector, connector sets a severity for them as -1 and this filter is not applied to those types of events|False|Int|0|
 |Alert Name Template|If provided, connector will use this value for Siemplify Alert Name. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use first Siemplify Event for placeholders. Only keys that have string value will be handled. If nothing is provided or user provides an invalid template, connector will use the default alert name.|False|String||
 |Rule Generator Template|	If provided, the connector will use this value for Siemplify Rule Generator. Please refer to the documentation portal for more details. You can provide placeholders in the following format: [name of the field]. Example: Phishing - [event_mailbox]. Note: connector will use the first Siemplify event for placeholders. Only keys that have string value will be handled. If nothing is provided or the user provides an invalid template, the connector will use the default rule generator.|False|String||
 |Proxy Server Address|Proxy server address.|False|String||
