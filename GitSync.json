@@ -14,7 +14,9 @@
         "Connector": {
             "Crowdstrike - Alerts Connector": "addon"
         },
-        "Job": {},
+        "Job": {
+            "Google Chronicle Sync Job": "addon"
+        },
         "Block": {}
     },
     "settings": {
