@@ -1,42 +1,6 @@
 [
     {
         "environment": "*",
-        "integrationIdentifier": "GoogleSecOpsAiAgents",
-        "settings": {
-            "instanceDescription": "",
-            "instanceName": "System All Environments Default Instance",
-            "settings": [
-                {
-                    "propertyName": "Verify SSL",
-                    "value": "True",
-                    "creationTimeUnixTimeInMs": 0,
-                    "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": 0,
-                    "isMandatory": false,
-                    "id": 15,
-                    "propertyDisplayName": "Verify SSL",
-                    "propertyDescription": "If enabled, verify the SSL certificate for the connection.",
-                    "integrationIdentifier": "GoogleSecOpsAiAgents",
-                    "integrationInstance": "404fa741-3411-483e-959e-d4ef2a3347c2"
-                },
-                {
-                    "propertyName": "AgentIdentifier",
-                    "value": null,
-                    "creationTimeUnixTimeInMs": 0,
-                    "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": 9,
-                    "isMandatory": false,
-                    "id": 128,
-                    "propertyDisplayName": "Agent",
-                    "propertyDescription": null,
-                    "integrationIdentifier": "GoogleSecOpsAiAgents",
-                    "integrationInstance": "404fa741-3411-483e-959e-d4ef2a3347c2"
-                }
-            ]
-        }
-    },
-    {
-        "environment": "*",
         "integrationIdentifier": "CrowdStrikeFalcon",
         "settings": {
             "instanceDescription": "",
@@ -47,11 +11,11 @@
                     "value": "https://api.crowdstrike.com",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": 2,
+                    "propertyType": "String",
                     "isMandatory": false,
                     "id": 77,
                     "propertyDisplayName": "API Root",
-                    "propertyDescription": null,
+                    "propertyDescription": "",
                     "integrationIdentifier": "CrowdStrikeFalcon",
                     "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
                 },
@@ -60,11 +24,11 @@
                     "value": "",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": 2,
+                    "propertyType": "String",
                     "isMandatory": true,
                     "id": 78,
                     "propertyDisplayName": "Client API ID",
-                    "propertyDescription": null,
+                    "propertyDescription": "",
                     "integrationIdentifier": "CrowdStrikeFalcon",
                     "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
                 },
@@ -73,11 +37,11 @@
                     "value": "",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": 3,
+                    "propertyType": "Password",
                     "isMandatory": true,
                     "id": 79,
                     "propertyDisplayName": "Client API Secret",
-                    "propertyDescription": null,
+                    "propertyDescription": "",
                     "integrationIdentifier": "CrowdStrikeFalcon",
                     "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
                 },
@@ -86,11 +50,11 @@
                     "value": "False",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": 0,
+                    "propertyType": "Boolean",
                     "isMandatory": false,
                     "id": 80,
                     "propertyDisplayName": "Verify SSL",
-                    "propertyDescription": null,
+                    "propertyDescription": "",
                     "integrationIdentifier": "CrowdStrikeFalcon",
                     "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
                 },
@@ -99,26 +63,36 @@
                     "value": "",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": 2,
+                    "propertyType": "String",
                     "isMandatory": false,
                     "id": 81,
                     "propertyDisplayName": "Customer ID",
                     "propertyDescription": "The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.",
                     "integrationIdentifier": "CrowdStrikeFalcon",
                     "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
-                },
+                }
+            ]
+        }
+    },
+    {
+        "environment": "*",
+        "integrationIdentifier": "GoogleSecOpsAiAgents",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System All Environments Default Instance",
+            "settings": [
                 {
-                    "propertyName": "AgentIdentifier",
-                    "value": null,
+                    "propertyName": "Verify SSL",
+                    "value": "True",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": 9,
+                    "propertyType": "Boolean",
                     "isMandatory": false,
-                    "id": 129,
-                    "propertyDisplayName": "Agent",
-                    "propertyDescription": null,
-                    "integrationIdentifier": "CrowdStrikeFalcon",
-                    "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
+                    "id": 15,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection.",
+                    "integrationIdentifier": "GoogleSecOpsAiAgents",
+                    "integrationInstance": "404fa741-3411-483e-959e-d4ef2a3347c2"
                 }
             ]
         }

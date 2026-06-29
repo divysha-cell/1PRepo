@@ -1,15 +1,10 @@
 [
     {
-        "type": 0,
-        "name": "Template",
-        "content": "Template",
-        "creatorUserName": null,
-        "forMigration": false,
-        "environments": [
-            "Default Environment"
-        ],
+        "name": "projects/project/locations/location/instances/instance/emailTemplates/2",
+        "templateType": "Template",
         "id": 2,
-        "creationTimeUnixTimeInMs": 1782466411299,
-        "modificationTimeUnixTimeInMs": 1782718572087
+        "content": "Template",
+        "displayName": "Template",
+        "environments": "[\"Default Environment\"]"
     }
 ]

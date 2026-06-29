@@ -16,10 +16,7 @@
                 "secondaryDestination": "FileName",
                 "thirdDestination": "SourceUserName",
                 "fourthDestination": "SourceUserName",
-                "visualFamily": "Copy of RACF",
-                "id": 0,
-                "creationTimeUnixTimeInMs": 1782718963997,
-                "modificationTimeUnixTimeInMs": 1782718963997
+                "id": 0
             },
             {
                 "primarySource": "SourceUserName",
@@ -31,10 +28,7 @@
                 "secondaryDestination": "",
                 "thirdDestination": "",
                 "fourthDestination": "",
-                "visualFamily": "Copy of RACF",
-                "id": 0,
-                "creationTimeUnixTimeInMs": 1782718963997,
-                "modificationTimeUnixTimeInMs": 1782718963997
+                "id": 0
             },
             {
                 "primarySource": "DestinationProcessName",
@@ -46,13 +40,10 @@
                 "secondaryDestination": "",
                 "thirdDestination": "",
                 "fourthDestination": "",
-                "visualFamily": "Copy of RACF",
-                "id": 0,
-                "creationTimeUnixTimeInMs": 1782718963997,
-                "modificationTimeUnixTimeInMs": 1782718963997
+                "id": 0
             }
         ],
-        "creationTimeUnixTimeInMs": 1782718964009,
-        "modificationTimeUnixTimeInMs": 1782718964009
+        "creationTimeUnixTimeInMs": 0,
+        "modificationTimeUnixTimeInMs": 0
     }
 }

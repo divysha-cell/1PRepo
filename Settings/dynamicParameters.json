@@ -1,9 +1,10 @@
 [
     {
+        "name": "projects/project/locations/location/instances/instance/dynamicParameters/2",
         "id": 2,
-        "name": "Dp1",
-        "type": 0,
+        "displayName": "Dp1",
+        "parameterType": "String",
         "defaultValue": "12345",
-        "optionalValues": []
+        "optionalValuesJson": "[]"
     }
 ]
