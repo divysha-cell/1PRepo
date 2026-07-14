@@ -10,10 +10,8 @@ This job will synchronize information about Chronicle SOAR Cases and Chronicle S
 |----|----|------------|-----|
 |Environment|String|True|Default Environment|
 |API Root|String|True|https://backstory.googleapis.com|
-|User's Service Account|Password||*****|
-|Workload Identity Email|Password||*****|
-|Max Hours Backwards|String||24|
-|Verify SSL|Boolean||true|
+|User's Service Account|Password|False|*****|
+|Workload Identity Email|Password|False|*****|
+|Max Hours Backwards|String|False|24|
+|Verify SSL|Boolean|False|true|
 
-
-addon
