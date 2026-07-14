@@ -1,17 +1,5 @@
 [
     {
-        "name": "projects/project/locations/location/instances/instance/caseCloseDefinitions/30",
-        "id": 30,
-        "rootCause": "manualCaseClose reason",
-        "closeReason": "Maintenance"
-    },
-    {
-        "name": "projects/project/locations/location/instances/instance/caseCloseDefinitions/28",
-        "id": 28,
-        "rootCause": "w",
-        "closeReason": "Malicious"
-    },
-    {
         "name": "projects/project/locations/location/instances/instance/caseCloseDefinitions/27",
         "id": 27,
         "rootCause": "No clear conclusion",

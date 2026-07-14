@@ -4,25 +4,25 @@
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/5",
             "displayName": "5",
             "type": 2,
-            "value": "[Case.FirstTagForCaseName]"
+            "value": ""
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/4",
             "displayName": "4",
             "type": 2,
-            "value": "[Alert.Product]"
+            "value": ""
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/3",
             "displayName": "3",
             "type": 2,
-            "value": "[Alert.CVE| dateFormat(\"pattern\") | dateFormat(\"pattern\")]"
+            "value": "[Alert.Product]"
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/2",
             "displayName": "2",
             "type": 2,
-            "value": ""
+            "value": "[Case.FirstTagForCaseName]"
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/1",
@@ -37,25 +37,25 @@
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/5",
             "displayName": "5",
             "type": 2,
-            "value": "[Case.FirstTagForCaseName]"
+            "value": ""
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/4",
             "displayName": "4",
             "type": 2,
-            "value": "[Alert.Product]"
+            "value": ""
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/3",
             "displayName": "3",
             "type": 2,
-            "value": "[Alert.CVE| dateFormat(\"pattern\") | dateFormat(\"pattern\")]"
+            "value": "[Alert.Product]"
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/2",
             "displayName": "2",
             "type": 2,
-            "value": ""
+            "value": "[Case.FirstTagForCaseName]"
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/1",
@@ -69,25 +69,25 @@
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/5",
             "displayName": "5",
             "type": 2,
-            "value": "[Case.FirstTagForCaseName]"
+            "value": ""
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/4",
             "displayName": "4",
             "type": 2,
-            "value": "[Alert.Product]"
+            "value": ""
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/3",
             "displayName": "3",
             "type": 2,
-            "value": "[Alert.CVE| dateFormat(\"pattern\") | dateFormat(\"pattern\")]"
+            "value": "[Alert.Product]"
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/2",
             "displayName": "2",
             "type": 2,
-            "value": ""
+            "value": "[Case.FirstTagForCaseName]"
         },
         {
             "name": "projects/project/locations/location/instances/instance/moduleSettings/CaseTitleSettings/properties/1",

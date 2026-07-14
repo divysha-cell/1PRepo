@@ -1,11 +1,5 @@
 [
     {
-        "name": "projects/project/locations/location/instances/instance/caseStageDefinitions/8",
-        "id": 8,
-        "displayName": "stage7",
-        "order": 7
-    },
-    {
         "name": "projects/project/locations/location/instances/instance/caseStageDefinitions/6",
         "id": 6,
         "displayName": "Research",

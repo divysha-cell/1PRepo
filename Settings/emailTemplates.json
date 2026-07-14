@@ -1,10 +1,1 @@
-[
-    {
-        "name": "projects/project/locations/location/instances/instance/emailTemplates/2",
-        "templateType": "Template",
-        "id": 2,
-        "content": "Template",
-        "displayName": "Template",
-        "environments": "[\"Default Environment\"]"
-    }
-]
+[]

@@ -1,75 +1,137 @@
 [
     {
-        "environment": "*",
-        "integrationIdentifier": "CrowdStrikeFalcon",
+        "environment": "Default Environment",
+        "integrationIdentifier": "GoogleThreatIntelligence",
         "settings": {
             "instanceDescription": "",
-            "instanceName": "CrowdStrikeFalcon_1",
+            "instanceName": "System Default Instance",
             "settings": [
                 {
                     "propertyName": "API Root",
-                    "value": "https://api.crowdstrike.com",
-                    "creationTimeUnixTimeInMs": 0,
-                    "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": "String",
-                    "isMandatory": false,
-                    "id": 77,
-                    "propertyDisplayName": "API Root",
-                    "propertyDescription": "",
-                    "integrationIdentifier": "CrowdStrikeFalcon",
-                    "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
-                },
-                {
-                    "propertyName": "Client API ID",
-                    "value": "",
+                    "value": "https://www.virustotal.com",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "String",
                     "isMandatory": true,
-                    "id": 78,
-                    "propertyDisplayName": "Client API ID",
-                    "propertyDescription": "",
-                    "integrationIdentifier": "CrowdStrikeFalcon",
-                    "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
+                    "id": 12,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "The API root of the Google Threat Intelligence instance.",
+                    "integrationIdentifier": "GoogleThreatIntelligence",
+                    "integrationInstance": "e155abcc-28e2-44b1-8f99-0a8c9b3cb1a7"
                 },
                 {
-                    "propertyName": "Client API Secret",
-                    "value": "",
+                    "propertyName": "API Key",
+                    "value": "***************",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Password",
                     "isMandatory": true,
-                    "id": 79,
-                    "propertyDisplayName": "Client API Secret",
-                    "propertyDescription": "",
-                    "integrationIdentifier": "CrowdStrikeFalcon",
-                    "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
+                    "id": 13,
+                    "propertyDisplayName": "API Key",
+                    "propertyDescription": "The Google Threat Intelligence API key.",
+                    "integrationIdentifier": "GoogleThreatIntelligence",
+                    "integrationInstance": "e155abcc-28e2-44b1-8f99-0a8c9b3cb1a7"
                 },
                 {
-                    "propertyName": "Verify SSL",
-                    "value": "False",
-                    "creationTimeUnixTimeInMs": 0,
-                    "modificationTimeUnixTimeInMs": 0,
-                    "propertyType": "Boolean",
-                    "isMandatory": false,
-                    "id": 80,
-                    "propertyDisplayName": "Verify SSL",
-                    "propertyDescription": "",
-                    "integrationIdentifier": "CrowdStrikeFalcon",
-                    "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
-                },
-                {
-                    "propertyName": "Customer ID",
+                    "propertyName": "ASM Project Name",
                     "value": "",
                     "creationTimeUnixTimeInMs": 0,
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "String",
                     "isMandatory": false,
-                    "id": 81,
-                    "propertyDisplayName": "Customer ID",
-                    "propertyDescription": "The customer ID of the tenant in which to execute the integration. For use in multi-tenant (MSSP) environments.",
-                    "integrationIdentifier": "CrowdStrikeFalcon",
-                    "integrationInstance": "9bac50e3-717b-42e1-895f-d978fab1ac79"
+                    "id": 14,
+                    "propertyDisplayName": "ASM Project Name",
+                    "propertyDescription": "The Attack Surface Management (ASM) project name to use in the Google Threat Intelligence integration. This parameter is required to execute the ASM actions.",
+                    "integrationIdentifier": "GoogleThreatIntelligence",
+                    "integrationInstance": "e155abcc-28e2-44b1-8f99-0a8c9b3cb1a7"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 15,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If selected, the integration verifies that the SSL certificate for connecting to the Google Threat Intelligence server is valid.",
+                    "integrationIdentifier": "GoogleThreatIntelligence",
+                    "integrationInstance": "e155abcc-28e2-44b1-8f99-0a8c9b3cb1a7"
+                }
+            ]
+        }
+    },
+    {
+        "environment": "Default Environment",
+        "integrationIdentifier": "GoogleChronicle",
+        "settings": {
+            "instanceDescription": "",
+            "instanceName": "System Default Instance",
+            "settings": [
+                {
+                    "propertyName": "UI Root",
+                    "value": "https://{instance}.chronicle.security",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 5,
+                    "propertyDisplayName": "UI Root",
+                    "propertyDescription": "UI root of the Chronicle instance. It will be used to create a link that points back to Chronicle across multiple actions.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "b57199b3-09b3-4f33-9763-430409c19a3e"
+                },
+                {
+                    "propertyName": "API Root",
+                    "value": "https://backstory.googleapis.com",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "String",
+                    "isMandatory": true,
+                    "id": 6,
+                    "propertyDisplayName": "API Root",
+                    "propertyDescription": "API root of the Chronicle instance.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "b57199b3-09b3-4f33-9763-430409c19a3e"
+                },
+                {
+                    "propertyName": "User's Service Account",
+                    "value": "***************",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 7,
+                    "propertyDisplayName": "User's Service Account",
+                    "propertyDescription": "Service Account that is used for authentication. You can configure either this parameter or the Workload Identity Email parameter. If both this and Workload Identity Email not provided, the default Service Account of the SecOps Instance will be used to authenticate.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "b57199b3-09b3-4f33-9763-430409c19a3e"
+                },
+                {
+                    "propertyName": "Workload Identity Email",
+                    "value": "",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Password",
+                    "isMandatory": false,
+                    "id": 8,
+                    "propertyDisplayName": "Workload Identity Email",
+                    "propertyDescription": "The client email address of your workload identity. You can configure either this parameter or the User's Service Account parameter. To impersonate service accounts with the workload identity email address, grant the Service Account Token Creator role to your service account. If both this and User's Service Account not provided, the default Service Account of the SecOps Instance will be used to authenticate.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "b57199b3-09b3-4f33-9763-430409c19a3e"
+                },
+                {
+                    "propertyName": "Verify SSL",
+                    "value": "True",
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "propertyType": "Boolean",
+                    "isMandatory": false,
+                    "id": 9,
+                    "propertyDisplayName": "Verify SSL",
+                    "propertyDescription": "If enabled, verify the SSL certificate for the connection to the Google Chronicle server is valid.",
+                    "integrationIdentifier": "GoogleChronicle",
+                    "integrationInstance": "b57199b3-09b3-4f33-9763-430409c19a3e"
                 }
             ]
         }
@@ -88,11 +150,11 @@
                     "modificationTimeUnixTimeInMs": 0,
                     "propertyType": "Boolean",
                     "isMandatory": false,
-                    "id": 15,
+                    "id": 3,
                     "propertyDisplayName": "Verify SSL",
                     "propertyDescription": "If enabled, verify the SSL certificate for the connection.",
                     "integrationIdentifier": "GoogleSecOpsAiAgents",
-                    "integrationInstance": "404fa741-3411-483e-959e-d4ef2a3347c2"
+                    "integrationInstance": "fa91c56f-daab-46c6-8794-c1b2abfceb2c"
                 }
             ]
         }
