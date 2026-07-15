@@ -1,0 +1,335 @@
+{
+    "id": 0,
+    "identifier": "3145c059-58e8-455c-85ae-7376ebf15107",
+    "version": "1",
+    "isEnabled": true,
+    "isDebugMode": false,
+    "name": "New Playbook",
+    "creator": "938b8025-2884-4f3f-a89d-996caec0f5c7",
+    "modifiedBy": "938b8025-2884-4f3f-a89d-996caec0f5c7",
+    "priority": 2,
+    "description": "",
+    "executionScope": 1,
+    "environments": [
+        "Default Environment"
+    ],
+    "categoryName": "Default",
+    "categoryId": 1,
+    "originalPlaybookIdentifier": "3145c059-58e8-455c-85ae-7376ebf15107",
+    "creationTimeUnixTimeInMs": 1784101868549,
+    "modificationTimeUnixTimeInMs": 1784101868549,
+    "trigger": {
+        "id": 0,
+        "identifier": "dd981a8c-2068-4f8e-a9a9-1acbf9446510",
+        "type": 8,
+        "logicalOperator": 0,
+        "conditions": [
+            {
+                "fieldName": "",
+                "value": "",
+                "matchType": 0,
+                "customOperatorName": null
+            }
+        ],
+        "reactionLogicalOperator": 1,
+        "reactionConditions": [],
+        "executionMode": 0
+    },
+    "steps": [
+        {
+            "parallelActions": [],
+            "identifier": "8be711b9-788e-4ee9-9e70-bd8a99c71b34",
+            "originalStepIdentifier": "8be711b9-788e-4ee9-9e70-bd8a99c71b34",
+            "isAutomatic": true,
+            "isSkippable": false,
+            "instanceName": "New Block_1",
+            "name": "New Block",
+            "integration": "Siemplify",
+            "description": "An embedded workflow that can receive inputs and return an output.",
+            "actionProvider": "Flow",
+            "actionName": "NestedAction",
+            "type": 5,
+            "parameters": [
+                {
+                    "name": "AssignedUsers",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "DistinctDuplicateEntities",
+                    "value": "true",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "HasApprovalLink",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "MessageToAssignee",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "NestedWorkflowIdentifier",
+                    "value": "af441ff7-ddc8-4e96-a242-53ec6a629d90",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "NestedWorkflowInputs",
+                    "value": "[]",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "PendingActionTimeout",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "UseEntitiesLoopScope",
+                    "value": "true",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "NestedWorkflowSteps",
+                    "value": "[{\"identifier\":\"786fd7a3-777e-40c7-ac84-1dac644cb5d9\",\"integration\":\"Siemplify\",\"actionName\":\"Siemplify_Add Entity Insight\",\"instanceName\":\"Siemplify_Add Entity Insight_1\",\"stepType\":0}]",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "NestedWorkflowOutput",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                }
+            ],
+            "autoSkipOnFailure": false,
+            "isDebugMockData": false,
+            "debugData": null,
+            "parentStepContainerId": null,
+            "workflowIdentifier": "3145c059-58e8-455c-85ae-7376ebf15107",
+            "isTouchedByAi": false,
+            "startLoopStepIdentifier": null,
+            "logsExplorerUrl": null,
+            "id": 0,
+            "creationTimeUnixTimeInMs": 1784101868549,
+            "modificationTimeUnixTimeInMs": 1784101868549,
+            "additionalProperties": {}
+        },
+        {
+            "parallelActions": [],
+            "identifier": "eacb7ffa-60e3-45c6-8270-571338bb8f6d",
+            "originalStepIdentifier": "eacb7ffa-60e3-45c6-8270-571338bb8f6d",
+            "isAutomatic": true,
+            "isSkippable": false,
+            "instanceName": "Crowdstrike Falcon Containment_1",
+            "name": "Crowdstrike Falcon Containment",
+            "integration": "Siemplify",
+            "description": "This block performs containment on endpoints by targeting case-related IPs and hostnames to prevent further compromise. A boolean input controls manual or automatic execution. In automatic mode, the Upload IOCs and Isolate Endpoint flags determine which actions run. It returns true if successful, false on failure, or empty if no action is taken.",
+            "actionProvider": "Flow",
+            "actionName": "NestedAction",
+            "type": 5,
+            "parameters": [
+                {
+                    "name": "AssignedUsers",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "DistinctDuplicateEntities",
+                    "value": "true",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "HasApprovalLink",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "MessageToAssignee",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "NestedWorkflowIdentifier",
+                    "value": "c40d5dfe-cac0-4e04-b8ca-b9a950e67d77",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "NestedWorkflowInputs",
+                    "value": "[{\"FieldName\":\"Manual\",\"MatchType\":0,\"Value\":\"True\",\"CustomOperatorName\":null},{\"FieldName\":\"Upload IOCs\",\"MatchType\":0,\"Value\":\"True\",\"CustomOperatorName\":null},{\"FieldName\":\"Isolate Endpoint\",\"MatchType\":0,\"Value\":\"True\",\"CustomOperatorName\":null}]",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "PendingActionTimeout",
+                    "value": null,
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "UseEntitiesLoopScope",
+                    "value": "true",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "NestedWorkflowSteps",
+                    "value": "[{\"identifier\":\"27a5e4f4-712b-4e08-b9e3-5a9e810889e1\",\"integration\":\"Flow\",\"actionName\":\"IfFlowCondition\",\"instanceName\":\"Is Manual?\",\"stepType\":4},{\"identifier\":\"3440a0cf-eadf-48c1-b58b-77786659f947\",\"integration\":\"Flow\",\"actionName\":\"IfFlowCondition\",\"instanceName\":\"Has Endpoints?\",\"stepType\":4},{\"identifier\":\"66b25dbb-b9c5-4afe-86b4-f2d5059ce1d4\",\"integration\":\"CrowdStrikeFalcon\",\"actionName\":\"CrowdStrikeFalcon_Upload IOCs\",\"instanceName\":\"Upload IOCs Auto\",\"stepType\":0},{\"identifier\":\"6931084f-ea42-46ed-90d5-3ef17163c650\",\"integration\":\"CrowdStrikeFalcon\",\"actionName\":\"CrowdStrikeFalcon_Contain Endpoint\",\"instanceName\":\"Contain Endpoint Auto\",\"stepType\":0},{\"identifier\":\"69c96dd4-78c6-42b3-a762-819b4bf8f28f\",\"integration\":\"Flow\",\"actionName\":\"EntitySelection\",\"instanceName\":\"Hostnames and IPs\",\"stepType\":0},{\"identifier\":\"6a629c03-339b-47be-9a34-10b1fde34e0a\",\"integration\":\"CrowdStrikeFalcon\",\"actionName\":\"CrowdStrikeFalcon_Contain Endpoint\",\"instanceName\":\"Contain Endpoint\",\"stepType\":0},{\"identifier\":\"80ee9ded-4402-48b4-acb7-1fd031a3ccc5\",\"integration\":\"Flow\",\"actionName\":\"IfFlowCondition\",\"instanceName\":\"Has Endpoints? Auto\",\"stepType\":4},{\"identifier\":\"8274ceb5-d538-49bf-8368-93427607c8cd\",\"integration\":\"Flow\",\"actionName\":\"IfFlowCondition\",\"instanceName\":\"Is Success?\",\"stepType\":4},{\"identifier\":\"94023124-c701-467d-883b-8cee144ac188\",\"integration\":\"Flow\",\"actionName\":\"IfFlowCondition\",\"instanceName\":\"Has Malicious Entities? Auto\",\"stepType\":4},{\"identifier\":\"a47f5136-c1f7-436a-ab9e-b906e5c2009d\",\"integration\":\"CrowdStrikeFalcon\",\"actionName\":\"CrowdStrikeFalcon_Upload IOCs\",\"instanceName\":\"Upload IOCs\",\"stepType\":0},{\"identifier\":\"cf88461e-78de-4732-b714-c0624c52c9e8\",\"integration\":\"Flow\",\"actionName\":\"IfFlowCondition\",\"instanceName\":\"Has Malicious Entities?\",\"stepType\":4},{\"identifier\":\"f28bbf25-52e7-40dd-af07-37729fabf974\",\"integration\":\"Flow\",\"actionName\":\"IfFlowCondition\",\"instanceName\":\"Has Relevant Entities?\",\"stepType\":4}]",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                },
+                {
+                    "name": "NestedWorkflowOutput",
+                    "value": "[\n  \"False\",\n  \"True\",\n  \"True\",\n  \"True\",\n  \"True\"\n]",
+                    "type": null,
+                    "isMandatory": false,
+                    "defaultValue": null,
+                    "id": 0,
+                    "creationTimeUnixTimeInMs": 0,
+                    "modificationTimeUnixTimeInMs": 0,
+                    "additionalProperties": {}
+                }
+            ],
+            "autoSkipOnFailure": false,
+            "isDebugMockData": false,
+            "debugData": null,
+            "parentStepContainerId": null,
+            "workflowIdentifier": "3145c059-58e8-455c-85ae-7376ebf15107",
+            "isTouchedByAi": false,
+            "startLoopStepIdentifier": null,
+            "logsExplorerUrl": null,
+            "id": 0,
+            "creationTimeUnixTimeInMs": 1784101868549,
+            "modificationTimeUnixTimeInMs": 1784101868549,
+            "additionalProperties": {}
+        }
+    ],
+    "stepsRelations": [
+        {
+            "condition": "",
+            "fromStep": "8be711b9-788e-4ee9-9e70-bd8a99c71b34",
+            "toStep": "eacb7ffa-60e3-45c6-8270-571338bb8f6d",
+            "destinationActionStatus": 0
+        }
+    ],
+    "templateName": null,
+    "playbookType": 0,
+    "debugData": {
+        "debugBaseAlertId": null,
+        "debugAlertId": null
+    },
+    "entityAccessLevel": 2,
+    "defaultAccessLevel": 2,
+    "permissions": [],
+    "overviewTemplates": [],
+    "creationSource": 1
+}
