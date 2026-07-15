@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "source": "PaloAltoPanorama",
+        "familyName": "Default",
+        "familyId": 0,
+        "product": "Panorama",
+        "eventName": null,
+        "mappingStatus": null,
+        "changeSource": "ChangeSourceUnspecified",
+        "exampleEventFields": []
+    }
+]
