@@ -15,6 +15,23 @@ This job will synchronize information about Chronicle SOAR Cases and Chronicle S
 |Max Hours Backwards|String|False|24|
 |Verify SSL|Boolean|False|true|
 
+## Google Chronicle Sync Job
+This job will synchronize information about Chronicle SOAR Cases and Chronicle SOAR Alerts with Chronicle SIEM.
+ Note: This job is only supported from Chronicle SOAR version 6.1.44 and higher.
+
+
+**Run Interval In Seconds:** 3600
+
+#### Parameters
+|Name|Type|Is Mandatory|Value|
+|----|----|------------|-----|
+|Environment|String|True|Default Environment|
+|API Root|String|True|https://us-chronicle.googleapis.com/v1alpha/projects/84044654851/locations/us/instances/1ce5182d-fdba-4dca-a71f-1b748e42f580|
+|User's Service Account|Password|False|*****|
+|Workload Identity Email|Password|False|*****|
+|Max Hours Backwards|String|False|24|
+|Verify SSL|Boolean|False|false|
+
 ## Job_Random_Jira_22
 Automated random job 22 for integration Jira template Sync Closure
 
