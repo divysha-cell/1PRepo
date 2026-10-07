@@ -1,13 +1,1 @@
-[
-    {
-        "name": "projects/project/locations/location/instances/instance/caseTagDefinitions/5",
-        "id": 5,
-        "displayName": "CaseTag created under CaseData>Tags",
-        "matchCriteria": "ByEntityPropertyName",
-        "value": "1",
-        "propertyName": "12",
-        "comparisonType": "Contain",
-        "priority": 1,
-        "canBeCaseTitle": false
-    }
-]
+[]
